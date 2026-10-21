@@ -1,6 +1,6 @@
 # EverythingFi 🌐
 
-A Web3 app directory: 191 apps organized by category, with a password-protected admin page.
+A Web3 app directory: apps organized by category, with a password-protected admin page.
 
 ## How it works
 

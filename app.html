@@ -135,8 +135,7 @@ function render() {
     var apps = list.filter(function (a) { return a.cat === cat; });
     if (!apps.length) return '';
     return '<section class="cat-section"><div class="cat-section-hdr">' +
-      '<span class="cat-section-hdr-name">' + esc(cat) + '</span>' +
-      '<span class="cat-section-hdr-count">' + apps.length + '</span></div>' +
+      '<span class="cat-section-hdr-name">' + esc(cat) + '</span></div>' +
       '<div class="grid">' + apps.map(buildCard).join('') + '</div></section>';
   }).join('');
 }
