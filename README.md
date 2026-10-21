@@ -1,6 +1,6 @@
 # EverythingFi 🌐
 
-A self-contained Web3 app directory — 159 apps, one file, no backend.
+A self-contained Web3 app directory — 191 apps, one file, no backend.
 
 ## What is this?
 
@@ -8,7 +8,7 @@ EverythingFi is a single-page Web3 directory that organizes the best tools and p
 
 ## Features
 
-- 📁 **159 Web3 apps** organized by category
+- 📁 **191 Web3 apps** organized by category
 - 🔍 **Filter by category** — DeFi, NFTs, Security, Analytics, Perp Dex, Utilities, Productivity, and more
 - 🖼️ **Embedded logos** — all app logos are base64-encoded, no external requests
 - ⚡ **Zero dependencies** — pure HTML, CSS, and vanilla JS
