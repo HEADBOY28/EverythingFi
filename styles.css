@@ -38,7 +38,7 @@
 
   /* Layout */
   --nav-h:       56px;
-  --intro-h:     40px;
+  --intro-h:     0px;  /* no intro strip; was 40px */
   --sidebar-w:   210px;
 
   /* Radius */
@@ -147,7 +147,7 @@ body{
 
 /* Search */
 .nav-search-wrap{
-  flex:1;max-width:440px;
+  flex:1;min-width:0;max-width:440px;
   display:flex;align-items:center;gap:8px;
   background:var(--surface2);
   border:1.5px solid var(--border2);
@@ -162,10 +162,19 @@ body{
 }
 .nav-search-icon{color:var(--text3);font-size:15px;flex-shrink:0;line-height:1;}
 #search{
-  flex:1;background:none;border:none;outline:none;
+  flex:1;min-width:0;width:100%;background:none;border:none;outline:none;
   color:var(--text);font-size:13px;font-family:'Inter',inherit;
 }
 #search::placeholder{color:var(--text3);}
+
+/* Desktop: center the search bar in the top nav */
+@media(min-width:901px){
+  .topnav-inner{position:relative;}
+  .topnav-inner > .nav-search-wrap{
+    position:absolute;left:50%;transform:translateX(-50%);
+    width:min(440px, calc(100% - 2 * var(--sidebar-w) - 40px));
+  }
+}
 
 /* Nav right */
 .nav-right{margin-left:auto;display:flex;align-items:center;gap:8px;flex-shrink:0;}
