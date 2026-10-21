@@ -7,7 +7,7 @@
 <meta name="description" content="EverythingFi is a curated directory of Web3 apps, organized by category."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Newsreader:opsz,wght@6..72,300&family=Syne:wght@600;700;800&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="styles.css"/>
 <script>
   // Apply the saved theme before the page paints, so there is no flash.
@@ -38,8 +38,10 @@
   /* Hero */
   .lp-main { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
     text-align: center; padding: 40px 16px 56px; }
-  .lp-title { font-family: 'Syne', system-ui, sans-serif; font-weight: 800; letter-spacing: -0.02em; line-height: 1.05;
-    font-size: clamp(34px, 6vw, 58px); max-width: 940px; text-wrap: balance; }
+  /* Hero headline: modeled on Hyperliquid's Teodor Light heading. Newsreader Light is the free stand-in. */
+  .lp-title { font-family: 'Teodor Light', 'Teodor', 'Newsreader', Georgia, 'Times New Roman', serif; font-weight: 300;
+    font-variation-settings: 'opsz' 28; letter-spacing: -0.03em; line-height: 1.05;
+    font-size: clamp(44px, 7.5vw, 90px); max-width: 940px; text-wrap: balance; }
   .lp-intro { color: var(--text2); font-size: clamp(15px, 2vw, 17px); line-height: 1.65; max-width: 600px; margin: 20px auto 0;
     white-space: pre-line; text-wrap: pretty; }
 
