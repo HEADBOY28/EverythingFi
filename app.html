@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>EverythingFi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+<script>
+  // Apply the saved theme before the page paints, so there is no flash.
+  (function () {
+    var saved = null;
+    try { saved = localStorage.getItem('ef-theme'); } catch (e) {}
+    var dark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    document.documentElement.setAttribute('data-theme', saved || (dark ? 'dark' : 'light'));
+  })();
+</script>
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="topnav-inner">
+    <button class="menu-btn" onclick="toggleSidebar()" aria-label="Open categories">&#9776;</button>
+    <a class="nav-brand" href="/" title="Home">
+      <div class="nav-logo-wrap">
+        <span id="logo-icon-emoji">🗂</span>
+        <img id="logo-icon-img" hidden style="width:100%;height:100%;object-fit:cover;border-radius:7px" alt=""/>
+      </div>
+      <span class="nav-brand-name" id="logo-text">EverythingFi</span>
+    </a>
+
+    <div class="nav-search-wrap">
+      <span class="nav-search-icon">⌕</span>
+      <input type="text" id="search" placeholder="Search..." oninput="render()"/>
+    </div>
+
+    <div class="nav-right">
+      <button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme" aria-label="Toggle dark/light mode">
+        <span class="theme-icon">&#9790;</span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="sidebar-overlay" id="sidebar-overlay" onclick="closeSidebar()"></div>
+
+<div class="page-shell">
+  <div class="main-layout">
+    <nav class="sidebar" id="sidebar" aria-label="Categories"></nav>
+    <main class="content-area">
+      <div class="breadcrumb" id="breadcrumb">
+        <span class="bc-cat" id="bc-cat"></span>
+        <button class="bc-clear" onclick="setTab('All')">✕ Clear</button>
+      </div>
+      <div id="grid"></div>
+    </main>
+  </div>
+</div>
+
+<script>
+var site = { brand: {}, catOrder: [], apps: [] };
+var activeTab = 'All';
+
+function esc(s) {
+  return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+    return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+  });
+}
+function isImage(icon) { return /^(data:|https?:|icons\/)/.test(icon || ''); }
+
+// Categories in admin-defined order, then any others alphabetically.
+function categories() {
+  var used = [];
+  site.apps.forEach(function (a) { if (used.indexOf(a.cat) < 0) used.push(a.cat); });
+  var ordered = site.catOrder.filter(function (c) { return used.indexOf(c) >= 0; });
+  var rest = used.filter(function (c) { return ordered.indexOf(c) < 0; }).sort();
+  return ordered.concat(rest);
+}
+
+function filteredApps() {
+  var q = document.getElementById('search').value.trim().toLowerCase();
+  return site.apps.filter(function (a) {
+    var inCat = activeTab === 'All' || a.cat === activeTab;
+    var inQ = !q || [a.name, a.desc, a.cat].join(' ').toLowerCase().indexOf(q) >= 0;
+    return inCat && inQ;
+  });
+}
+
+function renderSidebar() {
+  var out = '<div class="sidebar-section-hdr">Categories</div>';
+  out += '<button class="sidebar-all-btn' + (activeTab === 'All' ? ' active' : '') + '" data-cat="All">All Apps</button>';
+  categories().forEach(function (c) {
+    out += '<button class="cat-trigger' + (activeTab === c ? ' active' : '') + '" data-cat="' + esc(c) + '">' +
+      '<span class="cat-dot"></span><span class="cat-name">' + esc(c) + '</span></button>';
+  });
+  var sb = document.getElementById('sidebar');
+  sb.innerHTML = out;
+}
+
+function buildCard(a) {
+  var icon = isImage(a.icon)
+    ? '<div class="card-icon"><img src="' + esc(a.icon) + '" alt="" loading="lazy"/></div>'
+    : '<div class="card-icon">' + esc(a.icon || '🔗') + '</div>';
+  return '<div class="card" tabindex="0" data-id="' + esc(a.id) + '">' +
+    '<div class="card-top">' + icon + '<span class="card-badge">' + esc(a.cat) + '</span></div>' +
+    '<div class="card-title">' + esc(a.name) + '<span class="card-arrow">&#8599;</span></div>' +
+    '<div class="card-desc">' + esc(a.desc) + '</div></div>';
+}
+
+function render() {
+  renderSidebar();
+  var list = filteredApps();
+  var grid = document.getElementById('grid');
+  var bc = document.getElementById('breadcrumb');
+  bc.className = activeTab === 'All' ? 'breadcrumb' : 'breadcrumb visible';
+  document.getElementById('bc-cat').textContent = activeTab;
+
+  if (!list.length) {
+    grid.className = 'grid';
+    grid.innerHTML = '<div class="empty-state"><div class="empty-state-icon">🔍</div>' +
+      '<div class="empty-state-msg">No apps found</div>' +
+      '<div class="empty-state-sub">Try a different search or category</div></div>';
+    return;
+  }
+  if (activeTab !== 'All') {
+    grid.className = 'grid';
+    grid.innerHTML = list.map(buildCard).join('');
+    return;
+  }
+  // "All" view: one section per category.
+  grid.className = '';
+  grid.innerHTML = categories().map(function (cat) {
+    var apps = list.filter(function (a) { return a.cat === cat; });
+    if (!apps.length) return '';
+    return '<section class="cat-section"><div class="cat-section-hdr">' +
+      '<span class="cat-section-hdr-name">' + esc(cat) + '</span>' +
+      '<span class="cat-section-hdr-count">' + apps.length + '</span></div>' +
+      '<div class="grid">' + apps.map(buildCard).join('') + '</div></section>';
+  }).join('');
+}
+
+function setTab(cat) { activeTab = cat; closeSidebar(); render(); window.scrollTo(0, 0); }
+
+function applyBrand() {
+  var b = site.brand || {};
+  var name = b.name || 'EverythingFi';
+  document.getElementById('logo-text').textContent = name;
+  document.title = name;
+  var img = document.getElementById('logo-icon-img');
+  var emoji = document.getElementById('logo-icon-emoji');
+  if (b.logoImage) { img.src = b.logoImage; img.hidden = false; emoji.hidden = true; }
+  else { emoji.textContent = b.logoEmoji || '🗂'; emoji.hidden = false; img.hidden = true; }
+}
+
+function launchApp(id) {
+  var app = site.apps.find(function (a) { return String(a.id) === String(id); });
+  if (app) window.open(app.url, '_blank', 'noopener,noreferrer');
+}
+
+document.getElementById('sidebar').addEventListener('click', function (e) {
+  var btn = e.target.closest('[data-cat]');
+  if (btn) setTab(btn.getAttribute('data-cat'));
+});
+document.getElementById('grid').addEventListener('click', function (e) {
+  var card = e.target.closest('.card');
+  if (card) launchApp(card.getAttribute('data-id'));
+});
+document.getElementById('grid').addEventListener('keydown', function (e) {
+  var card = e.target.closest('.card');
+  if (card && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); launchApp(card.getAttribute('data-id')); }
+});
+document.addEventListener('contextmenu', function (e) { if (e.target.closest('.card')) e.preventDefault(); });
+document.addEventListener('auxclick', function (e) { if (e.button === 1 && e.target.closest('.card')) e.preventDefault(); });
+document.addEventListener('dragstart', function (e) { if (e.target.closest('.card')) e.preventDefault(); });
+
+function toggleSidebar() {
+  document.getElementById('sidebar').classList.toggle('open');
+  document.getElementById('sidebar-overlay').classList.toggle('open');
+}
+function closeSidebar() {
+  document.getElementById('sidebar').classList.remove('open');
+  document.getElementById('sidebar-overlay').classList.remove('open');
+}
+
+function updateThemeIcon() {
+  var dark = document.documentElement.getAttribute('data-theme') === 'dark';
+  document.querySelector('.theme-icon').textContent = dark ? '☀' : '☾';
+}
+function toggleTheme() {
+  var root = document.documentElement;
+  var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  root.setAttribute('data-theme', next);
+  try { localStorage.setItem('ef-theme', next); } catch (e) {}
+  updateThemeIcon();
+}
+updateThemeIcon();
+
+fetch('data/site.json', { cache: 'no-cache' })
+  .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+  .then(function (data) { site = data; applyBrand(); render(); })
+  .catch(function () {
+    document.getElementById('grid').innerHTML =
+      '<div class="empty-state"><div class="empty-state-msg">Could not load apps</div>' +
+      '<div class="empty-state-sub">Please refresh the page.</div></div>';
+  });
+</script>
+</body>
+</html>

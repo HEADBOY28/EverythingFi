@@ -4,6 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>EverythingFi</title>
+<meta name="description" content="EverythingFi is a curated directory of Web3 apps, organized by category."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet"/>
@@ -17,173 +18,355 @@
     document.documentElement.setAttribute('data-theme', saved || (dark ? 'dark' : 'light'));
   })();
 </script>
+<style>
+  [hidden] { display: none !important; }
+  body { display: flex; flex-direction: column; min-height: 100vh; position: relative; }
+  body::before {
+    content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
+    background:
+      radial-gradient(60% 50% at 50% 0%, var(--accentbg2), transparent 70%),
+      radial-gradient(40% 35% at 85% 85%, var(--accentbg), transparent 70%);
+  }
+
+  /* Header */
+  .lp-head { display: flex; align-items: center; gap: 12px; max-width: 1080px; width: 100%; margin: 0 auto; padding: 18px 20px; }
+  .lp-head .nav-brand { min-width: 0; }
+  .lp-head-right { margin-left: auto; display: flex; align-items: center; gap: 8px; }
+  .lp-link { color: var(--text2); font-weight: 600; font-size: 13px; text-decoration: none; padding: 8px 12px; border-radius: var(--rs); }
+  .lp-link:hover { color: var(--text); background: var(--surface); }
+
+  /* Hero */
+  .lp-main { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center; padding: 40px 16px 56px; }
+  .lp-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 600; color: var(--accent);
+    background: var(--accentbg); border: 1px solid var(--border3); padding: 5px 12px; border-radius: 999px; margin-bottom: 22px; }
+  .lp-eyebrow-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+  .lp-title { font-family: 'Syne', system-ui, sans-serif; font-weight: 800; letter-spacing: -0.02em; line-height: 1.05;
+    font-size: clamp(34px, 6vw, 58px); max-width: 940px; text-wrap: balance; }
+  .lp-intro { color: var(--text2); font-size: clamp(15px, 2vw, 17px); line-height: 1.65; max-width: 600px; margin: 20px auto 0;
+    white-space: pre-line; text-wrap: pretty; }
+
+  /* Auth card */
+  .lp-auth { width: min(400px, 100%); margin-top: 34px; background: var(--surface); border: 1.5px solid var(--border2);
+    border-radius: var(--rx); padding: 20px; box-shadow: var(--card-shadow); text-align: left; }
+  .lp-btn { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; font: inherit; font-size: 14px;
+    font-weight: 600; padding: 12px 18px; border-radius: var(--r); cursor: pointer; text-decoration: none;
+    border: 1.5px solid var(--border2); background: var(--surface2); color: var(--text); transition: background .15s, box-shadow .15s, transform .15s; }
+  .lp-btn:hover { background: var(--surface3); }
+  .lp-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .lp-btn-primary { background: var(--accent); border-color: var(--accent); color: #fff; box-shadow: 0 2px 10px rgba(255,92,53,0.35); }
+  .lp-btn-primary:hover { background: var(--accent2); box-shadow: 0 4px 16px rgba(255,92,53,0.45); transform: translateY(-1px); }
+  .lp-btn[disabled] { opacity: .6; cursor: wait; transform: none; }
+  .lp-btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+  .lp-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; }
+  .lp-soon { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--text3);
+    border: 1px solid var(--border2); border-radius: 999px; padding: 1px 6px; }
+  .lp-note { font-size: 12px; color: var(--text2); text-align: center; min-height: 18px; margin-top: 12px; }
+  .lp-note:empty { display: none; }
+  .lp-note.err { color: var(--red); }
+  .lp-note a { color: var(--accent); font-weight: 600; }
+  .lp-divider { display: flex; align-items: center; gap: 10px; color: var(--text3); font-size: 11px; margin: 14px 0; }
+  .lp-divider::before, .lp-divider::after { content: ""; flex: 1; height: 1px; background: var(--border2); }
+  .lp-explore { display: flex; align-items: center; justify-content: center; gap: 6px; color: var(--text); font-weight: 600;
+    font-size: 14px; text-decoration: none; padding: 8px; border-radius: var(--rs); }
+  .lp-explore:hover { color: var(--accent); }
+  .lp-explore span { transition: transform .15s; }
+  .lp-explore:hover span { transform: translateX(3px); }
+
+  /* Connected state */
+  .lp-wallet { display: flex; align-items: center; gap: 12px; padding: 4px 2px 16px; }
+  .lp-wallet-avatar { width: 40px; height: 40px; border-radius: 50%; flex-shrink: 0; overflow: hidden; background: var(--accentbg2);
+    display: flex; align-items: center; justify-content: center; }
+  .lp-wallet-avatar img { width: 26px; height: 26px; }
+  .lp-wallet-label { font-size: 11px; color: var(--text3); font-weight: 600; text-transform: uppercase; letter-spacing: .05em; }
+  .lp-wallet-addr { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 15px; font-weight: 600; }
+  .lp-text-btn { background: none; border: none; font: inherit; font-size: 12px; color: var(--text2); cursor: pointer;
+    display: block; margin: 12px auto 0; padding: 4px 8px; border-radius: var(--rs); }
+  .lp-text-btn:hover { color: var(--red); }
+
+  /* Wallet picker */
+  .wallet-list { display: flex; flex-direction: column; gap: 8px; }
+  .wallet-opt { display: flex; align-items: center; gap: 12px; width: 100%; padding: 12px 14px; font: inherit; font-size: 14px;
+    font-weight: 600; color: var(--text); background: var(--surface2); border: 1.5px solid var(--border2); border-radius: var(--r); cursor: pointer; text-align: left; }
+  .wallet-opt:hover { border-color: var(--border3); background: var(--accentbg); }
+  .wallet-opt img { width: 28px; height: 28px; border-radius: 7px; }
+
+  /* App icon strip */
+  .lp-strip { width: 100%; max-width: 760px; margin-top: 44px; overflow: hidden;
+    mask-image: linear-gradient(90deg, transparent, #000 15%, #000 85%, transparent);
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 15%, #000 85%, transparent); }
+  .lp-strip-track { display: flex; gap: 12px; width: max-content; animation: lp-scroll 60s linear infinite; }
+  .lp-strip:hover .lp-strip-track { animation-play-state: paused; }
+  .lp-strip .card-icon { width: 44px; height: 44px; border-radius: 12px; box-shadow: var(--card-shadow); flex-shrink: 0; }
+  @keyframes lp-scroll { to { transform: translateX(-50%); } }
+  @media (prefers-reduced-motion: reduce) { .lp-strip-track { animation: none; } }
+
+  /* Footer */
+  .lp-foot { border-top: 1px solid var(--border2); }
+  .lp-foot-inner { max-width: 1080px; margin: 0 auto; padding: 20px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+  .lp-copy { color: var(--text3); font-size: 12px; }
+  .lp-socials { margin-left: auto; display: flex; gap: 4px; flex-wrap: wrap; }
+  .lp-social { display: inline-flex; align-items: center; gap: 7px; color: var(--text2); text-decoration: none; font-size: 13px;
+    font-weight: 500; padding: 7px 10px; border-radius: var(--rs); }
+  .lp-social:hover { color: var(--text); background: var(--surface); }
+  .lp-social svg { width: 16px; height: 16px; }
+
+  @media (max-width: 520px) {
+    .lp-head-right .lp-link { display: none; }
+    .lp-main { padding-top: 24px; }
+    .lp-foot-inner { flex-direction: column-reverse; align-items: center; text-align: center; }
+    .lp-socials { margin-left: 0; justify-content: center; }
+  }
+</style>
 </head>
 <body>
 
-<nav class="topnav">
-  <div class="topnav-inner">
-    <button class="menu-btn" onclick="toggleSidebar()" aria-label="Open categories">&#9776;</button>
-    <div class="nav-brand">
-      <div class="nav-logo-wrap">
-        <span id="logo-icon-emoji">🗂</span>
-        <img id="logo-icon-img" hidden style="width:100%;height:100%;object-fit:cover;border-radius:7px" alt=""/>
-      </div>
-      <span class="nav-brand-name" id="logo-text">EverythingFi</span>
+<header class="lp-head">
+  <a class="nav-brand" href="/">
+    <div class="nav-logo-wrap">
+      <span id="logo-icon-emoji">🗂</span>
+      <img id="logo-icon-img" hidden style="width:100%;height:100%;object-fit:cover;border-radius:7px" alt=""/>
     </div>
+    <span class="nav-brand-name" id="logo-text">EverythingFi</span>
+  </a>
+  <div class="lp-head-right">
+    <a class="lp-link" href="/app">Browse apps</a>
+    <button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme" aria-label="Toggle dark/light mode">
+      <span class="theme-icon">&#9790;</span>
+    </button>
+  </div>
+</header>
 
-    <div class="nav-search-wrap">
-      <span class="nav-search-icon">⌕</span>
-      <input type="text" id="search" placeholder="Search..." oninput="render()"/>
-    </div>
+<main class="lp-main">
+  <div class="lp-eyebrow" id="eyebrow" hidden><span class="lp-eyebrow-dot"></span><span id="eyebrow-text"></span></div>
+  <h1 class="lp-title" id="tagline">Every Web3 app, in one place.</h1>
+  <p class="lp-intro" id="intro">EverythingFi is a curated directory of Web3 tools: DEXs, bridges, wallets, analytics, prediction markets, AI agents and more, sorted by category so you can find what you need fast.</p>
 
-    <div class="nav-right">
-      <button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme" aria-label="Toggle dark/light mode">
-        <span class="theme-icon">&#9790;</span>
+  <div class="lp-auth">
+    <!-- Signed out -->
+    <div id="auth-out">
+      <button class="lp-btn lp-btn-primary" id="connect-btn" onclick="connectWallet()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 7V5a2 2 0 0 0-2-2H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3v3a1 1 0 0 1-1 1H5a2 2 0 0 1-2-2V5"/></svg>
+        <span id="connect-label">Connect wallet</span>
       </button>
+      <div class="lp-row">
+        <button class="lp-btn" onclick="emailSoon()">Sign up <span class="lp-soon">Soon</span></button>
+        <button class="lp-btn" onclick="emailSoon()">Log in <span class="lp-soon">Soon</span></button>
+      </div>
+    </div>
+
+    <!-- Signed in with a wallet -->
+    <div id="auth-in" hidden>
+      <div class="lp-wallet">
+        <div class="lp-wallet-avatar" id="wallet-avatar"></div>
+        <div>
+          <div class="lp-wallet-label">Connected</div>
+          <div class="lp-wallet-addr" id="wallet-addr"></div>
+        </div>
+      </div>
+      <a class="lp-btn lp-btn-primary" href="/app">Enter EverythingFi <span aria-hidden="true">→</span></a>
+      <button class="lp-text-btn" onclick="disconnectWallet()">Disconnect</button>
+    </div>
+
+    <div class="lp-note" id="note" role="status" aria-live="polite"></div>
+
+    <div id="explore-wrap">
+      <div class="lp-divider">or</div>
+      <a class="lp-explore" href="/app">Explore apps without an account <span aria-hidden="true">→</span></a>
     </div>
   </div>
-</nav>
 
-<div class="sidebar-overlay" id="sidebar-overlay" onclick="closeSidebar()"></div>
+  <div class="lp-strip" id="strip" hidden aria-hidden="true"><div class="lp-strip-track" id="strip-track"></div></div>
+</main>
 
-<div class="page-shell">
-  <div class="main-layout">
-    <nav class="sidebar" id="sidebar" aria-label="Categories"></nav>
-    <main class="content-area">
-      <div class="breadcrumb" id="breadcrumb">
-        <span class="bc-cat" id="bc-cat"></span>
-        <button class="bc-clear" onclick="setTab('All')">✕ Clear</button>
-      </div>
-      <div id="grid"></div>
-    </main>
+<footer class="lp-foot">
+  <div class="lp-foot-inner">
+    <div class="lp-copy">© <span id="year"></span> <span id="foot-name">EverythingFi</span></div>
+    <nav class="lp-socials" id="socials" aria-label="Social links"></nav>
+  </div>
+</footer>
+
+<!-- Wallet picker (shown when more than one wallet is installed) -->
+<div class="overlay" id="wallet-modal">
+  <div class="modal" style="max-width:380px">
+    <div class="modal-title">Choose a wallet</div>
+    <div class="wallet-list" id="wallet-list"></div>
+    <div class="modal-actions"><button type="button" class="btn-cancel" onclick="closePicker()">Cancel</button></div>
   </div>
 </div>
 
 <script>
-var site = { brand: {}, catOrder: [], apps: [] };
-var activeTab = 'All';
+var site = { brand: {}, landing: {}, catOrder: [], apps: [] };
 
+function $(id) { return document.getElementById(id); }
 function esc(s) {
   return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
     return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
   });
 }
-function isImage(icon) { return /^(data:|https?:|icons\/)/.test(icon || ''); }
+function store(key, val) {
+  try { if (val == null) localStorage.removeItem(key); else localStorage.setItem(key, val); } catch (e) {}
+}
+function load(key) { try { return localStorage.getItem(key); } catch (e) { return null; } }
 
-// Categories in admin-defined order, then any others alphabetically.
-function categories() {
-  var used = [];
-  site.apps.forEach(function (a) { if (used.indexOf(a.cat) < 0) used.push(a.cat); });
-  var ordered = site.catOrder.filter(function (c) { return used.indexOf(c) >= 0; });
-  var rest = used.filter(function (c) { return ordered.indexOf(c) < 0; }).sort();
-  return ordered.concat(rest);
+function note(msg, isErr) {
+  var n = $('note');
+  n.className = 'lp-note' + (isErr ? ' err' : '');
+  n.innerHTML = msg || '';
 }
 
-function filteredApps() {
-  var q = document.getElementById('search').value.trim().toLowerCase();
-  return site.apps.filter(function (a) {
-    var inCat = activeTab === 'All' || a.cat === activeTab;
-    var inQ = !q || [a.name, a.desc, a.cat].join(' ').toLowerCase().indexOf(q) >= 0;
-    return inCat && inQ;
-  });
-}
+// ── Content from data/site.json (editable in the admin page) ──
+var ICONS = {
+  x: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>',
+  docs: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></svg>',
+  telegram: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 4.3 18.7 19.4c-.2 1-.9 1.3-1.7.8l-4.8-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.3-4.9 8.9-8c.4-.3-.1-.5-.6-.2L6.5 13.2l-4.7-1.5c-1-.3-1-1 .2-1.5L20.6 3c.9-.3 1.6.2 1.3 1.3z"/></svg>',
+  discord: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.3 4.4A19.8 19.8 0 0 0 15.4 3l-.6 1.3a18.3 18.3 0 0 0-5.6 0L8.6 3a19.7 19.7 0 0 0-4.9 1.5C.6 9.1-.3 13.6.1 18.1a19.9 19.9 0 0 0 6 3l1.3-2.1a12.9 12.9 0 0 1-2-1l.5-.4a14.2 14.2 0 0 0 12.2 0l.5.4c-.6.4-1.3.7-2 1l1.3 2.1a19.8 19.8 0 0 0 6-3c.5-5.2-.9-9.7-3.6-13.7zM8 15.4c-1.2 0-2.2-1.1-2.2-2.4S6.8 10.6 8 10.6s2.2 1.1 2.2 2.4-1 2.4-2.2 2.4zm8 0c-1.2 0-2.2-1.1-2.2-2.4s1-2.4 2.2-2.4 2.2 1.1 2.2 2.4-1 2.4-2.2 2.4z"/></svg>'
+};
+var LINK_LABELS = { x: 'X', docs: 'Docs', telegram: 'Telegram', discord: 'Discord' };
 
-function renderSidebar() {
-  var out = '<div class="sidebar-section-hdr">Categories</div>';
-  out += '<button class="sidebar-all-btn' + (activeTab === 'All' ? ' active' : '') + '" data-cat="All">All Apps</button>';
-  categories().forEach(function (c) {
-    out += '<button class="cat-trigger' + (activeTab === c ? ' active' : '') + '" data-cat="' + esc(c) + '">' +
-      '<span class="cat-dot"></span><span class="cat-name">' + esc(c) + '</span></button>';
-  });
-  var sb = document.getElementById('sidebar');
-  sb.innerHTML = out;
-}
+function applySite() {
+  var b = site.brand || {};
+  var L = site.landing || {};
+  var name = b.name || 'EverythingFi';
+  $('logo-text').textContent = name;
+  $('foot-name').textContent = name;
+  document.title = name;
+  var img = $('logo-icon-img'), emoji = $('logo-icon-emoji');
+  if (b.logoImage) { img.src = b.logoImage; img.hidden = false; emoji.hidden = true; }
+  else { emoji.textContent = b.logoEmoji || '🗂'; emoji.hidden = false; img.hidden = true; }
 
-function buildCard(a) {
-  var icon = isImage(a.icon)
-    ? '<div class="card-icon"><img src="' + esc(a.icon) + '" alt="" loading="lazy"/></div>'
-    : '<div class="card-icon">' + esc(a.icon || '🔗') + '</div>';
-  return '<div class="card" tabindex="0" data-id="' + esc(a.id) + '">' +
-    '<div class="card-top">' + icon + '<span class="card-badge">' + esc(a.cat) + '</span></div>' +
-    '<div class="card-title">' + esc(a.name) + '<span class="card-arrow">&#8599;</span></div>' +
-    '<div class="card-desc">' + esc(a.desc) + '</div></div>';
-}
+  if (L.tagline) $('tagline').textContent = L.tagline;
+  if (L.intro) $('intro').textContent = L.intro;
 
-function render() {
-  renderSidebar();
-  var list = filteredApps();
-  var grid = document.getElementById('grid');
-  var bc = document.getElementById('breadcrumb');
-  bc.className = activeTab === 'All' ? 'breadcrumb' : 'breadcrumb visible';
-  document.getElementById('bc-cat').textContent = activeTab;
-
-  if (!list.length) {
-    grid.className = 'grid';
-    grid.innerHTML = '<div class="empty-state"><div class="empty-state-icon">🔍</div>' +
-      '<div class="empty-state-msg">No apps found</div>' +
-      '<div class="empty-state-sub">Try a different search or category</div></div>';
-    return;
+  var apps = site.apps || [];
+  var cats = {};
+  apps.forEach(function (a) { cats[a.cat] = 1; });
+  if (apps.length) {
+    $('eyebrow-text').textContent = apps.length + ' apps · ' + Object.keys(cats).length + ' categories';
+    $('eyebrow').hidden = false;
   }
-  if (activeTab !== 'All') {
-    grid.className = 'grid';
-    grid.innerHTML = list.map(buildCard).join('');
-    return;
+
+  // Scrolling strip of app logos (list is doubled so the loop is seamless).
+  var withImg = apps.filter(function (a) { return /^icons\//.test(a.icon || ''); }).slice(0, 18);
+  if (withImg.length >= 8) {
+    var tiles = withImg.map(function (a) {
+      return '<div class="card-icon"><img src="' + esc(a.icon) + '" alt="" loading="lazy"/></div>';
+    }).join('');
+    $('strip-track').innerHTML = tiles + tiles;
+    $('strip').hidden = false;
   }
-  // "All" view: one section per category.
-  grid.className = '';
-  grid.innerHTML = categories().map(function (cat) {
-    var apps = list.filter(function (a) { return a.cat === cat; });
-    if (!apps.length) return '';
-    return '<section class="cat-section"><div class="cat-section-hdr">' +
-      '<span class="cat-section-hdr-name">' + esc(cat) + '</span>' +
-      '<span class="cat-section-hdr-count">' + apps.length + '</span></div>' +
-      '<div class="grid">' + apps.map(buildCard).join('') + '</div></section>';
+
+  var links = L.links || {};
+  $('socials').innerHTML = ['x', 'docs', 'telegram', 'discord'].filter(function (k) {
+    return /^https:\/\//i.test(links[k] || '');
+  }).map(function (k) {
+    return '<a class="lp-social" href="' + esc(links[k]) + '" target="_blank" rel="noopener noreferrer">' +
+      ICONS[k] + '<span>' + LINK_LABELS[k] + '</span></a>';
   }).join('');
 }
 
-function setTab(cat) { activeTab = cat; closeSidebar(); render(); window.scrollTo(0, 0); }
-
-function applyBrand() {
-  var b = site.brand || {};
-  var name = b.name || 'EverythingFi';
-  document.getElementById('logo-text').textContent = name;
-  document.title = name;
-  var img = document.getElementById('logo-icon-img');
-  var emoji = document.getElementById('logo-icon-emoji');
-  if (b.logoImage) { img.src = b.logoImage; img.hidden = false; emoji.hidden = true; }
-  else { emoji.textContent = b.logoEmoji || '🗂'; emoji.hidden = false; img.hidden = true; }
+function emailSoon() {
+  note('Email accounts are coming soon. For now, connect a wallet or <a href="/app">explore without an account</a>.');
 }
 
-function launchApp(id) {
-  var app = site.apps.find(function (a) { return String(a.id) === String(id); });
-  if (app) window.open(app.url, '_blank', 'noopener,noreferrer');
-}
-
-document.getElementById('sidebar').addEventListener('click', function (e) {
-  var btn = e.target.closest('[data-cat]');
-  if (btn) setTab(btn.getAttribute('data-cat'));
+// ── Wallet connection ──
+// Wallets announce themselves through EIP-6963, so we can list each one when several are installed.
+var wallets = [];
+window.addEventListener('eip6963:announceProvider', function (e) {
+  var d = e.detail;
+  if (!d || !d.provider || !d.info) return;
+  if (!wallets.some(function (w) { return w.info.uuid === d.info.uuid; })) wallets.push(d);
 });
-document.getElementById('grid').addEventListener('click', function (e) {
-  var card = e.target.closest('.card');
-  if (card) launchApp(card.getAttribute('data-id'));
-});
-document.getElementById('grid').addEventListener('keydown', function (e) {
-  var card = e.target.closest('.card');
-  if (card && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); launchApp(card.getAttribute('data-id')); }
-});
-document.addEventListener('contextmenu', function (e) { if (e.target.closest('.card')) e.preventDefault(); });
-document.addEventListener('auxclick', function (e) { if (e.button === 1 && e.target.closest('.card')) e.preventDefault(); });
-document.addEventListener('dragstart', function (e) { if (e.target.closest('.card')) e.preventDefault(); });
+window.dispatchEvent(new Event('eip6963:requestProvider'));
 
-function toggleSidebar() {
-  document.getElementById('sidebar').classList.toggle('open');
-  document.getElementById('sidebar-overlay').classList.toggle('open');
-}
-function closeSidebar() {
-  document.getElementById('sidebar').classList.remove('open');
-  document.getElementById('sidebar-overlay').classList.remove('open');
+function shortAddr(a) { return a.slice(0, 6) + '…' + a.slice(-4); }
+function safeIcon(src) { return /^data:image\/(svg\+xml|png|jpeg|webp|gif)[;,]/.test(src || '') ? src : ''; }
+
+function showConnected(addr, icon) {
+  $('auth-out').hidden = true;
+  $('explore-wrap').hidden = true;
+  $('auth-in').hidden = false;
+  $('wallet-addr').textContent = shortAddr(addr);
+  $('wallet-addr').title = addr;
+  var src = safeIcon(icon);
+  $('wallet-avatar').innerHTML = src ? '<img alt="" src="' + esc(src) + '"/>' : '<span style="font-size:18px">👛</span>';
+  note('');
 }
 
+function showDisconnected() {
+  $('auth-out').hidden = false;
+  $('explore-wrap').hidden = false;
+  $('auth-in').hidden = true;
+}
+
+function setBusy(busy) {
+  $('connect-btn').disabled = busy;
+  $('connect-label').textContent = busy ? 'Check your wallet…' : 'Connect wallet';
+}
+
+async function connectWith(provider, icon) {
+  closePicker();
+  setBusy(true);
+  note('');
+  try {
+    var accounts = await provider.request({ method: 'eth_requestAccounts' });
+    if (!accounts || !accounts[0]) throw new Error('No account was shared.');
+    store('ef-wallet', accounts[0]);
+    store('ef-wallet-icon', icon || null);
+    showConnected(accounts[0], icon);
+  } catch (err) {
+    var rejected = err && (err.code === 4001 || /reject|denied/i.test(err.message || ''));
+    note(rejected ? 'Connection cancelled.' : 'Could not connect: ' + esc((err && err.message) || 'unknown error'), !rejected);
+  } finally {
+    setBusy(false);
+  }
+}
+
+function connectWallet() {
+  if (wallets.length > 1) return openPicker();
+  if (wallets.length === 1) return connectWith(wallets[0].provider, wallets[0].info.icon);
+  if (window.ethereum) return connectWith(window.ethereum, '');
+  // No wallet in this browser. On phones, offer to reopen the page inside the MetaMask app.
+  var mobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  var here = location.host + location.pathname;
+  note(mobile
+    ? 'No wallet found. <a href="https://metamask.app.link/dapp/' + esc(here) + '">Open in MetaMask</a> or use your wallet app\'s browser.'
+    : 'No wallet found. Install one like <a href="https://metamask.io/download/" target="_blank" rel="noopener">MetaMask</a> or <a href="https://rabby.io" target="_blank" rel="noopener">Rabby</a>, then refresh.', true);
+}
+
+function openPicker() {
+  $('wallet-list').innerHTML = wallets.map(function (w, i) {
+    var src = safeIcon(w.info.icon);
+    return '<button class="wallet-opt" data-i="' + i + '">' + (src ? '<img alt="" src="' + esc(src) + '"/>' : '<span>👛</span>') +
+      '<span>' + esc(w.info.name || 'Wallet') + '</span></button>';
+  }).join('');
+  $('wallet-modal').classList.add('open');
+}
+function closePicker() { $('wallet-modal').classList.remove('open'); }
+$('wallet-list').addEventListener('click', function (e) {
+  var b = e.target.closest('[data-i]');
+  if (b) { var w = wallets[+b.getAttribute('data-i')]; connectWith(w.provider, w.info.icon); }
+});
+$('wallet-modal').addEventListener('click', function (e) { if (e.target === this) closePicker(); });
+document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closePicker(); });
+
+async function disconnectWallet() {
+  store('ef-wallet', null);
+  store('ef-wallet-icon', null);
+  showDisconnected();
+  note('Wallet disconnected.');
+  // Ask the wallet to forget this site too, where supported. Ignore failures.
+  var p = (wallets[0] && wallets[0].provider) || window.ethereum;
+  if (p) { try { await p.request({ method: 'wallet_revokePermissions', params: [{ eth_accounts: {} }] }); } catch (e) {} }
+}
+
+// Restore a previous connection on return visits.
+(function () {
+  var saved = load('ef-wallet');
+  if (saved && /^0x[0-9a-fA-F]{40}$/.test(saved)) showConnected(saved, load('ef-wallet-icon'));
+})();
+
+// ── Theme ──
 function updateThemeIcon() {
   var dark = document.documentElement.getAttribute('data-theme') === 'dark';
   document.querySelector('.theme-icon').textContent = dark ? '☀' : '☾';
@@ -192,19 +375,16 @@ function toggleTheme() {
   var root = document.documentElement;
   var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
   root.setAttribute('data-theme', next);
-  try { localStorage.setItem('ef-theme', next); } catch (e) {}
+  store('ef-theme', next);
   updateThemeIcon();
 }
 updateThemeIcon();
+$('year').textContent = new Date().getFullYear();
 
 fetch('data/site.json', { cache: 'no-cache' })
   .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
-  .then(function (data) { site = data; applyBrand(); render(); })
-  .catch(function () {
-    document.getElementById('grid').innerHTML =
-      '<div class="empty-state"><div class="empty-state-msg">Could not load apps</div>' +
-      '<div class="empty-state-sub">Please refresh the page.</div></div>';
-  });
+  .then(function (data) { site = data; applySite(); })
+  .catch(function () { /* The default text above still shows. */ });
 </script>
 </body>
 </html>

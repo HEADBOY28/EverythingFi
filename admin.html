@@ -109,7 +109,7 @@
 <div id="admin-view" hidden>
   <nav class="topnav">
     <div class="topnav-inner">
-      <a class="nav-brand" href="/" title="View the public site" style="min-width:auto">
+      <a class="nav-brand" href="/app" title="View the public site" style="min-width:auto">
         <div class="nav-logo-wrap"><span id="nav-logo">🗂</span></div>
         <span class="nav-brand-name"><span id="nav-name">EverythingFi</span> <span style="color:var(--text3);font-weight:600">Admin</span></span>
       </a>
@@ -200,6 +200,14 @@
         <input type="text" id="b-emoji" maxlength="8" style="width:70px;background:var(--surface2);border:1.5px solid var(--border2);border-radius:var(--rs);color:var(--text);padding:6px 10px;font:inherit">
       </div>
     </div>
+    <div class="modal-title" style="font-size:14px;margin:22px 0 12px">Landing page</div>
+    <div class="field"><label for="b-tagline">Headline</label><input id="b-tagline" maxlength="120" placeholder="Every Web3 app, in one place."></div>
+    <div class="field"><label for="b-intro">Intro text</label><textarea id="b-intro" rows="4" maxlength="1200" placeholder="A short introduction to the project"></textarea></div>
+    <div class="field"><label for="b-x">X (Twitter) link</label><input id="b-x" type="url" maxlength="300" placeholder="https://x.com/yourhandle"></div>
+    <div class="field"><label for="b-docs">Docs link</label><input id="b-docs" type="url" maxlength="300" placeholder="https://docs.example.com"></div>
+    <div class="field"><label for="b-telegram">Telegram link</label><input id="b-telegram" type="url" maxlength="300" placeholder="https://t.me/yourgroup"></div>
+    <div class="field"><label for="b-discord">Discord link</label><input id="b-discord" type="url" maxlength="300" placeholder="https://discord.gg/invite"></div>
+    <p style="font-size:11px;color:var(--text3);margin-top:-6px">Leave a link empty to hide it.</p>
     <div class="modal-actions">
       <button type="button" class="btn-cancel" onclick="closeModal('brand-modal')">Cancel</button>
       <button type="submit" class="btn-save">Save</button>
@@ -511,6 +519,10 @@ function openBrand() {
   draftIcon = site.brand.logoImage || site.brand.logoEmoji || '🗂';
   $('b-emoji').value = site.brand.logoImage ? '' : (site.brand.logoEmoji || '🗂');
   showDraftIcon($('b-icon-preview'));
+  var L = site.landing || {}, links = L.links || {};
+  $('b-tagline').value = L.tagline || '';
+  $('b-intro').value = L.intro || '';
+  ['x', 'docs', 'telegram', 'discord'].forEach(function (k) { $('b-' + k).value = links[k] || ''; });
   openModal('brand-modal');
 }
 $('b-file').addEventListener('change', async function () {
@@ -528,6 +540,13 @@ $('brand-form').addEventListener('submit', function (e) {
     logoEmoji: isImg ? (site.brand.logoEmoji || '🗂') : (draftIcon || '🗂'),
     logoImage: isImg ? draftIcon : null,
   };
+  var links = {};
+  for (var k of ['x', 'docs', 'telegram', 'discord']) {
+    var v = $('b-' + k).value.trim();
+    if (v && !/^https:\/\/\S+$/i.test(v)) { alert('Links must start with https://'); $('b-' + k).focus(); return; }
+    links[k] = v;
+  }
+  site.landing = { tagline: $('b-tagline').value.trim(), intro: $('b-intro').value.trim(), links: links };
   closeModal('brand-modal'); markChanged();
 });
 

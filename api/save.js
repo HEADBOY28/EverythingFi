@@ -48,7 +48,20 @@ function validate(site) {
     logoEmoji: cleanIcon(b.logoEmoji || '🗂') || '🗂',
     logoImage: b.logoImage && ICON_PATH.test(b.logoImage) ? b.logoImage : null,
   };
-  return { brand, catOrder, apps: cleanApps };
+  const L = site.landing || {};
+  const tagline = str(L.tagline || '', 120);
+  const intro = str(L.intro || '', 1200);
+  if (tagline === null) throw new Error('Landing headline is too long');
+  if (intro === null) throw new Error('Landing intro is too long');
+  const links = {};
+  const rawLinks = L.links || {};
+  for (const [key, label] of [['x', 'X'], ['docs', 'Docs'], ['telegram', 'Telegram'], ['discord', 'Discord']]) {
+    const v = str(rawLinks[key] || '', 300);
+    if (v && !/^https:\/\/[^\s"'<>]+$/i.test(v)) throw new Error(label + ' link must be a full https:// address');
+    links[key] = v || '';
+  }
+  const landing = { tagline, intro, links };
+  return { brand, landing, catOrder, apps: cleanApps };
 }
 
 function decodeUploads(uploads, site) {
