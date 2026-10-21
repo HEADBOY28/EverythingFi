@@ -88,8 +88,8 @@ function filteredApps() {
   });
 }
 
-// Layout matches the original Claude web version: "Browse" sidebar, one flat grid,
-// category shown as a small tag at the bottom of each card in the "All" view.
+// Layout follows the original Claude web version: "Browse" sidebar, cards with the
+// category as a small tag at the bottom; "All tools" is grouped into category sections.
 function renderSidebar() {
   var out = '<div class="sidebar-label">Browse</div>';
   out += '<button class="sidebar-all-btn' + (activeTab === 'All' ? ' active' : '') + '" data-cat="All"><span>All tools</span></button>';
@@ -121,15 +121,28 @@ function render() {
   var bc = document.getElementById('breadcrumb');
   bc.className = activeTab === 'All' ? 'breadcrumb' : 'breadcrumb visible';
   document.getElementById('bc-cat').textContent = activeTab;
-  grid.className = 'grid';
 
   if (!list.length) {
+    grid.className = 'grid';
     grid.innerHTML = '<div class="empty-state"><div class="empty-state-icon">🔍</div>' +
       '<div class="empty-state-msg">No apps found</div>' +
       '<div class="empty-state-sub">Try a different search or category</div></div>';
     return;
   }
-  grid.innerHTML = list.map(buildCard).join('');
+  if (activeTab !== 'All') {
+    grid.className = 'grid';
+    grid.innerHTML = list.map(buildCard).join('');
+    return;
+  }
+  // "All tools" view: one section per category, with a header (no counts).
+  grid.className = '';
+  grid.innerHTML = cats.map(function (cat) {
+    var apps = list.filter(function (a) { return a.cat === cat; });
+    if (!apps.length) return '';
+    return '<section class="cat-section"><div class="cat-section-hdr">' +
+      '<span class="cat-section-hdr-name">' + esc(cat) + '</span></div>' +
+      '<div class="grid">' + apps.map(buildCard).join('') + '</div></section>';
+  }).join('');
 }
 
 function setTab(cat) { activeTab = cat; closeSidebar(); render(); window.scrollTo(0, 0); }
