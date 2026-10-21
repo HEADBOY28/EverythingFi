@@ -139,7 +139,7 @@
 
 <main class="lp-main">
   <div class="lp-eyebrow" id="eyebrow" hidden><span class="lp-eyebrow-dot"></span><span id="eyebrow-text"></span></div>
-  <h1 class="lp-title" id="tagline">Every Web3 app, in one place.</h1>
+  <h1 class="lp-title" id="tagline">The app for all apps.</h1>
   <p class="lp-intro" id="intro">EverythingFi is a curated directory of Web3 tools: DEXs, bridges, wallets, analytics, prediction markets, AI agents and more, sorted by category so you can find what you need fast.</p>
 
   <div class="lp-auth">
@@ -149,10 +149,6 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 7V5a2 2 0 0 0-2-2H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3v3a1 1 0 0 1-1 1H5a2 2 0 0 1-2-2V5"/></svg>
         <span id="connect-label">Connect wallet</span>
       </button>
-      <div class="lp-row">
-        <button class="lp-btn" onclick="emailSoon()">Sign up <span class="lp-soon">Soon</span></button>
-        <button class="lp-btn" onclick="emailSoon()">Log in <span class="lp-soon">Soon</span></button>
-      </div>
     </div>
 
     <!-- Signed in with a wallet -->
@@ -263,10 +259,6 @@ function applySite() {
     return '<a class="lp-social" href="' + esc(links[k]) + '" target="_blank" rel="noopener noreferrer">' +
       ICONS[k] + '<span>' + LINK_LABELS[k] + '</span></a>';
   }).join('');
-}
-
-function emailSoon() {
-  note('Email accounts are coming soon. For now, connect a wallet or <a href="/app">explore without an account</a>.');
 }
 
 // ── Wallet connection ──

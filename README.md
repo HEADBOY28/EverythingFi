@@ -4,7 +4,7 @@ A Web3 app directory: 191 apps organized by category, with a password-protected 
 
 ## How it works
 
-- `index.html`: the landing page at `/`. Intro text, Connect wallet, Sign up / Log in (coming soon) and social links. The headline, intro and links are edited in the admin page under **Branding**.
+- `index.html`: the landing page at `/`. Intro text, Connect wallet and social links. The headline, intro and links are edited in the admin page under **Branding**.
 - `app.html`: the public, read-only app directory at `/app`. It loads the apps from `data/site.json`.
 - `admin.html`: the admin page at `/admin`. Sign in with your username and password to add, edit and delete apps, manage categories and branding.
 - `api/`: small Vercel serverless functions for login and publishing. When you click **Publish** in the admin page, the changes are committed to this repo and Vercel redeploys the site automatically.
