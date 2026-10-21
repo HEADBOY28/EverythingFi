@@ -88,56 +88,48 @@ function filteredApps() {
   });
 }
 
+// Layout matches the original Claude web version: "Browse" sidebar, one flat grid,
+// category shown as a small tag at the bottom of each card in the "All" view.
 function renderSidebar() {
-  var out = '<div class="sidebar-section-hdr">Categories</div>';
-  out += '<button class="sidebar-all-btn' + (activeTab === 'All' ? ' active' : '') + '" data-cat="All">All Apps</button>';
+  var out = '<div class="sidebar-label">Browse</div>';
+  out += '<button class="sidebar-all-btn' + (activeTab === 'All' ? ' active' : '') + '" data-cat="All"><span>All tools</span></button>';
   categories().forEach(function (c) {
-    out += '<button class="cat-trigger' + (activeTab === c ? ' active' : '') + '" data-cat="' + esc(c) + '">' +
-      '<span class="cat-dot"></span><span class="cat-name">' + esc(c) + '</span></button>';
+    out += '<div class="cat-item"><button class="cat-trigger' + (activeTab === c ? ' active' : '') + '" data-cat="' + esc(c) + '">' +
+      '<span class="cat-name">' + esc(c) + '</span></button></div>';
   });
-  var sb = document.getElementById('sidebar');
-  sb.innerHTML = out;
+  document.getElementById('sidebar').innerHTML = out;
 }
 
-function buildCard(a) {
+function buildCard(a, i) {
+  var bg = 'background:rgba(79,142,247,0.1)';
   var icon = isImage(a.icon)
-    ? '<div class="card-icon"><img src="' + esc(a.icon) + '" alt="" loading="lazy"/></div>'
-    : '<div class="card-icon">' + esc(a.icon || '🔗') + '</div>';
-  return '<div class="card" tabindex="0" data-id="' + esc(a.id) + '">' +
-    '<div class="card-top">' + icon + '<span class="card-badge">' + esc(a.cat) + '</span></div>' +
+    ? '<div class="card-icon" style="' + bg + ';padding:0;overflow:hidden"><img src="' + esc(a.icon) + '" alt="" loading="lazy"/></div>'
+    : '<div class="card-icon" style="' + bg + '">' + esc(a.icon || '🔗') + '</div>';
+  return '<div class="card" tabindex="0" data-id="' + esc(a.id) + '" style="animation-delay:' + Math.min(i * 0.05, 0.6).toFixed(2) + 's">' +
+    '<div class="card-top">' + icon + '</div>' +
     '<div class="card-title">' + esc(a.name) + '<span class="card-arrow">&#8599;</span></div>' +
-    '<div class="card-desc">' + esc(a.desc) + '</div></div>';
+    '<div class="card-desc">' + esc(a.desc) + '</div>' +
+    (activeTab === 'All' ? '<div class="card-tag">' + esc(a.cat) + '</div>' : '') + '</div>';
 }
 
 function render() {
   renderSidebar();
-  var list = filteredApps();
+  var cats = categories();
+  // Keep apps in category order, as the sidebar lists them.
+  var list = filteredApps().sort(function (x, y) { return cats.indexOf(x.cat) - cats.indexOf(y.cat); });
   var grid = document.getElementById('grid');
   var bc = document.getElementById('breadcrumb');
   bc.className = activeTab === 'All' ? 'breadcrumb' : 'breadcrumb visible';
   document.getElementById('bc-cat').textContent = activeTab;
+  grid.className = 'grid';
 
   if (!list.length) {
-    grid.className = 'grid';
     grid.innerHTML = '<div class="empty-state"><div class="empty-state-icon">🔍</div>' +
       '<div class="empty-state-msg">No apps found</div>' +
       '<div class="empty-state-sub">Try a different search or category</div></div>';
     return;
   }
-  if (activeTab !== 'All') {
-    grid.className = 'grid';
-    grid.innerHTML = list.map(buildCard).join('');
-    return;
-  }
-  // "All" view: one section per category.
-  grid.className = '';
-  grid.innerHTML = categories().map(function (cat) {
-    var apps = list.filter(function (a) { return a.cat === cat; });
-    if (!apps.length) return '';
-    return '<section class="cat-section"><div class="cat-section-hdr">' +
-      '<span class="cat-section-hdr-name">' + esc(cat) + '</span></div>' +
-      '<div class="grid">' + apps.map(buildCard).join('') + '</div></section>';
-  }).join('');
+  grid.innerHTML = list.map(buildCard).join('');
 }
 
 function setTab(cat) { activeTab = cat; closeSidebar(); render(); window.scrollTo(0, 0); }
