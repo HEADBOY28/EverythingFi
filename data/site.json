@@ -1,0 +1,1560 @@
+{
+ "brand": {
+  "name": "EverythingFi",
+  "logoEmoji": "🗂",
+  "logoImage": null
+ },
+ "catOrder": [
+  "Productivity",
+  "Dex Aggregator",
+  "Prediction Market",
+  "Research Blogs",
+  "News",
+  "Data & Analytics",
+  "Security",
+  "Wallet",
+  "Bridges",
+  "Perp Dex",
+  "Social Analytics",
+  "Bounty",
+  "Trenches",
+  "DeFi",
+  "NFTs",
+  "AI Agents",
+  "CEX",
+  "Educational",
+  "Launchpad",
+  "Ramps",
+  "Utilities"
+ ],
+ "apps": [
+  {
+   "id": 1,
+   "name": "Notion",
+   "url": "https://notion.so",
+   "desc": "All-in-one workspace for notes, docs & wikis.",
+   "cat": "Productivity",
+   "icon": "icons/1.jpg"
+  },
+  {
+   "id": 2,
+   "name": "GitHub",
+   "url": "https://github.com",
+   "desc": "Version control and code collaboration platform.",
+   "cat": "Productivity",
+   "icon": "icons/2.jpg"
+  },
+  {
+   "id": 3,
+   "name": "ChatGPT",
+   "url": "https://chat.openai.com",
+   "desc": "AI-powered chat and writing assistant.",
+   "cat": "Productivity",
+   "icon": "icons/3.jpg"
+  },
+  {
+   "id": 4,
+   "name": "Linear",
+   "url": "https://linear.app",
+   "desc": "Fast, streamlined project management for teams.",
+   "cat": "Productivity",
+   "icon": "icons/4.jpg"
+  },
+  {
+   "id": 5,
+   "name": "Lunar Finance",
+   "url": "https://lunarfinance.io",
+   "desc": "DeFi aggregator for optimal swap routes.",
+   "cat": "Dex Aggregator",
+   "icon": "icons/5.jpg"
+  },
+  {
+   "id": 6,
+   "name": "Jumper",
+   "url": "https://jumper.xyz",
+   "desc": "Cross-chain bridge and swap aggregator.",
+   "cat": "Dex Aggregator",
+   "icon": "icons/6.jpg"
+  },
+  {
+   "id": 7,
+   "name": "Llama Swap",
+   "url": "https://swap.defillama.com",
+   "desc": "DefiLlama meta-aggregator for best swap rates.",
+   "cat": "Dex Aggregator",
+   "icon": "icons/7.jpg"
+  },
+  {
+   "id": 8,
+   "name": "Polymarket",
+   "url": "https://polymarket.com",
+   "desc": "Decentralized prediction market platform.",
+   "cat": "Prediction Market",
+   "icon": "icons/8.jpg"
+  },
+  {
+   "id": 9,
+   "name": "Kalshi",
+   "url": "https://kalshi.com",
+   "desc": "Regulated event contracts and prediction markets.",
+   "cat": "Prediction Market",
+   "icon": "icons/9.jpg"
+  },
+  {
+   "id": 10,
+   "name": "Polymarket Analytics",
+   "url": "https://polymarketanalytics.com",
+   "desc": "Analytics and insights for Polymarket traders.",
+   "cat": "Prediction Market",
+   "icon": "icons/10.jpg"
+  },
+  {
+   "id": 11,
+   "name": "Polysights",
+   "url": "https://www.polysights.xyz",
+   "desc": "Prediction market data and sentiment tools.",
+   "cat": "Prediction Market",
+   "icon": "icons/11.jpg"
+  },
+  {
+   "id": 12,
+   "name": "Messari",
+   "url": "https://messari.io",
+   "desc": "Crypto research, data and market intelligence.",
+   "cat": "Research Blogs",
+   "icon": "icons/12.jpg"
+  },
+  {
+   "id": 13,
+   "name": "Four Pillars",
+   "url": "https://4pillars.io/en",
+   "desc": "In-depth crypto research and protocol analysis.",
+   "cat": "Research Blogs",
+   "icon": "icons/13.jpg"
+  },
+  {
+   "id": 14,
+   "name": "Delphi Digital",
+   "url": "https://delphidigital.io",
+   "desc": "Institutional-grade crypto research and insights.",
+   "cat": "Research Blogs",
+   "icon": "icons/14.jpg"
+  },
+  {
+   "id": 15,
+   "name": "Blockworks Research",
+   "url": "https://blockworksresearch.com",
+   "desc": "Professional crypto market research and analysis.",
+   "cat": "Research Blogs",
+   "icon": "icons/15.jpg"
+  },
+  {
+   "id": 16,
+   "name": "blocmates",
+   "url": "https://www.blocmates.com",
+   "desc": "Accessible DeFi and crypto research for all levels.",
+   "cat": "Research Blogs",
+   "icon": "icons/16.jpg"
+  },
+  {
+   "id": 17,
+   "name": "a16z crypto",
+   "url": "https://a16zcrypto.com",
+   "desc": "Research and insights from a16z crypto fund.",
+   "cat": "Research Blogs",
+   "icon": "icons/17.jpg"
+  },
+  {
+   "id": 18,
+   "name": "Nansen Research",
+   "url": "https://app.nansen.ai",
+   "desc": "On-chain analytics and smart money research.",
+   "cat": "Research Blogs",
+   "icon": "icons/18.jpg"
+  },
+  {
+   "id": 19,
+   "name": "Binance Research",
+   "url": "https://research.binance.com",
+   "desc": "Crypto market research from Binance analysts.",
+   "cat": "Research Blogs",
+   "icon": "icons/19.jpg"
+  },
+  {
+   "id": 20,
+   "name": "Paradigm",
+   "url": "https://www.paradigm.xyz",
+   "desc": "Research and writing from Paradigm crypto fund.",
+   "cat": "Research Blogs",
+   "icon": "icons/20.jpg"
+  },
+  {
+   "id": 21,
+   "name": "Beluga",
+   "url": "https://heybeluga.com",
+   "desc": "Curated crypto research and DeFi insights.",
+   "cat": "Research Blogs",
+   "icon": "icons/21.jpg"
+  },
+  {
+   "id": 22,
+   "name": "The Block",
+   "url": "https://www.theblock.co",
+   "desc": "Crypto news, research and data platform.",
+   "cat": "Research Blogs",
+   "icon": "icons/22.jpg"
+  },
+  {
+   "id": 23,
+   "name": "Cryptonary",
+   "url": "https://cryptonary.com",
+   "desc": "Crypto education and investment research.",
+   "cat": "Research Blogs",
+   "icon": "icons/23.jpg"
+  },
+  {
+   "id": 24,
+   "name": "Milk Road",
+   "url": "https://milkroad.com",
+   "desc": "Daily crypto newsletter and market insights.",
+   "cat": "Research Blogs",
+   "icon": "icons/24.jpg"
+  },
+  {
+   "id": 25,
+   "name": "WatcherGuru",
+   "url": "https://watcher.guru",
+   "desc": "Real-time crypto news and market alerts.",
+   "cat": "News",
+   "icon": "icons/25.jpg"
+  },
+  {
+   "id": 26,
+   "name": "DEGEN NEWS",
+   "url": "https://x.com/DegenerateNews",
+   "desc": "Crypto degen news and alpha on X.",
+   "cat": "News",
+   "icon": "icons/26.jpg"
+  },
+  {
+   "id": 27,
+   "name": "Tree News",
+   "url": "https://news.treeofalpha.com",
+   "desc": "Aggregated crypto news from Tree of Alpha.",
+   "cat": "News",
+   "icon": "icons/27.jpg"
+  },
+  {
+   "id": 28,
+   "name": "db",
+   "url": "https://x.dbnews.com",
+   "desc": "Fast crypto news feed and market updates.",
+   "cat": "News",
+   "icon": "icons/28.jpg"
+  },
+  {
+   "id": 29,
+   "name": "zoomer",
+   "url": "https://x.com/zoomerfied",
+   "desc": "Crypto commentary and market takes on X.",
+   "cat": "News",
+   "icon": "icons/29.jpg"
+  },
+  {
+   "id": 30,
+   "name": "DefiLlama",
+   "url": "https://defillama.com",
+   "desc": "DeFi TVL tracker and protocol analytics.",
+   "cat": "Data & Analytics",
+   "icon": "icons/30.jpg"
+  },
+  {
+   "id": 31,
+   "name": "Token Terminal",
+   "url": "https://tokenterminal.com",
+   "desc": "Fundamental financial metrics for crypto protocols.",
+   "cat": "Data & Analytics",
+   "icon": "icons/31.jpg"
+  },
+  {
+   "id": 32,
+   "name": "Tokenomist",
+   "url": "https://tokenomist.ai",
+   "desc": "Token unlock schedules and vesting analytics.",
+   "cat": "Data & Analytics",
+   "icon": "icons/32.jpg"
+  },
+  {
+   "id": 33,
+   "name": "Flipside",
+   "url": "https://flipsidecrypto.xyz",
+   "desc": "Community-powered blockchain analytics platform.",
+   "cat": "Data & Analytics",
+   "icon": "icons/33.jpg"
+  },
+  {
+   "id": 34,
+   "name": "Artemis",
+   "url": "https://www.artemis.ai",
+   "desc": "Crypto sector analytics and benchmarking.",
+   "cat": "Data & Analytics",
+   "icon": "icons/34.jpg"
+  },
+  {
+   "id": 35,
+   "name": "Nansen",
+   "url": "https://app.nansen.ai",
+   "desc": "On-chain analytics and smart money tracking.",
+   "cat": "Data & Analytics",
+   "icon": "icons/35.jpg"
+  },
+  {
+   "id": 36,
+   "name": "Arkham",
+   "url": "https://intel.arkm.com",
+   "desc": "Blockchain intelligence and wallet tracking.",
+   "cat": "Data & Analytics",
+   "icon": "icons/36.jpg"
+  },
+  {
+   "id": 37,
+   "name": "DEX Screener",
+   "url": "https://dexscreener.com",
+   "desc": "Real-time DEX pair and token analytics.",
+   "cat": "Data & Analytics",
+   "icon": "icons/37.jpg"
+  },
+  {
+   "id": 38,
+   "name": "0xScope",
+   "url": "https://ai.0xscope.com",
+   "desc": "AI-powered on-chain intelligence and analytics.",
+   "cat": "Data & Analytics",
+   "icon": "icons/38.jpg"
+  },
+  {
+   "id": 39,
+   "name": "Dune",
+   "url": "https://dune.com",
+   "desc": "Community-built blockchain data dashboards.",
+   "cat": "Data & Analytics",
+   "icon": "icons/39.jpg"
+  },
+  {
+   "id": 40,
+   "name": "Bubblemaps",
+   "url": "https://bubblemaps.io",
+   "desc": "Visual token supply and wallet distribution maps.",
+   "cat": "Data & Analytics",
+   "icon": "icons/40.jpg"
+  },
+  {
+   "id": 41,
+   "name": "SoSoValue",
+   "url": "https://sosovalue.com",
+   "desc": "Crypto ETF and market data analytics.",
+   "cat": "Data & Analytics",
+   "icon": "icons/41.jpg"
+  },
+  {
+   "id": 42,
+   "name": "DEXTools",
+   "url": "https://www.dextools.io/app",
+   "desc": "DEX trading tools, charts and token info.",
+   "cat": "Data & Analytics",
+   "icon": "icons/42.jpg"
+  },
+  {
+   "id": 43,
+   "name": "CoinGecko",
+   "url": "https://www.coingecko.com",
+   "desc": "Comprehensive crypto price and market data.",
+   "cat": "Data & Analytics",
+   "icon": "icons/43.jpg"
+  },
+  {
+   "id": 44,
+   "name": "CoinMarketCap",
+   "url": "https://coinmarketcap.com",
+   "desc": "Global crypto market caps and price tracking.",
+   "cat": "Data & Analytics",
+   "icon": "icons/44.jpg"
+  },
+  {
+   "id": 45,
+   "name": "Etherscan",
+   "url": "https://etherscan.io",
+   "desc": "Ethereum blockchain explorer and analytics.",
+   "cat": "Data & Analytics",
+   "icon": "icons/45.jpg"
+  },
+  {
+   "id": 46,
+   "name": "L2BEAT",
+   "url": "https://l2beat.com",
+   "desc": "Ethereum Layer 2 risk and TVL analytics.",
+   "cat": "Data & Analytics",
+   "icon": "icons/46.jpg"
+  },
+  {
+   "id": 47,
+   "name": "RWA.io",
+   "url": "https://app.rwa.io/overview",
+   "desc": "Real world assets on-chain data and analytics.",
+   "cat": "Data & Analytics",
+   "icon": "icons/47.jpg"
+  },
+  {
+   "id": 48,
+   "name": "DePIN Scan",
+   "url": "https://depinscan.io",
+   "desc": "Decentralized physical infrastructure network data.",
+   "cat": "Data & Analytics",
+   "icon": "icons/48.jpg"
+  },
+  {
+   "id": 49,
+   "name": "Bitcoin Layers",
+   "url": "https://www.bitcoinlayers.org",
+   "desc": "Bitcoin Layer 2 and scaling solution tracker.",
+   "cat": "Data & Analytics",
+   "icon": "icons/49.jpg"
+  },
+  {
+   "id": 50,
+   "name": "NFTScan",
+   "url": "https://www.nftscan.com",
+   "desc": "Multi-chain NFT explorer and analytics.",
+   "cat": "Data & Analytics",
+   "icon": "icons/50.jpg"
+  },
+  {
+   "id": 51,
+   "name": "DeBank",
+   "url": "https://debank.com",
+   "desc": "DeFi portfolio tracker and wallet analytics.",
+   "cat": "Data & Analytics",
+   "icon": "icons/51.jpg"
+  },
+  {
+   "id": 52,
+   "name": "CryptoRank",
+   "url": "https://cryptorank.io",
+   "desc": "Crypto fundraising, vesting and market analytics.",
+   "cat": "Data & Analytics",
+   "icon": "icons/52.jpg"
+  },
+  {
+   "id": 53,
+   "name": "RootData",
+   "url": "https://www.rootdata.com",
+   "desc": "Crypto project and investor database.",
+   "cat": "Data & Analytics",
+   "icon": "icons/53.jpg"
+  },
+  {
+   "id": 54,
+   "name": "kolscan",
+   "url": "https://kolscan.io",
+   "desc": "KOL wallet tracking and influence analytics.",
+   "cat": "Data & Analytics",
+   "icon": "icons/54.jpg"
+  },
+  {
+   "id": 55,
+   "name": "Blockworks",
+   "url": "https://blockworks.com",
+   "desc": "Crypto media, events and market intelligence.",
+   "cat": "Data & Analytics",
+   "icon": "icons/55.jpg"
+  },
+  {
+   "id": 56,
+   "name": "Glassnode",
+   "url": "https://glassnode.com",
+   "desc": "On-chain market intelligence and analytics.",
+   "cat": "Data & Analytics",
+   "icon": "icons/56.jpg"
+  },
+  {
+   "id": 57,
+   "name": "CoinGlass",
+   "url": "https://www.coinglass.com",
+   "desc": "Crypto derivatives and liquidation data.",
+   "cat": "Data & Analytics",
+   "icon": "icons/57.jpg"
+  },
+  {
+   "id": 58,
+   "name": "Revoke Cash",
+   "url": "https://revoke.cash",
+   "desc": "Revoke token approvals to protect your wallet.",
+   "cat": "Security",
+   "icon": "icons/58.jpg"
+  },
+  {
+   "id": 59,
+   "name": "Pocketuniverse",
+   "url": "https://www.pocketuniverse.app",
+   "desc": "Transaction simulation and phishing protection.",
+   "cat": "Security",
+   "icon": "icons/59.jpg"
+  },
+  {
+   "id": 60,
+   "name": "PeckShield",
+   "url": "https://peckshield.com",
+   "desc": "Blockchain security audits and threat monitoring.",
+   "cat": "Security",
+   "icon": "icons/60.jpg"
+  },
+  {
+   "id": 61,
+   "name": "Phantom",
+   "url": "https://phantom.com",
+   "desc": "Multi-chain crypto wallet for Solana and more.",
+   "cat": "Wallet",
+   "icon": "icons/61.jpg"
+  },
+  {
+   "id": 62,
+   "name": "Rabby Wallet",
+   "url": "https://rabby.io",
+   "desc": "Smart EVM wallet with risk scanning.",
+   "cat": "Wallet",
+   "icon": "icons/62.jpg"
+  },
+  {
+   "id": 63,
+   "name": "MetaMask",
+   "url": "https://metamask.io",
+   "desc": "The most widely used Ethereum browser wallet.",
+   "cat": "Wallet",
+   "icon": "icons/63.jpg"
+  },
+  {
+   "id": 64,
+   "name": "Keplr",
+   "url": "https://www.keplr.app",
+   "desc": "Interchain wallet for the Cosmos ecosystem.",
+   "cat": "Wallet",
+   "icon": "icons/64.jpg"
+  },
+  {
+   "id": 65,
+   "name": "Xverse",
+   "url": "https://www.xverse.app",
+   "desc": "Bitcoin and Stacks wallet for Web3.",
+   "cat": "Wallet",
+   "icon": "icons/65.jpg"
+  },
+  {
+   "id": 66,
+   "name": "Slush Wallet",
+   "url": "https://slush.app",
+   "desc": "Clean and simple crypto wallet experience.",
+   "cat": "Wallet",
+   "icon": "icons/66.jpg"
+  },
+  {
+   "id": 67,
+   "name": "Stargate Finance",
+   "url": "https://stargate.finance",
+   "desc": "Omnichain native asset bridge protocol.",
+   "cat": "Bridges",
+   "icon": "icons/67.jpg"
+  },
+  {
+   "id": 68,
+   "name": "Hyperliquid",
+   "url": "https://app.hyperliquid.xyz/trade",
+   "desc": "High-performance on-chain perpetuals exchange.",
+   "cat": "Perp Dex",
+   "icon": "icons/68.jpg"
+  },
+  {
+   "id": 69,
+   "name": "tread.fi",
+   "url": "https://www.tread.fi",
+   "desc": "Perp trading analytics and position tracking.",
+   "cat": "Perp Dex",
+   "icon": "icons/69.jpg"
+  },
+  {
+   "id": 70,
+   "name": "Santiment",
+   "url": "https://app.santiment.net",
+   "desc": "Crypto social and on-chain sentiment analytics.",
+   "cat": "Social Analytics",
+   "icon": "icons/70.jpg"
+  },
+  {
+   "id": 71,
+   "name": "LunarCrush",
+   "url": "https://lunarcrush.com",
+   "desc": "Social media analytics and crypto sentiment.",
+   "cat": "Social Analytics",
+   "icon": "icons/71.jpg"
+  },
+  {
+   "id": 72,
+   "name": "Twitter Score",
+   "url": "https://twitterscore.io",
+   "desc": "Crypto Twitter influence and engagement scoring.",
+   "cat": "Social Analytics",
+   "icon": "icons/72.jpg"
+  },
+  {
+   "id": 73,
+   "name": "Moni",
+   "url": "https://getmoni.io/discover",
+   "desc": "Smart money social tracking and alpha discovery.",
+   "cat": "Social Analytics",
+   "icon": "icons/73.jpg"
+  },
+  {
+   "id": 74,
+   "name": "Kaito AI",
+   "url": "https://kaito.ai",
+   "desc": "AI-powered crypto information and attention tracking.",
+   "cat": "Social Analytics",
+   "icon": "icons/74.jpg"
+  },
+  {
+   "id": 75,
+   "name": "Sorsa App",
+   "url": "https://sorsa.io",
+   "desc": "Social analytics and crypto community insights.",
+   "cat": "Social Analytics",
+   "icon": "icons/75.jpg"
+  },
+  {
+   "id": 76,
+   "name": "Immunefi",
+   "url": "https://immunefi.com",
+   "desc": "Largest crypto bug bounty platform.",
+   "cat": "Bounty",
+   "icon": "icons/76.jpg"
+  },
+  {
+   "id": 77,
+   "name": "Scribble",
+   "url": "https://scribble.network",
+   "desc": "Crypto research and writing bounties.",
+   "cat": "Bounty",
+   "icon": "icons/77.jpg"
+  },
+  {
+   "id": 78,
+   "name": "Code4rena",
+   "url": "https://code4rena.com",
+   "desc": "Competitive smart contract security audits.",
+   "cat": "Bounty",
+   "icon": "icons/78.jpg"
+  },
+  {
+   "id": 79,
+   "name": "Sherlock",
+   "url": "https://sherlock.xyz",
+   "desc": "Smart contract audit and exploit coverage.",
+   "cat": "Bounty",
+   "icon": "icons/79.jpg"
+  },
+  {
+   "id": 80,
+   "name": "Rova",
+   "url": "https://rova.xyz/tasks",
+   "desc": "Crypto tasks and bounty earning platform.",
+   "cat": "Bounty",
+   "icon": "icons/80.jpg"
+  },
+  {
+   "id": 81,
+   "name": "Superteam Earn",
+   "url": "https://superteam.fun/earn",
+   "desc": "Solana ecosystem grants and bounties.",
+   "cat": "Bounty",
+   "icon": "icons/81.jpg"
+  },
+  {
+   "id": 82,
+   "name": "Wizz",
+   "url": "https://wizzhq.xyz",
+   "desc": "Crypto quests, tasks and earning platform.",
+   "cat": "Bounty",
+   "icon": "icons/82.jpg"
+  },
+  {
+   "id": 83,
+   "name": "First Dollar",
+   "url": "https://app.firstdollar.money",
+   "desc": "Earn your first dollar through crypto tasks.",
+   "cat": "Bounty",
+   "icon": "icons/83.jpg"
+  },
+  {
+   "id": 84,
+   "name": "Axiom",
+   "url": "https://axiom.trade",
+   "desc": "On-chain trading terminal for degens.",
+   "cat": "Trenches",
+   "icon": "icons/84.jpg"
+  },
+  {
+   "id": 85,
+   "name": "Pumpfun",
+   "url": "https://pump.fun",
+   "desc": "Launch and trade meme coins on Solana.",
+   "cat": "Trenches",
+   "icon": "icons/85.jpg"
+  },
+  {
+   "id": 86,
+   "name": "Stablewatch",
+   "url": "https://www.stablewatch.io",
+   "desc": "Stablecoin monitoring and depeg alerts.",
+   "cat": "DeFi",
+   "icon": "icons/86.jpg"
+  },
+  {
+   "id": 87,
+   "name": "Aave",
+   "url": "https://aave.com",
+   "desc": "Decentralized liquidity and lending protocol.",
+   "cat": "DeFi",
+   "icon": "icons/87.jpg"
+  },
+  {
+   "id": 88,
+   "name": "Safe",
+   "url": "https://app.safe.global/",
+   "desc": "Multi-sig wallet and platform.",
+   "cat": "Wallet",
+   "icon": "icons/88.jpg"
+  },
+  {
+   "id": 89,
+   "name": "Typefully",
+   "url": "https://typefully.com/",
+   "desc": "Assist creators to write, schedule & publish on X.",
+   "cat": "Productivity",
+   "icon": "icons/89.jpg"
+  },
+  {
+   "id": 90,
+   "name": "Ethena",
+   "url": "https://ethena.fi/",
+   "desc": "Decentralized synthetic dollar protocol that turns crypto market structure into a yield-bearing dollar system.",
+   "cat": "DeFi",
+   "icon": "icons/90.jpg"
+  },
+  {
+   "id": 91,
+   "name": "Cielo",
+   "url": "https://app.cielo.finance/",
+   "desc": "Track everything. Trade anything on Solana + Base. Onchain discovery & wallet intelligence for EVM, Bitcoin, Hyperliquid, Polymarket + advanced Solana trading.",
+   "cat": "Data & Analytics",
+   "icon": "icons/91.jpg"
+  },
+  {
+   "id": 92,
+   "name": "Summ",
+   "url": "https://app.summ.com/",
+   "desc": "Crypto Tax Calculator.",
+   "cat": "Data & Analytics",
+   "icon": "icons/92.jpg"
+  },
+  {
+   "id": 93,
+   "name": "QuillBot",
+   "url": "https://quillbot.com/",
+   "desc": "AI-powered writing tool that helps users paraphrase, improve, and refine text for clarity and style.",
+   "cat": "Productivity",
+   "icon": "icons/93.jpg"
+  },
+  {
+   "id": 94,
+   "name": "GMGN.Ai",
+   "url": "https://gmgn.ai/",
+   "desc": "Fast Trade, Copy Trade & AFK Automation.",
+   "cat": "Trenches",
+   "icon": "icons/94.jpg"
+  },
+  {
+   "id": 95,
+   "name": "Chainlist",
+   "url": "https://chainlist.org/",
+   "desc": "Add networks, Chains, RPCs.",
+   "cat": "Utilities",
+   "icon": "icons/95.jpg"
+  },
+  {
+   "id": 96,
+   "name": "Binance",
+   "url": "https://binance.com/",
+   "desc": "The world's leading blockchain ecosystem and digital asset exchange.",
+   "cat": "CEX",
+   "icon": "icons/96.jpg"
+  },
+  {
+   "id": 97,
+   "name": "Sol-Incinerator",
+   "url": "https://sol-incinerator.com/",
+   "desc": "Reclaim SOL by closing your token accounts.",
+   "cat": "Utilities",
+   "icon": "icons/97.jpg"
+  },
+  {
+   "id": 98,
+   "name": "ScamSniffer",
+   "url": "https://www.scamsniffer.io/extension/",
+   "desc": "More safer browsing and signing experience.",
+   "cat": "Security",
+   "icon": "icons/98.jpg"
+  },
+  {
+   "id": 99,
+   "name": "Railgun",
+   "url": "https://railgun.org/",
+   "desc": "Hold assets and interact with DeFi privately, no bridge needed.",
+   "cat": "DeFi",
+   "icon": "icons/99.jpg"
+  },
+  {
+   "id": 100,
+   "name": "Whale Alert",
+   "url": "https://x.com/whale_alert",
+   "desc": "Live reporting on large and interesting blockchain transactions as they happen.",
+   "cat": "News",
+   "icon": "icons/100.jpg"
+  },
+  {
+   "id": 101,
+   "name": "Strategic ETH Reserve",
+   "url": "https://www.strategicethreserve.xyz/",
+   "desc": "The Strategic ETH Reserve.",
+   "cat": "Utilities",
+   "icon": "icons/101.jpg"
+  },
+  {
+   "id": 102,
+   "name": "Jito",
+   "url": "https://www.jito.network/",
+   "desc": "Market Layer of Solana.",
+   "cat": "DeFi",
+   "icon": "icons/102.jpg"
+  },
+  {
+   "id": 103,
+   "name": "DefiLlama Search",
+   "url": "https://search.defillama.com/",
+   "desc": "The fastest way to find safe, official links for thousands of crypto projects.",
+   "cat": "Utilities",
+   "icon": "icons/103.jpg"
+  },
+  {
+   "id": 104,
+   "name": "Pendle",
+   "url": "https://www.pendle.finance/",
+   "desc": "Yield trading platform.",
+   "cat": "DeFi",
+   "icon": "icons/104.jpg"
+  },
+  {
+   "id": 105,
+   "name": "Kamino",
+   "url": "https://kamino.com/lend",
+   "desc": "Credit infrastructure on Solana.",
+   "cat": "DeFi",
+   "icon": "icons/105.jpg"
+  },
+  {
+   "id": 106,
+   "name": "Curve Finance",
+   "url": "https://www.curve.finance/",
+   "desc": "Home of stablecoins.",
+   "cat": "DeFi",
+   "icon": "icons/106.jpg"
+  },
+  {
+   "id": 107,
+   "name": "Alchemy",
+   "url": "https://www.alchemy.com/",
+   "desc": "Onchain developer platform. Build with blockchain RPC APIs, smart wallets and rollups.",
+   "cat": "Utilities",
+   "icon": "icons/107.jpg"
+  },
+  {
+   "id": 108,
+   "name": "Balancer",
+   "url": "https://balancer.fi/",
+   "desc": "Programmable AMM infrastructure.",
+   "cat": "DeFi",
+   "icon": "icons/108.jpg"
+  },
+  {
+   "id": 109,
+   "name": "Frontrun",
+   "url": "https://www.frontrun.pro/",
+   "desc": "Extension wallet for pro onchain traders with speed and advanced tooling.",
+   "cat": "Wallet",
+   "icon": "icons/109.jpg"
+  },
+  {
+   "id": 110,
+   "name": "Meteora",
+   "url": "https://www.meteora.ag/",
+   "desc": "Building world-class dynamic liquidity pools for the biggest LP community.",
+   "cat": "DeFi",
+   "icon": "icons/110.jpg"
+  },
+  {
+   "id": 111,
+   "name": "Fomo",
+   "url": "https://fomo.family/",
+   "desc": "Social trading app.",
+   "cat": "Trenches",
+   "icon": "icons/111.jpg"
+  },
+  {
+   "id": 112,
+   "name": "LearnWEB3",
+   "url": "https://learnweb3.io/",
+   "desc": "Become a web3 developer today for free!",
+   "cat": "Educational",
+   "icon": "icons/112.jpg"
+  },
+  {
+   "id": 113,
+   "name": "Moonpay",
+   "url": "https://www.moonpay.com/",
+   "desc": "The easy way for people and AI to buy, sell, and use crypto.",
+   "cat": "Ramps",
+   "icon": "icons/113.jpg"
+  },
+  {
+   "id": 114,
+   "name": "Trojan",
+   "url": "https://trojan.com/",
+   "desc": "Experience the fastest onchain execution with unmatched rewards.",
+   "cat": "Trenches",
+   "icon": "icons/114.jpg"
+  },
+  {
+   "id": 115,
+   "name": "Moonshot",
+   "url": "https://moonshot.com/",
+   "desc": "Buy, Sell, and Create Memes with Apple Pay.",
+   "cat": "Trenches",
+   "icon": "icons/115.jpg"
+  },
+  {
+   "id": 116,
+   "name": "Near Intents",
+   "url": "https://intents.near.org/",
+   "desc": "The universal trading protocol for onchain markets and tokenized assets.",
+   "cat": "Bridges",
+   "icon": "icons/116.jpg"
+  },
+  {
+   "id": 117,
+   "name": "Ledger",
+   "url": "https://shop.ledger.com/",
+   "desc": "Hardware wallet for securely storing crypto offline, keeping private keys safe and transactions protected.",
+   "cat": "Wallet",
+   "icon": "icons/117.jpg"
+  },
+  {
+   "id": 118,
+   "name": "Tornado Cash",
+   "url": "https://x.com/TornadoCash",
+   "desc": "A fully decentralized protocol for private transactions on Ethereum.",
+   "cat": "DeFi",
+   "icon": "icons/118.jpg"
+  },
+  {
+   "id": 119,
+   "name": "Etherfi",
+   "url": "https://www.ether.fi/",
+   "desc": "Ethereum staking and restaking protocol that lets you earn yield while keeping full control of your assets.",
+   "cat": "DeFi",
+   "icon": "icons/119.jpg"
+  },
+  {
+   "id": 120,
+   "name": "MetaDAO",
+   "url": "https://www.metadao.fi/",
+   "desc": "Raise money while putting ownership into the hands of your early users and believers.",
+   "cat": "Launchpad",
+   "icon": "icons/120.jpg"
+  },
+  {
+   "id": 121,
+   "name": "Legion",
+   "url": "https://app.legion.cc?homie=04A42448",
+   "desc": "Early access to the best ICOs and pre-token sales.",
+   "cat": "Launchpad",
+   "icon": "icons/121.jpg"
+  },
+  {
+   "id": 122,
+   "name": "Buidlpad",
+   "url": "https://buidlpad.com/",
+   "desc": "Launch the future.",
+   "cat": "Launchpad",
+   "icon": "icons/122.jpg"
+  },
+  {
+   "id": 123,
+   "name": "Echo",
+   "url": "https://echo.xyz/",
+   "desc": "Invest in early-stage cryptocurrency projects and new startups alongside notable angels.",
+   "cat": "Launchpad",
+   "icon": "icons/123.jpg"
+  },
+  {
+   "id": 124,
+   "name": "Coinlist",
+   "url": "https://coinlist.co/",
+   "desc": "Buy the newest tokens before they list anywhere else.",
+   "cat": "Launchpad",
+   "icon": "icons/124.jpg"
+  },
+  {
+   "id": 125,
+   "name": "Morpho",
+   "url": "https://app.morpho.org/",
+   "desc": "The universal lending network.",
+   "cat": "DeFi",
+   "icon": "icons/125.jpg"
+  },
+  {
+   "id": 126,
+   "name": "Bybit",
+   "url": "https://www.bybit.com/en/",
+   "desc": "The ultimate crypto exchange and Web3 platform.",
+   "cat": "CEX",
+   "icon": "icons/126.jpg"
+  },
+  {
+   "id": 127,
+   "name": "Mayan Finance",
+   "url": "https://mayan.finance/",
+   "desc": "Swap any asset to any chain instantly.",
+   "cat": "Bridges",
+   "icon": "icons/127.jpg"
+  },
+  {
+   "id": 128,
+   "name": "MEXC",
+   "url": "https://www.mexc.com/0fee-infinite?utm_source=socialmedia&utm_medium=MEXC&utm_campaign=brand_upgrading",
+   "desc": "Your 0-Fee Gateway to infinite opportunities. Trade Crypto, Gold, Silver, Oil, Prediction Markets and US Stocks.",
+   "cat": "CEX",
+   "icon": "icons/128.jpg"
+  },
+  {
+   "id": 129,
+   "name": "OKX",
+   "url": "https://www.okx.com/en-eu",
+   "desc": "A new alternative for your crypto journey.",
+   "cat": "CEX",
+   "icon": "icons/129.jpg"
+  },
+  {
+   "id": 130,
+   "name": "Squid",
+   "url": "https://www.squidrouter.com/",
+   "desc": "Seamless execution across 100+ networks.",
+   "cat": "Bridges",
+   "icon": "icons/130.jpg"
+  },
+  {
+   "id": 131,
+   "name": "Maestro",
+   "url": "https://t.me/maestro?start=r-linktreebot",
+   "desc": "The ultimate Telegram trading suite for DeFi.",
+   "cat": "Trenches",
+   "icon": "icons/131.jpg"
+  },
+  {
+   "id": 132,
+   "name": "Compound Finance",
+   "url": "https://compound.finance/",
+   "desc": "Decentralized lending protocol where users earn interest or borrow against crypto assets.",
+   "cat": "DeFi",
+   "icon": "icons/132.jpg"
+  },
+  {
+   "id": 133,
+   "name": "Whale Sniper",
+   "url": "https://x.com/Whale_Sniper",
+   "desc": "Get notified when unusual activity is spotted on exchanges.",
+   "cat": "News",
+   "icon": "icons/133.png"
+  },
+  {
+   "id": 134,
+   "name": "CowSwap",
+   "url": "https://swap.cow.fi?ref=COW-307465",
+   "desc": "Decentralized trading protocol that matches orders directly to get better prices and lower fees.",
+   "cat": "DeFi",
+   "icon": "icons/134.jpg"
+  },
+  {
+   "id": 135,
+   "name": "Bankless",
+   "url": "https://www.bankless.com/",
+   "desc": "Media and education platform for the Bankless movement in crypto.",
+   "cat": "Research Blogs",
+   "icon": "icons/135.jpg"
+  },
+  {
+   "id": 136,
+   "name": "Bithumb",
+   "url": "https://www.bithumb.com/",
+   "desc": "Digital Asset Platform based in Korea.",
+   "cat": "CEX",
+   "icon": "icons/136.jpg"
+  },
+  {
+   "id": 137,
+   "name": "Upbit Korea",
+   "url": "https://www.upbit.com/",
+   "desc": "The Most Trusted Global Digital Asset Exchange.",
+   "cat": "CEX",
+   "icon": "icons/137.jpg"
+  },
+  {
+   "id": 138,
+   "name": "Printr",
+   "url": "https://app.printr.money/",
+   "desc": "Launch a token on any chain in one click.",
+   "cat": "Trenches",
+   "icon": "icons/138.jpg"
+  },
+  {
+   "id": 139,
+   "name": "Antidrain",
+   "url": "https://www.antidrain.dev/",
+   "desc": "Rescue airdrops, recover staked tokens & save NFTs from compromised wallets. One atomic transaction.",
+   "cat": "Utilities",
+   "icon": "icons/139.png"
+  },
+  {
+   "id": 140,
+   "name": "Batch Revoke",
+   "url": "https://batch-revoker.vercel.app/",
+   "desc": "Revoke multiple tokens in single tx and single approval in each chain.",
+   "cat": "Security",
+   "icon": "icons/140.svg"
+  },
+  {
+   "id": 141,
+   "name": "Zapper",
+   "url": "https://zapper.xyz/",
+   "desc": "Track your DeFi and NFT portfolio.",
+   "cat": "Data & Analytics",
+   "icon": "icons/141.jpg"
+  },
+  {
+   "id": 142,
+   "name": "Debridge",
+   "url": "https://debridge.com/",
+   "desc": "Trade any opportunity, ahead of the curve. Trustless by design.",
+   "cat": "Bridges",
+   "icon": "icons/142.jpg"
+  },
+  {
+   "id": 143,
+   "name": "Virtuals Protocol",
+   "url": "https://www.virtuals.io/",
+   "desc": "A hybrid, intelligent economy where humans and agents coordinate to achieve sovereignty.",
+   "cat": "AI Agents",
+   "icon": "icons/143.jpg"
+  },
+  {
+   "id": 144,
+   "name": "Aixbt",
+   "url": "https://aixbt.tech/",
+   "desc": "Real-time market intelligence platform analyzing social intel, on-chain data, and other sources to surface emerging trends.",
+   "cat": "AI Agents",
+   "icon": "icons/144.jpg"
+  },
+  {
+   "id": 145,
+   "name": "Certificate Search",
+   "url": "https://crt.sh/",
+   "desc": "Verify domain names, organization names and SSL certificates.",
+   "cat": "Utilities",
+   "icon": "icons/145.jpg"
+  },
+  {
+   "id": 146,
+   "name": "Blowfish",
+   "url": "https://blowfish.xyz/",
+   "desc": "Transaction warnings and malicious dApp protection on 10+ chains.",
+   "cat": "Security",
+   "icon": "icons/146.jpg"
+  },
+  {
+   "id": 147,
+   "name": "Honeypot.is",
+   "url": "https://honeypot.is/",
+   "desc": "Check if a coin or token is a honeypot before buying.",
+   "cat": "Security",
+   "icon": "icons/147.png"
+  },
+  {
+   "id": 148,
+   "name": "GoPlus Security",
+   "url": "https://gopluslabs.io/en",
+   "desc": "Security layer for checking token risks, malicious addresses, and dApp risk signals.",
+   "cat": "Security",
+   "icon": "icons/148.jpg"
+  },
+  {
+   "id": 149,
+   "name": "Ethos Network",
+   "url": "https://app.ethos.network/",
+   "desc": "Reputation and credibility for crypto, driven by peer-to-peer reviews.",
+   "cat": "Social Analytics",
+   "icon": "icons/149.jpg"
+  },
+  {
+   "id": 150,
+   "name": "Aegisweb3",
+   "url": "https://aegisweb3.com/",
+   "desc": "Detects scams and token phishing domains.",
+   "cat": "Security",
+   "icon": "icons/150.png"
+  },
+  {
+   "id": 151,
+   "name": "Wallchain",
+   "url": "https://quacks.app/?ref=NDIDI_GRAM",
+   "desc": "Social network for creators to examine and monetize their brand.",
+   "cat": "Social Analytics",
+   "icon": "icons/151.jpg"
+  },
+  {
+   "id": 152,
+   "name": "Lighter",
+   "url": "https://app.lighter.xyz/",
+   "desc": "Trade digital assets with low costs and low latency on Ethereum L2 with custom ZK circuits.",
+   "cat": "Perp Dex",
+   "icon": "icons/152.jpg"
+  },
+  {
+   "id": 153,
+   "name": "Discord",
+   "url": "https://discord.com/",
+   "desc": "Communication platform for text, voice, and video chat.",
+   "cat": "Productivity",
+   "icon": "icons/153.png"
+  },
+  {
+   "id": 154,
+   "name": "TradingView",
+   "url": "https://www.tradingview.com/",
+   "desc": "Financial charting and market analysis platform for traders and investors.",
+   "cat": "Data & Analytics",
+   "icon": "icons/154.jpg"
+  },
+  {
+   "id": 155,
+   "name": "Uniswap",
+   "url": "https://app.uniswap.org/",
+   "desc": "Buy and sell crypto on Ethereum and 18+ other chains.",
+   "cat": "DeFi",
+   "icon": "icons/155.jpg"
+  },
+  {
+   "id": 156,
+   "name": "Telegram",
+   "url": "https://telegram.org/",
+   "desc": "Cloud-based messaging platform for chat, voice calls, and large communities.",
+   "cat": "Productivity",
+   "icon": "icons/156.jpg"
+  },
+  {
+   "id": 157,
+   "name": "OpenSea",
+   "url": "https://opensea.io/",
+   "desc": "Multichain NFT marketplace.",
+   "cat": "NFTs",
+   "icon": "icons/157.jpg"
+  },
+  {
+   "id": 158,
+   "name": "Rollup.wtf",
+   "url": "https://rollup.wtf/",
+   "desc": "Tracks the performance of Ethereum Layer 2 rollups.",
+   "cat": "Utilities",
+   "icon": "icons/158.svg"
+  },
+  {
+   "id": 159,
+   "name": "Fear & Greed Index",
+   "url": "https://alternative.me/crypto/fear-and-greed-index/",
+   "desc": "The Fear and Greed Index for Bitcoin and other large cryptocurrencies.",
+   "cat": "Utilities",
+   "icon": "icons/159.png"
+  },
+  {
+   "id": 160,
+   "name": "PolyCop",
+   "url": "https://polycop.fun/leaderboard",
+   "desc": "Smart Money Trading Bot on Polymarket.",
+   "cat": "Prediction Market",
+   "icon": "icons/160.jpg"
+  },
+  {
+   "id": 161,
+   "name": "Mimix",
+   "url": "https://app.mimix.xyz/",
+   "desc": "Verifiable ad network for organic content.",
+   "cat": "Bounty",
+   "icon": "icons/161.jpg"
+  },
+  {
+   "id": 162,
+   "name": "WalletConnect",
+   "url": "https://walletconnect.com/",
+   "desc": "Largest network of digital wallets.",
+   "cat": "Wallet",
+   "icon": "icons/162.jpg"
+  },
+  {
+   "id": 163,
+   "name": "Fixed Float",
+   "url": "https://ff.io/?ref=cry43atb",
+   "desc": "Fully automatic cryptocurrency exchange with Lightning Network support.",
+   "cat": "Utilities",
+   "icon": "icons/163.jpg"
+  },
+  {
+   "id": 164,
+   "name": "Sunrise",
+   "url": "https://sunrise.xyz/",
+   "desc": "Solana asset gateway connecting cross-chain assets to liquid Solana-native markets.",
+   "cat": "DeFi",
+   "icon": "icons/164.jpg"
+  },
+  {
+   "id": 165,
+   "name": "xStocks",
+   "url": "https://defi.xstocks.fi/points?ref=HEADBOY",
+   "desc": "Over 100 tokenized stocks and ETFs available onchain and on centralized exchanges.",
+   "cat": "DeFi",
+   "icon": "icons/165.jpg"
+  },
+  {
+   "id": 166,
+   "name": "Veilo",
+   "url": "https://www.veilo.network/",
+   "desc": "All-in-one Solana privacy app.",
+   "cat": "Wallet",
+   "icon": "icons/166.jpg"
+  },
+  {
+   "id": 167,
+   "name": "Gibwork",
+   "url": "https://app.gib.work/?ref=gibwork",
+   "desc": "Create work, take on work, and get paid in crypto.",
+   "cat": "Bounty",
+   "icon": "icons/167.jpg"
+  },
+  {
+   "id": 168,
+   "name": "Kairos",
+   "url": "https://app.kairos.trade/",
+   "desc": "Prediction Market Trading Terminal.",
+   "cat": "Prediction Market",
+   "icon": "icons/168.jpg"
+  },
+  {
+   "id": 169,
+   "name": "Luma",
+   "url": "https://luma.com/home",
+   "desc": "Delightful events platform for hosting and discovering events.",
+   "cat": "Productivity",
+   "icon": "icons/169.jpg"
+  },
+  {
+   "id": 170,
+   "name": "Shillz",
+   "url": "https://www.shillz.app/",
+   "desc": "Community Rewards Platform.",
+   "cat": "Bounty",
+   "icon": "icons/170.jpg"
+  },
+  {
+   "id": 171,
+   "name": "Aerodrome",
+   "url": "https://aerodrome.finance/",
+   "desc": "The central trading and liquidity marketplace on Base.",
+   "cat": "DeFi",
+   "icon": "icons/171.jpg"
+  },
+  {
+   "id": 172,
+   "name": "BaseApp",
+   "url": "https://base.app/",
+   "desc": "Trade, earn, predict, and chat with friends or agents.",
+   "cat": "DeFi",
+   "icon": "icons/172.jpg"
+  },
+  {
+   "id": 173,
+   "name": "Marketcapof",
+   "url": "https://marketcapof.com/",
+   "desc": "Explore the potential price of your favorite crypto or stock.",
+   "cat": "Utilities",
+   "icon": "icons/173.jpg"
+  },
+  {
+   "id": 174,
+   "name": "Jupiter",
+   "url": "https://jup.ag/",
+   "desc": "Solana's leading liquidity hub for swaps, trading, and capital management across the ecosystem.",
+   "cat": "DeFi",
+   "icon": "icons/174.jpg"
+  },
+  {
+   "id": 175,
+   "name": "BagsApp",
+   "url": "https://bags.fm/",
+   "desc": "Launch, Trade, Earn, and Discover the Next Big Thing.",
+   "cat": "Trenches",
+   "icon": "icons/175.jpg"
+  },
+  {
+   "id": 176,
+   "name": "Birdeye",
+   "url": "https://birdeye.so/",
+   "desc": "All-in-one trading data tool with real-time charts, smart money flows, and rich historical data.",
+   "cat": "Data & Analytics",
+   "icon": "icons/176.jpg"
+  },
+  {
+   "id": 177,
+   "name": "Bankr",
+   "url": "https://bankr.bot/terminal",
+   "desc": "Build an AI agent and launch a token.",
+   "cat": "Trenches",
+   "icon": "icons/177.jpg"
+  },
+  {
+   "id": 178,
+   "name": "Metaplex",
+   "url": "https://www.metaplex.com/",
+   "desc": "Discover, trade, and launch tokens on Solana.",
+   "cat": "Launchpad",
+   "icon": "icons/178.jpg"
+  },
+  {
+   "id": 179,
+   "name": "Alphagate",
+   "url": "https://alphagate.io/",
+   "desc": "Discovering crypto projects before they go mainstream.",
+   "cat": "Data & Analytics",
+   "icon": "icons/179.svg"
+  },
+  {
+   "id": 180,
+   "name": "Backpack",
+   "url": "https://backpack.exchange/",
+   "desc": "Your brokerage, your exchange, your money.",
+   "cat": "Perp Dex",
+   "icon": "icons/180.jpg"
+  },
+  {
+   "id": 181,
+   "name": "Upshift",
+   "url": "https://www.upshift.finance/",
+   "desc": "Institutional vaults for Earn, RWAs, PayFi and more. Non-custodial.",
+   "cat": "DeFi",
+   "icon": "icons/181.jpg"
+  },
+  {
+   "id": 182,
+   "name": "Magic Eden",
+   "url": "https://magiceden.io/",
+   "desc": "The home of all collectibles on Solana and multichain.",
+   "cat": "NFTs",
+   "icon": "icons/182.png"
+  },
+  {
+   "id": 183,
+   "name": "Hedgey Finance",
+   "url": "https://hedgey.finance/",
+   "desc": "Token vesting, lockups, grants, and distributions for teams, investors, and community.",
+   "cat": "DeFi",
+   "icon": "icons/183.jpg"
+  },
+  {
+   "id": 184,
+   "name": "Garden",
+   "url": "https://garden.finance/",
+   "desc": "The new standard for Bitcoin rails.",
+   "cat": "Bridges",
+   "icon": "icons/184.jpg"
+  },
+  {
+   "id": 185,
+   "name": "Bulk",
+   "url": "https://early.bulk.trade/deposit?ref=HEADBOY",
+   "desc": "One Exchange. Infinite Markets.",
+   "cat": "Perp Dex",
+   "icon": "icons/185.jpg"
+  },
+  {
+   "id": 186,
+   "name": "Bullpen",
+   "url": "https://bullpen.fi/",
+   "desc": "Trade Polymarket, Hyperliquid, and Solana from one interface.",
+   "cat": "DeFi",
+   "icon": "icons/186.jpg"
+  },
+  {
+   "id": 187,
+   "name": "World",
+   "url": "https://world.xyz/",
+   "desc": "The Solana prediction market.",
+   "cat": "Prediction Market",
+   "icon": "icons/187.jpg"
+  },
+  {
+   "id": 188,
+   "name": "OpenAI",
+   "url": "https://openai.com/",
+   "desc": "AI research and deployment company building advanced models and tools for useful artificial intelligence.",
+   "cat": "Productivity",
+   "icon": "icons/188.jpg"
+  },
+  {
+   "id": 189,
+   "name": "QuantAI",
+   "url": "https://tryquant.io/",
+   "desc": "AI-powered trading platform combining chat-based execution, automation, and analytics.",
+   "cat": "AI Agents",
+   "icon": "icons/189.jpg"
+  },
+  {
+   "id": 190,
+   "name": "Pharos Watch",
+   "url": "https://pharos.watch/about/",
+   "desc": "Monitors 364 stablecoins with live reserve feeds, depeg warnings, and a public blacklist tracker.",
+   "cat": "Security",
+   "icon": "icons/190.jpg"
+  },
+  {
+   "id": 191,
+   "name": "Merkl",
+   "url": "https://merkl.xyz/",
+   "desc": "Calculates yield and rewards earned onchain and distributes them to your wallet.",
+   "cat": "DeFi",
+   "icon": "icons/191.jpg"
+  }
+ ]
+}

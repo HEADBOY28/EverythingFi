@@ -1,30 +1,31 @@
 # EverythingFi 🌐
 
-A self-contained Web3 app directory — 191 apps, one file, no backend.
+A Web3 app directory: 191 apps organized by category, with a password-protected admin page.
 
-## What is this?
+## How it works
 
-EverythingFi is a single-page Web3 directory that organizes the best tools and platforms across the DeFi, NFT, and broader crypto ecosystem. Built as a single `index.html` file with zero dependencies.
+- `index.html`: the public, read-only site. It loads the apps from `data/site.json`.
+- `admin.html`: the admin page at `/admin`. Sign in with your username and password to add, edit and delete apps, manage categories and branding.
+- `api/`: small Vercel serverless functions for login and publishing. When you click **Publish** in the admin page, the changes are committed to this repo and Vercel redeploys the site automatically.
+- `icons/`: app logos.
 
-## Features
+## Setup on Vercel
 
-- 📁 **191 Web3 apps** organized by category
-- 🔍 **Filter by category** — DeFi, NFTs, Security, Analytics, Perp Dex, Utilities, Productivity, and more
-- 🖼️ **Embedded logos** — all app logos are base64-encoded, no external requests
-- ⚡ **Zero dependencies** — pure HTML, CSS, and vanilla JS
-- 📱 **Responsive** — works on desktop and mobile
+Add these in **Vercel → Project → Settings → Environment Variables**, then redeploy:
 
-## Categories
+| Name | Value |
+| --- | --- |
+| `ADMIN_USERNAME` | Your admin username |
+| `ADMIN_PASSWORD` | A long, unique password |
+| `SESSION_SECRET` | A long random string (e.g. run `openssl rand -hex 32`) |
+| `GITHUB_TOKEN` | A fine-grained GitHub token with **Contents: Read and write** on this repo only |
+| `GITHUB_REPO` | `HEADBOY28/EverythingFi` (optional, this is the default) |
 
-DeFi · NFTs · Perp Dex · Security · Data & Analytics · Social Analytics · Utilities · Productivity · and more
+Credentials never appear in the code. The admin page only works on Vercel (not GitHub Pages), because it needs the `api/` functions.
 
-## Usage
+## Local preview
 
-Just open `index.html` in any browser. No install, no build step, no backend.
-
-## Live Site
-
-🔗 [headboy28.github.io/EverythingFi](https://headboy28.github.io/EverythingFi)
+Run `python3 -m http.server` in this folder and open http://localhost:8000. Opening `index.html` directly will not load the apps.
 
 ---
 
