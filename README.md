@@ -1,4 +1,4 @@
-# EverythingFi 🌐
+# Jabiru 🌐
 
 A Web3 app directory: apps organized by category, with a password-protected admin page.
 

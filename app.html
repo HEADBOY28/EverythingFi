@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>EverythingFi</title>
+<title>Jabiru</title>
+<link rel="icon" type="image/png" href="/icons/favicon.png"/>
+<link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet"/>
@@ -23,12 +25,13 @@
 <nav class="topnav">
   <div class="topnav-inner">
     <button class="menu-btn" onclick="toggleSidebar()" aria-label="Open categories">&#9776;</button>
-    <a class="nav-brand" href="/" title="Home">
-      <div class="nav-logo-wrap">
-        <span id="logo-icon-emoji">🗂</span>
-        <img id="logo-icon-img" hidden style="width:100%;height:100%;object-fit:cover;border-radius:7px" alt=""/>
+    <a class="nav-brand use-wordmark" href="/" title="Home">
+      <div class="nav-logo-wrap is-img" id="logo-wrap">
+        <span id="logo-icon-emoji" hidden>🗂</span>
+        <img id="logo-icon-img" src="icons/jabiru-mark.png" alt=""/>
       </div>
-      <span class="nav-brand-name" id="logo-text">EverythingFi</span>
+      <span class="nav-wordmark" aria-hidden="true"></span>
+      <span class="nav-brand-name" id="logo-text">Jabiru</span>
     </a>
 
     <div class="nav-search-wrap">
@@ -149,13 +152,16 @@ function setTab(cat) { activeTab = cat; closeSidebar(); render(); window.scrollT
 
 function applyBrand() {
   var b = site.brand || {};
-  var name = b.name || 'EverythingFi';
+  var name = b.name || 'Jabiru';
   document.getElementById('logo-text').textContent = name;
   document.title = name;
   var img = document.getElementById('logo-icon-img');
   var emoji = document.getElementById('logo-icon-emoji');
   if (b.logoImage) { img.src = b.logoImage; img.hidden = false; emoji.hidden = true; }
   else { emoji.textContent = b.logoEmoji || '🗂'; emoji.hidden = false; img.hidden = true; }
+  document.getElementById('logo-wrap').classList.toggle('is-img', !!b.logoImage);
+  // Show the drawn wordmark while the site is called Jabiru; otherwise show the name as text.
+  document.querySelector('.nav-brand').classList.toggle('use-wordmark', name.trim().toLowerCase() === 'jabiru');
 }
 
 function launchApp(id) {

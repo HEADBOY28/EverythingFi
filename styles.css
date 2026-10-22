@@ -145,6 +145,20 @@ body{
   color:var(--text);letter-spacing:-0.01em;
 }
 
+/* Image logo: show it as-is (no orange tile behind it) */
+.nav-logo-wrap.is-img{background:none;box-shadow:none;border-radius:50%;}
+.nav-logo-wrap.is-img img,#nav-logo img{width:100%;height:100%;object-fit:contain;display:block;}
+#nav-logo{display:contents;}
+
+/* Wordmark: the brand's drawn "Jabiru" lettering, coloured with the theme text colour */
+.nav-wordmark{
+  display:none;height:19px;aspect-ratio:370/96;flex-shrink:0;background:var(--text);
+  -webkit-mask:url(icons/jabiru-wordmark.png) no-repeat left center/contain;
+  mask:url(icons/jabiru-wordmark.png) no-repeat left center/contain;
+}
+.use-wordmark .nav-wordmark{display:block;}
+.use-wordmark .nav-brand-name{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
+
 /* Search */
 .nav-search-wrap{
   flex:1;min-width:0;max-width:440px;

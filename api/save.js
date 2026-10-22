@@ -44,7 +44,7 @@ function validate(site) {
   const catOrder = [...new Set(site.catOrder.map((c) => str(c, 60)).filter(Boolean))];
   const b = site.brand || {};
   const brand = {
-    name: str(b.name, 40) || 'EverythingFi',
+    name: str(b.name, 40) || 'Jabiru',
     logoEmoji: cleanIcon(b.logoEmoji || '🗂') || '🗂',
     logoImage: b.logoImage && ICON_PATH.test(b.logoImage) ? b.logoImage : null,
   };
