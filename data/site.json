@@ -1565,6 +1565,14 @@
    "desc": "Calculates yield and rewards earned onchain and distributes them to your wallet.",
    "cat": "DeFi",
    "icon": "icons/191.jpg"
+  },
+  {
+   "id": 192,
+   "name": "Claude",
+   "url": "https://claude.ai",
+   "desc": "AI assistant by Anthropic for writing, research, coding & analysis.",
+   "cat": "Productivity",
+   "icon": "icons/192.jpg"
   }
  ]
 }
