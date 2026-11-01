@@ -1573,6 +1573,38 @@
    "desc": "AI assistant by Anthropic for writing, research, coding & analysis.",
    "cat": "Productivity",
    "icon": "icons/192.jpg"
+  },
+  {
+   "id": 193,
+   "name": "Proxima",
+   "url": "https://x.com/JoinProxima",
+   "desc": "Trade new tokens fast in the Solana trenches.",
+   "cat": "Trenches",
+   "icon": "icons/193.jpg"
+  },
+  {
+   "id": 194,
+   "name": "10x",
+   "url": "https://x.com/try10x",
+   "desc": "Trade majors and lowcaps on leverage.",
+   "cat": "Perp Dex",
+   "icon": "icons/194.jpg"
+  },
+  {
+   "id": 195,
+   "name": "Rugcheck",
+   "url": "https://rugcheck.xyz",
+   "desc": "Solana's most trusted anti-rug tool.",
+   "cat": "Utilities",
+   "icon": "icons/195.jpg"
+  },
+  {
+   "id": 196,
+   "name": "Ultrasound Money",
+   "url": "https://ultrasound.money",
+   "desc": "Track ETH burn and supply.",
+   "cat": "Utilities",
+   "icon": "icons/196.jpg"
   }
  ]
 }
