@@ -1577,15 +1577,15 @@
   {
    "id": 193,
    "name": "Proxima",
-   "url": "https://x.com/JoinProxima",
-   "desc": "Trade new tokens fast in the Solana trenches.",
+   "url": "https://proxima.tools",
+   "desc": "All-in-one infrastructure for launching and managing tokens.",
    "cat": "Trenches",
    "icon": "icons/193.jpg"
   },
   {
    "id": 194,
    "name": "10x",
-   "url": "https://x.com/try10x",
+   "url": "https://10x.gg",
    "desc": "Trade majors and lowcaps on leverage.",
    "cat": "Perp Dex",
    "icon": "icons/194.jpg"
