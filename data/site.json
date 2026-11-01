@@ -1613,6 +1613,14 @@
    "desc": "Solana yield exchange: trade interest rates, hedge yield and earn with automated vaults.",
    "cat": "DeFi",
    "icon": "icons/197.jpg"
+  },
+  {
+   "id": 198,
+   "name": "MaxyTools",
+   "url": "https://maxy.tools/tiermaker",
+   "desc": "Tier list maker: rank 379+ Web3 projects from S to F and export as PNG.",
+   "cat": "Utilities",
+   "icon": "icons/198.jpg"
   }
  ]
 }
