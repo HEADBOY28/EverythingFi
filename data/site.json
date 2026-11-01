@@ -1605,6 +1605,14 @@
    "desc": "Track ETH burn and supply.",
    "cat": "Utilities",
    "icon": "icons/196.jpg"
+  },
+  {
+   "id": 197,
+   "name": "Exponent",
+   "url": "https://app.exponent.finance/",
+   "desc": "Solana yield exchange: trade interest rates, hedge yield and earn with automated vaults.",
+   "cat": "DeFi",
+   "icon": "icons/197.jpg"
   }
  ]
 }
