@@ -1621,6 +1621,14 @@
    "desc": "Tier list maker: rank 379+ Web3 projects from S to F and export as PNG.",
    "cat": "Utilities",
    "icon": "icons/198.jpg"
+  },
+  {
+   "id": 199,
+   "name": "Velo",
+   "url": "https://velo.xyz/",
+   "desc": "Faster, easier crypto data: markets, news and trading in one place.",
+   "cat": "Data & Analytics",
+   "icon": "icons/199.jpg"
   }
  ]
 }
