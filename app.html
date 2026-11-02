@@ -53,10 +53,6 @@
   <div class="main-layout">
     <nav class="sidebar" id="sidebar" aria-label="Categories"></nav>
     <main class="content-area">
-      <div class="breadcrumb" id="breadcrumb">
-        <span class="bc-cat" id="bc-cat"></span>
-        <button class="bc-clear" onclick="setTab('All')">✕ Clear</button>
-      </div>
       <div id="grid"></div>
     </main>
   </div>
@@ -111,44 +107,134 @@ function buildCard(a, i) {
   return '<div class="card" tabindex="0" data-id="' + esc(a.id) + '" style="animation-delay:' + Math.min(i * 0.05, 0.6).toFixed(2) + 's">' +
     '<div class="card-top">' + icon + '</div>' +
     '<div class="card-title">' + esc(a.name) + '<span class="card-arrow">&#8599;</span></div>' +
-    '<div class="card-desc">' + esc(a.desc) + '</div>' +
-    (activeTab === 'All' ? '<div class="card-tag">' + esc(a.cat) + '</div>' : '') + '</div>';
+    '<div class="card-desc">' + esc(a.desc) + '</div></div>';
 }
 
+// One line per folder. A category without an entry here gets a generic line.
+var CAT_DESC = {
+  'Productivity': 'Everyday tools for writing, planning, coding and staying in touch.',
+  'Dex Aggregator': 'Route swaps across DEXs for the best price.',
+  'Prediction Market': 'Trade on the outcome of real-world events.',
+  'Research Blogs': 'Reports, deep dives and long-form crypto research.',
+  'News': 'Headlines, alerts and breaking stories from across crypto.',
+  'Data & Analytics': 'Charts, dashboards, token data and on-chain analytics.',
+  'Security': 'Scanners, revokers and monitors that keep your funds safe.',
+  'Wallet': 'Store, send and manage your crypto.',
+  'Bridges': 'Move assets between chains.',
+  'Perp Dex': 'Trade perpetual futures with leverage on-chain.',
+  'Social Analytics': 'Track sentiment, mindshare and crypto social activity.',
+  'Bounty': 'Earn from audits, bug bounties, tasks and quests.',
+  'Trenches': 'Fast tools for finding and trading new tokens.',
+  'DeFi': 'Lend, borrow, stake, swap and earn yield.',
+  'NFTs': 'Mint, collect and trade digital collectibles.',
+  'AI Agents': 'Autonomous agents and AI-powered crypto tools.',
+  'CEX': 'Centralised exchanges for buying and trading crypto.',
+  'Educational': 'Learn crypto, from the basics to building.',
+  'Launchpad': 'Discover and back new token launches.',
+  'Ramps': 'Move between cash and crypto.',
+  'Utilities': 'Handy tools for everyday on-chain tasks.'
+};
+function catDesc(c) { return CAT_DESC[c] || 'A collection of ' + c + ' tools.'; }
+function appCount(n) { return n + (n === 1 ? ' app' : ' apps'); }
+function appsIn(cat) { return site.apps.filter(function (a) { return a.cat === cat; }); }
+
+var PREVIEW_MAX = 4;
+function buildFolder(cat, i) {
+  var apps = appsIn(cat);
+  var shown = apps.slice(0, PREVIEW_MAX);
+  var more = apps.length - shown.length;
+  var peek = shown.map(function (a) {
+    return '<span class="folder-app">' + (isImage(a.icon)
+      ? '<img src="' + esc(a.icon) + '" alt="" loading="lazy"/>'
+      : '<span class="folder-app-emoji">' + esc(a.icon || '🔗') + '</span>') + '</span>';
+  }).join('') + (more > 0 ? '<span class="folder-app folder-more">+' + more + '</span>' : '');
+  return '<button class="folder" data-folder="' + esc(cat) + '" style="--i:' + i + '" aria-label="Open ' + esc(cat) + ' folder, ' + appCount(apps.length) + '">' +
+    '<span class="folder-back" aria-hidden="true"></span>' +
+    '<span class="folder-peek" aria-hidden="true">' + peek + '</span>' +
+    '<span class="folder-front">' +
+      '<span class="folder-name">' + esc(cat) + '</span>' +
+      '<span class="folder-desc">' + esc(catDesc(cat)) + '</span>' +
+      '<span class="folder-meta"><span class="folder-count">' + appCount(apps.length) + '</span>' +
+      '<span class="folder-open">Open <span aria-hidden="true">&rarr;</span></span></span>' +
+    '</span></button>';
+}
+
+var FOLDER_ICON = '<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M3 6.5A1.5 1.5 0 0 1 4.5 5h4.3l2 2h8.7A1.5 1.5 0 0 1 21 8.5v9A1.5 1.5 0 0 1 19.5 19h-15A1.5 1.5 0 0 1 3 17.5z" fill="currentColor"/></svg>';
+
+var lastView = null;
 function render() {
   renderSidebar();
   var cats = categories();
+  var q = document.getElementById('search').value.trim();
+  var search = document.getElementById('search');
+  search.placeholder = activeTab === 'All' ? 'Search all tools...' : 'Search in ' + activeTab + '...';
   // Keep apps in category order, as the sidebar lists them.
   var list = filteredApps().sort(function (x, y) { return cats.indexOf(x.cat) - cats.indexOf(y.cat); });
   var grid = document.getElementById('grid');
-  var bc = document.getElementById('breadcrumb');
-  bc.className = activeTab === 'All' ? 'breadcrumb' : 'breadcrumb visible';
-  document.getElementById('bc-cat').textContent = activeTab;
+  var out;
 
-  if (!list.length) {
-    grid.className = 'grid';
-    grid.innerHTML = '<div class="empty-state"><div class="empty-state-icon">🔍</div>' +
-      '<div class="empty-state-msg">No apps found</div>' +
-      '<div class="empty-state-sub">Try a different search or category</div></div>';
-    return;
-  }
   if (activeTab !== 'All') {
-    grid.className = 'grid';
-    grid.innerHTML = list.map(buildCard).join('');
-    return;
+    // Opened folder: header with a way back, then the folder's apps.
+    var total = appsIn(activeTab).length;
+    out = '<header class="lib-head folder-head">' +
+      '<button class="folder-backlink" data-folder="All"><span aria-hidden="true">&larr;</span> All tools</button>' +
+      '<div class="folder-head-row"><span class="folder-head-icon">' + FOLDER_ICON + '</span>' +
+      '<h1 class="lib-title">' + esc(activeTab) + '</h1><span class="lib-count">' + appCount(total) + '</span></div>' +
+      '<p class="lib-sub">' + esc(catDesc(activeTab)) + '</p></header>';
+    out += list.length
+      ? '<div class="grid">' + list.map(buildCard).join('') + '</div>'
+      : emptyState('Nothing in ' + activeTab + ' matches “' + q + '”', 'Try another word, or go back to search all tools.');
+  } else if (q) {
+    // Searching from All tools: results from every folder, grouped by folder.
+    out = '<header class="lib-head"><h1 class="lib-title">Results for “' + esc(q) + '”</h1>' +
+      '<p class="lib-sub">' + (list.length ? appCount(list.length) + ' across all folders' : 'Searched all folders') + '</p></header>';
+    out += list.length ? cats.map(function (cat) {
+      var apps = list.filter(function (a) { return a.cat === cat; });
+      if (!apps.length) return '';
+      return '<section class="cat-section"><div class="cat-section-hdr">' +
+        '<span class="cat-section-hdr-name">' + esc(cat) + '</span>' +
+        '<button class="cat-section-open" data-folder="' + esc(cat) + '">Open folder &rarr;</button></div>' +
+        '<div class="grid">' + apps.map(buildCard).join('') + '</div></section>';
+    }).join('') : emptyState('No apps found', 'Try a different name or keyword.');
+  } else {
+    // All tools: the folder library.
+    out = '<header class="lib-head"><h1 class="lib-title">All tools</h1>' +
+      '<p class="lib-sub">Every app on Jabiru, sorted into folders. Open one to explore.</p></header>' +
+      '<div class="folder-grid">' + cats.map(buildFolder).join('') + '</div>';
   }
-  // "All tools" view: one section per category, with a header (no counts).
   grid.className = '';
-  grid.innerHTML = cats.map(function (cat) {
-    var apps = list.filter(function (a) { return a.cat === cat; });
-    if (!apps.length) return '';
-    return '<section class="cat-section"><div class="cat-section-hdr">' +
-      '<span class="cat-section-hdr-name">' + esc(cat) + '</span></div>' +
-      '<div class="grid">' + apps.map(buildCard).join('') + '</div></section>';
-  }).join('');
+  grid.innerHTML = out;
+
+  // Play the entrance animation only when the view changes, not on every keystroke.
+  var view = activeTab + (activeTab === 'All' && q ? ':search' : '');
+  if (view !== lastView) {
+    grid.classList.remove('view-enter'); void grid.offsetWidth; grid.classList.add('view-enter');
+    lastView = view;
+  }
 }
 
-function setTab(cat) { activeTab = cat; closeSidebar(); render(); window.scrollTo(0, 0); }
+function emptyState(msg, sub) {
+  return '<div class="empty-state"><div class="empty-state-icon">🔍</div>' +
+    '<div class="empty-state-msg">' + esc(msg) + '</div><div class="empty-state-sub">' + esc(sub) + '</div></div>';
+}
+
+// The open folder lives in the URL hash (/app#DeFi), so Back and shared links work.
+function tabFromHash() {
+  var h = '';
+  try { h = decodeURIComponent(location.hash.slice(1)); } catch (e) {}
+  return categories().indexOf(h) >= 0 ? h : 'All';
+}
+function setTab(cat) {
+  if (cat !== activeTab) {
+    history.pushState(null, '', cat === 'All' ? location.pathname + location.search : '#' + encodeURIComponent(cat));
+    document.getElementById('search').value = '';
+  }
+  activeTab = cat; closeSidebar(); render(); window.scrollTo(0, 0);
+}
+window.addEventListener('popstate', function () {
+  activeTab = tabFromHash(); document.getElementById('search').value = '';
+  render(); window.scrollTo(0, 0);
+});
 
 function applyBrand() {
   var b = site.brand || {};
@@ -174,6 +260,8 @@ document.getElementById('sidebar').addEventListener('click', function (e) {
   if (btn) setTab(btn.getAttribute('data-cat'));
 });
 document.getElementById('grid').addEventListener('click', function (e) {
+  var folder = e.target.closest('[data-folder]');
+  if (folder) { setTab(folder.getAttribute('data-folder')); return; }
   var card = e.target.closest('.card');
   if (card) launchApp(card.getAttribute('data-id'));
 });
@@ -209,7 +297,7 @@ updateThemeIcon();
 
 fetch('data/site.json', { cache: 'no-cache' })
   .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
-  .then(function (data) { site = data; applyBrand(); render(); })
+  .then(function (data) { site = data; applyBrand(); activeTab = tabFromHash(); render(); })
   .catch(function () {
     document.getElementById('grid').innerHTML =
       '<div class="empty-state"><div class="empty-state-msg">Could not load apps</div>' +
