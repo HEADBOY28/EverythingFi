@@ -35,7 +35,8 @@
   "Educational",
   "Launchpad",
   "Ramps",
-  "Utilities"
+  "Utilities",
+  "Chains"
  ],
  "apps": [
   {
@@ -1629,6 +1630,86 @@
    "desc": "Faster, easier crypto data: markets, news and trading in one place.",
    "cat": "Data & Analytics",
    "icon": "icons/199.jpg"
+  },
+  {
+   "id": 200,
+   "name": "OnRe",
+   "url": "https://app.onre.finance",
+   "desc": "Solana's highest-yield institutional dollar asset, backed by real-world reinsurance.",
+   "cat": "DeFi",
+   "icon": "icons/200.jpg"
+  },
+  {
+   "id": 201,
+   "name": "DAWN",
+   "url": "https://infrastructure.finance/",
+   "desc": "Tokenizes the digital infrastructure powering AI, with yield tokens and a points program.",
+   "cat": "DeFi",
+   "icon": "icons/201.jpg"
+  },
+  {
+   "id": 202,
+   "name": "Arcus",
+   "url": "https://arcus.xyz/",
+   "desc": "Stock and crypto perps and spot, built by the dYdX team with Robinhood.",
+   "cat": "Perp Dex",
+   "icon": "icons/202.jpg"
+  },
+  {
+   "id": 203,
+   "name": "Hylo",
+   "url": "https://hylo.so",
+   "desc": "Liquidation-resistant leveraged tokens and a high-yield Solana stablecoin.",
+   "cat": "DeFi",
+   "icon": "icons/203.jpg"
+  },
+  {
+   "id": 204,
+   "name": "Solstice",
+   "url": "https://solstice.finance",
+   "desc": "Solana yield layer behind the USX stablecoin, SLX and YieldVault.",
+   "cat": "DeFi",
+   "icon": "icons/204.jpg"
+  },
+  {
+   "id": 205,
+   "name": "Variational",
+   "url": "https://variational.io",
+   "desc": "Zero-fee perps on 500+ crypto, stock and commodity markets, built on Arbitrum.",
+   "cat": "Perp Dex",
+   "icon": "icons/205.jpg"
+  },
+  {
+   "id": 206,
+   "name": "Loopscale",
+   "url": "https://loopscale.com",
+   "desc": "Order book credit markets for lending, borrowing and one-click loops on Solana.",
+   "cat": "DeFi",
+   "icon": "icons/206.jpg"
+  },
+  {
+   "id": 207,
+   "name": "Titan",
+   "url": "https://titan.exchange/",
+   "desc": "Solana DEX meta-aggregator for best-price swaps.",
+   "cat": "Dex Aggregator",
+   "icon": "icons/207.jpg"
+  },
+  {
+   "id": 208,
+   "name": "Backyard Finance",
+   "url": "https://app.backyard.finance/",
+   "desc": "Pick and deposit into top Solana yield vaults from one place.",
+   "cat": "DeFi",
+   "icon": "icons/208.jpg"
+  },
+  {
+   "id": 209,
+   "name": "Abstract",
+   "url": "https://abs.xyz",
+   "desc": "Ethereum L2 built for consumer apps, finance and digital assets.",
+   "cat": "Chains",
+   "icon": "icons/209.jpg"
   }
  ]
 }
