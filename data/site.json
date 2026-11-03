@@ -2053,6 +2053,86 @@
    "desc": "Live Bitcoin explorer for fees, blocks and pending transactions.",
    "cat": "Data & Analytics",
    "icon": "icons/252.jpg"
+  },
+  {
+   "id": 253,
+   "name": "Fomoscan",
+   "url": "https://www.fomoscan.sh",
+   "desc": "Reveals the traders behind Fomo wallets, with identities, social graphs and copy-trading data on Solana, Base and BNB.",
+   "cat": "Data & Analytics",
+   "icon": "icons/253.jpg"
+  },
+  {
+   "id": 254,
+   "name": "CopyFomo",
+   "url": "https://www.copyfomo.com",
+   "desc": "Telegram bot that mirrors any Fomo leaderboard trader's buys and sells into your own wallet, at your size.",
+   "cat": "Trenches",
+   "icon": "icons/254.jpg"
+  },
+  {
+   "id": 255,
+   "name": "Fomo Lens",
+   "url": "https://hogen.pro/fomo-helper/",
+   "desc": "Free Chrome extension that adds a token's story, community thesis and holder breakdown to Fomo, GMGN and XXYY.",
+   "cat": "Utilities",
+   "icon": "icons/255.jpg"
+  },
+  {
+   "id": 256,
+   "name": "Fomo Guard",
+   "url": "https://fomoguard.family",
+   "desc": "Chrome extension that adds limit orders, paper trading and rug checks to Fomo.",
+   "cat": "Trenches",
+   "icon": "icons/256.jpg"
+  },
+  {
+   "id": 257,
+   "name": "fomo signal",
+   "url": "https://fomosignal.family",
+   "desc": "Chrome extension that pings you the moment traders you track link a wallet, buy, or pile into the same token.",
+   "cat": "Trenches",
+   "icon": "icons/257.jpg"
+  },
+  {
+   "id": 258,
+   "name": "StalkChain",
+   "url": "https://stalkchain.com",
+   "desc": "Tracks KOL wallets with PnL leaderboards, a live trade feed and the tokens they're buying right now.",
+   "cat": "Data & Analytics",
+   "icon": "icons/258.jpg"
+  },
+  {
+   "id": 259,
+   "name": "hoodwatch",
+   "url": "https://www.hoodwatch.io/whales",
+   "desc": "See what whales are buying on Robinhood Chain, ranked by conviction, low caps first.",
+   "cat": "Data & Analytics",
+   "icon": "icons/259.jpg"
+  },
+  {
+   "id": 260,
+   "name": "Wind",
+   "url": "https://wind.jokkimon.club",
+   "desc": "Second-by-second alerts when the crypto accounts you follow post, across every platform.",
+   "cat": "Social Analytics",
+   "icon": "icons/260.jpg"
+  },
+  {
+   "id": 261,
+   "name": "Web3.bio",
+   "url": "https://web3.bio",
+   "desc": "Search any handle, address or ENS name to find the wallets and profiles linked to it.",
+   "cat": "Utilities",
+   "icon": "icons/261.jpg"
+  },
+  {
+   "id": 262,
+   "name": "whobought",
+   "url": "https://whobought.xyz",
+   "desc": "Live Fomo and Pump.fun trader swaps: what they bought, at what market cap, and whether they held or dumped.",
+   "cat": "Trenches",
+   "icon": "icons/262.jpg"
   }
  ]
 }
