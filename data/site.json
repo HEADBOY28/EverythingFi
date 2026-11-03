@@ -35,8 +35,7 @@
   "Educational",
   "Launchpad",
   "Ramps",
-  "Utilities",
-  "Chains"
+  "Utilities"
  ],
  "apps": [
   {
@@ -1702,14 +1701,6 @@
    "desc": "Pick and deposit into top Solana yield vaults from one place.",
    "cat": "DeFi",
    "icon": "icons/208.jpg"
-  },
-  {
-   "id": 209,
-   "name": "Abstract",
-   "url": "https://abs.xyz",
-   "desc": "Ethereum L2 built for consumer apps, finance and digital assets.",
-   "cat": "Chains",
-   "icon": "icons/209.jpg"
   }
  ]
 }
