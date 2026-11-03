@@ -1701,6 +1701,294 @@
    "desc": "Pick and deposit into top Solana yield vaults from one place.",
    "cat": "DeFi",
    "icon": "icons/208.jpg"
+  },
+  {
+   "id": 209,
+   "name": "CryptoQuant",
+   "url": "https://cryptoquant.com",
+   "desc": "On-chain and market data on exchange flows, miners and whales, with alerts and custom dashboards.",
+   "cat": "Data & Analytics",
+   "icon": "icons/209.jpg"
+  },
+  {
+   "id": 210,
+   "name": "Kaiko",
+   "url": "https://www.kaiko.com",
+   "desc": "Institutional-grade market data: trades, order books, liquidity and benchmark prices across exchanges.",
+   "cat": "Data & Analytics",
+   "icon": "icons/210.jpg"
+  },
+  {
+   "id": 211,
+   "name": "Coin Metrics",
+   "url": "https://coinmetrics.io",
+   "desc": "Transparent network and market data, indexes and research trusted by institutions.",
+   "cat": "Data & Analytics",
+   "icon": "icons/211.jpg"
+  },
+  {
+   "id": 212,
+   "name": "Sentora",
+   "url": "https://sentora.com",
+   "desc": "Institutional DeFi intelligence, risk analytics and yield strategies.",
+   "cat": "Data & Analytics",
+   "icon": "icons/212.jpg"
+  },
+  {
+   "id": 213,
+   "name": "growthepie",
+   "url": "https://growthepie.com",
+   "desc": "Open analytics for Ethereum and its L2s: fees, activity, blockspace and app usage.",
+   "cat": "Data & Analytics",
+   "icon": "icons/213.jpg"
+  },
+  {
+   "id": 214,
+   "name": "Zerion",
+   "url": "https://zerion.io",
+   "desc": "Wallet and portfolio tracker for tokens, NFTs and DeFi across 60+ chains, with built-in swaps.",
+   "cat": "Wallet",
+   "icon": "icons/214.jpg"
+  },
+  {
+   "id": 215,
+   "name": "Solscan",
+   "url": "https://solscan.io",
+   "desc": "Solana's go-to explorer for transactions, tokens, accounts and holder breakdowns.",
+   "cat": "Data & Analytics",
+   "icon": "icons/215.jpg"
+  },
+  {
+   "id": 216,
+   "name": "Spot On Chain",
+   "url": "https://spotonchain.ai",
+   "desc": "AI-powered whale and smart-money tracking with real-time alerts on market-moving wallets.",
+   "cat": "Data & Analytics",
+   "icon": "icons/216.jpg"
+  },
+  {
+   "id": 217,
+   "name": "Bitquery",
+   "url": "https://bitquery.io",
+   "desc": "Blockchain data APIs and real-time streams for DEX trades, transfers and balances on 40+ chains.",
+   "cat": "Utilities",
+   "icon": "icons/217.jpg"
+  },
+  {
+   "id": 218,
+   "name": "GoldRush",
+   "url": "https://goldrush.dev",
+   "desc": "Covalent's multichain data API for decoded transactions, balances and token holders on 100+ chains.",
+   "cat": "Utilities",
+   "icon": "icons/218.jpg"
+  },
+  {
+   "id": 219,
+   "name": "Moralis",
+   "url": "https://moralis.com",
+   "desc": "Wallet, token, NFT and price APIs for building crypto apps, bots and dashboards.",
+   "cat": "Utilities",
+   "icon": "icons/219.jpg"
+  },
+  {
+   "id": 220,
+   "name": "Tenderly",
+   "url": "https://tenderly.co",
+   "desc": "Simulate, debug and monitor smart contracts and transactions before they hit the chain.",
+   "cat": "Utilities",
+   "icon": "icons/220.jpg"
+  },
+  {
+   "id": 221,
+   "name": "Routescan",
+   "url": "https://routescan.io",
+   "desc": "One block explorer for 110+ EVM chains, subnets and appchains.",
+   "cat": "Data & Analytics",
+   "icon": "icons/221.jpg"
+  },
+  {
+   "id": 222,
+   "name": "Blockscout",
+   "url": "https://www.blockscout.com",
+   "desc": "Open-source block explorer powering 3,000+ EVM chains.",
+   "cat": "Data & Analytics",
+   "icon": "icons/222.jpg"
+  },
+  {
+   "id": 223,
+   "name": "OKLink",
+   "url": "https://www.oklink.com",
+   "desc": "Multichain explorer with address analysis, token data and compliance-grade intelligence.",
+   "cat": "Data & Analytics",
+   "icon": "icons/223.jpg"
+  },
+  {
+   "id": 224,
+   "name": "DeFiSafety",
+   "url": "https://defisafety.com",
+   "desc": "Rates DeFi protocols on documentation, testing, transparency and admin controls.",
+   "cat": "Security",
+   "icon": "icons/224.jpg"
+  },
+  {
+   "id": 225,
+   "name": "GeckoTerminal",
+   "url": "https://www.geckoterminal.com",
+   "desc": "CoinGecko's real-time DEX tracker for pools, prices, liquidity and newly launched pairs.",
+   "cat": "Data & Analytics",
+   "icon": "icons/225.jpg"
+  },
+  {
+   "id": 226,
+   "name": "Coinalyze",
+   "url": "https://coinalyze.net",
+   "desc": "Futures analytics: open interest, funding rates, liquidations and basis across exchanges.",
+   "cat": "Data & Analytics",
+   "icon": "icons/226.jpg"
+  },
+  {
+   "id": 227,
+   "name": "1inch",
+   "url": "https://1inch.com",
+   "desc": "Routes swaps across hundreds of liquidity sources on 13+ chains for the best execution.",
+   "cat": "Dex Aggregator",
+   "icon": "icons/227.jpg"
+  },
+  {
+   "id": 228,
+   "name": "Matcha",
+   "url": "https://matcha.xyz",
+   "desc": "0x-powered DEX aggregator with gasless and cross-chain swaps and upfront cost breakdowns.",
+   "cat": "Dex Aggregator",
+   "icon": "icons/228.jpg"
+  },
+  {
+   "id": 229,
+   "name": "Photon",
+   "url": "https://photon-sol.tinyastro.io",
+   "desc": "Lightning-fast Solana terminal for spotting new tokens and sniping trades.",
+   "cat": "Trenches",
+   "icon": "icons/229.jpg"
+  },
+  {
+   "id": 230,
+   "name": "BullX",
+   "url": "https://neo.bullx.io",
+   "desc": "Multichain memecoin trading terminal with live charts, limit orders and fast execution.",
+   "cat": "Trenches",
+   "icon": "icons/230.jpg"
+  },
+  {
+   "id": 231,
+   "name": "MetaSleuth",
+   "url": "https://metasleuth.io",
+   "desc": "BlockSec's visual tool for tracing stolen funds and mapping wallet connections.",
+   "cat": "Security",
+   "icon": "icons/231.jpg"
+  },
+  {
+   "id": 232,
+   "name": "Chainalysis Reactor",
+   "url": "https://www.chainalysis.com/product/reactor/",
+   "desc": "Investigation software used by governments and exchanges to trace funds across chains.",
+   "cat": "Security",
+   "icon": "icons/232.jpg"
+  },
+  {
+   "id": 233,
+   "name": "TRM Labs",
+   "url": "https://www.trmlabs.com",
+   "desc": "Blockchain intelligence for investigations, sanctions screening and crypto compliance.",
+   "cat": "Security",
+   "icon": "icons/233.jpg"
+  },
+  {
+   "id": 234,
+   "name": "Elliptic Investigator",
+   "url": "https://www.elliptic.co/products/investigator/",
+   "desc": "Cross-chain forensics that follows funds, flags illicit exposure and builds evidence.",
+   "cat": "Security",
+   "icon": "icons/234.jpg"
+  },
+  {
+   "id": 235,
+   "name": "MistTrack",
+   "url": "https://misttrack.io",
+   "desc": "SlowMist's fund-tracing and AML tool with wallet risk scores and stolen-fund tracking.",
+   "cat": "Security",
+   "icon": "icons/235.jpg"
+  },
+  {
+   "id": 236,
+   "name": "Chainabuse",
+   "url": "https://www.chainabuse.com",
+   "desc": "Search and report scam addresses in a public database of crypto fraud.",
+   "cat": "Security",
+   "icon": "icons/236.jpg"
+  },
+  {
+   "id": 237,
+   "name": "Blockaid",
+   "url": "https://blockaid.io",
+   "desc": "Simulates transactions and blocks malicious ones before you sign. Trusted by MetaMask and Coinbase.",
+   "cat": "Security",
+   "icon": "icons/237.jpg"
+  },
+  {
+   "id": 238,
+   "name": "Sardine",
+   "url": "https://www.sardine.ai",
+   "desc": "Fraud prevention and AML platform for banks, fintechs and crypto companies.",
+   "cat": "Security",
+   "icon": "icons/238.jpg"
+  },
+  {
+   "id": 239,
+   "name": "Solidus Labs HALO",
+   "url": "https://www.soliduslabs.com/solutions/platform",
+   "desc": "Market surveillance that detects manipulation, wash trading and insider activity across venues.",
+   "cat": "Security",
+   "icon": "icons/239.jpg"
+  },
+  {
+   "id": 240,
+   "name": "Merkle Science",
+   "url": "https://merklescience.com",
+   "desc": "Crypto risk and compliance: transaction monitoring, wallet screening and investigations.",
+   "cat": "Security",
+   "icon": "icons/240.jpg"
+  },
+  {
+   "id": 241,
+   "name": "Crystal Intelligence",
+   "url": "https://crystalintelligence.com",
+   "desc": "All-in-one blockchain investigation tool for tracing funds and screening counterparties.",
+   "cat": "Security",
+   "icon": "icons/241.jpg"
+  },
+  {
+   "id": 242,
+   "name": "Phalcon Explorer",
+   "url": "https://blocksec.com/phalcon/explorer",
+   "desc": "Breaks down any transaction step by step, with fund flows, calls and exploits visualized.",
+   "cat": "Security",
+   "icon": "icons/242.jpg"
+  },
+  {
+   "id": 243,
+   "name": "Token Sniffer",
+   "url": "https://tokensniffer.com",
+   "desc": "Scans token contracts for scam patterns and gives each token a safety score.",
+   "cat": "Security",
+   "icon": "icons/243.jpg"
+  },
+  {
+   "id": 244,
+   "name": "Forta",
+   "url": "https://www.forta.org",
+   "desc": "Real-time threat detection network that flags exploits and scams on-chain.",
+   "cat": "Security",
+   "icon": "icons/244.jpg"
   }
  ]
 }
