@@ -1989,6 +1989,70 @@
    "desc": "Real-time threat detection network that flags exploits and scams on-chain.",
    "cat": "Security",
    "icon": "icons/244.jpg"
+  },
+  {
+   "id": 245,
+   "name": "Lookonchain",
+   "url": "https://www.lookonchain.com",
+   "desc": "Whale and smart-money moves, explained in plain English as they happen.",
+   "cat": "Data & Analytics",
+   "icon": "icons/245.jpg"
+  },
+  {
+   "id": 246,
+   "name": "InsightX",
+   "url": "https://insightx.network",
+   "desc": "Maps hidden links between token holders to expose insiders, bundles and sybil wallets.",
+   "cat": "Data & Analytics",
+   "icon": "icons/246.jpg"
+  },
+  {
+   "id": 247,
+   "name": "SolSniffer",
+   "url": "https://solsniffer.com",
+   "desc": "Scans Solana tokens for rug risks and gives each one a safety score.",
+   "cat": "Security",
+   "icon": "icons/247.jpg"
+  },
+  {
+   "id": 248,
+   "name": "DropsTab",
+   "url": "https://dropstab.com",
+   "desc": "Token unlocks, vesting schedules, funding rounds and investor lists in one dashboard.",
+   "cat": "Data & Analytics",
+   "icon": "icons/248.jpg"
+  },
+  {
+   "id": 249,
+   "name": "CoinAnk",
+   "url": "https://coinank.com",
+   "desc": "Derivatives data: liquidation heatmaps, open interest, funding rates and long/short ratios.",
+   "cat": "Data & Analytics",
+   "icon": "icons/249.jpg"
+  },
+  {
+   "id": 250,
+   "name": "CryptoFees",
+   "url": "https://cryptofees.info",
+   "desc": "Ranks blockchains and protocols by the fees people actually pay to use them, updated daily.",
+   "cat": "Data & Analytics",
+   "icon": "icons/250.jpg"
+  },
+  {
+   "id": 251,
+   "name": "Farside",
+   "url": "https://farside.co.uk",
+   "desc": "Daily inflows and outflows for Bitcoin and Ether ETFs.",
+   "cat": "Data & Analytics",
+   "icon": "icons/251.jpg"
+  },
+  {
+   "id": 252,
+   "name": "mempool.space",
+   "url": "https://mempool.space",
+   "desc": "Live Bitcoin explorer for fees, blocks and pending transactions.",
+   "cat": "Data & Analytics",
+   "icon": "icons/252.jpg"
   }
  ]
 }
