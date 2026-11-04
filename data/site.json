@@ -2133,6 +2133,14 @@
    "desc": "Live Fomo and Pump.fun trader swaps: what they bought, at what market cap, and whether they held or dumped.",
    "cat": "Trenches",
    "icon": "icons/262.jpg"
+  },
+  {
+   "id": 263,
+   "name": "Bitget",
+   "url": "https://www.bitget.com",
+   "desc": "Global crypto exchange for spot, futures and copy trading, with its own Web3 wallet.",
+   "cat": "CEX",
+   "icon": "icons/263.jpg"
   }
  ]
 }
