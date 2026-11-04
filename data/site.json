@@ -2141,6 +2141,22 @@
    "desc": "Global crypto exchange for spot, futures and copy trading, with its own Web3 wallet.",
    "cat": "CEX",
    "icon": "icons/263.jpg"
+  },
+  {
+   "id": 264,
+   "name": "Alphabot",
+   "url": "https://alphabot.app",
+   "desc": "Enter whitelist raffles and giveaways for upcoming NFT mints, and track project collabs in one place.",
+   "cat": "NFTs",
+   "icon": "icons/264.jpg"
+  },
+  {
+   "id": 265,
+   "name": "NFT Calendar",
+   "url": "https://nftcalendar.io",
+   "desc": "Calendar of upcoming NFT drops, so you can see what is minting over the next few days.",
+   "cat": "NFTs",
+   "icon": "icons/265.jpg"
   }
  ]
 }
