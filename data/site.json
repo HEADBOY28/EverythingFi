@@ -2293,6 +2293,86 @@
    "desc": "Track upcoming TGEs and token sales, VC deal flow, investors and the ROI of recently launched tokens.",
    "cat": "Data & Analytics",
    "icon": "icons/282.jpg"
+  },
+  {
+   "id": 283,
+   "name": "Crypto Fundraising",
+   "url": "https://crypto-fundraising.info/",
+   "desc": "Database of every crypto funding round from pre-seed to Series C, with investor profiles and deal history.",
+   "cat": "Data & Analytics",
+   "icon": "icons/283.jpg"
+  },
+  {
+   "id": 284,
+   "name": "EigenPhi",
+   "url": "https://eigenphi.substack.com/",
+   "desc": "Wisdom of DeFi: research on MEV, sandwich attacks and on-chain trading behaviour.",
+   "cat": "Research Blogs",
+   "icon": "icons/284.jpg"
+  },
+  {
+   "id": 285,
+   "name": "ChainCatcher",
+   "url": "https://www.chaincatcher.com/en",
+   "desc": "Leading Chinese-language Web3 and AI media outlet with 24/7 news, flash updates and research, now in English too.",
+   "cat": "News",
+   "icon": "icons/285.jpg"
+  },
+  {
+   "id": 286,
+   "name": "Dexu",
+   "url": "https://dexu.ai/",
+   "desc": "AI social analytics that tracks mindshare, sentiment, KOLs and narratives across X, YouTube, TikTok, Reddit and Telegram.",
+   "cat": "Social Analytics",
+   "icon": "icons/286.jpg"
+  },
+  {
+   "id": 287,
+   "name": "Revert",
+   "url": "https://revert.finance",
+   "desc": "Analytics, lending and automation for Uniswap-style liquidity providers: track LP returns and auto-compound or rebalance positions.",
+   "cat": "DeFi",
+   "icon": "icons/287.jpg"
+  },
+  {
+   "id": 288,
+   "name": "Rayo",
+   "url": "https://rayo.gg",
+   "desc": "Community-curated directory for discovering emerging Web3 projects, formerly The Dapp List.",
+   "cat": "Data & Analytics",
+   "icon": "icons/288.jpg"
+  },
+  {
+   "id": 289,
+   "name": "ChainEye",
+   "url": "https://chaineye.tools",
+   "desc": "Free, open-source multi-chain analytics tools for retail investors.",
+   "cat": "Data & Analytics",
+   "icon": "icons/289.jpg"
+  },
+  {
+   "id": 290,
+   "name": "CryptoPanic",
+   "url": "https://cryptopanic.com/",
+   "desc": "News aggregator that pulls crypto headlines from everywhere and shows community votes on their price impact.",
+   "cat": "News",
+   "icon": "icons/290.jpg"
+  },
+  {
+   "id": 291,
+   "name": "Whales Market",
+   "url": "https://whales.market/",
+   "desc": "Pre-market DEX for trading tokens and points before they launch, through secured OTC deals.",
+   "cat": "DeFi",
+   "icon": "icons/291.jpg"
+  },
+  {
+   "id": 292,
+   "name": "Crunchbase",
+   "url": "https://www.crunchbase.com",
+   "desc": "Company and funding database for tracking startups, investors and private-market deals.",
+   "cat": "Data & Analytics",
+   "icon": "icons/292.jpg"
   }
  ]
 }
