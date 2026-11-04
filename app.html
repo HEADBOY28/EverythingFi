@@ -37,6 +37,11 @@
     <div class="nav-search-wrap">
       <span class="nav-search-icon">⌕</span>
       <input type="text" id="search" placeholder="Search..." oninput="render()"/>
+      <button type="button" class="filter-btn" id="filter-btn" aria-expanded="false" aria-controls="filter-panel" title="Filters">
+        <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M20 18h0" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/><circle cx="16" cy="6" r="2" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="10" cy="12" r="2" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="18" cy="18" r="2" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+        <span class="filter-btn-label">Filters</span><span class="filter-badge" id="filter-badge" hidden></span>
+      </button>
+      <div class="filter-panel" id="filter-panel" role="dialog" aria-label="Filter apps" hidden></div>
     </div>
 
     <div class="nav-right">
@@ -78,13 +83,74 @@ function categories() {
   return ordered.concat(rest);
 }
 
+// Filters: tags live in data/tags.json (app id -> tags), grouped for the filter panel.
+var tagData = { groups: [], apps: {} };
+var activeTags = [];
+function tagsOf(a) { return tagData.apps[String(a.id)] || []; }
+function hasAllTags(a) {
+  var t = tagsOf(a);
+  return activeTags.every(function (x) { return t.indexOf(x) >= 0; });
+}
+
 function filteredApps() {
   var q = document.getElementById('search').value.trim().toLowerCase();
   return site.apps.filter(function (a) {
     var inCat = activeTab === 'All' || a.cat === activeTab;
-    var inQ = !q || [a.name, a.desc, a.cat].join(' ').toLowerCase().indexOf(q) >= 0;
-    return inCat && inQ;
+    var inQ = !q || [a.name, a.desc, a.cat].concat(tagsOf(a)).join(' ').toLowerCase().indexOf(q) >= 0;
+    return inCat && inQ && hasAllTags(a);
   });
+}
+
+function renderFilterPanel() {
+  var inScope = site.apps.filter(function (a) { return activeTab === 'All' || a.cat === activeTab; });
+  var out = '<div class="filter-panel-head"><span class="filter-panel-title">Filter apps</span>' +
+    (activeTags.length ? '<button type="button" class="filter-clear" data-clear>Clear all</button>' : '') + '</div>';
+  tagData.groups.forEach(function (g) {
+    var chips = g.tags.map(function (t) {
+      var on = activeTags.indexOf(t) >= 0;
+      // How many apps you'd see if you added this filter to the ones already on.
+      var n = inScope.filter(function (a) { var at = tagsOf(a); return at.indexOf(t) >= 0 && hasAllTags(a); }).length;
+      return '<button type="button" class="filter-chip' + (on ? ' on' : '') + '" data-tag="' + esc(t) + '" aria-pressed="' + on + '"' +
+        (!on && !n ? ' disabled' : '') + '>' + esc(t) + '<span class="filter-chip-n">' + n + '</span></button>';
+    }).join('');
+    out += '<div class="filter-group"><div class="filter-group-name">' + esc(g.name) + '</div><div class="filter-chips">' + chips + '</div></div>';
+  });
+  document.getElementById('filter-panel').innerHTML = out;
+  var badge = document.getElementById('filter-badge');
+  badge.hidden = !activeTags.length; badge.textContent = activeTags.length;
+  document.getElementById('filter-btn').classList.toggle('active', activeTags.length > 0);
+}
+
+function activeFilterRow() {
+  if (!activeTags.length) return '';
+  return '<div class="active-filters">' + activeTags.map(function (t) {
+    return '<button type="button" class="active-filter" data-untag="' + esc(t) + '" aria-label="Remove ' + esc(t) + ' filter">' +
+      esc(t) + '<span aria-hidden="true">&times;</span></button>';
+  }).join('') + '<button type="button" class="active-filter-clear" data-clear>Clear filters</button></div>';
+}
+
+function toggleTag(t) {
+  var i = activeTags.indexOf(t);
+  if (i >= 0) activeTags.splice(i, 1); else activeTags.push(t);
+  syncTagsToUrl(); render();
+}
+function clearTags() { activeTags = []; syncTagsToUrl(); render(); }
+// Filters ride in the query string (/app?tags=Hyperliquid), so filtered views can be shared.
+function syncTagsToUrl() {
+  var p = new URLSearchParams(location.search);
+  if (activeTags.length) p.set('tags', activeTags.join(',')); else p.delete('tags');
+  var s = p.toString();
+  history.replaceState(history.state, '', location.pathname + (s ? '?' + s : '') + location.hash);
+}
+function tagsFromUrl() {
+  var raw = new URLSearchParams(location.search).get('tags') || '';
+  var known = [];
+  tagData.groups.forEach(function (g) { known = known.concat(g.tags); });
+  return raw.split(',').map(function (s) { return s.trim(); }).filter(function (t) { return known.indexOf(t) >= 0; });
+}
+function setFilterPanel(open) {
+  document.getElementById('filter-panel').hidden = !open;
+  document.getElementById('filter-btn').setAttribute('aria-expanded', open);
 }
 
 // Layout follows the original Claude web version: "Browse" sidebar, cards with the
@@ -166,8 +232,12 @@ var FOLDER_ICON = '<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="
 var lastView = null;
 function render() {
   renderSidebar();
+  renderFilterPanel();
   var cats = categories();
   var q = document.getElementById('search').value.trim();
+  var filtering = !!(q || activeTags.length);
+  var label = q ? '“' + q + '”' : activeTags.join(' + ');
+  if (q && activeTags.length) label += ' in ' + activeTags.join(' + ');
   var search = document.getElementById('search');
   search.placeholder = activeTab === 'All' ? 'Search all tools...' : 'Search in ' + activeTab + '...';
   // Keep apps in category order, as the sidebar lists them.
@@ -182,14 +252,14 @@ function render() {
       '<button class="folder-backlink" data-folder="All"><span aria-hidden="true">&larr;</span> All tools</button>' +
       '<div class="folder-head-row"><span class="folder-head-icon">' + FOLDER_ICON + '</span>' +
       '<h1 class="lib-title">' + esc(activeTab) + '</h1><span class="lib-count">' + appCount(total) + '</span></div>' +
-      '<p class="lib-sub">' + esc(catDesc(activeTab)) + '</p></header>';
+      '<p class="lib-sub">' + esc(catDesc(activeTab)) + '</p></header>' + activeFilterRow();
     out += list.length
       ? '<div class="grid">' + list.map(buildCard).join('') + '</div>'
-      : emptyState('Nothing in ' + activeTab + ' matches “' + q + '”', 'Try another word, or go back to search all tools.');
-  } else if (q) {
-    // Searching from All tools: results from every folder, grouped by folder.
-    out = '<header class="lib-head"><h1 class="lib-title">Results for “' + esc(q) + '”</h1>' +
-      '<p class="lib-sub">' + (list.length ? appCount(list.length) + ' across all folders' : 'Searched all folders') + '</p></header>';
+      : emptyState('Nothing in ' + activeTab + ' matches ' + label, 'Try another word, remove a filter, or go back to search all tools.');
+  } else if (filtering) {
+    // Searching or filtering from All tools: results from every folder, grouped by folder.
+    out = '<header class="lib-head"><h1 class="lib-title">Results for ' + esc(label) + '</h1>' +
+      '<p class="lib-sub">' + (list.length ? appCount(list.length) + ' across all folders' : 'Searched all folders') + '</p></header>' + activeFilterRow();
     out += list.length ? cats.map(function (cat) {
       var apps = list.filter(function (a) { return a.cat === cat; });
       if (!apps.length) return '';
@@ -197,7 +267,7 @@ function render() {
         '<span class="cat-section-hdr-name">' + esc(cat) + '</span>' +
         '<button class="cat-section-open" data-folder="' + esc(cat) + '">Open folder &rarr;</button></div>' +
         '<div class="grid">' + apps.map(buildCard).join('') + '</div></section>';
-    }).join('') : emptyState('No apps found', 'Try a different name or keyword.');
+    }).join('') : emptyState('No apps found', activeTags.length ? 'Try removing a filter.' : 'Try a different name or keyword.');
   } else {
     // All tools: the folder library.
     out = '<header class="lib-head"><h1 class="lib-title">All tools</h1>' +
@@ -208,7 +278,7 @@ function render() {
   grid.innerHTML = out;
 
   // Play the entrance animation only when the view changes, not on every keystroke.
-  var view = activeTab + (activeTab === 'All' && q ? ':search' : '');
+  var view = activeTab + (activeTab === 'All' && filtering ? ':search' : '');
   if (view !== lastView) {
     grid.classList.remove('view-enter'); void grid.offsetWidth; grid.classList.add('view-enter');
     lastView = view;
@@ -261,7 +331,28 @@ document.getElementById('sidebar').addEventListener('click', function (e) {
   var btn = e.target.closest('[data-cat]');
   if (btn) setTab(btn.getAttribute('data-cat'));
 });
+document.getElementById('filter-btn').addEventListener('click', function (e) {
+  e.stopPropagation();
+  setFilterPanel(document.getElementById('filter-panel').hidden);
+});
+document.getElementById('filter-panel').addEventListener('click', function (e) {
+  e.stopPropagation();
+  var chip = e.target.closest('[data-tag]');
+  if (chip) { toggleTag(chip.getAttribute('data-tag')); return; }
+  if (e.target.closest('[data-clear]')) clearTags();
+});
+document.addEventListener('click', function (e) {
+  if (!e.target.closest('.nav-search-wrap')) setFilterPanel(false);
+});
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape' && !document.getElementById('filter-panel').hidden) {
+    setFilterPanel(false); document.getElementById('filter-btn').focus();
+  }
+});
 document.getElementById('grid').addEventListener('click', function (e) {
+  var untag = e.target.closest('[data-untag]');
+  if (untag) { toggleTag(untag.getAttribute('data-untag')); return; }
+  if (e.target.closest('[data-clear]')) { clearTags(); return; }
   var folder = e.target.closest('[data-folder]');
   if (folder) { setTab(folder.getAttribute('data-folder')); return; }
   var card = e.target.closest('.card');
@@ -297,9 +388,17 @@ function toggleTheme() {
 }
 updateThemeIcon();
 
+// Tags are optional: if they fail to load, search and folders still work.
+var tagsReady = fetch('data/tags.json', { cache: 'no-cache' })
+  .then(function (r) { return r.ok ? r.json() : null; })
+  .then(function (t) { if (t && t.groups) tagData = t; })
+  .catch(function () {});
 fetch('data/site.json', { cache: 'no-cache' })
   .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
-  .then(function (data) { site = data; applyBrand(); activeTab = tabFromHash(); render(); })
+  .then(function (data) {
+    site = data; applyBrand(); activeTab = tabFromHash();
+    return tagsReady.then(function () { activeTags = tagsFromUrl(); render(); });
+  })
   .catch(function () {
     document.getElementById('grid').innerHTML =
       '<div class="empty-state"><div class="empty-state-msg">Could not load apps</div>' +

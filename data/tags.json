@@ -1,0 +1,913 @@
+{
+ "groups": [
+  {
+   "name": "Ecosystem",
+   "tags": [
+    "Hyperliquid",
+    "Solana",
+    "Ethereum",
+    "Bitcoin",
+    "Base",
+    "BNB Chain",
+    "Layer 2s",
+    "Robinhood Chain",
+    "Cosmos",
+    "Sui"
+   ]
+  },
+  {
+   "name": "Topic",
+   "tags": [
+    "Whale Tracking",
+    "Smart Money",
+    "Wallet Tracking",
+    "KOL Tracking",
+    "Copy Trading",
+    "Memecoins",
+    "Token Launch",
+    "Rug Check",
+    "Wallet Safety",
+    "Fund Tracing",
+    "Token Unlocks",
+    "Fundraising",
+    "Derivatives",
+    "Stablecoins",
+    "Yield",
+    "Lending",
+    "Staking",
+    "Privacy",
+    "Stocks & RWA",
+    "ETFs",
+    "MEV",
+    "Polymarket",
+    "Fomo",
+    "NFT Mints",
+    "Alerts",
+    "AI",
+    "Charts",
+    "Portfolio",
+    "Block Explorer",
+    "Developer APIs",
+    "Taxes"
+   ]
+  },
+  {
+   "name": "Format",
+   "tags": [
+    "Telegram Bot",
+    "Browser Extension",
+    "Mobile App",
+    "Open Source"
+   ]
+  }
+ ],
+ "apps": {
+  "3": [
+   "AI"
+  ],
+  "8": [
+   "Polymarket"
+  ],
+  "10": [
+   "Polymarket"
+  ],
+  "11": [
+   "Polymarket"
+  ],
+  "18": [
+   "Smart Money"
+  ],
+  "19": [
+   "BNB Chain"
+  ],
+  "25": [
+   "Alerts"
+  ],
+  "32": [
+   "Token Unlocks"
+  ],
+  "35": [
+   "Hyperliquid",
+   "Whale Tracking",
+   "Smart Money"
+  ],
+  "36": [
+   "Hyperliquid",
+   "Whale Tracking",
+   "Wallet Tracking",
+   "Fund Tracing"
+  ],
+  "37": [
+   "Memecoins",
+   "Charts"
+  ],
+  "38": [
+   "AI"
+  ],
+  "40": [
+   "Rug Check"
+  ],
+  "41": [
+   "Bitcoin",
+   "ETFs"
+  ],
+  "42": [
+   "Memecoins",
+   "Charts"
+  ],
+  "45": [
+   "Ethereum",
+   "Block Explorer"
+  ],
+  "46": [
+   "Ethereum",
+   "Layer 2s"
+  ],
+  "47": [
+   "Stocks & RWA"
+  ],
+  "49": [
+   "Bitcoin"
+  ],
+  "50": [
+   "Block Explorer"
+  ],
+  "51": [
+   "Wallet Tracking",
+   "Portfolio"
+  ],
+  "52": [
+   "Token Unlocks",
+   "Fundraising"
+  ],
+  "53": [
+   "Fundraising"
+  ],
+  "54": [
+   "Solana",
+   "Smart Money",
+   "Wallet Tracking",
+   "KOL Tracking",
+   "Memecoins"
+  ],
+  "56": [
+   "Bitcoin"
+  ],
+  "57": [
+   "Hyperliquid",
+   "Derivatives"
+  ],
+  "58": [
+   "Wallet Safety",
+   "Open Source"
+  ],
+  "59": [
+   "Wallet Safety",
+   "Browser Extension"
+  ],
+  "61": [
+   "Hyperliquid",
+   "Solana",
+   "Browser Extension",
+   "Mobile App"
+  ],
+  "62": [
+   "Ethereum",
+   "Browser Extension"
+  ],
+  "63": [
+   "Ethereum",
+   "Browser Extension",
+   "Mobile App"
+  ],
+  "64": [
+   "Cosmos",
+   "Browser Extension"
+  ],
+  "65": [
+   "Bitcoin",
+   "Browser Extension"
+  ],
+  "66": [
+   "Sui",
+   "Browser Extension",
+   "Mobile App"
+  ],
+  "68": [
+   "Hyperliquid",
+   "Derivatives"
+  ],
+  "69": [
+   "Hyperliquid",
+   "Derivatives"
+  ],
+  "72": [
+   "KOL Tracking"
+  ],
+  "73": [
+   "Smart Money"
+  ],
+  "74": [
+   "KOL Tracking",
+   "AI"
+  ],
+  "81": [
+   "Solana"
+  ],
+  "84": [
+   "Hyperliquid",
+   "Solana",
+   "Memecoins"
+  ],
+  "85": [
+   "Solana",
+   "Memecoins",
+   "Token Launch"
+  ],
+  "86": [
+   "Stablecoins",
+   "Alerts"
+  ],
+  "87": [
+   "Ethereum",
+   "Lending"
+  ],
+  "88": [
+   "Ethereum"
+  ],
+  "90": [
+   "Ethereum",
+   "Stablecoins",
+   "Yield"
+  ],
+  "91": [
+   "Hyperliquid",
+   "Solana",
+   "Base",
+   "Smart Money",
+   "Wallet Tracking",
+   "Polymarket"
+  ],
+  "92": [
+   "Taxes"
+  ],
+  "93": [
+   "AI"
+  ],
+  "94": [
+   "Solana",
+   "Smart Money",
+   "Copy Trading",
+   "Memecoins"
+  ],
+  "95": [
+   "Developer APIs"
+  ],
+  "96": [
+   "BNB Chain"
+  ],
+  "97": [
+   "Solana"
+  ],
+  "98": [
+   "Wallet Safety",
+   "Browser Extension"
+  ],
+  "99": [
+   "Ethereum",
+   "Privacy"
+  ],
+  "100": [
+   "Whale Tracking",
+   "Alerts"
+  ],
+  "101": [
+   "Ethereum"
+  ],
+  "102": [
+   "Solana",
+   "Staking",
+   "MEV"
+  ],
+  "104": [
+   "Ethereum",
+   "Yield"
+  ],
+  "105": [
+   "Solana",
+   "Yield",
+   "Lending"
+  ],
+  "106": [
+   "Ethereum",
+   "Stablecoins"
+  ],
+  "107": [
+   "Developer APIs"
+  ],
+  "108": [
+   "Ethereum"
+  ],
+  "109": [
+   "Browser Extension"
+  ],
+  "110": [
+   "Solana",
+   "Yield"
+  ],
+  "111": [
+   "Solana",
+   "Base",
+   "Copy Trading",
+   "Memecoins",
+   "Fomo",
+   "Mobile App"
+  ],
+  "114": [
+   "Solana",
+   "Memecoins",
+   "Telegram Bot"
+  ],
+  "115": [
+   "Solana",
+   "Memecoins",
+   "Token Launch",
+   "Mobile App"
+  ],
+  "118": [
+   "Ethereum",
+   "Privacy"
+  ],
+  "119": [
+   "Ethereum",
+   "Staking"
+  ],
+  "120": [
+   "Solana"
+  ],
+  "125": [
+   "Ethereum",
+   "Lending"
+  ],
+  "128": [
+   "Stocks & RWA"
+  ],
+  "131": [
+   "Solana",
+   "Memecoins",
+   "Telegram Bot"
+  ],
+  "132": [
+   "Ethereum",
+   "Lending"
+  ],
+  "133": [
+   "Whale Tracking",
+   "Alerts"
+  ],
+  "134": [
+   "Ethereum",
+   "MEV"
+  ],
+  "138": [
+   "Memecoins",
+   "Token Launch"
+  ],
+  "139": [
+   "Wallet Safety"
+  ],
+  "140": [
+   "Wallet Safety"
+  ],
+  "141": [
+   "Wallet Tracking",
+   "Portfolio"
+  ],
+  "143": [
+   "AI"
+  ],
+  "144": [
+   "AI"
+  ],
+  "146": [
+   "Wallet Safety"
+  ],
+  "147": [
+   "Rug Check"
+  ],
+  "148": [
+   "Rug Check"
+  ],
+  "150": [
+   "Wallet Safety"
+  ],
+  "152": [
+   "Ethereum",
+   "Layer 2s",
+   "Derivatives"
+  ],
+  "154": [
+   "Charts"
+  ],
+  "155": [
+   "Ethereum"
+  ],
+  "158": [
+   "Ethereum",
+   "Layer 2s"
+  ],
+  "159": [
+   "Bitcoin"
+  ],
+  "160": [
+   "Smart Money",
+   "Copy Trading",
+   "Polymarket"
+  ],
+  "163": [
+   "Bitcoin"
+  ],
+  "164": [
+   "Solana"
+  ],
+  "165": [
+   "Stocks & RWA"
+  ],
+  "166": [
+   "Solana",
+   "Privacy"
+  ],
+  "167": [
+   "Solana"
+  ],
+  "168": [
+   "Polymarket"
+  ],
+  "171": [
+   "Base"
+  ],
+  "172": [
+   "Base",
+   "Mobile App"
+  ],
+  "174": [
+   "Solana"
+  ],
+  "175": [
+   "Solana",
+   "Memecoins",
+   "Token Launch"
+  ],
+  "176": [
+   "Solana",
+   "Smart Money",
+   "Charts"
+  ],
+  "177": [
+   "Base",
+   "Memecoins",
+   "Token Launch",
+   "AI"
+  ],
+  "178": [
+   "Solana",
+   "Token Launch"
+  ],
+  "180": [
+   "Derivatives"
+  ],
+  "181": [
+   "Yield"
+  ],
+  "182": [
+   "Solana"
+  ],
+  "183": [
+   "Token Unlocks"
+  ],
+  "184": [
+   "Bitcoin"
+  ],
+  "185": [
+   "Solana",
+   "Derivatives"
+  ],
+  "186": [
+   "Hyperliquid",
+   "Solana",
+   "Polymarket"
+  ],
+  "187": [
+   "Solana"
+  ],
+  "188": [
+   "AI"
+  ],
+  "189": [
+   "AI"
+  ],
+  "190": [
+   "Stablecoins",
+   "Alerts"
+  ],
+  "191": [
+   "Yield"
+  ],
+  "192": [
+   "AI"
+  ],
+  "193": [
+   "Solana",
+   "Memecoins",
+   "Token Launch"
+  ],
+  "194": [
+   "Derivatives"
+  ],
+  "195": [
+   "Solana",
+   "Memecoins",
+   "Rug Check"
+  ],
+  "196": [
+   "Ethereum"
+  ],
+  "197": [
+   "Solana",
+   "Yield"
+  ],
+  "199": [
+   "Hyperliquid",
+   "Derivatives",
+   "Charts"
+  ],
+  "200": [
+   "Solana",
+   "Stablecoins",
+   "Yield",
+   "Stocks & RWA"
+  ],
+  "201": [
+   "Stocks & RWA"
+  ],
+  "202": [
+   "Derivatives",
+   "Stocks & RWA"
+  ],
+  "203": [
+   "Solana",
+   "Stablecoins"
+  ],
+  "204": [
+   "Solana",
+   "Stablecoins",
+   "Yield"
+  ],
+  "205": [
+   "Layer 2s",
+   "Derivatives",
+   "Stocks & RWA"
+  ],
+  "206": [
+   "Solana",
+   "Lending"
+  ],
+  "207": [
+   "Solana"
+  ],
+  "208": [
+   "Solana",
+   "Yield"
+  ],
+  "209": [
+   "Bitcoin",
+   "Whale Tracking",
+   "Alerts"
+  ],
+  "212": [
+   "Yield"
+  ],
+  "213": [
+   "Ethereum",
+   "Layer 2s"
+  ],
+  "214": [
+   "Wallet Tracking",
+   "Portfolio",
+   "Mobile App"
+  ],
+  "215": [
+   "Solana",
+   "Block Explorer"
+  ],
+  "216": [
+   "Hyperliquid",
+   "Whale Tracking",
+   "Smart Money",
+   "Alerts",
+   "AI"
+  ],
+  "217": [
+   "Developer APIs"
+  ],
+  "218": [
+   "Developer APIs"
+  ],
+  "219": [
+   "Developer APIs"
+  ],
+  "220": [
+   "Developer APIs"
+  ],
+  "221": [
+   "Block Explorer"
+  ],
+  "222": [
+   "Block Explorer",
+   "Open Source"
+  ],
+  "223": [
+   "Wallet Tracking",
+   "Fund Tracing",
+   "Block Explorer"
+  ],
+  "225": [
+   "Memecoins",
+   "Charts"
+  ],
+  "226": [
+   "Hyperliquid",
+   "Derivatives"
+  ],
+  "227": [
+   "Ethereum"
+  ],
+  "228": [
+   "Ethereum"
+  ],
+  "229": [
+   "Solana",
+   "Memecoins"
+  ],
+  "230": [
+   "Solana",
+   "Memecoins"
+  ],
+  "231": [
+   "Fund Tracing"
+  ],
+  "232": [
+   "Fund Tracing"
+  ],
+  "233": [
+   "Fund Tracing"
+  ],
+  "234": [
+   "Fund Tracing"
+  ],
+  "235": [
+   "Fund Tracing"
+  ],
+  "237": [
+   "Wallet Safety"
+  ],
+  "240": [
+   "Fund Tracing"
+  ],
+  "241": [
+   "Fund Tracing"
+  ],
+  "242": [
+   "Fund Tracing",
+   "Block Explorer"
+  ],
+  "243": [
+   "Rug Check"
+  ],
+  "244": [
+   "Alerts"
+  ],
+  "245": [
+   "Hyperliquid",
+   "Whale Tracking"
+  ],
+  "246": [
+   "Solana",
+   "Rug Check"
+  ],
+  "247": [
+   "Solana",
+   "Memecoins",
+   "Rug Check"
+  ],
+  "248": [
+   "Token Unlocks",
+   "Fundraising"
+  ],
+  "249": [
+   "Hyperliquid",
+   "Whale Tracking",
+   "Derivatives"
+  ],
+  "251": [
+   "Bitcoin",
+   "ETFs"
+  ],
+  "252": [
+   "Bitcoin",
+   "Block Explorer"
+  ],
+  "253": [
+   "Solana",
+   "Base",
+   "BNB Chain",
+   "Wallet Tracking",
+   "Copy Trading",
+   "Fomo"
+  ],
+  "254": [
+   "Solana",
+   "Copy Trading",
+   "Fomo",
+   "Telegram Bot"
+  ],
+  "255": [
+   "Solana",
+   "Fomo",
+   "Browser Extension"
+  ],
+  "256": [
+   "Solana",
+   "Memecoins",
+   "Rug Check",
+   "Fomo",
+   "Browser Extension"
+  ],
+  "257": [
+   "Solana",
+   "Wallet Tracking",
+   "Memecoins",
+   "Fomo",
+   "Alerts",
+   "Browser Extension"
+  ],
+  "258": [
+   "Solana",
+   "Wallet Tracking",
+   "KOL Tracking"
+  ],
+  "259": [
+   "Robinhood Chain",
+   "Whale Tracking"
+  ],
+  "260": [
+   "Alerts"
+  ],
+  "261": [
+   "Wallet Tracking"
+  ],
+  "262": [
+   "Solana",
+   "Memecoins",
+   "Fomo"
+  ],
+  "263": [
+   "Copy Trading"
+  ],
+  "264": [
+   "NFT Mints"
+  ],
+  "265": [
+   "NFT Mints"
+  ],
+  "266": [
+   "Ethereum",
+   "Robinhood Chain",
+   "NFT Mints"
+  ],
+  "267": [
+   "NFT Mints"
+  ],
+  "268": [
+   "Robinhood Chain",
+   "NFT Mints",
+   "Alerts"
+  ],
+  "269": [
+   "NFT Mints"
+  ],
+  "270": [
+   "NFT Mints"
+  ],
+  "271": [
+   "KOL Tracking"
+  ],
+  "272": [
+   "KOL Tracking"
+  ],
+  "273": [
+   "Alerts"
+  ],
+  "274": [
+   "Alerts",
+   "Telegram Bot"
+  ],
+  "275": [
+   "Solana",
+   "Memecoins",
+   "Token Launch",
+   "Browser Extension"
+  ],
+  "276": [
+   "Solana",
+   "Memecoins",
+   "Token Launch"
+  ],
+  "277": [
+   "Rug Check"
+  ],
+  "278": [
+   "AI"
+  ],
+  "279": [
+   "KOL Tracking",
+   "Alerts",
+   "Telegram Bot"
+  ],
+  "280": [
+   "Alerts",
+   "Telegram Bot"
+  ],
+  "282": [
+   "Fundraising"
+  ],
+  "283": [
+   "Fundraising"
+  ],
+  "284": [
+   "Ethereum",
+   "MEV"
+  ],
+  "286": [
+   "KOL Tracking",
+   "AI"
+  ],
+  "287": [
+   "Yield",
+   "Lending"
+  ],
+  "289": [
+   "Open Source"
+  ],
+  "292": [
+   "Fundraising"
+  ],
+  "293": [
+   "Fund Tracing"
+  ],
+  "294": [
+   "Wallet Safety"
+  ],
+  "295": [
+   "Wallet Safety"
+  ],
+  "296": [
+   "Solana",
+   "Whale Tracking",
+   "Smart Money",
+   "Mobile App"
+  ],
+  "297": [
+   "Wallet Tracking"
+  ],
+  "298": [
+   "Bitcoin",
+   "Block Explorer"
+  ],
+  "299": [
+   "AI",
+   "Browser Extension"
+  ],
+  "300": [
+   "Stablecoins",
+   "Block Explorer"
+  ],
+  "301": [
+   "Block Explorer"
+  ],
+  "302": [
+   "Open Source"
+  ],
+  "306": [
+   "Open Source"
+  ],
+  "307": [
+   "Telegram Bot"
+  ],
+  "319": [
+   "Hyperliquid",
+   "Whale Tracking",
+   "Derivatives"
+  ]
+ }
+}
