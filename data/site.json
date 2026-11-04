@@ -2285,6 +2285,14 @@
    "desc": "Where crypto happens in real time: news, alpha, launches and the people building it.",
    "cat": "Productivity",
    "icon": "icons/281.jpg"
+  },
+  {
+   "id": 282,
+   "name": "ICO Analytics",
+   "url": "https://icoanalytics.org/",
+   "desc": "Track upcoming TGEs and token sales, VC deal flow, investors and the ROI of recently launched tokens.",
+   "cat": "Data & Analytics",
+   "icon": "icons/282.jpg"
   }
  ]
 }
