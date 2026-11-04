@@ -2582,6 +2582,14 @@
    "desc": "Save a permanent snapshot of a webpage or tweet, and find snapshots others have saved.",
    "cat": "OSINT",
    "icon": "icons/318.jpg"
+  },
+  {
+   "id": 319,
+   "name": "Hyperdash",
+   "url": "https://hyperdash.com",
+   "desc": "Hyperliquid trading terminal with advanced order execution, top-trader tracking and market analytics, formerly HypurrDash.",
+   "cat": "Perp Dex",
+   "icon": "icons/319.jpg"
   }
  ]
 }
