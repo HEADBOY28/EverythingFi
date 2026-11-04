@@ -22,6 +22,7 @@
   "News",
   "Data & Analytics",
   "Security",
+  "OSINT",
   "Wallet",
   "Bridges",
   "Perp Dex",
@@ -2461,6 +2462,126 @@
    "desc": "Compare bridges and swap rates across 27+ chains, with on-chain data on every route.",
    "cat": "Bridges",
    "icon": "icons/303.jpg"
+  },
+  {
+   "id": 304,
+   "name": "OSINT Industries",
+   "url": "https://www.osint.industries/",
+   "desc": "Look up an email, phone number or username to see the accounts and profiles linked to it across hundreds of sites.",
+   "cat": "OSINT",
+   "icon": "icons/304.jpg"
+  },
+  {
+   "id": 305,
+   "name": "Epieos",
+   "url": "https://epieos.com/",
+   "desc": "Find the Google and other accounts tied to an email address or phone number.",
+   "cat": "OSINT",
+   "icon": "icons/305.jpg"
+  },
+  {
+   "id": 306,
+   "name": "WhatsMyName",
+   "url": "https://whatsmyname.app/",
+   "desc": "Search a username across 600+ sites to find every account someone runs under the same handle.",
+   "cat": "OSINT",
+   "icon": "icons/306.jpg"
+  },
+  {
+   "id": 307,
+   "name": "TelegramDB",
+   "url": "https://t.me/tgdb_bot",
+   "desc": "Telegram bot that searches public groups and channels and shows which public chats a user has joined.",
+   "cat": "OSINT",
+   "icon": "icons/307.jpg"
+  },
+  {
+   "id": 308,
+   "name": "Discord.id",
+   "url": "https://discord.id/",
+   "desc": "Look up a Discord user ID to see when the account was created, plus its avatar, banner and badges.",
+   "cat": "OSINT",
+   "icon": "icons/308.jpg"
+  },
+  {
+   "id": 309,
+   "name": "Google Lens",
+   "url": "https://lens.google.com/",
+   "desc": "Reverse image search: check whether a founder's photo is stolen, stock or used on other profiles.",
+   "cat": "OSINT",
+   "icon": "icons/309.jpg"
+  },
+  {
+   "id": 310,
+   "name": "Yandex Images",
+   "url": "https://yandex.com/images/",
+   "desc": "Reverse image search that is often better than Google at matching faces and finding reused profile photos.",
+   "cat": "OSINT",
+   "icon": "icons/310.jpg"
+  },
+  {
+   "id": 311,
+   "name": "LeakPeek",
+   "url": "https://leakpeek.com/",
+   "desc": "Search billions of breached records by email, username or phone to see where an identity has leaked.",
+   "cat": "OSINT",
+   "icon": "icons/311.jpg"
+  },
+  {
+   "id": 312,
+   "name": "Snusbase",
+   "url": "https://snusbase.com/",
+   "desc": "Search engine for leaked database breaches, by email, username, IP, name or password hash.",
+   "cat": "OSINT",
+   "icon": "icons/312.jpg"
+  },
+  {
+   "id": 313,
+   "name": "Intelligence X",
+   "url": "https://intelx.io/",
+   "desc": "Search engine and archive covering data leaks, the dark web and the public web, by email, domain, IP or Bitcoin address.",
+   "cat": "OSINT",
+   "icon": "icons/313.jpg"
+  },
+  {
+   "id": 314,
+   "name": "Spur",
+   "url": "https://spur.us/",
+   "desc": "Check an IP address for VPN, proxy and residential-proxy use to spot masked or fake locations.",
+   "cat": "OSINT",
+   "icon": "icons/314.jpg"
+  },
+  {
+   "id": 315,
+   "name": "Cavalier",
+   "url": "https://cavalier.hudsonrock.com/",
+   "desc": "Hudson Rock's infostealer database: check whether an email or domain has been hit by password-stealing malware.",
+   "cat": "OSINT",
+   "icon": "icons/315.jpg"
+  },
+  {
+   "id": 316,
+   "name": "SecurityTrails",
+   "url": "https://securitytrails.com/",
+   "desc": "Historical DNS and WHOIS records: see who owned a domain and where it pointed before.",
+   "cat": "OSINT",
+   "icon": "icons/316.jpg"
+  },
+  {
+   "id": 317,
+   "name": "Wayback Machine",
+   "url": "https://web.archive.org/",
+   "desc": "See past versions of any website, including pages a project has since deleted or changed.",
+   "cat": "OSINT",
+   "icon": "icons/317.jpg"
+  },
+  {
+   "id": 318,
+   "name": "Archive Today",
+   "url": "https://archive.ph/",
+   "desc": "Save a permanent snapshot of a webpage or tweet, and find snapshots others have saved.",
+   "cat": "OSINT",
+   "icon": "icons/318.jpg"
   }
  ]
 }
