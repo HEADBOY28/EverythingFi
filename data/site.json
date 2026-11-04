@@ -2373,6 +2373,94 @@
    "desc": "Company and funding database for tracking startups, investors and private-market deals.",
    "cat": "Data & Analytics",
    "icon": "icons/292.jpg"
+  },
+  {
+   "id": 293,
+   "name": "Breadcrumbs",
+   "url": "https://www.breadcrumbs.app/",
+   "desc": "Blockchain investigation tool: follow funds across wallets with transaction graphs, labels and risk scores.",
+   "cat": "Security",
+   "icon": "icons/293.jpg"
+  },
+  {
+   "id": 294,
+   "name": "VirusTotal",
+   "url": "https://www.virustotal.com",
+   "desc": "Scan suspicious links, files and domains with 70+ antivirus engines before you click or connect a wallet.",
+   "cat": "Security",
+   "icon": "icons/294.jpg"
+  },
+  {
+   "id": 295,
+   "name": "urlscan.io",
+   "url": "https://urlscan.io/",
+   "desc": "Sandbox any website to see what it loads, where it connects and whether it is a known phishing page.",
+   "cat": "Security",
+   "icon": "icons/295.jpg"
+  },
+  {
+   "id": 296,
+   "name": "Moby",
+   "url": "https://mobyscreener.com/",
+   "desc": "Real-time whale flows and smart-money signals for Solana tokens, now as a mobile app.",
+   "cat": "Data & Analytics",
+   "icon": "icons/296.jpg"
+  },
+  {
+   "id": 297,
+   "name": "WalletLabels",
+   "url": "https://walletlabels.xyz/",
+   "desc": "Look up who is behind a wallet: exchanges, whales, funds and DeFi protocols, from a hand-verified label set.",
+   "cat": "Data & Analytics",
+   "icon": "icons/297.jpg"
+  },
+  {
+   "id": 298,
+   "name": "Blockchain.com Explorer",
+   "url": "https://www.blockchain.com/explorer",
+   "desc": "The original Bitcoin block explorer: look up blocks, transactions and addresses on BTC, ETH and more.",
+   "cat": "Data & Analytics",
+   "icon": "icons/298.jpg"
+  },
+  {
+   "id": 299,
+   "name": "MetaSuites",
+   "url": "https://blocksec.com/metasuites",
+   "desc": "BlockSec browser extension that adds address labels, AI transaction explanations and 20+ tools to block explorers.",
+   "cat": "Utilities",
+   "icon": "icons/299.jpg"
+  },
+  {
+   "id": 300,
+   "name": "Range CCTP Explorer",
+   "url": "https://usdc.range.org/",
+   "desc": "Track USDC moving between chains over Circle's CCTP bridge, transfer by transfer.",
+   "cat": "Bridges",
+   "icon": "icons/300.jpg"
+  },
+  {
+   "id": 301,
+   "name": "SocketScan",
+   "url": "https://www.socketscan.io/",
+   "desc": "Explorer for bridge transactions routed through Socket: search a hash or wallet to follow a transfer across chains.",
+   "cat": "Bridges",
+   "icon": "icons/301.jpg"
+  },
+  {
+   "id": 302,
+   "name": "Pulsy",
+   "url": "https://pulsy.app/",
+   "desc": "Cross-chain intelligence suite that tracks liquidity flows across bridges, plus no-code on-chain event workflows.",
+   "cat": "Bridges",
+   "icon": "icons/302.jpg"
+  },
+  {
+   "id": 303,
+   "name": "Chainspot",
+   "url": "https://chainspot.io/",
+   "desc": "Compare bridges and swap rates across 27+ chains, with on-chain data on every route.",
+   "cat": "Bridges",
+   "icon": "icons/303.jpg"
   }
  ]
 }
