@@ -2277,6 +2277,14 @@
    "desc": "Telegram bot with fast, custom monitors for crypto X accounts and social media activity.",
    "cat": "Social Analytics",
    "icon": "icons/280.jpg"
+  },
+  {
+   "id": 281,
+   "name": "X (formerly Twitter)",
+   "url": "https://x.com",
+   "desc": "Where crypto happens in real time: news, alpha, launches and the people building it.",
+   "cat": "Productivity",
+   "icon": "icons/281.jpg"
   }
  ]
 }
