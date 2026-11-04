@@ -2157,6 +2157,126 @@
    "desc": "Calendar of upcoming NFT drops, so you can see what is minting over the next few days.",
    "cat": "NFTs",
    "icon": "icons/265.jpg"
+  },
+  {
+   "id": 266,
+   "name": "MintGo",
+   "url": "https://mintgo.fun/",
+   "desc": "Live NFT mint tracker for Ethereum, Robinhood Chain, Ink and Arc, with trending collections and minting tools.",
+   "cat": "NFTs",
+   "icon": "icons/266.jpg"
+  },
+  {
+   "id": 267,
+   "name": "MintScan",
+   "url": "https://waypoint.tools/mintscan/",
+   "desc": "Waypoint's live mint scanner: see which collections are minting fastest right now, across mainnet and L2s.",
+   "cat": "NFTs",
+   "icon": "icons/267.jpg"
+  },
+  {
+   "id": 268,
+   "name": "guap.wtf",
+   "url": "https://guap.wtf/",
+   "desc": "Real-time NFT mint tracker for Robinhood Chain, with a new-mint feed, trending collections and free mint alerts.",
+   "cat": "NFTs",
+   "icon": "icons/268.jpg"
+  },
+  {
+   "id": 269,
+   "name": "AlphaTrack",
+   "url": "https://alphatrack.xyz/",
+   "desc": "Track alpha groups, callers and upcoming NFT collabs, with a mint calendar, raffle auto-entry and eligibility checker.",
+   "cat": "NFTs",
+   "icon": "icons/269.jpg"
+  },
+  {
+   "id": 270,
+   "name": "MCT",
+   "url": "https://mct.xyz/en",
+   "desc": "All-in-one crypto toolbox: free mint scanner, gas tracker, batch transfers, multi-wallet tools and monitors.",
+   "cat": "Utilities",
+   "icon": "icons/270.jpg"
+  },
+  {
+   "id": 271,
+   "name": "leak.me",
+   "url": "https://leak.me/",
+   "desc": "Ranks the X accounts that smart crypto accounts are following right now, with a one-line summary of why.",
+   "cat": "Social Analytics",
+   "icon": "icons/271.jpg"
+  },
+  {
+   "id": 272,
+   "name": "purealpha",
+   "url": "https://purealpha.app/",
+   "desc": "Catch new crypto accounts early by tracking who a handpicked network of traders just followed.",
+   "cat": "Social Analytics",
+   "icon": "icons/272.jpg"
+  },
+  {
+   "id": 273,
+   "name": "985 Monitor",
+   "url": "https://985monitor.xyz/",
+   "desc": "One live feed of X, Truth Social, Telegram, WeChat, news and Binance Square posts from the accounts you track.",
+   "cat": "Social Analytics",
+   "icon": "icons/273.jpg"
+  },
+  {
+   "id": 274,
+   "name": "X-Relay",
+   "url": "https://x-relay.com/",
+   "desc": "Forward any X account's posts, replies, follows and contract drops to Telegram or Discord within milliseconds.",
+   "cat": "Social Analytics",
+   "icon": "icons/274.jpg"
+  },
+  {
+   "id": 275,
+   "name": "Uxento",
+   "url": "https://uxento.io/",
+   "desc": "Memecoin deployer and tracking platform: watch social signals and launch tokens in one click.",
+   "cat": "Trenches",
+   "icon": "icons/275.jpg"
+  },
+  {
+   "id": 276,
+   "name": "J7Tracker",
+   "url": "https://j7tracker.io/",
+   "desc": "Sniper tool with sub-millisecond token deploys and social-media tracking under 200ms.",
+   "cat": "Trenches",
+   "icon": "icons/276.jpg"
+  },
+  {
+   "id": 277,
+   "name": "Just Larps",
+   "url": "https://app.justlarps.fun/",
+   "desc": "Exposes the teams behind serial rug pulls, with a live feed built from public posts and on-chain records.",
+   "cat": "Security",
+   "icon": "icons/277.jpg"
+  },
+  {
+   "id": 278,
+   "name": "Orbital",
+   "url": "https://app.orbitalhq.xyz/",
+   "desc": "Real-time curated alpha, on-chain analytics and AI agents for spotting projects early.",
+   "cat": "Data & Analytics",
+   "icon": "icons/278.jpg"
+  },
+  {
+   "id": 279,
+   "name": "SilentAlpha",
+   "url": "https://t.me/SilentAlphaBot",
+   "desc": "Telegram bot that alerts you when your favourite crypto influencers follow a new account on X.",
+   "cat": "Social Analytics",
+   "icon": "icons/279.jpg"
+  },
+  {
+   "id": 280,
+   "name": "Redacted Systems",
+   "url": "https://t.me/redactedsystemsbot",
+   "desc": "Telegram bot with fast, custom monitors for crypto X accounts and social media activity.",
+   "cat": "Social Analytics",
+   "icon": "icons/280.jpg"
   }
  ]
 }
