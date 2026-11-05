@@ -2590,6 +2590,14 @@
    "desc": "Hyperliquid trading terminal with advanced order execution, top-trader tracking and market analytics, formerly HypurrDash.",
    "cat": "Perp Dex",
    "icon": "icons/319.jpg"
+  },
+  {
+   "id": 320,
+   "name": "Tori Finance",
+   "url": "https://app.tori.finance/earn?referral=VDJUF",
+   "desc": "Synthetic dollar protocol: swap USDC or USDT for trUSD and stake it to earn yield from market-neutral trading strategies, from $1.",
+   "cat": "DeFi",
+   "icon": "icons/320.jpg"
   }
  ]
 }
