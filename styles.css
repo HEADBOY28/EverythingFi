@@ -989,6 +989,7 @@ body{
 .filter-group + .filter-group{margin-top:14px;}
 .filter-group-name{font-size:10.5px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--text3);margin-bottom:7px;}
 .filter-chips{display:flex;flex-wrap:wrap;gap:6px;}
+.filter-group-note{font-size:11.5px;color:var(--text2);margin:-3px 0 8px;line-height:1.4;}
 .filter-chip{
   display:inline-flex;align-items:center;gap:6px;
   height:28px;padding:0 10px;border-radius:14px;

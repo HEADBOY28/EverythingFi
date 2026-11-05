@@ -113,7 +113,9 @@ function renderFilterPanel() {
       return '<button type="button" class="filter-chip' + (on ? ' on' : '') + '" data-tag="' + esc(t) + '" aria-pressed="' + on + '"' +
         (!on && !n ? ' disabled' : '') + '>' + esc(t) + '<span class="filter-chip-n">' + n + '</span></button>';
     }).join('');
-    out += '<div class="filter-group"><div class="filter-group-name">' + esc(g.name) + '</div><div class="filter-chips">' + chips + '</div></div>';
+    out += '<div class="filter-group"><div class="filter-group-name">' + esc(g.name) + '</div>' +
+      (g.note ? '<div class="filter-group-note">' + esc(g.note) + '</div>' : '') +
+      '<div class="filter-chips">' + chips + '</div></div>';
   });
   document.getElementById('filter-panel').innerHTML = out;
   var badge = document.getElementById('filter-badge');

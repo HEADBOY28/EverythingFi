@@ -1,6 +1,15 @@
 {
  "groups": [
   {
+   "name": "Pricing",
+   "note": "Freemium = free plan with paid upgrades. Trading and network fees don't count as paid.",
+   "tags": [
+    "Free",
+    "Freemium",
+    "Paid"
+   ]
+  },
+  {
    "name": "Ecosystem",
    "tags": [
     "Hyperliquid",
@@ -62,11 +71,34 @@
   }
  ],
  "apps": {
+  "1": [
+   "Freemium"
+  ],
+  "2": [
+   "Freemium"
+  ],
   "3": [
-   "AI"
+   "AI",
+   "Freemium"
+  ],
+  "4": [
+   "Freemium"
+  ],
+  "5": [
+   "Free"
+  ],
+  "6": [
+   "Free"
+  ],
+  "7": [
+   "Free"
   ],
   "8": [
-   "Polymarket"
+   "Polymarket",
+   "Free"
+  ],
+  "9": [
+   "Free"
   ],
   "10": [
    "Polymarket"
@@ -74,171 +106,319 @@
   "11": [
    "Polymarket"
   ],
+  "12": [
+   "Freemium"
+  ],
+  "13": [
+   "Free"
+  ],
+  "14": [
+   "Freemium"
+  ],
+  "15": [
+   "Paid"
+  ],
+  "16": [
+   "Freemium"
+  ],
+  "17": [
+   "Free"
+  ],
   "18": [
-   "Smart Money"
+   "Smart Money",
+   "Freemium"
   ],
   "19": [
-   "BNB Chain"
+   "BNB Chain",
+   "Free"
+  ],
+  "20": [
+   "Free"
+  ],
+  "21": [
+   "Free"
+  ],
+  "22": [
+   "Freemium"
+  ],
+  "23": [
+   "Freemium"
+  ],
+  "24": [
+   "Freemium"
   ],
   "25": [
-   "Alerts"
+   "Alerts",
+   "Free"
+  ],
+  "26": [
+   "Free"
+  ],
+  "28": [
+   "Freemium"
+  ],
+  "29": [
+   "Free"
+  ],
+  "30": [
+   "Freemium"
+  ],
+  "31": [
+   "Freemium"
   ],
   "32": [
-   "Token Unlocks"
+   "Token Unlocks",
+   "Freemium"
+  ],
+  "33": [
+   "Free"
+  ],
+  "34": [
+   "Freemium"
   ],
   "35": [
    "Hyperliquid",
    "Whale Tracking",
-   "Smart Money"
+   "Smart Money",
+   "Freemium"
   ],
   "36": [
    "Hyperliquid",
    "Whale Tracking",
    "Wallet Tracking",
-   "Fund Tracing"
+   "Fund Tracing",
+   "Free"
   ],
   "37": [
    "Memecoins",
-   "Charts"
+   "Charts",
+   "Free"
   ],
   "38": [
-   "AI"
+   "AI",
+   "Freemium"
+  ],
+  "39": [
+   "Freemium"
   ],
   "40": [
-   "Rug Check"
+   "Rug Check",
+   "Freemium"
   ],
   "41": [
    "Bitcoin",
-   "ETFs"
+   "ETFs",
+   "Free"
   ],
   "42": [
    "Memecoins",
-   "Charts"
+   "Charts",
+   "Freemium"
+  ],
+  "43": [
+   "Freemium"
+  ],
+  "44": [
+   "Free"
   ],
   "45": [
    "Ethereum",
-   "Block Explorer"
+   "Block Explorer",
+   "Free"
   ],
   "46": [
    "Ethereum",
-   "Layer 2s"
+   "Layer 2s",
+   "Free"
   ],
   "47": [
    "Stocks & RWA"
   ],
+  "48": [
+   "Free"
+  ],
   "49": [
-   "Bitcoin"
+   "Bitcoin",
+   "Free"
   ],
   "50": [
-   "Block Explorer"
+   "Block Explorer",
+   "Free"
   ],
   "51": [
    "Wallet Tracking",
-   "Portfolio"
+   "Portfolio",
+   "Free"
   ],
   "52": [
    "Token Unlocks",
-   "Fundraising"
+   "Fundraising",
+   "Freemium"
   ],
   "53": [
-   "Fundraising"
+   "Fundraising",
+   "Freemium"
   ],
   "54": [
    "Solana",
    "Smart Money",
    "Wallet Tracking",
    "KOL Tracking",
-   "Memecoins"
+   "Memecoins",
+   "Free"
+  ],
+  "55": [
+   "Free"
   ],
   "56": [
-   "Bitcoin"
+   "Bitcoin",
+   "Freemium"
   ],
   "57": [
    "Hyperliquid",
-   "Derivatives"
+   "Derivatives",
+   "Freemium"
   ],
   "58": [
    "Wallet Safety",
-   "Open Source"
+   "Open Source",
+   "Free"
   ],
   "59": [
    "Wallet Safety",
-   "Browser Extension"
+   "Browser Extension",
+   "Free"
+  ],
+  "60": [
+   "Paid"
   ],
   "61": [
    "Hyperliquid",
    "Solana",
    "Browser Extension",
-   "Mobile App"
+   "Mobile App",
+   "Free"
   ],
   "62": [
    "Ethereum",
-   "Browser Extension"
+   "Browser Extension",
+   "Free"
   ],
   "63": [
    "Ethereum",
    "Browser Extension",
-   "Mobile App"
+   "Mobile App",
+   "Free"
   ],
   "64": [
    "Cosmos",
-   "Browser Extension"
+   "Browser Extension",
+   "Free"
   ],
   "65": [
    "Bitcoin",
-   "Browser Extension"
+   "Browser Extension",
+   "Free"
   ],
   "66": [
    "Sui",
    "Browser Extension",
-   "Mobile App"
+   "Mobile App",
+   "Free"
+  ],
+  "67": [
+   "Free"
   ],
   "68": [
    "Hyperliquid",
-   "Derivatives"
+   "Derivatives",
+   "Free"
   ],
   "69": [
    "Hyperliquid",
    "Derivatives"
   ],
+  "70": [
+   "Freemium"
+  ],
+  "71": [
+   "Freemium"
+  ],
   "72": [
-   "KOL Tracking"
+   "KOL Tracking",
+   "Freemium"
   ],
   "73": [
-   "Smart Money"
+   "Smart Money",
+   "Freemium"
   ],
   "74": [
    "KOL Tracking",
-   "AI"
+   "AI",
+   "Freemium"
+  ],
+  "75": [
+   "Freemium"
+  ],
+  "76": [
+   "Free"
+  ],
+  "77": [
+   "Free"
+  ],
+  "78": [
+   "Free"
+  ],
+  "79": [
+   "Free"
+  ],
+  "80": [
+   "Free"
   ],
   "81": [
-   "Solana"
+   "Solana",
+   "Free"
+  ],
+  "82": [
+   "Free"
+  ],
+  "83": [
+   "Free"
   ],
   "84": [
    "Hyperliquid",
    "Solana",
-   "Memecoins"
+   "Memecoins",
+   "Free"
   ],
   "85": [
    "Solana",
    "Memecoins",
-   "Token Launch"
+   "Token Launch",
+   "Free"
   ],
   "86": [
    "Stablecoins",
-   "Alerts"
+   "Alerts",
+   "Free"
   ],
   "87": [
    "Ethereum",
-   "Lending"
+   "Lending",
+   "Free"
   ],
   "88": [
-   "Ethereum"
+   "Ethereum",
+   "Free"
+  ],
+  "89": [
+   "Freemium"
   ],
   "90": [
    "Ethereum",
    "Stablecoins",
-   "Yield"
+   "Yield",
+   "Free"
   ],
   "91": [
    "Hyperliquid",
@@ -246,74 +426,96 @@
    "Base",
    "Smart Money",
    "Wallet Tracking",
-   "Polymarket"
+   "Polymarket",
+   "Freemium"
   ],
   "92": [
-   "Taxes"
+   "Taxes",
+   "Freemium"
   ],
   "93": [
-   "AI"
+   "AI",
+   "Freemium"
   ],
   "94": [
    "Solana",
    "Smart Money",
    "Copy Trading",
-   "Memecoins"
+   "Memecoins",
+   "Free"
   ],
   "95": [
-   "Developer APIs"
+   "Developer APIs",
+   "Free"
   ],
   "96": [
-   "BNB Chain"
+   "BNB Chain",
+   "Free"
   ],
   "97": [
-   "Solana"
+   "Solana",
+   "Free"
   ],
   "98": [
    "Wallet Safety",
-   "Browser Extension"
+   "Browser Extension",
+   "Free"
   ],
   "99": [
    "Ethereum",
-   "Privacy"
+   "Privacy",
+   "Free"
   ],
   "100": [
    "Whale Tracking",
-   "Alerts"
+   "Alerts",
+   "Free"
   ],
   "101": [
-   "Ethereum"
+   "Ethereum",
+   "Free"
   ],
   "102": [
    "Solana",
    "Staking",
-   "MEV"
+   "MEV",
+   "Free"
+  ],
+  "103": [
+   "Free"
   ],
   "104": [
    "Ethereum",
-   "Yield"
+   "Yield",
+   "Free"
   ],
   "105": [
    "Solana",
    "Yield",
-   "Lending"
+   "Lending",
+   "Free"
   ],
   "106": [
    "Ethereum",
-   "Stablecoins"
+   "Stablecoins",
+   "Free"
   ],
   "107": [
-   "Developer APIs"
+   "Developer APIs",
+   "Freemium"
   ],
   "108": [
-   "Ethereum"
+   "Ethereum",
+   "Free"
   ],
   "109": [
-   "Browser Extension"
+   "Browser Extension",
+   "Freemium"
   ],
   "110": [
    "Solana",
-   "Yield"
+   "Yield",
+   "Free"
   ],
   "111": [
    "Solana",
@@ -321,200 +523,334 @@
    "Copy Trading",
    "Memecoins",
    "Fomo",
-   "Mobile App"
+   "Mobile App",
+   "Free"
+  ],
+  "112": [
+   "Free"
+  ],
+  "113": [
+   "Free"
   ],
   "114": [
    "Solana",
    "Memecoins",
-   "Telegram Bot"
+   "Telegram Bot",
+   "Free"
   ],
   "115": [
    "Solana",
    "Memecoins",
    "Token Launch",
-   "Mobile App"
+   "Mobile App",
+   "Free"
+  ],
+  "116": [
+   "Free"
+  ],
+  "117": [
+   "Paid"
   ],
   "118": [
    "Ethereum",
-   "Privacy"
+   "Privacy",
+   "Free"
   ],
   "119": [
    "Ethereum",
-   "Staking"
+   "Staking",
+   "Free"
   ],
   "120": [
-   "Solana"
+   "Solana",
+   "Free"
+  ],
+  "121": [
+   "Free"
+  ],
+  "122": [
+   "Free"
+  ],
+  "123": [
+   "Free"
+  ],
+  "124": [
+   "Free"
   ],
   "125": [
    "Ethereum",
-   "Lending"
+   "Lending",
+   "Free"
+  ],
+  "126": [
+   "Free"
+  ],
+  "127": [
+   "Free"
   ],
   "128": [
-   "Stocks & RWA"
+   "Stocks & RWA",
+   "Free"
+  ],
+  "129": [
+   "Free"
+  ],
+  "130": [
+   "Free"
   ],
   "131": [
    "Solana",
    "Memecoins",
-   "Telegram Bot"
+   "Telegram Bot",
+   "Freemium"
   ],
   "132": [
    "Ethereum",
-   "Lending"
+   "Lending",
+   "Free"
   ],
   "133": [
    "Whale Tracking",
-   "Alerts"
+   "Alerts",
+   "Free"
   ],
   "134": [
    "Ethereum",
-   "MEV"
+   "MEV",
+   "Free"
+  ],
+  "135": [
+   "Freemium"
+  ],
+  "136": [
+   "Free"
+  ],
+  "137": [
+   "Free"
   ],
   "138": [
    "Memecoins",
-   "Token Launch"
+   "Token Launch",
+   "Free"
   ],
   "139": [
-   "Wallet Safety"
+   "Wallet Safety",
+   "Paid"
   ],
   "140": [
-   "Wallet Safety"
+   "Wallet Safety",
+   "Free"
   ],
   "141": [
    "Wallet Tracking",
-   "Portfolio"
+   "Portfolio",
+   "Free"
+  ],
+  "142": [
+   "Free"
   ],
   "143": [
-   "AI"
+   "AI",
+   "Free"
   ],
   "144": [
-   "AI"
+   "AI",
+   "Paid"
+  ],
+  "145": [
+   "Free"
   ],
   "146": [
-   "Wallet Safety"
+   "Wallet Safety",
+   "Paid"
   ],
   "147": [
-   "Rug Check"
+   "Rug Check",
+   "Free"
   ],
   "148": [
-   "Rug Check"
+   "Rug Check",
+   "Freemium"
+  ],
+  "149": [
+   "Free"
   ],
   "150": [
    "Wallet Safety"
   ],
+  "151": [
+   "Free"
+  ],
   "152": [
    "Ethereum",
    "Layer 2s",
-   "Derivatives"
+   "Derivatives",
+   "Free"
+  ],
+  "153": [
+   "Freemium"
   ],
   "154": [
-   "Charts"
+   "Charts",
+   "Freemium"
   ],
   "155": [
-   "Ethereum"
+   "Ethereum",
+   "Free"
+  ],
+  "156": [
+   "Freemium"
+  ],
+  "157": [
+   "Free"
   ],
   "158": [
    "Ethereum",
-   "Layer 2s"
+   "Layer 2s",
+   "Free"
   ],
   "159": [
-   "Bitcoin"
+   "Bitcoin",
+   "Free"
   ],
   "160": [
    "Smart Money",
    "Copy Trading",
    "Polymarket"
   ],
+  "161": [
+   "Free"
+  ],
+  "162": [
+   "Free"
+  ],
   "163": [
-   "Bitcoin"
+   "Bitcoin",
+   "Free"
   ],
   "164": [
-   "Solana"
+   "Solana",
+   "Free"
   ],
   "165": [
-   "Stocks & RWA"
+   "Stocks & RWA",
+   "Free"
   ],
   "166": [
    "Solana",
-   "Privacy"
+   "Privacy",
+   "Free"
   ],
   "167": [
-   "Solana"
+   "Solana",
+   "Free"
   ],
   "168": [
    "Polymarket"
   ],
+  "169": [
+   "Freemium"
+  ],
+  "170": [
+   "Free"
+  ],
   "171": [
-   "Base"
+   "Base",
+   "Free"
   ],
   "172": [
    "Base",
-   "Mobile App"
+   "Mobile App",
+   "Free"
+  ],
+  "173": [
+   "Free"
   ],
   "174": [
-   "Solana"
+   "Solana",
+   "Free"
   ],
   "175": [
    "Solana",
    "Memecoins",
-   "Token Launch"
+   "Token Launch",
+   "Free"
   ],
   "176": [
    "Solana",
    "Smart Money",
-   "Charts"
+   "Charts",
+   "Freemium"
   ],
   "177": [
    "Base",
    "Memecoins",
    "Token Launch",
-   "AI"
+   "AI",
+   "Freemium"
   ],
   "178": [
    "Solana",
-   "Token Launch"
+   "Token Launch",
+   "Free"
+  ],
+  "179": [
+   "Freemium"
   ],
   "180": [
-   "Derivatives"
+   "Derivatives",
+   "Free"
   ],
   "181": [
-   "Yield"
+   "Yield",
+   "Free"
   ],
   "182": [
-   "Solana"
+   "Solana",
+   "Free"
   ],
   "183": [
-   "Token Unlocks"
+   "Token Unlocks",
+   "Free"
   ],
   "184": [
-   "Bitcoin"
+   "Bitcoin",
+   "Free"
   ],
   "185": [
    "Solana",
-   "Derivatives"
+   "Derivatives",
+   "Free"
   ],
   "186": [
    "Hyperliquid",
    "Solana",
-   "Polymarket"
+   "Polymarket",
+   "Free"
   ],
   "187": [
-   "Solana"
+   "Solana",
+   "Free"
   ],
   "188": [
-   "AI"
+   "AI",
+   "Freemium"
   ],
   "189": [
    "AI"
   ],
   "190": [
    "Stablecoins",
-   "Alerts"
+   "Alerts",
+   "Free"
   ],
   "191": [
-   "Yield"
+   "Yield",
+   "Free"
   ],
   "192": [
-   "AI"
+   "AI",
+   "Freemium"
   ],
   "193": [
    "Solana",
@@ -522,178 +858,245 @@
    "Token Launch"
   ],
   "194": [
-   "Derivatives"
+   "Derivatives",
+   "Free"
   ],
   "195": [
    "Solana",
    "Memecoins",
-   "Rug Check"
+   "Rug Check",
+   "Free"
   ],
   "196": [
-   "Ethereum"
+   "Ethereum",
+   "Free"
   ],
   "197": [
    "Solana",
-   "Yield"
+   "Yield",
+   "Free"
+  ],
+  "198": [
+   "Free"
   ],
   "199": [
    "Hyperliquid",
    "Derivatives",
-   "Charts"
+   "Charts",
+   "Freemium"
   ],
   "200": [
    "Solana",
    "Stablecoins",
    "Yield",
-   "Stocks & RWA"
+   "Stocks & RWA",
+   "Free"
   ],
   "201": [
-   "Stocks & RWA"
+   "Stocks & RWA",
+   "Free"
   ],
   "202": [
    "Derivatives",
-   "Stocks & RWA"
+   "Stocks & RWA",
+   "Free"
   ],
   "203": [
    "Solana",
-   "Stablecoins"
+   "Stablecoins",
+   "Free"
   ],
   "204": [
    "Solana",
    "Stablecoins",
-   "Yield"
+   "Yield",
+   "Free"
   ],
   "205": [
    "Layer 2s",
    "Derivatives",
-   "Stocks & RWA"
+   "Stocks & RWA",
+   "Free"
   ],
   "206": [
    "Solana",
-   "Lending"
+   "Lending",
+   "Free"
   ],
   "207": [
-   "Solana"
+   "Solana",
+   "Free"
   ],
   "208": [
    "Solana",
-   "Yield"
+   "Yield",
+   "Free"
   ],
   "209": [
    "Bitcoin",
    "Whale Tracking",
-   "Alerts"
+   "Alerts",
+   "Freemium"
+  ],
+  "210": [
+   "Paid"
+  ],
+  "211": [
+   "Freemium"
   ],
   "212": [
-   "Yield"
+   "Yield",
+   "Freemium"
   ],
   "213": [
    "Ethereum",
-   "Layer 2s"
+   "Layer 2s",
+   "Free"
   ],
   "214": [
    "Wallet Tracking",
    "Portfolio",
-   "Mobile App"
+   "Mobile App",
+   "Free"
   ],
   "215": [
    "Solana",
-   "Block Explorer"
+   "Block Explorer",
+   "Free"
   ],
   "216": [
    "Hyperliquid",
    "Whale Tracking",
    "Smart Money",
    "Alerts",
-   "AI"
+   "AI",
+   "Freemium"
   ],
   "217": [
-   "Developer APIs"
+   "Developer APIs",
+   "Freemium"
   ],
   "218": [
-   "Developer APIs"
+   "Developer APIs",
+   "Freemium"
   ],
   "219": [
-   "Developer APIs"
+   "Developer APIs",
+   "Freemium"
   ],
   "220": [
-   "Developer APIs"
+   "Developer APIs",
+   "Freemium"
   ],
   "221": [
-   "Block Explorer"
+   "Block Explorer",
+   "Free"
   ],
   "222": [
    "Block Explorer",
-   "Open Source"
+   "Open Source",
+   "Free"
   ],
   "223": [
    "Wallet Tracking",
    "Fund Tracing",
-   "Block Explorer"
+   "Block Explorer",
+   "Free"
+  ],
+  "224": [
+   "Free"
   ],
   "225": [
    "Memecoins",
-   "Charts"
+   "Charts",
+   "Free"
   ],
   "226": [
    "Hyperliquid",
-   "Derivatives"
+   "Derivatives",
+   "Free"
   ],
   "227": [
-   "Ethereum"
+   "Ethereum",
+   "Free"
   ],
   "228": [
-   "Ethereum"
+   "Ethereum",
+   "Free"
   ],
   "229": [
    "Solana",
-   "Memecoins"
+   "Memecoins",
+   "Free"
   ],
   "230": [
    "Solana",
-   "Memecoins"
+   "Memecoins",
+   "Free"
   ],
   "231": [
-   "Fund Tracing"
+   "Fund Tracing",
+   "Freemium"
   ],
   "232": [
-   "Fund Tracing"
+   "Fund Tracing",
+   "Paid"
   ],
   "233": [
-   "Fund Tracing"
+   "Fund Tracing",
+   "Paid"
   ],
   "234": [
-   "Fund Tracing"
+   "Fund Tracing",
+   "Paid"
   ],
   "235": [
-   "Fund Tracing"
+   "Fund Tracing",
+   "Freemium"
+  ],
+  "236": [
+   "Free"
   ],
   "237": [
-   "Wallet Safety"
+   "Wallet Safety",
+   "Paid"
+  ],
+  "238": [
+   "Paid"
+  ],
+  "239": [
+   "Paid"
   ],
   "240": [
-   "Fund Tracing"
+   "Fund Tracing",
+   "Paid"
   ],
   "241": [
-   "Fund Tracing"
+   "Fund Tracing",
+   "Paid"
   ],
   "242": [
    "Fund Tracing",
-   "Block Explorer"
+   "Block Explorer",
+   "Free"
   ],
   "243": [
-   "Rug Check"
+   "Rug Check",
+   "Free"
   ],
   "244": [
-   "Alerts"
+   "Alerts",
+   "Freemium"
   ],
   "245": [
    "Hyperliquid",
-   "Whale Tracking"
+   "Whale Tracking",
+   "Free"
   ],
   "246": [
    "Solana",
-   "Rug Check"
+   "Rug Check",
+   "Free"
   ],
   "247": [
    "Solana",
@@ -702,20 +1105,27 @@
   ],
   "248": [
    "Token Unlocks",
-   "Fundraising"
+   "Fundraising",
+   "Freemium"
   ],
   "249": [
    "Hyperliquid",
    "Whale Tracking",
-   "Derivatives"
+   "Derivatives",
+   "Freemium"
+  ],
+  "250": [
+   "Free"
   ],
   "251": [
    "Bitcoin",
-   "ETFs"
+   "ETFs",
+   "Free"
   ],
   "252": [
    "Bitcoin",
-   "Block Explorer"
+   "Block Explorer",
+   "Free"
   ],
   "253": [
    "Solana",
@@ -723,7 +1133,8 @@
    "BNB Chain",
    "Wallet Tracking",
    "Copy Trading",
-   "Fomo"
+   "Fomo",
+   "Freemium"
   ],
   "254": [
    "Solana",
@@ -734,14 +1145,16 @@
   "255": [
    "Solana",
    "Fomo",
-   "Browser Extension"
+   "Browser Extension",
+   "Free"
   ],
   "256": [
    "Solana",
    "Memecoins",
    "Rug Check",
    "Fomo",
-   "Browser Extension"
+   "Browser Extension",
+   "Free"
   ],
   "257": [
    "Solana",
@@ -749,22 +1162,26 @@
    "Memecoins",
    "Fomo",
    "Alerts",
-   "Browser Extension"
+   "Browser Extension",
+   "Free"
   ],
   "258": [
    "Solana",
    "Wallet Tracking",
-   "KOL Tracking"
+   "KOL Tracking",
+   "Freemium"
   ],
   "259": [
    "Robinhood Chain",
-   "Whale Tracking"
+   "Whale Tracking",
+   "Free"
   ],
   "260": [
    "Alerts"
   ],
   "261": [
-   "Wallet Tracking"
+   "Wallet Tracking",
+   "Free"
   ],
   "262": [
    "Solana",
@@ -772,45 +1189,55 @@
    "Fomo"
   ],
   "263": [
-   "Copy Trading"
+   "Copy Trading",
+   "Free"
   ],
   "264": [
-   "NFT Mints"
+   "NFT Mints",
+   "Freemium"
   ],
   "265": [
-   "NFT Mints"
+   "NFT Mints",
+   "Free"
   ],
   "266": [
    "Ethereum",
    "Robinhood Chain",
-   "NFT Mints"
+   "NFT Mints",
+   "Free"
   ],
   "267": [
-   "NFT Mints"
+   "NFT Mints",
+   "Free"
   ],
   "268": [
    "Robinhood Chain",
    "NFT Mints",
-   "Alerts"
+   "Alerts",
+   "Free"
   ],
   "269": [
-   "NFT Mints"
+   "NFT Mints",
+   "Paid"
   ],
   "270": [
-   "NFT Mints"
+   "NFT Mints",
+   "Freemium"
   ],
   "271": [
    "KOL Tracking"
   ],
   "272": [
-   "KOL Tracking"
+   "KOL Tracking",
+   "Freemium"
   ],
   "273": [
    "Alerts"
   ],
   "274": [
    "Alerts",
-   "Telegram Bot"
+   "Telegram Bot",
+   "Paid"
   ],
   "275": [
    "Solana",
@@ -821,10 +1248,12 @@
   "276": [
    "Solana",
    "Memecoins",
-   "Token Launch"
+   "Token Launch",
+   "Free"
   ],
   "277": [
-   "Rug Check"
+   "Rug Check",
+   "Free"
   ],
   "278": [
    "AI"
@@ -838,6 +1267,9 @@
    "Alerts",
    "Telegram Bot"
   ],
+  "281": [
+   "Freemium"
+  ],
   "282": [
    "Fundraising"
   ],
@@ -846,68 +1278,140 @@
   ],
   "284": [
    "Ethereum",
-   "MEV"
+   "MEV",
+   "Free"
+  ],
+  "285": [
+   "Free"
   ],
   "286": [
    "KOL Tracking",
-   "AI"
+   "AI",
+   "Freemium"
   ],
   "287": [
    "Yield",
-   "Lending"
+   "Lending",
+   "Free"
+  ],
+  "288": [
+   "Free"
   ],
   "289": [
-   "Open Source"
+   "Open Source",
+   "Free"
+  ],
+  "290": [
+   "Freemium"
+  ],
+  "291": [
+   "Free"
   ],
   "292": [
-   "Fundraising"
+   "Fundraising",
+   "Freemium"
   ],
   "293": [
-   "Fund Tracing"
+   "Fund Tracing",
+   "Freemium"
   ],
   "294": [
-   "Wallet Safety"
+   "Wallet Safety",
+   "Free"
   ],
   "295": [
-   "Wallet Safety"
+   "Wallet Safety",
+   "Free"
   ],
   "296": [
    "Solana",
    "Whale Tracking",
    "Smart Money",
-   "Mobile App"
+   "Mobile App",
+   "Freemium"
   ],
   "297": [
-   "Wallet Tracking"
+   "Wallet Tracking",
+   "Free"
   ],
   "298": [
    "Bitcoin",
-   "Block Explorer"
+   "Block Explorer",
+   "Free"
   ],
   "299": [
    "AI",
-   "Browser Extension"
+   "Browser Extension",
+   "Free"
   ],
   "300": [
    "Stablecoins",
-   "Block Explorer"
+   "Block Explorer",
+   "Free"
   ],
   "301": [
-   "Block Explorer"
+   "Block Explorer",
+   "Free"
   ],
   "302": [
-   "Open Source"
+   "Open Source",
+   "Free"
+  ],
+  "303": [
+   "Free"
+  ],
+  "304": [
+   "Paid"
+  ],
+  "305": [
+   "Freemium"
   ],
   "306": [
-   "Open Source"
+   "Open Source",
+   "Free"
   ],
   "307": [
-   "Telegram Bot"
+   "Telegram Bot",
+   "Freemium"
+  ],
+  "308": [
+   "Free"
+  ],
+  "309": [
+   "Free"
+  ],
+  "310": [
+   "Free"
+  ],
+  "311": [
+   "Freemium"
+  ],
+  "312": [
+   "Paid"
+  ],
+  "313": [
+   "Freemium"
+  ],
+  "314": [
+   "Freemium"
+  ],
+  "315": [
+   "Freemium"
+  ],
+  "316": [
+   "Freemium"
+  ],
+  "317": [
+   "Free"
+  ],
+  "318": [
+   "Free"
   ],
   "319": [
    "Hyperliquid",
    "Whale Tracking",
-   "Derivatives"
+   "Derivatives",
+   "Free"
   ]
  }
 }
