@@ -54,6 +54,10 @@
 
 <div class="sidebar-overlay" id="sidebar-overlay" onclick="closeSidebar()"></div>
 
+<div class="overlay info-overlay" id="info-overlay">
+  <div class="info-sheet" id="info-sheet" role="dialog" aria-modal="true" aria-labelledby="info-name"></div>
+</div>
+
 <div class="page-shell">
   <div class="main-layout">
     <nav class="sidebar" id="sidebar" aria-label="Categories"></nav>
@@ -172,8 +176,11 @@ function buildCard(a, i) {
   var icon = isImage(a.icon)
     ? '<div class="card-icon" style="' + bg + ';padding:0;overflow:hidden"><img src="' + esc(a.icon) + '" alt="" loading="lazy"/></div>'
     : '<div class="card-icon" style="' + bg + '">' + esc(a.icon || '🔗') + '</div>';
+  var info = hasInfo(a)
+    ? '<button type="button" class="card-info" data-info="' + esc(a.id) + '" aria-label="Info about ' + esc(a.name) + '" title="Pricing, yield and rewards">i</button>'
+    : '';
   return '<div class="card" tabindex="0" data-id="' + esc(a.id) + '" style="animation-delay:' + Math.min(i * 0.05, 0.6).toFixed(2) + 's">' +
-    '<div class="card-top">' + icon + '</div>' +
+    '<div class="card-top">' + icon + info + '</div>' +
     '<div class="card-title">' + esc(a.name) + '<span class="card-arrow">&#8599;</span></div>' +
     '<div class="card-desc">' + esc(a.desc) + '</div></div>';
 }
@@ -355,12 +362,15 @@ document.getElementById('grid').addEventListener('click', function (e) {
   var untag = e.target.closest('[data-untag]');
   if (untag) { toggleTag(untag.getAttribute('data-untag')); return; }
   if (e.target.closest('[data-clear]')) { clearTags(); return; }
+  var infoBtn = e.target.closest('[data-info]');
+  if (infoBtn) { e.stopPropagation(); openInfo(infoBtn.getAttribute('data-info'), infoBtn); return; }
   var folder = e.target.closest('[data-folder]');
   if (folder) { setTab(folder.getAttribute('data-folder')); return; }
   var card = e.target.closest('.card');
   if (card) launchApp(card.getAttribute('data-id'));
 });
 document.getElementById('grid').addEventListener('keydown', function (e) {
+  if (e.target.closest('.card-info')) return; // the ⓘ button handles its own keys
   var card = e.target.closest('.card');
   if (card && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); launchApp(card.getAttribute('data-id')); }
 });
@@ -391,6 +401,67 @@ function toggleTheme() {
 updateThemeIcon();
 
 // Tags are optional: if they fail to load, search and folders still work.
+// ── Info (ⓘ) disclosures: pricing from tags, plus yield / points notes from data/info.json ──
+var infoData = { apps: {} };
+var PRICING_TEXT = {
+  'Free': 'Free to use. You may still pay network or trading fees.',
+  'Freemium': 'Free plan available, with paid upgrades for extra features or limits.',
+  'Paid': 'Requires a paid plan, purchase or fee to use.'
+};
+function pricingOf(a) {
+  var t = tagsOf(a);
+  return ['Free', 'Freemium', 'Paid'].filter(function (p) { return t.indexOf(p) >= 0; })[0] || null;
+}
+function hasInfo(a) { return !!(pricingOf(a) || infoData.apps[String(a.id)]); }
+function infoRow(label, body, extra) {
+  return '<div class="info-row"><div class="info-label">' + esc(label) + '</div><div class="info-body">' + esc(body) +
+    (extra || '') + '</div></div>';
+}
+var infoReturnFocus = null;
+function openInfo(id, fromEl) {
+  var a = site.apps.find(function (x) { return String(x.id) === String(id); });
+  if (!a) return;
+  var d = infoData.apps[String(a.id)] || {};
+  var price = pricingOf(a);
+  var asOf = infoData.asOf ? new Date(infoData.asOf + 'T00:00:00').toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' }) : '';
+  var rows = '';
+  if (price) rows += infoRow('Pricing', PRICING_TEXT[price], '<span class="info-pill info-pill-' + price.toLowerCase() + '">' + price + '</span>');
+  // yieldSource: null means the text has no figures to source (just how yield works for that app).
+  if (d.yield) rows += infoRow('Yield (APY / APR)', d.yield, '<span class="info-src">' +
+    (d.yieldSource === null ? '' : 'Source: ' + esc(d.yieldSource || infoData.yieldSource || 'DefiLlama') + (asOf ? ', ' + esc(asOf) : '') + '. ') +
+    'Rates change constantly.</span>');
+  if (d.points) rows += infoRow('Points & airdrops', d.points);
+  if (d.note) rows += infoRow('Good to know', d.note);
+  var icon = isImage(a.icon) ? '<img src="' + esc(a.icon) + '" alt=""/>' : '<span>' + esc(a.icon || '🔗') + '</span>';
+  document.getElementById('info-sheet').innerHTML =
+    '<div class="info-head"><span class="info-icon">' + icon + '</span><div class="info-titles">' +
+      '<div class="info-name" id="info-name">' + esc(a.name) + '</div><div class="info-cat">' + esc(a.cat) + '</div></div>' +
+      '<button type="button" class="info-close" data-info-close aria-label="Close">&times;</button></div>' +
+    rows +
+    '<p class="info-disclaimer">Not financial advice. Yields, fees and reward programs can change or end at any time, so check the app before you deposit.</p>' +
+    '<button type="button" class="info-open" data-info-launch="' + esc(a.id) + '">Open ' + esc(a.name) + ' <span aria-hidden="true">&#8599;</span></button>';
+  infoReturnFocus = fromEl || null;
+  var ov = document.getElementById('info-overlay');
+  ov.classList.add('open');
+  ov.querySelector('.info-close').focus();
+}
+function closeInfo() {
+  var ov = document.getElementById('info-overlay');
+  if (!ov.classList.contains('open')) return;
+  ov.classList.remove('open');
+  if (infoReturnFocus && document.body.contains(infoReturnFocus)) infoReturnFocus.focus();
+}
+document.getElementById('info-overlay').addEventListener('click', function (e) {
+  var launch = e.target.closest('[data-info-launch]');
+  if (launch) { launchApp(launch.getAttribute('data-info-launch')); return; }
+  if (e.target === e.currentTarget || e.target.closest('[data-info-close]')) closeInfo();
+});
+document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeInfo(); });
+
+var infoReady = fetch('data/info.json', { cache: 'no-cache' })
+  .then(function (r) { return r.ok ? r.json() : null; })
+  .then(function (t) { if (t && t.apps) infoData = t; })
+  .catch(function () {});
 var tagsReady = fetch('data/tags.json', { cache: 'no-cache' })
   .then(function (r) { return r.ok ? r.json() : null; })
   .then(function (t) { if (t && t.groups) tagData = t; })
@@ -399,7 +470,7 @@ fetch('data/site.json', { cache: 'no-cache' })
   .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
   .then(function (data) {
     site = data; applyBrand(); activeTab = tabFromHash();
-    return tagsReady.then(function () { activeTags = tagsFromUrl(); render(); });
+    return Promise.all([tagsReady, infoReady]).then(function () { activeTags = tagsFromUrl(); render(); });
   })
   .catch(function () {
     document.getElementById('grid').innerHTML =

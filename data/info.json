@@ -1,0 +1,110 @@
+{
+ "asOf": "2026-11-10",
+ "yieldSource": "DefiLlama",
+ "apps": {
+  "62": {
+   "points": "Rabby runs Rabby Points for using the wallet."
+  },
+  "63": {
+   "points": "MetaMask Rewards, in the mobile app, gives points for trading challenges and can include airdrops and partner perks."
+  },
+  "68": {
+   "yield": "The HLP vault earns from market making and liquidations, so returns swing with trader profit and loss: about 3.7% average over the last 30 days. USDC lending earns about 3% to 4%.",
+   "points": "Hyperliquid's HYPE airdrop to points holders happened in November 2024.",
+   "note": "HLP can lose money when traders win big against it."
+  },
+  "87": {
+   "yield": "Lending rates float with demand. Stablecoin supply rates run up to about 5.6% APY on the bigger markets; ETH earns around 1.4%."
+  },
+  "90": {
+   "yield": "Staking USDe as sUSDe earns about 5.0% APY (30-day average 5.0%). Yield comes from funding rates, so it can drop sharply in bear markets.",
+   "points": "Runs the Sats campaign: holding or staking USDe and locking ENA earns Sats, which convert to ENA at the end of each season. Season 6 was reported live from March 26, 2026.",
+   "note": "Unstaking sUSDe has a 7-day cooldown before you get USDe back."
+  },
+  "102": {
+   "yield": "Staking SOL as JitoSOL earns about 4.8% APY, including MEV rewards."
+  },
+  "104": {
+   "yield": "Fixed yields on stablecoin markets mostly run about 5% to 10% APY, with some higher. You lock the rate until the market's maturity date.",
+   "note": "Selling a fixed-rate position before maturity happens at the market price, which can be lower than what you paid."
+  },
+  "105": {
+   "yield": "Stablecoin lending runs up to about 7% APY (PYUSD around 6.9%, part of it paid in reward tokens).",
+   "points": "Kamino moved from points to direct KMNO rewards paid on lending and liquidity activity."
+  },
+  "106": {
+   "yield": "Pool yields vary: big stablecoin pools earn little in fees, while some crvUSD and DOLA pools pay roughly 2% to 7.5%, often partly in CRV rewards. LPs also carry pool and depeg risk."
+  },
+  "108": {
+   "yield": "Pool yields range from under 1% to around 8% APY, depending on the pool and its incentives."
+  },
+  "110": {
+   "yield": "Yields come from trading fees on each liquidity pool and swing a lot with volume. Volatile pairs can show very high APRs along with impermanent loss risk.",
+   "yieldSource": null
+  },
+  "119": {
+   "yield": "Restaking ETH as weETH earns about 2.5% to 2.9% APY; the Liquid ETH vault about 3.5% to 3.9%; the Liquid USD vault about 5.3%.",
+   "points": "ether.fi has ended its traditional seasonal points program. Check the app for any current campaigns."
+  },
+  "125": {
+   "yield": "Curated stablecoin vaults mostly earn about 5% to 7% APY; for example, Steakhouse USDC on Base is around 5%."
+  },
+  "132": {
+   "yield": "Supply rates float with demand. Stablecoin markets earn up to about 7.6% APY; ETH and BTC markets earn little."
+  },
+  "152": {
+   "points": "Lighter's LIT token launched in December 2025, with 25% of supply airdropped to Season 1 and 2 points holders. A new points season had not been announced as of mid-2026."
+  },
+  "155": {
+   "yield": "Liquidity providers earn trading fees. Major WETH/USDC pools recently showed roughly 25% to 45% APR from fees; stable pairs under 1%. Impermanent loss can outweigh fees."
+  },
+  "165": {
+   "points": "Runs xPoints (since March 2026) for trading, holding and providing liquidity with xStocks, for non-US users. No token has been confirmed."
+  },
+  "171": {
+   "yield": "LP rewards are paid mostly in AERO and vary widely: stable pairs earn low single digits, while volatile pairs can show triple-digit APRs that move fast."
+  },
+  "174": {
+   "yield": "Jupiter Lend pays about 4.8% APY on USDC (30-day average 6.3%). Staking SOL as JupSOL earns about 5.1%."
+  },
+  "180": {
+   "yield": "Staking SOL as bpSOL earns about 5.4% to 5.6% APY. Backpack also pays interest on some exchange balances.",
+   "points": "Backpack's points seasons ended with its BP token launch and airdrop in March 2026."
+  },
+  "181": {
+   "yield": "Vault yields range widely: stablecoin vaults about 5% to 13% APY, depending on the vault and its strategy risk."
+  },
+  "185": {
+   "yield": "Staking SOL as bulkSOL earned about 4.6% APY on average over the last 30 days.",
+   "points": "Runs AURA points for pre-deposits, trading, staking and referrals ahead of an expected airdrop. No token date or conversion rate has been published."
+  },
+  "197": {
+   "yield": "Solana yield markets let you lock a fixed rate or trade variable yield. Rates depend on the market and its maturity date; check each market's implied APY.",
+   "yieldSource": null,
+   "points": "Has a Points Hub that tracks your Exponent points, and many markets pass through partner points (for example Hylo XP or Solstice Flares). No Exponent token has been confirmed."
+  },
+  "200": {
+   "yield": "ONyc, its reinsurance-backed yield token, earns about 11% APY.",
+   "note": "ONyc is backed by reinsurance, so returns depend on insurance claims as well as markets."
+  },
+  "203": {
+   "yield": "Staking SOL as hyloSOL earns about 5.4% APY. Its stablecoin and leveraged tokens carry their own yields and risks.",
+   "points": "Runs an XP program: holding Hylo products like xSOL and hyUSD earns XP. No token or airdrop has been confirmed."
+  },
+  "204": {
+   "points": "Runs Flares points, which are set to convert into SLX tokens. Using USX and eUSX, including on partner apps, earns Flares."
+  },
+  "205": {
+   "points": "Runs Omni points (since December 2025), earned from trading volume. A VAR token with a large community airdrop is expected, but no launch date has been confirmed."
+  },
+  "206": {
+   "yield": "USDC lending earns about 6% to 7.5% APY; some markets add reward tokens on top.",
+   "points": "Deposits earn Loopscale points, more when actively lent out, plus a share of points from people you refer. No token or airdrop date has been announced."
+  },
+  "320": {
+   "yield": "Staking trUSD as strUSD earns about 10% APY (30-day average 9.9%). Returns come from market-neutral trading strategies and can change.",
+   "points": "Runs Cores points (Season 1 started June 2026): holding trUSD or strUSD and using them in partner apps like Morpho, Pendle and Curve earns Cores. No token has been confirmed.",
+   "note": "Unstaking strUSD has a 7-day cooldown before you can swap back to USDC or USDT."
+  }
+ }
+}
