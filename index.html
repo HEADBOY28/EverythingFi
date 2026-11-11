@@ -81,6 +81,9 @@
   .lp-divider::before, .lp-divider::after { content: ""; flex: 1; height: 1px; background: var(--border2); }
 
   .lp-email { display: flex; flex-direction: column; gap: 10px; }
+  .lp-email-fields { display: flex; flex-direction: column; gap: 10px; animation: lp-reveal .2s ease-out; }
+  @keyframes lp-reveal { from { opacity: 0; transform: translateY(-4px); } }
+  @media (prefers-reduced-motion: reduce) { .lp-email-fields { animation: none; } }
   .lp-label { font-size: 12px; font-weight: 600; color: var(--text2); }
   .lp-input { width: 100%; height: 46px; font: inherit; font-size: 14px; padding: 0 14px; color: var(--text); background: var(--surface2);
     border: 1px solid var(--border2); border-radius: 12px; transition: border-color .15s, box-shadow .15s, background .15s; }
@@ -188,9 +191,11 @@
         <div class="lp-divider">or</div>
         <form class="lp-email" id="email-form" novalidate>
           <label class="lp-hp" aria-hidden="true">Website <input name="website" id="email-hp" tabindex="-1" autocomplete="off"></label>
-          <label class="lp-label" for="email-input">Email address</label>
-          <input class="lp-input" id="email-input" type="email" autocomplete="email" placeholder="you@example.com" maxlength="254" required>
-          <label class="lp-consent"><input type="checkbox" id="email-consent"> <span>Get the latest Jabiru news, new apps and offers straight to your inbox.</span></label>
+          <div class="lp-email-fields" id="email-fields" hidden>
+            <label class="lp-label" for="email-input">Email address</label>
+            <input class="lp-input" id="email-input" type="email" autocomplete="email" placeholder="you@example.com" maxlength="254" required>
+            <label class="lp-consent"><input type="checkbox" id="email-consent"> <span>Get the latest Jabiru news, new apps and offers straight to your inbox.</span></label>
+          </div>
           <button class="lp-btn lp-btn-dark" id="email-btn" type="submit">
             <span class="lp-btn-lead">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
@@ -344,6 +349,8 @@ function showDisconnected() {
   $('auth-out').hidden = false;
   $('explore-wrap').hidden = false;
   $('auth-in').hidden = true;
+  $('email-fields').hidden = true;
+  $('email-label').textContent = 'Continue with email';
 }
 
 function setBusy(busy) {
@@ -418,6 +425,13 @@ function showEmail(email) {
 
 $('email-form').addEventListener('submit', async function (e) {
   e.preventDefault();
+  // First click only opens the email field.
+  if ($('email-fields').hidden) {
+    $('email-fields').hidden = false;
+    $('email-label').textContent = 'Continue';
+    $('email-input').focus();
+    return;
+  }
   var email = $('email-input').value.trim();
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { note('Please enter a valid email address.', true); $('email-input').focus(); return; }
   if (!$('email-consent').checked) { note('Please tick the box to agree to receive updates.', true); return; }
@@ -439,7 +453,7 @@ $('email-form').addEventListener('submit', async function (e) {
     note(esc(err.message), true);
   } finally {
     $('email-btn').disabled = false;
-    $('email-label').textContent = 'Continue with email';
+    $('email-label').textContent = $('email-fields').hidden ? 'Continue with email' : 'Continue';
   }
 });
 
