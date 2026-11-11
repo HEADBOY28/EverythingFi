@@ -88,7 +88,26 @@ async function headSha() {
   return ref.object.sha;
 }
 
+// ── Redis (Upstash, added through Vercel Marketplace) ──
+// Runs several commands in one request and returns their results in order.
+async function redis(commands) {
+  const url = process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL;
+  const token = process.env.KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_REST_TOKEN;
+  if (!url || !token) throw new Error('Missing environment variable: KV_REST_API_URL / KV_REST_API_TOKEN');
+  const res = await fetch(url.replace(/\/$/, '') + '/pipeline', {
+    method: 'POST',
+    headers: { Authorization: 'Bearer ' + token, 'Content-Type': 'application/json' },
+    body: JSON.stringify(commands),
+  });
+  if (!res.ok) throw new Error('Redis ' + res.status + ': ' + (await res.text()).slice(0, 300));
+  const out = await res.json();
+  return out.map((r) => {
+    if (r.error) throw new Error('Redis: ' + r.error);
+    return r.result;
+  });
+}
+
 module.exports = {
   env, safeEqual, makeSessionCookie, clearSessionCookie, readSession, requireAdmin,
-  gh, headSha, branch,
+  gh, headSha, branch, redis,
 };

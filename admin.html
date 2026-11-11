@@ -132,6 +132,7 @@
       <select id="cat-filter" onchange="renderList()" aria-label="Filter by category"></select>
       <button class="btn" onclick="openCats()">Categories</button>
       <button class="btn" onclick="openBrand()">Branding</button>
+      <button class="btn" onclick="openSubs()">Subscribers</button>
       <button class="add-btn" onclick="openApp()">+ Add app</button>
     </div>
     <div class="app-list" id="app-list"></div>
@@ -216,6 +217,19 @@
       <button type="submit" class="btn-save">Save</button>
     </div>
   </form>
+</div>
+
+<!-- Subscribers modal -->
+<div class="overlay" id="subs-modal">
+  <div class="modal" style="max-width:560px">
+    <div class="modal-title">Email subscribers</div>
+    <p style="font-size:12px;color:var(--text2);margin:-4px 0 14px" id="subs-summary">Loading…</p>
+    <div id="subs-list" style="display:flex;flex-direction:column;gap:6px"></div>
+    <div class="modal-actions">
+      <button type="button" class="btn-cancel" onclick="closeModal('subs-modal')">Close</button>
+      <button type="button" class="btn-save" id="subs-csv" onclick="downloadSubs()" disabled>Download CSV</button>
+    </div>
+  </div>
 </div>
 
 <div class="toast" id="toast"></div>
@@ -553,6 +567,46 @@ $('brand-form').addEventListener('submit', function (e) {
   site.landing = { tagline: $('b-tagline').value.trim(), intro: $('b-intro').value.trim(), links: links };
   closeModal('brand-modal'); markChanged();
 });
+
+// ── Subscribers ──
+var subs = [];
+function fmtDate(iso) { var d = new Date(iso); return isNaN(d) ? '' : d.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' }); }
+function renderSubs() {
+  $('subs-summary').textContent = subs.length ? subs.length + (subs.length === 1 ? ' person has' : ' people have') + ' signed up, newest first.' : 'No one has signed up yet.';
+  $('subs-csv').disabled = !subs.length;
+  $('subs-list').innerHTML = subs.map(function (s, i) {
+    return '<div style="display:flex;align-items:center;gap:10px;padding:8px 10px;background:var(--surface2);border:1px solid var(--border2);border-radius:var(--rs)">' +
+      '<span style="flex:1;min-width:0;overflow-wrap:anywhere;font-size:13px">' + esc(s.email) + '</span>' +
+      '<span style="font-size:11px;color:var(--text3);white-space:nowrap">' + esc(fmtDate(s.at)) + '</span>' +
+      '<button class="btn btn-sm" data-sub="' + i + '">Remove</button></div>';
+  }).join('');
+}
+async function openSubs() {
+  subs = []; $('subs-list').innerHTML = ''; $('subs-summary').textContent = 'Loading…'; $('subs-csv').disabled = true;
+  openModal('subs-modal');
+  try { subs = (await api('/api/subscribers')).subscribers || []; renderSubs(); }
+  catch (err) { $('subs-summary').textContent = err.message; }
+}
+$('subs-list').addEventListener('click', async function (e) {
+  var b = e.target.closest('[data-sub]');
+  if (!b) return;
+  var s = subs[+b.getAttribute('data-sub')];
+  if (b.dataset.confirm !== '1') { b.dataset.confirm = '1'; b.textContent = 'Confirm'; return; }
+  b.disabled = true;
+  try {
+    await api('/api/subscribers?email=' + encodeURIComponent(s.email), { method: 'DELETE' });
+    subs = subs.filter(function (x) { return x !== s; }); renderSubs(); toast('Removed ' + s.email);
+  } catch (err) { b.disabled = false; toast(err.message); }
+});
+function downloadSubs() {
+  var cell = function (v) { v = String(v || ''); if (/^[=+\-@]/.test(v)) v = "'" + v; return '"' + v.replace(/"/g, '""') + '"'; };
+  var csv = 'email,signed_up,source\n' + subs.map(function (s) { return [s.email, s.at, s.source].map(cell).join(','); }).join('\n');
+  var a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([csv], { type: 'text/csv' }));
+  a.download = 'jabiru-subscribers-' + new Date().toISOString().slice(0, 10) + '.csv';
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(function () { URL.revokeObjectURL(a.href); }, 1000);
+}
 
 // ── Theme ──
 function updateThemeIcon() {

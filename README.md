@@ -22,6 +22,10 @@ Add these in **Vercel → Project → Settings → Environment Variables**, then
 | `GITHUB_TOKEN` | A fine-grained GitHub token with **Contents: Read and write** on this repo only |
 | `GITHUB_REPO` | `HEADBOY28/EverythingFi` (optional, this is the default) |
 
+### Email signups
+
+The landing page has a **Continue with email** form. Emails are stored privately in an Upstash Redis database (never in this public repo). To set it up: **Vercel → Project → Storage → Create Database → Upstash (Redis)**, connect it to this project, then redeploy. Vercel adds `KV_REST_API_URL` and `KV_REST_API_TOKEN` automatically. View, remove and export signups (CSV) in the admin page under **Subscribers**.
+
 Credentials never appear in the code. The admin page only works on Vercel (not GitHub Pages), because it needs the `api/` functions.
 
 ## Local preview

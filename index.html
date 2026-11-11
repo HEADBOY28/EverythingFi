@@ -66,6 +66,13 @@
   .lp-note:empty { display: none; }
   .lp-note.err { color: var(--red); }
   .lp-note a { color: var(--accent); font-weight: 600; }
+  .lp-email { display: flex; flex-direction: column; gap: 10px; }
+  .lp-input { width: 100%; font: inherit; font-size: 14px; padding: 11px 14px; color: var(--text); background: var(--surface2);
+    border: 1.5px solid var(--border2); border-radius: var(--r); }
+  .lp-input:focus { outline: none; border-color: var(--accent); }
+  .lp-consent { display: flex; gap: 8px; align-items: flex-start; font-size: 12px; color: var(--text2); line-height: 1.45; cursor: pointer; }
+  .lp-consent input { margin-top: 2px; accent-color: var(--accent); flex-shrink: 0; }
+  .lp-hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
   .lp-divider { display: flex; align-items: center; gap: 10px; color: var(--text3); font-size: 11px; margin: 14px 0; }
   .lp-divider::before, .lp-divider::after { content: ""; flex: 1; height: 1px; background: var(--border2); }
   .lp-explore { display: flex; align-items: center; justify-content: center; gap: 6px; color: var(--text); font-weight: 600;
@@ -80,7 +87,7 @@
     display: flex; align-items: center; justify-content: center; }
   .lp-wallet-avatar img { width: 26px; height: 26px; }
   .lp-wallet-label { font-size: 11px; color: var(--text3); font-weight: 600; text-transform: uppercase; letter-spacing: .05em; }
-  .lp-wallet-addr { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 15px; font-weight: 600; }
+  .lp-wallet-addr { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 15px; font-weight: 600; overflow-wrap: anywhere; }
   .lp-text-btn { background: none; border: none; font: inherit; font-size: 12px; color: var(--text2); cursor: pointer;
     display: block; margin: 12px auto 0; padding: 4px 8px; border-radius: var(--rs); }
   .lp-text-btn:hover { color: var(--red); }
@@ -150,6 +157,16 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 7V5a2 2 0 0 0-2-2H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3v3a1 1 0 0 1-1 1H5a2 2 0 0 1-2-2V5"/></svg>
         <span id="connect-label">Connect wallet</span>
       </button>
+      <div class="lp-divider">or</div>
+      <form class="lp-email" id="email-form" novalidate>
+        <label class="lp-hp" aria-hidden="true">Website <input name="website" id="email-hp" tabindex="-1" autocomplete="off"></label>
+        <input class="lp-input" id="email-input" type="email" autocomplete="email" placeholder="you@example.com" maxlength="254" aria-label="Email address" required>
+        <label class="lp-consent"><input type="checkbox" id="email-consent"> <span>Send me Jabiru news, new apps and offers. Unsubscribe anytime.</span></label>
+        <button class="lp-btn" id="email-btn" type="submit">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+          <span id="email-label">Continue with email</span>
+        </button>
+      </form>
     </div>
 
     <!-- Signed in with a wallet -->
@@ -157,12 +174,12 @@
       <div class="lp-wallet">
         <div class="lp-wallet-avatar" id="wallet-avatar"></div>
         <div>
-          <div class="lp-wallet-label">Connected</div>
+          <div class="lp-wallet-label" id="auth-label">Connected</div>
           <div class="lp-wallet-addr" id="wallet-addr"></div>
         </div>
       </div>
       <a class="lp-btn lp-btn-primary" href="/app">Enter Jabiru <span aria-hidden="true">→</span></a>
-      <button class="lp-text-btn" onclick="disconnectWallet()">Disconnect</button>
+      <button class="lp-text-btn" id="signout-btn" onclick="signOut()">Disconnect</button>
     </div>
 
     <div class="lp-note" id="note" role="status" aria-live="polite"></div>
@@ -272,10 +289,16 @@ window.dispatchEvent(new Event('eip6963:requestProvider'));
 function shortAddr(a) { return a.slice(0, 6) + '…' + a.slice(-4); }
 function safeIcon(src) { return /^data:image\/(svg\+xml|png|jpeg|webp|gif)[;,]/.test(src || '') ? src : ''; }
 
-function showConnected(addr, icon) {
+function showSignedIn(label, signOutText) {
   $('auth-out').hidden = true;
   $('explore-wrap').hidden = true;
   $('auth-in').hidden = false;
+  $('auth-label').textContent = label;
+  $('signout-btn').textContent = signOutText;
+}
+
+function showConnected(addr, icon) {
+  showSignedIn('Connected', 'Disconnect');
   $('wallet-addr').textContent = shortAddr(addr);
   $('wallet-addr').title = addr;
   var src = safeIcon(icon);
@@ -350,10 +373,58 @@ async function disconnectWallet() {
   if (p) { try { await p.request({ method: 'wallet_revokePermissions', params: [{ eth_accounts: {} }] }); } catch (e) {} }
 }
 
-// Restore a previous connection on return visits.
+// ── Email signup ──
+function showEmail(email) {
+  showSignedIn('Signed in with email', 'Sign out');
+  $('wallet-addr').textContent = email;
+  $('wallet-addr').title = email;
+  $('wallet-avatar').innerHTML = '<span style="font-size:18px">✉️</span>';
+  note('');
+}
+
+$('email-form').addEventListener('submit', async function (e) {
+  e.preventDefault();
+  var email = $('email-input').value.trim();
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { note('Please enter a valid email address.', true); $('email-input').focus(); return; }
+  if (!$('email-consent').checked) { note('Please tick the box to agree to receive updates.', true); return; }
+  $('email-btn').disabled = true;
+  $('email-label').textContent = 'Signing you in…';
+  note('');
+  try {
+    var res = await fetch('/api/subscribe', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'X-Requested-With': 'jabiru-site' },
+      body: JSON.stringify({ email: email, consent: true, website: $('email-hp').value })
+    });
+    var body = {};
+    try { body = await res.json(); } catch (err) {}
+    if (!res.ok) throw new Error(body.error || 'Something went wrong. Please try again.');
+    store('ef-email', email.toLowerCase());
+    showEmail(email.toLowerCase());
+  } catch (err) {
+    note(esc(err.message), true);
+  } finally {
+    $('email-btn').disabled = false;
+    $('email-label').textContent = 'Continue with email';
+  }
+});
+
+function signOut() {
+  if (load('ef-email')) {
+    store('ef-email', null);
+    showDisconnected();
+    note('Signed out.');
+  } else {
+    disconnectWallet();
+  }
+}
+
+// Restore a previous sign-in on return visits.
 (function () {
   var saved = load('ef-wallet');
+  var email = load('ef-email');
   if (saved && /^0x[0-9a-fA-F]{40}$/.test(saved)) showConnected(saved, load('ef-wallet-icon'));
+  else if (email) showEmail(email);
 })();
 
 // ── Theme ──
