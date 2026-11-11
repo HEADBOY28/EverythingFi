@@ -46,38 +46,62 @@
     white-space: pre-line; text-wrap: pretty; }
 
   /* Auth card */
-  .lp-auth { width: min(400px, 100%); margin-top: 34px; background: var(--surface); border: 1.5px solid var(--border2);
-    border-radius: var(--rx); padding: 20px; box-shadow: var(--card-shadow); text-align: left; }
-  .lp-btn { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; font: inherit; font-size: 14px;
-    font-weight: 600; padding: 12px 18px; border-radius: var(--r); cursor: pointer; text-decoration: none;
-    border: 1.5px solid var(--border2); background: var(--surface2); color: var(--text); transition: background .15s, box-shadow .15s, transform .15s; }
-  .lp-btn:hover { background: var(--surface3); }
+  .lp-auth { width: min(420px, 100%); margin-top: 36px; background: var(--surface); border: 1px solid var(--border2);
+    border-radius: 18px; box-shadow: 0 1px 2px rgba(28,20,36,0.04), 0 12px 40px rgba(28,20,36,0.08); text-align: left; overflow: hidden; }
+  .lp-auth-body { padding: 26px 26px 22px; }
+  .lp-auth-head { margin-bottom: 20px; }
+  .lp-auth-title { font-size: 17px; font-weight: 700; letter-spacing: -0.01em; color: var(--text); }
+  .lp-auth-sub { font-size: 13px; color: var(--text2); margin-top: 4px; }
+
+  .lp-btn { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; height: 46px; font: inherit; font-size: 14px;
+    font-weight: 600; padding: 0 18px; border-radius: 12px; cursor: pointer; text-decoration: none;
+    border: 1px solid var(--border2); background: var(--surface); color: var(--text);
+    transition: background .15s, box-shadow .15s, transform .15s, border-color .15s; }
+  .lp-btn:hover { background: var(--surface2); border-color: var(--border3); }
   .lp-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-  .lp-btn-primary { background: var(--accent); border-color: var(--accent); color: #fff; box-shadow: 0 2px 10px rgba(255,107,69,0.35); }
-  .lp-btn-primary:hover { background: var(--accent2); box-shadow: 0 4px 16px rgba(255,107,69,0.45); transform: translateY(-1px); }
+  .lp-btn:active { transform: translateY(1px); }
+  .lp-btn-primary { background: var(--accent); border-color: var(--accent); color: #fff;
+    box-shadow: 0 1px 0 rgba(255,255,255,0.25) inset, 0 6px 18px rgba(255,107,69,0.30); }
+  .lp-btn-primary:hover { background: var(--accent2); border-color: var(--accent2); box-shadow: 0 1px 0 rgba(255,255,255,0.25) inset, 0 8px 22px rgba(255,107,69,0.38); }
+  .lp-btn-dark { background: var(--text); border-color: var(--text); color: var(--surface); }
+  .lp-btn-dark:hover { background: var(--text); border-color: var(--text); opacity: .88; }
   .lp-btn[disabled] { opacity: .6; cursor: wait; transform: none; }
   .lp-btn svg { width: 18px; height: 18px; flex-shrink: 0; }
-  .lp-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 10px; }
-  .lp-soon { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--text3);
-    border: 1px solid var(--border2); border-radius: 999px; padding: 1px 6px; }
-  .lp-note { font-size: 12px; color: var(--text2); text-align: center; min-height: 18px; margin-top: 12px; }
+  .lp-btn .lp-arrow { margin-left: auto; opacity: .85; transition: transform .15s; }
+  .lp-btn:hover .lp-arrow { transform: translateX(3px); }
+  .lp-btn .lp-btn-lead { margin-right: auto; display: inline-flex; align-items: center; gap: 10px; }
+
+  .lp-note { font-size: 12px; color: var(--text2); text-align: center; min-height: 18px; margin-top: 14px; }
   .lp-note:empty { display: none; }
   .lp-note.err { color: var(--red); }
   .lp-note a { color: var(--accent); font-weight: 600; }
-  .lp-email { display: flex; flex-direction: column; gap: 10px; }
-  .lp-input { width: 100%; font: inherit; font-size: 14px; padding: 11px 14px; color: var(--text); background: var(--surface2);
-    border: 1.5px solid var(--border2); border-radius: var(--r); }
-  .lp-input:focus { outline: none; border-color: var(--accent); }
-  .lp-consent { display: flex; gap: 8px; align-items: flex-start; font-size: 12px; color: var(--text2); line-height: 1.45; cursor: pointer; }
-  .lp-consent input { margin-top: 2px; accent-color: var(--accent); flex-shrink: 0; }
-  .lp-hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
-  .lp-divider { display: flex; align-items: center; gap: 10px; color: var(--text3); font-size: 11px; margin: 14px 0; }
+
+  .lp-divider { display: flex; align-items: center; gap: 12px; color: var(--text3); font-size: 11px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: .08em; margin: 18px 0; }
   .lp-divider::before, .lp-divider::after { content: ""; flex: 1; height: 1px; background: var(--border2); }
-  .lp-explore { display: flex; align-items: center; justify-content: center; gap: 6px; color: var(--text); font-weight: 600;
-    font-size: 14px; text-decoration: none; padding: 8px; border-radius: var(--rs); }
+
+  .lp-email { display: flex; flex-direction: column; gap: 10px; }
+  .lp-label { font-size: 12px; font-weight: 600; color: var(--text2); }
+  .lp-input { width: 100%; height: 46px; font: inherit; font-size: 14px; padding: 0 14px; color: var(--text); background: var(--surface2);
+    border: 1px solid var(--border2); border-radius: 12px; transition: border-color .15s, box-shadow .15s, background .15s; }
+  .lp-input::placeholder { color: var(--text3); }
+  .lp-input:hover { border-color: var(--border3); }
+  .lp-input:focus { outline: none; border-color: var(--accent); background: var(--surface); box-shadow: 0 0 0 4px var(--accentbg2); }
+  .lp-consent { display: flex; gap: 10px; align-items: flex-start; font-size: 12px; color: var(--text2); line-height: 1.5; cursor: pointer; margin: 2px 0 4px; }
+  .lp-consent input { width: 16px; height: 16px; margin: 1px 0 0; accent-color: var(--accent); flex-shrink: 0; cursor: pointer; }
+  :root[data-theme="dark"] .lp-consent input { color-scheme: dark; }
+  .lp-hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+
+  .lp-auth-foot { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 26px;
+    background: var(--surface2); border-top: 1px solid var(--border2); font-size: 13px; color: var(--text2); }
+  .lp-explore { display: inline-flex; align-items: center; gap: 6px; color: var(--text); font-weight: 600; text-decoration: none; white-space: nowrap; }
   .lp-explore:hover { color: var(--accent); }
   .lp-explore span { transition: transform .15s; }
   .lp-explore:hover span { transform: translateX(3px); }
+  @media (max-width: 420px) {
+    .lp-auth-body { padding: 22px 18px 18px; }
+    .lp-auth-foot { padding: 14px 18px; }
+  }
 
   /* Connected state */
   .lp-wallet { display: flex; align-items: center; gap: 12px; padding: 4px 2px 16px; }
@@ -147,42 +171,56 @@
   <p class="lp-intro" id="intro">Jabiru is a curated directory of Web3 tools: DEXs, bridges, wallets, analytics, prediction markets, AI agents and more, sorted by category so you can find what you need fast.</p>
 
   <div class="lp-auth">
-    <!-- Signed out -->
-    <div id="auth-out">
-      <button class="lp-btn lp-btn-primary" id="connect-btn" onclick="connectWallet()">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 7V5a2 2 0 0 0-2-2H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3v3a1 1 0 0 1-1 1H5a2 2 0 0 1-2-2V5"/></svg>
-        <span id="connect-label">Connect wallet</span>
-      </button>
-      <div class="lp-divider">or</div>
-      <form class="lp-email" id="email-form" novalidate>
-        <label class="lp-hp" aria-hidden="true">Website <input name="website" id="email-hp" tabindex="-1" autocomplete="off"></label>
-        <input class="lp-input" id="email-input" type="email" autocomplete="email" placeholder="you@example.com" maxlength="254" aria-label="Email address" required>
-        <label class="lp-consent"><input type="checkbox" id="email-consent"> <span>Get the latest Jabiru news, new apps and offers straight to your inbox.</span></label>
-        <button class="lp-btn" id="email-btn" type="submit">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
-          <span id="email-label">Continue with email</span>
-        </button>
-      </form>
-    </div>
-
-    <!-- Signed in with a wallet -->
-    <div id="auth-in" hidden>
-      <div class="lp-wallet">
-        <div class="lp-wallet-avatar" id="wallet-avatar"></div>
-        <div>
-          <div class="lp-wallet-label" id="auth-label">Connected</div>
-          <div class="lp-wallet-addr" id="wallet-addr"></div>
+    <div class="lp-auth-body">
+      <!-- Signed out -->
+      <div id="auth-out">
+        <div class="lp-auth-head">
+          <div class="lp-auth-title">Get started</div>
+          <div class="lp-auth-sub">Connect a wallet or continue with your email.</div>
         </div>
+        <button class="lp-btn lp-btn-primary" id="connect-btn" onclick="connectWallet()">
+          <span class="lp-btn-lead">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 7V5a2 2 0 0 0-2-2H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3v3a1 1 0 0 1-1 1H5a2 2 0 0 1-2-2V5"/></svg>
+            <span id="connect-label">Connect wallet</span>
+          </span>
+          <svg class="lp-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+        <div class="lp-divider">or</div>
+        <form class="lp-email" id="email-form" novalidate>
+          <label class="lp-hp" aria-hidden="true">Website <input name="website" id="email-hp" tabindex="-1" autocomplete="off"></label>
+          <label class="lp-label" for="email-input">Email address</label>
+          <input class="lp-input" id="email-input" type="email" autocomplete="email" placeholder="you@example.com" maxlength="254" required>
+          <label class="lp-consent"><input type="checkbox" id="email-consent"> <span>Get the latest Jabiru news, new apps and offers straight to your inbox.</span></label>
+          <button class="lp-btn lp-btn-dark" id="email-btn" type="submit">
+            <span class="lp-btn-lead">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+              <span id="email-label">Continue with email</span>
+            </span>
+            <svg class="lp-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </form>
       </div>
-      <a class="lp-btn lp-btn-primary" href="/app">Enter Jabiru <span aria-hidden="true">→</span></a>
-      <button class="lp-text-btn" id="signout-btn" onclick="signOut()">Disconnect</button>
+
+      <!-- Signed in (wallet or email) -->
+      <div id="auth-in" hidden>
+        <div class="lp-wallet">
+          <div class="lp-wallet-avatar" id="wallet-avatar"></div>
+          <div>
+            <div class="lp-wallet-label" id="auth-label">Connected</div>
+            <div class="lp-wallet-addr" id="wallet-addr"></div>
+          </div>
+        </div>
+        <a class="lp-btn lp-btn-primary" href="/app"><span class="lp-btn-lead">Enter Jabiru</span>
+          <svg class="lp-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <button class="lp-text-btn" id="signout-btn" onclick="signOut()">Disconnect</button>
+      </div>
+
+      <div class="lp-note" id="note" role="status" aria-live="polite"></div>
     </div>
 
-    <div class="lp-note" id="note" role="status" aria-live="polite"></div>
-
-    <div id="explore-wrap">
-      <div class="lp-divider">or</div>
-      <a class="lp-explore" href="/app">Explore apps without an account <span aria-hidden="true">→</span></a>
+    <div class="lp-auth-foot" id="explore-wrap">
+      <span>Just looking around?</span>
+      <a class="lp-explore" href="/app">Explore apps <span aria-hidden="true">→</span></a>
     </div>
   </div>
 
