@@ -79,6 +79,7 @@ strong { font-weight: 600; }
 .d-callout { margin-top: 24px; padding: 16px 18px; border-radius: 14px; background: var(--accentbg); border: 1px solid var(--border3); }
 .d-callout-title { font-weight: 700; font-size: 15px; display: flex; align-items: center; gap: 8px; }
 .d-callout ul { margin-top: 6px; }
+.d-callout ul:first-child { margin-top: 0; }
 .d-callout li { color: var(--text2); }
 
 /* FAQ */
