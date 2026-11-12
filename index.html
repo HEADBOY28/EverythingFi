@@ -138,6 +138,9 @@
   .lp-foot { border-top: 1px solid var(--border2); }
   .lp-foot-inner { padding: 20px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
   .lp-copy { color: var(--text3); font-size: 12px; }
+  .lp-legal { display: flex; gap: 14px; }
+  .lp-legal a { color: var(--text2); font-size: 12px; text-decoration: none; }
+  .lp-legal a:hover { color: var(--text); }
   .lp-socials { margin-left: auto; display: flex; gap: 4px; flex-wrap: wrap; }
   .lp-social { display: inline-flex; align-items: center; gap: 7px; color: var(--text2); text-decoration: none; font-size: 13px;
     font-weight: 500; padding: 7px 10px; border-radius: var(--rs); }
@@ -235,6 +238,10 @@
 <footer class="lp-foot">
   <div class="lp-foot-inner">
     <div class="lp-copy">© <span id="year"></span> <span id="foot-name">Jabiru</span></div>
+    <nav class="lp-legal" aria-label="Legal">
+      <a href="/privacy">Privacy</a>
+      <a href="/terms">Terms</a>
+    </nav>
     <nav class="lp-socials" id="socials" aria-label="Social links"></nav>
   </div>
 </footer>
