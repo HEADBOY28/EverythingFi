@@ -132,3 +132,27 @@ summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; b
 .d-summary { margin-top: 28px; padding: 18px 20px; border-radius: 14px; background: var(--surface); border: 1px solid var(--border2); }
 .d-summary-title { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--accent); margin-bottom: 6px; }
 .d-summary li { color: var(--text2); }
+
+/* Contact page */
+.c-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 28px; }
+.c-card { background: var(--surface); border: 1px solid var(--border2); border-radius: 16px; padding: 20px; box-shadow: var(--card-shadow); }
+.c-icon { width: 40px; height: 40px; border-radius: 12px; display: flex; align-items: center; justify-content: center;
+  background: var(--accentbg2); color: var(--accent); margin-bottom: 14px; }
+.c-icon svg { width: 20px; height: 20px; }
+.c-card h3 { margin: 0 0 6px; font-size: 16px; }
+.c-card p { font-size: 14px !important; color: var(--text2); line-height: 1.6 !important; }
+.c-channels { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
+.c-channel { display: flex; align-items: center; gap: 14px; padding: 18px 20px; border-radius: 16px; background: var(--surface);
+  border: 1px solid var(--border2); text-decoration: none !important; color: var(--text) !important; transition: border-color .15s, transform .15s, box-shadow .15s; }
+.c-channel:hover { border-color: var(--border3); box-shadow: var(--card-hover); transform: translateY(-1px); }
+.c-channel-logo { width: 44px; height: 44px; border-radius: 12px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; color: #fff; }
+.c-channel-logo svg { width: 22px; height: 22px; }
+.c-x { background: #000; }
+.c-tg { background: #229ED9; }
+.c-channel b { display: block; font-size: 15px; font-weight: 700; }
+.c-channel span { font-size: 13px; color: var(--text2); font-weight: 500; }
+.c-channel .c-go { margin-left: auto; color: var(--text3); font-size: 18px; }
+.c-checklist li { color: var(--text2); }
+@media (max-width: 760px) {
+  .c-grid, .c-channels { grid-template-columns: 1fr; }
+}
