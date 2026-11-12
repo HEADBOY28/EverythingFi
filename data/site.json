@@ -2630,6 +2630,14 @@
    "desc": "The universal onchain payment rail: bridge and swap tokens instantly across chains.",
    "cat": "Bridges",
    "icon": "icons/324.jpg"
+  },
+  {
+   "id": 325,
+   "name": "Metric",
+   "url": "https://metric.xyz",
+   "desc": "The DEX that prices pools to reality. Trade, provide liquidity or deploy an active pool on Ethereum, Robinhood Chain and BNB Chain.",
+   "cat": "DeFi",
+   "icon": "icons/325.jpg"
   }
  ]
 }
