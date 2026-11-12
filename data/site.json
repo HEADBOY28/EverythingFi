@@ -2598,6 +2598,22 @@
    "desc": "Synthetic dollar protocol: swap USDC or USDT for trUSD and stake it to earn yield from market-neutral trading strategies, from $1.",
    "cat": "DeFi",
    "icon": "icons/320.jpg"
+  },
+  {
+   "id": 321,
+   "name": "Trueo",
+   "url": "https://trueo.com",
+   "desc": "Permissionless prediction markets on Base that anyone can create.",
+   "cat": "Prediction Market",
+   "icon": "icons/321.jpg"
+  },
+  {
+   "id": 322,
+   "name": "PolymarketScan",
+   "url": "https://polymarketscan.org",
+   "desc": "Polymarket analytics and whale tracking: large trades, graded wallet records, a free radar, Copilot and an Agent API.",
+   "cat": "Prediction Market",
+   "icon": "icons/322.jpg"
   }
  ]
 }
