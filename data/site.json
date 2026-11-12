@@ -2622,6 +2622,14 @@
    "desc": "Thematic, cross-asset investment research.",
    "cat": "Research Blogs",
    "icon": "icons/323.jpg"
+  },
+  {
+   "id": 324,
+   "name": "Relay",
+   "url": "https://relay.link",
+   "desc": "The universal onchain payment rail: bridge and swap tokens instantly across chains.",
+   "cat": "Bridges",
+   "icon": "icons/324.jpg"
   }
  ]
 }
