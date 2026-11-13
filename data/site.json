@@ -2638,6 +2638,46 @@
    "desc": "The DEX that prices pools to reality. Trade, provide liquidity or deploy an active pool on Ethereum, Robinhood Chain and BNB Chain.",
    "cat": "DeFi",
    "icon": "icons/325.jpg"
+  },
+  {
+   "id": 326,
+   "name": "Predict",
+   "url": "https://predict.fun",
+   "desc": "The BNB-native prediction market. Predict outcomes across politics, sports, crypto and more, and earn rewards.",
+   "cat": "Prediction Market",
+   "icon": "icons/326.jpg"
+  },
+  {
+   "id": 327,
+   "name": "Trust Wallet",
+   "url": "https://trustwallet.com",
+   "desc": "Self-custody crypto wallet to swap, trade perps, make predictions and more.",
+   "cat": "Wallet",
+   "icon": "icons/327.jpg"
+  },
+  {
+   "id": 328,
+   "name": "Papertrade",
+   "url": "https://papertrade.xyz",
+   "desc": "Fully onchain synthetic perpetuals on Hyperliquid with up to 1000x leverage and zero slippage.",
+   "cat": "Perp Dex",
+   "icon": "icons/328.jpg"
+  },
+  {
+   "id": 329,
+   "name": "Fluid",
+   "url": "https://fluid.io",
+   "desc": "The liquidity layer for all finance: lend, borrow, trade and more.",
+   "cat": "DeFi",
+   "icon": "icons/329.jpg"
+  },
+  {
+   "id": 330,
+   "name": "ENS",
+   "url": "https://ens.domains",
+   "desc": "Ethereum Name Service: get a readable web3 username like name.eth for your wallet.",
+   "cat": "Utilities",
+   "icon": "icons/330.jpg"
   }
  ]
 }
