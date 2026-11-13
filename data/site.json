@@ -1520,14 +1520,6 @@
    "icon": "icons/185.jpg"
   },
   {
-   "id": 186,
-   "name": "Bullpen",
-   "url": "https://bullpen.fi/",
-   "desc": "Trade Polymarket, Hyperliquid, and Solana from one interface.",
-   "cat": "DeFi",
-   "icon": "icons/186.jpg"
-  },
-  {
    "id": 187,
    "name": "World",
    "url": "https://world.xyz/",
