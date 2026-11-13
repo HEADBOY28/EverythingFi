@@ -2686,6 +2686,14 @@
    "desc": "PayFi protocol offering real yield from real payment flows, with $20B in payment volume processed.",
    "cat": "DeFi",
    "icon": "icons/331.jpg"
+  },
+  {
+   "id": 332,
+   "name": "Bungee",
+   "url": "https://www.bungee.exchange",
+   "desc": "Infinite ways to play the market: trade with their money, trade with leverage, or swap into anything.",
+   "cat": "Dex Aggregator",
+   "icon": "icons/332.jpg"
   }
  ]
 }
