@@ -2686,6 +2686,46 @@
    "desc": "Infinite ways to play the market: trade with their money, trade with leverage, or swap into anything.",
    "cat": "Dex Aggregator",
    "icon": "icons/332.jpg"
+  },
+  {
+   "id": 333,
+   "name": "Re",
+   "url": "https://re.xyz",
+   "desc": "Brings the reinsurance market onchain: stablecoin deposits back real reinsurance treaties, with access through reUSD and reUSDe.",
+   "cat": "DeFi",
+   "icon": "icons/333.jpg"
+  },
+  {
+   "id": 334,
+   "name": "Forest Road Vault",
+   "url": "https://forestroadvault.com",
+   "desc": "Real-world specialty-finance credit across media, renewables and digital assets, brought onchain via USDfr and sUSDfr.",
+   "cat": "DeFi",
+   "icon": "icons/334.jpg"
+  },
+  {
+   "id": 335,
+   "name": "3Jane",
+   "url": "https://www.3jane.xyz",
+   "desc": "Cryptonative credit creation, backed by Paradigm.",
+   "cat": "DeFi",
+   "icon": "icons/335.jpg"
+  },
+  {
+   "id": 336,
+   "name": "Hastra",
+   "url": "https://www.hastra.io",
+   "desc": "Institutional-grade yield products: PRIME on Solana and Ethereum, and AUTO on Solana.",
+   "cat": "DeFi",
+   "icon": "icons/336.jpg"
+  },
+  {
+   "id": 337,
+   "name": "Maple Finance",
+   "url": "https://maple.finance",
+   "desc": "Onchain asset manager offering digital asset lending and yield products, with $25B originated.",
+   "cat": "DeFi",
+   "icon": "icons/337.jpg"
   }
  ]
 }
