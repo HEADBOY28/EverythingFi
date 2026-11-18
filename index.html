@@ -113,12 +113,6 @@
     display: block; margin: 12px auto 0; padding: 4px 8px; border-radius: var(--rs); }
   .lp-text-btn:hover { color: var(--red); }
 
-  /* Wallet picker */
-  .wallet-list { display: flex; flex-direction: column; gap: 8px; }
-  .wallet-opt { display: flex; align-items: center; gap: 12px; width: 100%; padding: 12px 14px; font: inherit; font-size: 14px;
-    font-weight: 600; color: var(--text); background: var(--surface2); border: 1.5px solid var(--border2); border-radius: var(--r); cursor: pointer; text-align: left; }
-  .wallet-opt:hover { border-color: var(--border3); background: var(--accentbg); }
-  .wallet-opt img { width: 28px; height: 28px; border-radius: 7px; }
 
   /* App icon strip */
   .lp-strip { width: 100%; max-width: 760px; margin-top: 44px; overflow: hidden;
@@ -178,16 +172,8 @@
       <div id="auth-out">
         <div class="lp-auth-head">
           <div class="lp-auth-title">Get started</div>
-          <div class="lp-auth-sub">Connect a wallet or continue with your email.</div>
+          <div class="lp-auth-sub">Sign in to save apps and hear about new listings first.</div>
         </div>
-        <button class="lp-btn lp-btn-primary" id="connect-btn" onclick="connectWallet()">
-          <span class="lp-btn-lead">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 7V5a2 2 0 0 0-2-2H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3v3a1 1 0 0 1-1 1H5a2 2 0 0 1-2-2V5"/></svg>
-            <span id="connect-label">Connect wallet</span>
-          </span>
-          <svg class="lp-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </button>
-        <div class="lp-divider">or</div>
         <!-- Google sign-in (shown once GOOGLE_CLIENT_ID is set in Vercel) -->
         <div class="lp-google" id="google-wrap" hidden>
           <div class="lp-google-btn" id="google-btn" aria-label="Continue with Google"></div>
@@ -211,7 +197,7 @@
         </form>
       </div>
 
-      <!-- Signed in (wallet or email) -->
+      <!-- Signed in (Google or email) -->
       <div id="auth-in" hidden>
         <div class="lp-wallet">
           <div class="lp-wallet-avatar" id="wallet-avatar"></div>
@@ -269,15 +255,6 @@
     <button type="button" class="lp-btn lp-btn-primary" id="join-fallback" onclick="closeJoin(); $('email-btn').focus();" hidden>Sign up with email</button>
     <a class="join-skip" href="/app" id="join-skip">Explore anyway <span aria-hidden="true">→</span></a>
     <p class="lp-legal-note" style="text-align:center">By continuing, you agree to our <a href="/terms">Terms</a> and <a href="/privacy">Privacy Policy</a>.</p>
-  </div>
-</div>
-
-<!-- Wallet picker (shown when more than one wallet is installed) -->
-<div class="overlay" id="wallet-modal">
-  <div class="modal" style="max-width:380px">
-    <div class="modal-title">Choose a wallet</div>
-    <div class="wallet-list" id="wallet-list"></div>
-    <div class="modal-actions"><button type="button" class="btn-cancel" onclick="closePicker()">Cancel</button></div>
   </div>
 </div>
 
@@ -348,19 +325,6 @@ function applySite() {
   }).join('');
 }
 
-// ── Wallet connection ──
-// Wallets announce themselves through EIP-6963, so we can list each one when several are installed.
-var wallets = [];
-window.addEventListener('eip6963:announceProvider', function (e) {
-  var d = e.detail;
-  if (!d || !d.provider || !d.info) return;
-  if (!wallets.some(function (w) { return w.info.uuid === d.info.uuid; })) wallets.push(d);
-});
-window.dispatchEvent(new Event('eip6963:requestProvider'));
-
-function shortAddr(a) { return a.slice(0, 6) + '…' + a.slice(-4); }
-function safeIcon(src) { return /^data:image\/(svg\+xml|png|jpeg|webp|gif)[;,]/.test(src || '') ? src : ''; }
-
 function showSignedIn(label, signOutText) {
   $('auth-out').hidden = true;
   $('explore-wrap').hidden = true;
@@ -371,82 +335,12 @@ function showSignedIn(label, signOutText) {
   $('wallet-sub').hidden = true;
 }
 
-function showConnected(addr, icon) {
-  showSignedIn('Connected', 'Disconnect');
-  $('wallet-addr').textContent = shortAddr(addr);
-  $('wallet-addr').title = addr;
-  var src = safeIcon(icon);
-  $('wallet-avatar').innerHTML = src ? '<img alt="" src="' + esc(src) + '"/>' : '<span style="font-size:18px">👛</span>';
-  note('');
-}
-
 function showDisconnected() {
   $('auth-out').hidden = false;
   $('explore-wrap').hidden = false;
   $('auth-in').hidden = true;
   $('email-fields').hidden = true;
   $('email-label').textContent = 'Continue with email';
-}
-
-function setBusy(busy) {
-  $('connect-btn').disabled = busy;
-  $('connect-label').textContent = busy ? 'Check your wallet…' : 'Connect wallet';
-}
-
-async function connectWith(provider, icon) {
-  closePicker();
-  setBusy(true);
-  note('');
-  try {
-    var accounts = await provider.request({ method: 'eth_requestAccounts' });
-    if (!accounts || !accounts[0]) throw new Error('No account was shared.');
-    store('ef-wallet', accounts[0]);
-    store('ef-wallet-icon', icon || null);
-    showConnected(accounts[0], icon);
-  } catch (err) {
-    var rejected = err && (err.code === 4001 || /reject|denied/i.test(err.message || ''));
-    note(rejected ? 'Connection cancelled.' : 'Could not connect: ' + esc((err && err.message) || 'unknown error'), !rejected);
-  } finally {
-    setBusy(false);
-  }
-}
-
-function connectWallet() {
-  if (wallets.length > 1) return openPicker();
-  if (wallets.length === 1) return connectWith(wallets[0].provider, wallets[0].info.icon);
-  if (window.ethereum) return connectWith(window.ethereum, '');
-  // No wallet in this browser. On phones, offer to reopen the page inside the MetaMask app.
-  var mobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-  var here = location.host + location.pathname;
-  note(mobile
-    ? 'No wallet found. <a href="https://metamask.app.link/dapp/' + esc(here) + '">Open in MetaMask</a> or use your wallet app\'s browser.'
-    : 'No wallet found. Install one like <a href="https://metamask.io/download/" target="_blank" rel="noopener">MetaMask</a> or <a href="https://rabby.io" target="_blank" rel="noopener">Rabby</a>, then refresh.', true);
-}
-
-function openPicker() {
-  $('wallet-list').innerHTML = wallets.map(function (w, i) {
-    var src = safeIcon(w.info.icon);
-    return '<button class="wallet-opt" data-i="' + i + '">' + (src ? '<img alt="" src="' + esc(src) + '"/>' : '<span>👛</span>') +
-      '<span>' + esc(w.info.name || 'Wallet') + '</span></button>';
-  }).join('');
-  $('wallet-modal').classList.add('open');
-}
-function closePicker() { $('wallet-modal').classList.remove('open'); }
-$('wallet-list').addEventListener('click', function (e) {
-  var b = e.target.closest('[data-i]');
-  if (b) { var w = wallets[+b.getAttribute('data-i')]; connectWith(w.provider, w.info.icon); }
-});
-$('wallet-modal').addEventListener('click', function (e) { if (e.target === this) closePicker(); });
-document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closePicker(); });
-
-async function disconnectWallet() {
-  store('ef-wallet', null);
-  store('ef-wallet-icon', null);
-  showDisconnected();
-  note('Wallet disconnected.');
-  // Ask the wallet to forget this site too, where supported. Ignore failures.
-  var p = (wallets[0] && wallets[0].provider) || window.ethereum;
-  if (p) { try { await p.request({ method: 'wallet_revokePermissions', params: [{ eth_accounts: {} }] }); } catch (e) {} }
 }
 
 // ── Email signup ──
@@ -574,7 +468,6 @@ document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && jo
 
 function setupGoogle(clientId) {
   googleClientId = clientId;
-  document.querySelector('.lp-auth-sub').textContent = 'Connect a wallet or continue with Google.';
   $('google-wrap').hidden = false;
   $('email-form').hidden = true;
   var tag = document.createElement('script');
@@ -602,28 +495,25 @@ function signOut() {
     note('Signed out.');
     return;
   }
-  if (load('ef-email')) {
-    store('ef-email', null);
-    showDisconnected();
-    note('Signed out.');
-  } else {
-    disconnectWallet();
-  }
+  store('ef-email', null);
+  showDisconnected();
+  note('Signed out.');
 }
 
 // Restore a previous sign-in on return visits.
 (function () {
-  var saved = load('ef-wallet');
+  // Wallet sign-in was retired: forget any old wallet connection.
+  store('ef-wallet', null);
+  store('ef-wallet-icon', null);
   var email = load('ef-email');
-  if (saved && /^0x[0-9a-fA-F]{40}$/.test(saved)) showConnected(saved, load('ef-wallet-icon'));
-  else if (email) showEmail(email);
+  if (email) showEmail(email);
   // Ask the server whether Google sign-in is set up and whether this visitor is signed in.
   fetch('/api/account', { credentials: 'same-origin', cache: 'no-store' })
     .then(function (r) { return r.ok ? r.json() : null; })
     .then(function (info) {
       if (!info) return;
       if (info.clientId) setupGoogle(info.clientId);
-      if (info.user && !(saved && /^0x[0-9a-fA-F]{40}$/.test(saved))) showGoogle(info.user);
+      if (info.user) showGoogle(info.user);
     })
     .catch(function () { /* Keep the email form. */ });
 })();

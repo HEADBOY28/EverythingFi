@@ -115,12 +115,12 @@ function loadIds(key) {
 function storeIds(key, ids) { try { localStorage.setItem(key, JSON.stringify(ids)); } catch (e) {} }
 var savedIds = loadIds('ef-saved');
 
-// Saving apps needs an account: Google (checked with the server) or a connected wallet.
+// Saving apps needs an account: Google (checked with the server), or an older email sign-up.
 var account = { signedIn: false, clientId: '' };
 function hasLocalSignIn() {
-  var w = null, em = null;
-  try { w = localStorage.getItem('ef-wallet'); em = localStorage.getItem('ef-email'); } catch (e) {}
-  return !!((w && /^0x[0-9a-fA-F]{40}$/.test(w)) || em);
+  var em = null;
+  try { em = localStorage.getItem('ef-email'); } catch (e) {}
+  return !!em;
 }
 account.signedIn = hasLocalSignIn();
 var accountReady = fetch('/api/account', { credentials: 'same-origin', cache: 'no-store' })
