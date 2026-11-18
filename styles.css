@@ -889,9 +889,8 @@ body{
   transition:transform 0.32s cubic-bezier(0.2,0.8,0.2,1),box-shadow 0.25s,border-color 0.2s;
 }
 .folder-name{
-  /* Classic serif: Georgia, falling back to Times New Roman */
-  font-family:Georgia,'Times New Roman',Times,serif;
-  font-weight:400;
+  font-family:'Inter',system-ui,sans-serif;
+  font-weight:600;
   font-size:18px;letter-spacing:-0.01em;line-height:1.2;
   color:var(--text);
   white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
