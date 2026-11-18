@@ -77,6 +77,31 @@
   </div>
 </div>
 
+<!-- Sign-in prompt (saving apps needs an account) -->
+<div class="overlay" id="join-modal">
+  <div class="modal join-modal" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="join-title">
+    <button type="button" class="join-close" data-join-close aria-label="Close">&times;</button>
+    <img class="join-logo" src="icons/jabiru-mark.png" alt=""/>
+    <h2 class="join-title" id="join-title">Sign in to save apps</h2>
+    <p class="join-sub" id="join-sub">Create a free account to star apps and keep your favourites in one place.</p>
+    <ul class="join-perks">
+      <li><span class="join-tick" aria-hidden="true">✓</span><div><b>Save your favourites</b><span>Star any app and find it again under Saved.</span></div></li>
+      <li><span class="join-tick" aria-hidden="true">✓</span><div><b>New apps in your inbox</b><span>Be first to hear about new listings, news and offers.</span></div></li>
+      <li><span class="join-tick" aria-hidden="true">✓</span><div><b>Free, no passwords</b><span>Use Google or your wallet. Nothing to remember.</span></div></li>
+    </ul>
+    <div class="join-google" id="join-google" hidden>
+      <div class="lp-google-btn" id="google-btn-modal"></div>
+      <label class="lp-consent"><input type="checkbox" id="google-consent-modal"> <span>Send me new apps, news and offers. Unsubscribe anytime.</span></label>
+    </div>
+    <a class="lp-btn lp-btn-primary" href="/" id="join-wallet">
+      <span class="lp-btn-lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 7V5a2 2 0 0 0-2-2H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3v3a1 1 0 0 1-1 1H5a2 2 0 0 1-2-2V5"/></svg>Connect wallet</span>
+    </a>
+    <p class="join-error" id="join-error" role="alert" hidden></p>
+    <button type="button" class="join-skip" data-join-close style="background:none;border:none;width:100%;cursor:pointer;font:inherit;font-size:13.5px;font-weight:600">Not now</button>
+    <p class="lp-legal-note" style="text-align:center">By continuing, you agree to our <a href="/terms">Terms</a> and <a href="/privacy">Privacy Policy</a>.</p>
+  </div>
+</div>
+
 <script>
 var site = { brand: {}, catOrder: [], apps: [] };
 var activeTab = 'All';
@@ -91,8 +116,26 @@ function loadIds(key) {
 }
 function storeIds(key, ids) { try { localStorage.setItem(key, JSON.stringify(ids)); } catch (e) {} }
 var savedIds = loadIds('ef-saved');
+
+// Saving apps needs an account: Google (checked with the server) or a connected wallet.
+var account = { signedIn: false, clientId: '' };
+function hasLocalSignIn() {
+  var w = null, em = null;
+  try { w = localStorage.getItem('ef-wallet'); em = localStorage.getItem('ef-email'); } catch (e) {}
+  return !!((w && /^0x[0-9a-fA-F]{40}$/.test(w)) || em);
+}
+account.signedIn = hasLocalSignIn();
+var accountReady = fetch('/api/account', { credentials: 'same-origin', cache: 'no-store' })
+  .then(function (r) { return r.ok ? r.json() : null; })
+  .then(function (info) {
+    if (!info) return;
+    account.clientId = info.clientId || '';
+    if (info.user) account.signedIn = true;
+  })
+  .catch(function () {});
+function mySavedIds() { return account.signedIn ? savedIds : []; }
 var recentIds = loadIds('ef-recent');
-function isSaved(a) { return savedIds.indexOf(String(a.id)) >= 0; }
+function isSaved(a) { return mySavedIds().indexOf(String(a.id)) >= 0; }
 function toggleSave(id) {
   id = String(id);
   var i = savedIds.indexOf(id);
@@ -111,7 +154,7 @@ function newApps() {
   return site.apps.filter(isNew).sort(function (x, y) { return x.added < y.added ? 1 : x.added > y.added ? -1 : y.id - x.id; });
 }
 function appsForTab(tab) {
-  if (tab === SAVED) return byIds(savedIds);
+  if (tab === SAVED) return byIds(mySavedIds());
   if (tab === NEW) return newApps();
   return site.apps.filter(function (a) { return a.cat === tab; });
 }
@@ -212,7 +255,7 @@ function renderSidebar() {
   var nNew = newApps().length;
   if (nNew) out += '<button class="sidebar-all-btn' + (activeTab === NEW ? ' active' : '') + '" data-cat="' + NEW + '"><span>New this week</span><span class="side-count is-new">' + nNew + '</span></button>';
   out += '<button class="sidebar-all-btn' + (activeTab === SAVED ? ' active' : '') + '" data-cat="' + SAVED + '"><span>Saved</span>' +
-    (savedIds.length ? '<span class="side-count">' + byIds(savedIds).length + '</span>' : '') + '</button>';
+    (mySavedIds().length ? '<span class="side-count">' + byIds(mySavedIds()).length + '</span>' : '') + '</button>';
   out += '<div class="sidebar-label sidebar-label-sub">Folders</div>';
   categories().forEach(function (c) {
     out += '<div class="cat-item"><button class="cat-trigger' + (activeTab === c ? ' active' : '') + '" data-cat="' + esc(c) + '">' +
@@ -320,6 +363,8 @@ function render() {
     if (activeTab === SAVED || activeTab === NEW) list = appsForTab(activeTab).filter(function (a) { return list.indexOf(a) >= 0; });
     out += list.length
       ? '<div class="grid">' + list.map(buildCard).join('') + '</div>'
+      : activeTab === SAVED && !account.signedIn
+        ? emptyState('Sign in to save apps', 'Create a free account to star apps and keep your favourites here.', '☆', 'Sign in')
       : activeTab === SAVED && !savedIds.length
         ? emptyState('No saved apps yet', 'Tap the star on any app to keep it here for next time.', '☆')
         : emptyState('Nothing in ' + activeTab + ' matches ' + label, 'Try another word, remove a filter, or go back to search all tools.');
@@ -341,8 +386,8 @@ function render() {
       '<p class="lib-sub">' + site.apps.length + ' apps, sorted into ' + cats.length + ' folders. Open one to explore.</p></header>' +
       shelf('Jump back in', byIds(recentIds).slice(0, 6), null) +
       shelf('New on Jabiru', newApps().slice(0, 6), NEW) +
-      shelf('Saved', byIds(savedIds).slice(0, 6), savedIds.length > 6 ? SAVED : null) +
-      (recentIds.length || savedIds.length || newApps().length ? '<div class="cat-section-hdr shelf-hdr"><span class="cat-section-hdr-name">Folders</span></div>' : '') +
+      shelf('Saved', byIds(mySavedIds()).slice(0, 6), mySavedIds().length > 6 ? SAVED : null) +
+      (recentIds.length || mySavedIds().length || newApps().length ? '<div class="cat-section-hdr shelf-hdr"><span class="cat-section-hdr-name">Folders</span></div>' : '') +
       '<div class="folder-grid">' + cats.map(buildFolder).join('') + '</div>';
   }
   grid.className = '';
@@ -366,9 +411,10 @@ function shelf(title, apps, tab) {
     '<div class="grid">' + apps.map(buildCard).join('') + '</div></section>';
 }
 
-function emptyState(msg, sub, icon) {
+function emptyState(msg, sub, icon, action) {
   return '<div class="empty-state"><div class="empty-state-icon">' + (icon || '🔍') + '</div>' +
-    '<div class="empty-state-msg">' + esc(msg) + '</div><div class="empty-state-sub">' + esc(sub) + '</div></div>';
+    '<div class="empty-state-msg">' + esc(msg) + '</div><div class="empty-state-sub">' + esc(sub) + '</div>' +
+    (action ? '<button type="button" class="lp-btn lp-btn-primary empty-action" data-join>' + esc(action) + '</button>' : '') + '</div>';
 }
 
 // The open folder lives in the URL hash (/app#DeFi), so Back and shared links work.
@@ -445,11 +491,16 @@ document.getElementById('grid').addEventListener('click', function (e) {
   var save = e.target.closest('[data-save]');
   if (save) {
     var sid = save.getAttribute('data-save');
-    toggleSave(sid); render();
-    // Keep keyboard focus on the star after the page redraws.
-    var again = document.querySelector('[data-save="' + sid + '"]'); if (again) again.focus({ preventScroll: true });
+    var doSave = function () {
+      if (!account.signedIn) { openJoin(sid); return; }
+      toggleSave(sid); render();
+      // Keep keyboard focus on the star after the page redraws.
+      var again = document.querySelector('[data-save="' + sid + '"]'); if (again) again.focus({ preventScroll: true });
+    };
+    if (account.signedIn) doSave(); else accountReady.then(doSave);
     return;
   }
+  if (e.target.closest('[data-join]')) { accountReady.then(function () { openJoin(null); }); return; }
   var untag = e.target.closest('[data-untag]');
   if (untag) { toggleTag(untag.getAttribute('data-untag')); return; }
   if (e.target.closest('[data-clear]')) { clearTags(); return; }
@@ -466,6 +517,72 @@ document.getElementById('grid').addEventListener('keydown', function (e) {
 document.addEventListener('contextmenu', function (e) { if (e.target.closest('.card')) e.preventDefault(); });
 document.addEventListener('auxclick', function (e) { if (e.button === 1 && e.target.closest('.card')) e.preventDefault(); });
 document.addEventListener('dragstart', function (e) { if (e.target.closest('.card')) e.preventDefault(); });
+
+// ── Sign-in prompt ──
+var pendingSave = null, joinOpen = false, gsiLoading = null;
+function loadGoogle() {
+  if (window.google && google.accounts) return Promise.resolve();
+  if (gsiLoading) return gsiLoading;
+  gsiLoading = new Promise(function (resolve, reject) {
+    var tag = document.createElement('script');
+    tag.src = 'https://accounts.google.com/gsi/client'; tag.async = true;
+    tag.onload = function () {
+      google.accounts.id.initialize({ client_id: account.clientId, callback: onGoogleCredential, auto_select: false, ux_mode: 'popup' });
+      resolve();
+    };
+    tag.onerror = reject;
+    document.head.appendChild(tag);
+  });
+  return gsiLoading;
+}
+function renderModalGoogle() {
+  var box = document.getElementById('google-btn-modal');
+  box.innerHTML = '';
+  var dark = document.documentElement.getAttribute('data-theme') === 'dark';
+  google.accounts.id.renderButton(box, { type: 'standard', theme: dark ? 'filled_black' : 'outline', size: 'large', shape: 'rectangular',
+    text: 'continue_with', logo_alignment: 'center', width: Math.min(400, Math.max(200, box.offsetWidth || 340)) });
+}
+function openJoin(appId) {
+  pendingSave = appId;
+  joinOpen = true;
+  var app = appId && site.apps.find(function (a) { return String(a.id) === String(appId); });
+  document.getElementById('join-title').textContent = app ? 'Sign in to save ' + app.name : 'Sign in to save apps';
+  document.getElementById('join-error').hidden = true;
+  var gWrap = document.getElementById('join-google');
+  gWrap.hidden = !account.clientId;
+  document.getElementById('join-modal').classList.add('open');
+  document.querySelector('.join-modal').focus({ preventScroll: true });
+  if (account.clientId) loadGoogle().then(renderModalGoogle).catch(function () { gWrap.hidden = true; });
+}
+function closeJoin() {
+  joinOpen = false; pendingSave = null;
+  document.getElementById('join-modal').classList.remove('open');
+}
+async function onGoogleCredential(response) {
+  var err = document.getElementById('join-error');
+  err.hidden = true;
+  try {
+    var res = await fetch('/api/account', {
+      method: 'POST', credentials: 'same-origin',
+      headers: { 'Content-Type': 'application/json', 'X-Requested-With': 'jabiru-site' },
+      body: JSON.stringify({ credential: response.credential, consent: document.getElementById('google-consent-modal').checked })
+    });
+    var body = {};
+    try { body = await res.json(); } catch (e) {}
+    if (!res.ok || !body.user) throw new Error(body.error || 'Sign-in failed. Please try again.');
+    account.signedIn = true;
+    var id = pendingSave;
+    closeJoin();
+    if (id && savedIds.indexOf(String(id)) < 0) toggleSave(id);
+    render();
+  } catch (e) {
+    err.textContent = e.message; err.hidden = false;
+  }
+}
+document.getElementById('join-modal').addEventListener('click', function (e) {
+  if (e.target === this || e.target.closest('[data-join-close]')) closeJoin();
+});
+document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && joinOpen) closeJoin(); });
 
 function toggleSidebar() {
   document.getElementById('sidebar').classList.toggle('open');
@@ -498,6 +615,8 @@ fetch('data/site.json', { cache: 'no-cache' })
   .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
   .then(function (data) {
     site = data; applyBrand(); activeTab = tabFromHash();
+    // Once we know whether the visitor is signed in, redraw so Saved shows correctly.
+    accountReady.then(function () { render(); });
     return tagsReady.then(function () { activeTags = tagsFromUrl(); render(); });
   })
   .catch(function () {

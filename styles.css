@@ -1048,3 +1048,52 @@ body{
   color:var(--text3);border:1px solid var(--border2);border-radius:5px;padding:3px 6px;pointer-events:none;}
 #search:focus ~ .search-kbd,#search:not(:placeholder-shown) ~ .search-kbd{display:none;}
 @media (max-width:640px){.search-kbd{display:none;}}
+
+/* ── Shared sign-in buttons and sign-up pop-up (home and app pages) ── */
+.lp-btn { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; height: 46px; font: inherit; font-size: 14px;
+  font-weight: 600; padding: 0 18px; border-radius: 12px; cursor: pointer; text-decoration: none;
+  border: 1px solid var(--border2); background: var(--surface); color: var(--text);
+  transition: background .15s, box-shadow .15s, transform .15s, border-color .15s; }
+.lp-btn:hover { background: var(--surface2); border-color: var(--border3); }
+.lp-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.lp-btn:active { transform: translateY(1px); }
+.lp-btn-primary { background: var(--accent); border-color: var(--accent); color: #fff;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.25) inset, 0 6px 18px rgba(255,107,69,0.30); }
+.lp-btn-primary:hover { background: var(--accent2); border-color: var(--accent2); box-shadow: 0 1px 0 rgba(255,255,255,0.25) inset, 0 8px 22px rgba(255,107,69,0.38); }
+.lp-btn-dark { background: var(--text); border-color: var(--text); color: var(--surface); }
+.lp-btn-dark:hover { background: var(--text); border-color: var(--text); opacity: .88; }
+.lp-btn[disabled] { opacity: .6; cursor: wait; transform: none; }
+.lp-btn svg { width: 18px; height: 18px; flex-shrink: 0; }
+.lp-btn .lp-arrow { margin-left: auto; opacity: .85; transition: transform .15s; }
+.lp-btn:hover .lp-arrow { transform: translateX(3px); }
+.lp-btn .lp-btn-lead { margin-right: auto; display: inline-flex; align-items: center; gap: 10px; }
+.lp-google-btn { min-height: 44px; display: flex; justify-content: center; color-scheme: light; }
+.lp-google-btn > div { width: 100%; }
+.lp-legal-note { font-size: 11px; color: var(--text3); line-height: 1.5; margin: 0; }
+.lp-legal-note a { color: var(--text2); text-decoration: underline; text-underline-offset: 2px; }
+/* Sign-up nudge */
+.join-modal { max-width: 400px; width: calc(100% - 32px); position: relative; text-align: left; padding: 28px 26px 22px; border-radius: 18px; }
+.join-modal:focus { outline: none; }
+.join-close { position: absolute; top: 12px; right: 12px; width: 32px; height: 32px; border-radius: 8px; border: none; background: none;
+  color: var(--text3); font-size: 22px; line-height: 1; cursor: pointer; }
+.join-close:hover { background: var(--surface2); color: var(--text); }
+.join-logo { width: 44px; height: 44px; display: block; }
+.join-title { font-size: 20px; font-weight: 700; letter-spacing: -0.02em; margin-top: 14px; }
+.join-sub { font-size: 13.5px; color: var(--text2); margin-top: 4px; }
+.join-perks { list-style: none; padding: 0; margin: 18px 0 20px; display: flex; flex-direction: column; gap: 12px; }
+.join-perks li { display: flex; gap: 12px; align-items: flex-start; }
+.join-perks b { display: block; font-size: 14px; font-weight: 600; }
+.join-perks span { font-size: 12.5px; color: var(--text2); line-height: 1.45; }
+.join-tick { width: 22px; height: 22px; flex-shrink: 0; border-radius: 50%; background: var(--accentbg2); color: var(--accent) !important;
+  font-size: 12px !important; font-weight: 700; display: flex; align-items: center; justify-content: center; margin-top: 1px; }
+.join-google { display: flex; flex-direction: column; gap: 10px; margin-bottom: 10px; }
+.join-google:not([hidden]) + .lp-btn { background: var(--surface); border-color: var(--border2); color: var(--text); box-shadow: none; }
+.join-google:not([hidden]) + .lp-btn:hover { background: var(--surface2); border-color: var(--border3); }
+.join-skip { display: flex; align-items: center; justify-content: center; gap: 6px; margin: 14px 0 10px; font-size: 13.5px; font-weight: 600;
+  color: var(--text2); text-decoration: none; }
+.join-skip:hover { color: var(--accent); }
+.lp-consent { display: flex; gap: 10px; align-items: flex-start; font-size: 12px; color: var(--text2); line-height: 1.5; cursor: pointer; margin: 2px 0 4px; }
+.lp-consent input { width: 16px; height: 16px; margin: 1px 0 0; accent-color: var(--accent); flex-shrink: 0; cursor: pointer; }
+:root[data-theme="dark"] .lp-consent input { color-scheme: dark; }
+.join-error { font-size: 12.5px; color: var(--red); text-align: center; margin: 10px 0 0; }
+.empty-action { width: auto; display: inline-flex; margin-top: 16px; padding: 0 22px; }
