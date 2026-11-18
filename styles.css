@@ -381,8 +381,8 @@ body{
   border-bottom:1.5px solid var(--border2);
 }
 .cat-section-hdr-name{
-  font-family:'Syne',sans-serif;
-  font-size:14px;font-weight:700;
+  font-family:'Inter',system-ui,sans-serif;
+  font-size:14px;font-weight:600;
   color:var(--text);
   letter-spacing:-0.01em;
 }
