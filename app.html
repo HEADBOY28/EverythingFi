@@ -208,7 +208,7 @@ function setFilterPanel(open) {
 // category as a small tag at the bottom; "All tools" is grouped into category sections.
 function renderSidebar() {
   var out = '<div class="sidebar-label">Browse</div>';
-  out += '<button class="sidebar-all-btn' + (activeTab === 'All' ? ' active' : '') + '" data-cat="All"><span>All tools</span></button>';
+  out += '<button class="sidebar-all-btn' + (activeTab === 'All' ? ' active' : '') + '" data-cat="All"><span>Home</span></button>';
   var nNew = newApps().length;
   if (nNew) out += '<button class="sidebar-all-btn' + (activeTab === NEW ? ' active' : '') + '" data-cat="' + NEW + '"><span>New this week</span><span class="side-count is-new">' + nNew + '</span></button>';
   out += '<button class="sidebar-all-btn' + (activeTab === SAVED ? ' active' : '') + '" data-cat="' + SAVED + '"><span>Saved</span>' +
