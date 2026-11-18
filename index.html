@@ -38,9 +38,8 @@
   body::before {
     content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none;
     background:
-      radial-gradient(55% 45% at 50% 0%, rgba(255,107,69,0.24), transparent 70%),
-      radial-gradient(35% 35% at 8% 70%, rgba(255,154,107,0.16), transparent 70%),
-      radial-gradient(40% 35% at 92% 85%, rgba(255,107,69,0.14), transparent 70%);
+      radial-gradient(60% 50% at 50% 0%, var(--accentbg2), transparent 70%),
+      radial-gradient(40% 35% at 85% 85%, var(--accentbg), transparent 70%);
   }
 
   /* Header */
@@ -94,23 +93,9 @@
 
   .lp-auth-foot { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 26px;
     background: var(--surface2); border-top: 1px solid var(--border2); font-size: 13px; color: var(--text2); }
-  .lp-hl { font-style: italic; background: linear-gradient(100deg, #FF6B45 10%, #FF9A6B 90%); -webkit-background-clip: text; background-clip: text; color: transparent; padding-right: .06em; }
-  .lp-pill { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 18px; padding: 6px 12px 6px 10px; border-radius: 999px;
-    font-size: 12.5px; font-weight: 600; color: var(--accent); text-decoration: none; background: var(--accentbg);
-    border: 1px solid var(--border3); transition: background .15s; }
-  .lp-pill:hover { background: var(--accentbg2); }
-  .lp-pill-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px var(--accentbg2); animation: lp-pulse 2s ease-in-out infinite; }
-  @keyframes lp-pulse { 50% { box-shadow: 0 0 0 7px rgba(255,107,69,0); } }
-  @media (prefers-reduced-motion: reduce) { .lp-pill-dot { animation: none; } }
-  .lp-auth { position: relative; border-color: var(--border3) !important;
-    box-shadow: 0 1px 2px rgba(28,20,36,0.04), 0 18px 50px rgba(255,107,69,0.18) !important; }
-  .lp-auth::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 4px; z-index: 1;
-    background: linear-gradient(90deg, #FF6B45, #FF9A6B, #FF6B45); }
-  .lp-auth-title { display: flex; align-items: center; gap: 8px; }
-  .lp-auth-title::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
-  .lp-auth-foot .lp-explore { color: var(--accent); }
   .lp-explore { display: inline-flex; align-items: center; gap: 6px; color: var(--text); font-weight: 600; text-decoration: none; white-space: nowrap; }
   .lp-explore:hover { color: var(--accent); }
+  .lp-auth-foot .lp-explore { color: var(--accent); }
   .lp-explore span { transition: transform .15s; }
   .lp-explore:hover span { transform: translateX(3px); }
   @media (max-width: 420px) {
@@ -136,7 +121,7 @@
     -webkit-mask-image: linear-gradient(90deg, transparent, #000 15%, #000 85%, transparent); }
   .lp-strip-track { display: flex; gap: 12px; width: max-content; animation: lp-scroll 60s linear infinite; }
   .lp-strip:hover .lp-strip-track { animation-play-state: paused; }
-  .lp-strip .card-icon { width: 44px; height: 44px; border-radius: 12px; box-shadow: 0 0 0 3px var(--accentbg2), var(--card-shadow); flex-shrink: 0; }
+  .lp-strip .card-icon { width: 44px; height: 44px; border-radius: 12px; box-shadow: var(--card-shadow); flex-shrink: 0; }
   @keyframes lp-scroll { to { transform: translateX(-50%); } }
   @media (prefers-reduced-motion: reduce) { .lp-strip-track { animation: none; } }
 
@@ -179,8 +164,7 @@
 </header>
 
 <main class="lp-main">
-  <a class="lp-pill" id="lp-pill" href="/app#new" hidden><span class="lp-pill-dot" aria-hidden="true"></span><span id="lp-pill-text"></span><span aria-hidden="true">→</span></a>
-  <h1 class="lp-title" id="tagline">The app for <span class="lp-hl">all apps.</span></h1>
+  <h1 class="lp-title" id="tagline">The app for all apps.</h1>
   <p class="lp-intro" id="intro">Curated Web3 tools, sorted by category so you find what you need fast.</p>
 
   <div class="lp-auth">
@@ -304,13 +288,6 @@ var ICONS = {
 };
 var LINK_LABELS = { x: 'X', docs: 'Docs', telegram: 'Telegram', discord: 'Discord' };
 
-// Headline: the last two words get the orange highlight.
-function setTagline(text) {
-  var words = String(text).trim().split(/\s+/);
-  var tail = words.splice(Math.max(1, words.length - 2)).join(' ');
-  $('tagline').innerHTML = (words.length ? esc(words.join(' ')) + ' ' : '') + '<span class="lp-hl">' + esc(tail) + '</span>';
-}
-
 function applySite() {
   var b = site.brand || {};
   var L = site.landing || {};
@@ -325,16 +302,10 @@ function applySite() {
   // Show the drawn wordmark while the site is called Jabiru; otherwise show the name as text.
   document.querySelector('.nav-brand').classList.toggle('use-wordmark', name.trim().toLowerCase() === 'jabiru');
 
-  if (L.tagline) setTagline(L.tagline);
+  if (L.tagline) $('tagline').textContent = L.tagline;
   if (L.intro) $('intro').textContent = L.intro;
 
   var apps = site.apps || [];
-  var weekAgo = Date.now() - 7 * 864e5;
-  var fresh = apps.filter(function (a) { return a.added && new Date(a.added + 'T00:00:00Z').getTime() >= weekAgo; }).length;
-  if (apps.length) {
-    $('lp-pill-text').textContent = apps.length + ' apps' + (fresh ? ' · ' + fresh + ' new this week' : '');
-    $('lp-pill').hidden = false;
-  }
 
   // Scrolling strip of app logos (list is doubled so the loop is seamless).
   var withImg = apps.filter(function (a) { return /^icons\//.test(a.icon || ''); }).slice(0, 18);
