@@ -3,4 +3,4 @@ Allow: /
 Disallow: /admin
 Disallow: /api/
 
-Sitemap: https://everythingfi.vercel.app/sitemap.xml
+Sitemap: https://www.jabiru.app/sitemap.xml
