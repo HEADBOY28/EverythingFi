@@ -380,8 +380,15 @@ function render() {
     }).join('') : emptyState('No apps found', activeTags.length ? 'Try removing a filter.' : 'Try a different name or keyword.');
   } else {
     // All tools: the folder library.
-    out = '<header class="lib-head"><h1 class="lib-title">All tools</h1>' +
-      '<p class="lib-sub">' + site.apps.length + ' apps, sorted into ' + cats.length + ' folders. Open one to explore.</p></header>' +
+    var nNewHero = newApps().length, nSavedHero = byIds(mySavedIds()).length;
+    out = '<header class="home-hero">' +
+        '<div class="home-hero-text"><div class="home-eyebrow">The Jabiru directory</div>' +
+        '<h1 class="home-title">Find your next Web3 app</h1>' +
+        '<p class="home-sub">' + site.apps.length + ' hand-picked apps across ' + cats.length + ' folders.</p></div>' +
+        '<div class="home-stats">' +
+          (nNewHero ? '<button type="button" class="home-stat" data-folder="' + NEW + '"><b>' + nNewHero + '</b><span>New this week</span></button>' : '') +
+          '<button type="button" class="home-stat" data-folder="' + SAVED + '"><b>' + nSavedHero + '</b><span>Saved</span></button>' +
+        '</div></header>' +
       shelf('Jump back in', byIds(recentIds).slice(0, 6), null) +
       shelf('New on Jabiru', newApps().slice(0, 6), NEW) +
       shelf('Saved', byIds(mySavedIds()).slice(0, 6), mySavedIds().length > 6 ? SAVED : null) +

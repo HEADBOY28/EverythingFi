@@ -1097,3 +1097,50 @@ body{
 :root[data-theme="dark"] .lp-consent input { color-scheme: dark; }
 .join-error { font-size: 12.5px; color: var(--red); text-align: center; margin: 10px 0 0; }
 .empty-action { width: auto; display: inline-flex; margin-top: 16px; padding: 0 22px; }
+
+/* ── Orange accents ── */
+/* Thin brand line across the top of the app */
+.topnav{box-shadow:inset 0 2px 0 var(--accent);}
+
+/* Home hero */
+.home-hero{position:relative;overflow:hidden;display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;
+  margin:4px 0 28px;padding:26px 28px;border-radius:18px;color:#fff;
+  background:radial-gradient(120% 140% at 100% 0%,#FF9A6B 0%,rgba(255,154,107,0) 55%),linear-gradient(135deg,#FF6B45 0%,#F0532C 100%);
+  box-shadow:0 10px 30px rgba(240,83,44,.25);}
+.home-hero::after{content:"";position:absolute;right:-40px;top:-40px;width:220px;height:220px;border-radius:50%;
+  background:url(icons/jabiru-mark.png) center/cover;opacity:.12;filter:grayscale(1) brightness(3);pointer-events:none;}
+.home-hero-text{position:relative;z-index:1;}
+.home-eyebrow{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;opacity:.85;}
+.home-title{font-family:'Inter',system-ui,sans-serif;font-size:28px;font-weight:700;letter-spacing:-.025em;line-height:1.15;margin-top:6px;}
+.home-sub{font-size:14px;opacity:.9;margin-top:6px;}
+.home-stats{position:relative;z-index:1;display:flex;gap:10px;}
+.home-stat{display:flex;flex-direction:column;align-items:flex-start;min-width:110px;padding:10px 14px;border-radius:12px;cursor:pointer;
+  font:inherit;color:#fff;text-align:left;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);
+  backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);transition:background .15s,transform .15s;}
+.home-stat:hover{background:rgba(255,255,255,.26);transform:translateY(-1px);}
+.home-stat:focus-visible{outline:2px solid #fff;outline-offset:2px;}
+.home-stat b{font-size:22px;font-weight:700;letter-spacing:-.02em;line-height:1.1;}
+.home-stat span{font-size:12px;opacity:.9;}
+@media (max-width:640px){.home-hero{padding:20px;}.home-title{font-size:22px;}.home-stats{width:100%;}.home-stat{flex:1;min-width:0;}}
+
+/* App cards: warm tint, orange on hover */
+.card{background:linear-gradient(180deg,var(--accentbg) 0%,rgba(255,107,69,0) 55%),var(--surface);overflow:hidden;}
+.card::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:linear-gradient(90deg,#FF6B45,#FF9A6B);
+  transform:scaleX(0);transform-origin:left;transition:transform .25s ease;}
+.card:hover::before,.card:focus-visible::before{transform:scaleX(1);}
+.card:hover{border-color:var(--accent);box-shadow:0 10px 26px rgba(255,107,69,.18),0 2px 6px rgba(28,20,36,.06);}
+.card:hover .card-title{color:var(--accent);}
+.card-title{transition:color .15s;}
+.card-icon{box-shadow:0 0 0 3px var(--accentbg);}
+
+/* Section headings get an orange marker */
+.cat-section-hdr-name{display:inline-flex;align-items:center;gap:8px;}
+.cat-section-hdr-name::before{content:"";width:4px;height:14px;border-radius:2px;background:var(--accent);}
+
+/* Folders: orange edge and name on hover */
+.folder:hover .folder-name,.folder:focus-visible .folder-name{color:var(--accent);}
+.folder:hover .folder-front,.folder:focus-visible .folder-front{border-color:var(--accent);}
+
+/* Search: orange focus ring */
+#search:focus{box-shadow:0 0 0 4px var(--accentbg2);}
+.nav-search-wrap:focus-within{border-color:var(--accent);}
