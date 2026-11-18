@@ -93,6 +93,14 @@
   .lp-divider::before, .lp-divider::after { content: ""; flex: 1; height: 1px; background: var(--border2); }
 
   .lp-email { display: flex; flex-direction: column; gap: 10px; }
+  .lp-google { display: flex; flex-direction: column; gap: 12px; }
+  .lp-google-btn { min-height: 44px; display: flex; justify-content: center; color-scheme: light; }
+  .lp-google-btn > div { width: 100%; }
+  .lp-legal-note { font-size: 11px; color: var(--text3); line-height: 1.5; margin: 0; }
+  .lp-legal-note a { color: var(--text2); text-decoration: underline; text-underline-offset: 2px; }
+  .lp-wallet-addr.is-name { font-family: inherit; font-size: 16px; }
+  .lp-wallet-sub { font-size: 12px; color: var(--text2); overflow-wrap: anywhere; }
+  .lp-wallet-avatar img.is-photo { width: 100%; height: 100%; object-fit: cover; }
   .lp-email-fields { display: flex; flex-direction: column; gap: 10px; animation: lp-reveal .2s ease-out; }
   @keyframes lp-reveal { from { opacity: 0; transform: translateY(-4px); } }
   @media (prefers-reduced-motion: reduce) { .lp-email-fields { animation: none; } }
@@ -204,6 +212,12 @@
           <svg class="lp-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </button>
         <div class="lp-divider">or</div>
+        <!-- Google sign-in (shown once GOOGLE_CLIENT_ID is set in Vercel) -->
+        <div class="lp-google" id="google-wrap" hidden>
+          <div class="lp-google-btn" id="google-btn" aria-label="Continue with Google"></div>
+          <label class="lp-consent"><input type="checkbox" id="google-consent"> <span>Get the latest Jabiru news, new apps and offers straight to your inbox.</span></label>
+          <p class="lp-legal-note">By continuing, you agree to our <a href="/terms">Terms</a> and <a href="/privacy">Privacy Policy</a>.</p>
+        </div>
         <form class="lp-email" id="email-form" novalidate>
           <label class="lp-hp" aria-hidden="true">Website <input name="website" id="email-hp" tabindex="-1" autocomplete="off"></label>
           <div class="lp-email-fields" id="email-fields" hidden>
@@ -228,6 +242,7 @@
           <div>
             <div class="lp-wallet-label" id="auth-label">Connected</div>
             <div class="lp-wallet-addr" id="wallet-addr"></div>
+            <div class="lp-wallet-sub" id="wallet-sub" hidden></div>
           </div>
         </div>
         <a class="lp-btn lp-btn-primary" href="/app"><span class="lp-btn-lead">Enter Jabiru</span>
@@ -354,6 +369,8 @@ function showSignedIn(label, signOutText) {
   $('auth-in').hidden = false;
   $('auth-label').textContent = label;
   $('signout-btn').textContent = signOutText;
+  $('wallet-addr').classList.remove('is-name');
+  $('wallet-sub').hidden = true;
 }
 
 function showConnected(addr, icon) {
@@ -477,7 +494,85 @@ $('email-form').addEventListener('submit', async function (e) {
   }
 });
 
+// ── Google sign-in ──
+var googleUser = null;
+var googleClientId = '';
+
+function showGoogle(user) {
+  googleUser = user;
+  showSignedIn('Signed in with Google', 'Sign out');
+  $('wallet-addr').textContent = user.name || user.email;
+  $('wallet-addr').classList.add('is-name');
+  $('wallet-addr').title = user.email;
+  $('wallet-sub').textContent = user.email;
+  $('wallet-sub').hidden = false;
+  var pic = /^https:\/\/[a-z0-9.-]+\.googleusercontent\.com\//i.test(user.picture || '') ? user.picture : '';
+  $('wallet-avatar').innerHTML = pic
+    ? '<img class="is-photo" alt="" referrerpolicy="no-referrer" src="' + esc(pic) + '"/>'
+    : '<span style="font-size:16px;font-weight:700">' + esc((user.name || user.email || '?').charAt(0).toUpperCase()) + '</span>';
+  note('');
+}
+
+async function onGoogleCredential(response) {
+  note('Signing you in…');
+  try {
+    var res = await fetch('/api/account', {
+      method: 'POST',
+      credentials: 'same-origin',
+      headers: { 'Content-Type': 'application/json', 'X-Requested-With': 'jabiru-site' },
+      body: JSON.stringify({ credential: response.credential, consent: $('google-consent').checked })
+    });
+    var body = {};
+    try { body = await res.json(); } catch (err) {}
+    if (!res.ok || !body.user) throw new Error(body.error || 'Sign-in failed. Please try again.');
+    store('ef-email', null);
+    showGoogle(body.user);
+  } catch (err) {
+    note(esc(err.message), true);
+  }
+}
+
+function renderGoogleButton() {
+  if (!window.google || !google.accounts || !googleClientId) return;
+  var box = $('google-btn');
+  box.innerHTML = '';
+  var dark = document.documentElement.getAttribute('data-theme') === 'dark';
+  google.accounts.id.renderButton(box, {
+    type: 'standard', theme: dark ? 'filled_black' : 'outline', size: 'large', shape: 'rectangular',
+    text: 'continue_with', logo_alignment: 'center', width: Math.min(400, Math.max(200, box.offsetWidth || 360))
+  });
+}
+
+function setupGoogle(clientId) {
+  googleClientId = clientId;
+  document.querySelector('.lp-auth-sub').textContent = 'Connect a wallet or continue with Google.';
+  $('google-wrap').hidden = false;
+  $('email-form').hidden = true;
+  var tag = document.createElement('script');
+  tag.src = 'https://accounts.google.com/gsi/client';
+  tag.async = true;
+  tag.onload = function () {
+    google.accounts.id.initialize({ client_id: clientId, callback: onGoogleCredential, auto_select: false, cancel_on_tap_outside: true, ux_mode: 'popup' });
+    renderGoogleButton();
+  };
+  tag.onerror = function () {
+    // Google could not load (blocked or offline): fall back to the email form.
+    $('google-wrap').hidden = true;
+    $('email-form').hidden = false;
+  };
+  document.head.appendChild(tag);
+}
+
 function signOut() {
+  if (googleUser) {
+    googleUser = null;
+    fetch('/api/account', { method: 'DELETE', credentials: 'same-origin', headers: { 'X-Requested-With': 'jabiru-site' } }).catch(function () {});
+    try { google.accounts.id.disableAutoSelect(); } catch (e) {}
+    showDisconnected();
+    renderGoogleButton();
+    note('Signed out.');
+    return;
+  }
   if (load('ef-email')) {
     store('ef-email', null);
     showDisconnected();
@@ -493,6 +588,15 @@ function signOut() {
   var email = load('ef-email');
   if (saved && /^0x[0-9a-fA-F]{40}$/.test(saved)) showConnected(saved, load('ef-wallet-icon'));
   else if (email) showEmail(email);
+  // Ask the server whether Google sign-in is set up and whether this visitor is signed in.
+  fetch('/api/account', { credentials: 'same-origin', cache: 'no-store' })
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (info) {
+      if (!info) return;
+      if (info.clientId) setupGoogle(info.clientId);
+      if (info.user && !(saved && /^0x[0-9a-fA-F]{40}$/.test(saved))) showGoogle(info.user);
+    })
+    .catch(function () { /* Keep the email form. */ });
 })();
 
 // ── Theme ──
@@ -506,6 +610,7 @@ function toggleTheme() {
   root.setAttribute('data-theme', next);
   store('ef-theme', next);
   updateThemeIcon();
+  renderGoogleButton();
 }
 updateThemeIcon();
 $('year').textContent = new Date().getFullYear();

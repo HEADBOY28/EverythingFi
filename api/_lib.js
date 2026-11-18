@@ -107,7 +107,34 @@ async function redis(commands) {
   });
 }
 
+// ── Visitor accounts (Google sign-in) ──
+// Signed with a different prefix than admin sessions, so a visitor cookie can never pass as an admin one.
+const USER_COOKIE = 'jb_user';
+const USER_DAYS = 30;
+function userSig(payload) {
+  return crypto.createHmac('sha256', env('SESSION_SECRET')).update('user:' + payload).digest('base64url');
+}
+function makeUserCookie(user) {
+  const payload = Buffer.from(JSON.stringify({ ...user, exp: Date.now() + USER_DAYS * 864e5 })).toString('base64url');
+  return `${USER_COOKIE}=${payload}.${userSig(payload)}; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=${USER_DAYS * 86400}`;
+}
+function clearUserCookie() {
+  return `${USER_COOKIE}=; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=0`;
+}
+function readUser(req) {
+  const match = (req.headers.cookie || '').split(/;\s*/).find((c) => c.startsWith(USER_COOKIE + '='));
+  if (!match) return null;
+  const [payload, sig] = match.slice(USER_COOKIE.length + 1).split('.');
+  if (!payload || !sig || !safeEqual(sig, userSig(payload))) return null;
+  try {
+    const data = JSON.parse(Buffer.from(payload, 'base64url').toString());
+    return data.exp > Date.now() ? data : null;
+  } catch (e) {
+    return null;
+  }
+}
+
 module.exports = {
   env, safeEqual, makeSessionCookie, clearSessionCookie, readSession, requireAdmin,
-  gh, headSha, branch, redis,
+  gh, headSha, branch, redis, makeUserCookie, clearUserCookie, readUser,
 };
