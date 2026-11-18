@@ -87,15 +87,13 @@
     <ul class="join-perks">
       <li><span class="join-tick" aria-hidden="true">✓</span><div><b>Save your favourites</b><span>Star any app and find it again under Saved.</span></div></li>
       <li><span class="join-tick" aria-hidden="true">✓</span><div><b>New apps in your inbox</b><span>Be first to hear about new listings, news and offers.</span></div></li>
-      <li><span class="join-tick" aria-hidden="true">✓</span><div><b>Free, no passwords</b><span>Use Google or your wallet. Nothing to remember.</span></div></li>
+      <li><span class="join-tick" aria-hidden="true">✓</span><div><b>Free, no passwords</b><span>Sign in with Google in one tap. Nothing to remember.</span></div></li>
     </ul>
     <div class="join-google" id="join-google" hidden>
       <div class="lp-google-btn" id="google-btn-modal"></div>
       <label class="lp-consent"><input type="checkbox" id="google-consent-modal"> <span>Send me new apps, news and offers. Unsubscribe anytime.</span></label>
     </div>
-    <a class="lp-btn lp-btn-primary" href="/" id="join-wallet">
-      <span class="lp-btn-lead"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 7V5a2 2 0 0 0-2-2H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3v3a1 1 0 0 1-1 1H5a2 2 0 0 1-2-2V5"/></svg>Connect wallet</span>
-    </a>
+    <a class="lp-btn lp-btn-primary" href="/" id="join-fallback" hidden>Sign in</a>
     <p class="join-error" id="join-error" role="alert" hidden></p>
     <button type="button" class="join-skip" data-join-close style="background:none;border:none;width:100%;cursor:pointer;font:inherit;font-size:13.5px;font-weight:600">Not now</button>
     <p class="lp-legal-note" style="text-align:center">By continuing, you agree to our <a href="/terms">Terms</a> and <a href="/privacy">Privacy Policy</a>.</p>
@@ -550,9 +548,12 @@ function openJoin(appId) {
   document.getElementById('join-error').hidden = true;
   var gWrap = document.getElementById('join-google');
   gWrap.hidden = !account.clientId;
+  document.getElementById('join-fallback').hidden = !!account.clientId;
   document.getElementById('join-modal').classList.add('open');
   document.querySelector('.join-modal').focus({ preventScroll: true });
-  if (account.clientId) loadGoogle().then(renderModalGoogle).catch(function () { gWrap.hidden = true; });
+  if (account.clientId) loadGoogle().then(renderModalGoogle).catch(function () {
+    gWrap.hidden = true; document.getElementById('join-fallback').hidden = false;
+  });
 }
 function closeJoin() {
   joinOpen = false; pendingSave = null;
