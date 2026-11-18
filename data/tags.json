@@ -826,10 +826,6 @@
    "Solana",
    "Free"
   ],
-  "188": [
-   "AI",
-   "Freemium"
-  ],
   "189": [
    "AI"
   ],
@@ -1411,6 +1407,195 @@
    "Stablecoins",
    "Yield",
    "Free"
+  ],
+  "338": [
+   "AI",
+   "Freemium",
+   "Mobile App"
+  ],
+  "339": [
+   "AI",
+   "Freemium",
+   "Mobile App"
+  ],
+  "340": [
+   "Ethereum",
+   "Layer 2s",
+   "Free"
+  ],
+  "341": [
+   "Ethereum",
+   "Layer 2s",
+   "Free"
+  ],
+  "342": [
+   "Ethereum",
+   "Layer 2s",
+   "Free"
+  ],
+  "343": [
+   "Base",
+   "Free"
+  ],
+  "344": [
+   "Free"
+  ],
+  "345": [
+   "Free"
+  ],
+  "346": [
+   "Free"
+  ],
+  "347": [
+   "Freemium"
+  ],
+  "348": [
+   "Free"
+  ],
+  "349": [
+   "Free"
+  ],
+  "350": [
+   "Solana",
+   "Free",
+   "Mobile App",
+   "Browser Extension"
+  ],
+  "351": [
+   "Ethereum",
+   "Layer 2s",
+   "Free",
+   "Mobile App",
+   "Browser Extension"
+  ],
+  "352": [
+   "Bitcoin",
+   "Ethereum",
+   "Solana",
+   "Free",
+   "Mobile App",
+   "Browser Extension"
+  ],
+  "353": [
+   "Ethereum",
+   "Layer 2s",
+   "Free"
+  ],
+  "354": [
+   "Solana",
+   "Ethereum",
+   "Free"
+  ],
+  "355": [
+   "Derivatives",
+   "Free",
+   "Open Source"
+  ],
+  "356": [
+   "Derivatives",
+   "Free"
+  ],
+  "357": [
+   "Solana",
+   "Derivatives",
+   "Free"
+  ],
+  "358": [
+   "BNB Chain",
+   "Derivatives",
+   "Free"
+  ],
+  "359": [
+   "Derivatives",
+   "Privacy",
+   "Free"
+  ],
+  "360": [
+   "Derivatives",
+   "Stocks & RWA",
+   "Free"
+  ],
+  "361": [
+   "Free",
+   "Mobile App"
+  ],
+  "362": [
+   "Free",
+   "Mobile App",
+   "Stocks & RWA"
+  ],
+  "363": [
+   "Free",
+   "Mobile App"
+  ],
+  "364": [
+   "Free",
+   "Mobile App",
+   "Stocks & RWA"
+  ],
+  "365": [
+   "Ethereum",
+   "Free"
+  ],
+  "366": [
+   "Solana",
+   "Free"
+  ],
+  "367": [
+   "AI",
+   "Open Source",
+   "Free"
+  ],
+  "368": [
+   "AI"
+  ],
+  "369": [
+   "AI",
+   "Yield"
+  ],
+  "370": [
+   "Ethereum",
+   "Free"
+  ],
+  "371": [
+   "Free"
+  ],
+  "372": [
+   "Ethereum",
+   "Free"
+  ],
+  "377": [
+   "Ethereum",
+   "Staking",
+   "Yield",
+   "Free"
+  ],
+  "378": [
+   "Ethereum",
+   "Stablecoins",
+   "Yield"
+  ],
+  "379": [
+   "Ethereum",
+   "Staking"
+  ],
+  "380": [
+   "Solana",
+   "Free"
+  ],
+  "381": [
+   "Solana",
+   "Free"
+  ],
+  "382": [
+   "BNB Chain",
+   "Free"
+  ],
+  "383": [
+   "Ethereum",
+   "Lending",
+   "Yield",
+   "Stablecoins"
   ]
  }
 }

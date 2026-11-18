@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="robots" content="noindex"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Page not found · Jabiru</title>
+<link rel="icon" type="image/png" href="/icons/favicon.png"/>
+<link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
+<meta name="description" content="Contact Jabiru about app listings, partnerships and ad placements."/>
+<meta name="theme-color" content="#FF6B45"/>
+<link rel="manifest" href="/manifest.webmanifest"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="Jabiru"/>
+<meta property="og:title" content="Contact · Jabiru"/>
+<meta property="og:description" content="Contact Jabiru about app listings, partnerships and ad placements."/>
+<meta property="og:url" content="https://everythingfi.vercel.app/contact"/>
+<meta property="og:image" content="https://everythingfi.vercel.app/og.png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:site" content="@Jabiru_"/>
+<meta name="twitter:image" content="https://everythingfi.vercel.app/og.png"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Newsreader:opsz,wght@6..72,300&family=Syne:wght@600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+<link rel="stylesheet" href="docs.css"/>
+<script>
+  (function () {
+    var saved = null;
+    try { saved = localStorage.getItem('ef-theme'); } catch (e) {}
+    var dark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    document.documentElement.setAttribute('data-theme', saved || (dark ? 'dark' : 'light'));
+  })();
+</script>
+</head>
+<body>
+
+<header class="d-head">
+  <div class="d-head-inner">
+    <a class="nav-brand use-wordmark" href="/" title="Home">
+      <div class="nav-logo-wrap is-img"><img src="icons/jabiru-mark.png" alt=""/></div>
+      <span class="nav-wordmark" aria-hidden="true"></span>
+      <span class="nav-brand-name">Jabiru</span>
+    </a>
+    <span class="d-tag">404</span>
+    <div class="d-head-right">
+      <button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme" aria-label="Toggle dark/light mode"><span class="theme-icon">&#9790;</span></button>
+      <a class="d-btn" href="/app">Open Jabiru <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</header>
+
+<div class="d-wrap" style="grid-template-columns:minmax(0,1fr);max-width:720px;">
+  <main style="max-width:none;padding:80px 0 40px;text-align:center;">
+    <div class="d-eyebrow">404</div>
+    <h1 style="font-family:'Newsreader',Georgia,serif;font-weight:300;font-size:clamp(40px,7vw,64px);letter-spacing:-0.03em;line-height:1.05;margin-top:10px">This page flew away.</h1>
+    <p style="font-size:17px;color:var(--text2);margin:14px auto 0;max-width:460px">The link may be broken, or the page may have moved. Try one of these instead.</p>
+    <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:28px">
+      <a class="d-btn" href="/app">Browse apps <span aria-hidden="true">→</span></a>
+      <a class="d-btn" href="/" style="background:var(--surface);color:var(--text)!important;border:1px solid var(--border2)">Home</a>
+      <a class="d-btn" href="/docs" style="background:var(--surface);color:var(--text)!important;border:1px solid var(--border2)">Docs</a>
+    </div>
+  </main>
+</div>
+
+<footer class="d-foot">
+  <div>
+    <span>© <span id="year"></span> Jabiru</span>
+    <a href="/">Home</a>
+    <a href="/app">Apps</a>
+    <a href="/docs">Docs</a>
+    <a href="/privacy">Privacy</a>
+    <a href="/terms">Terms</a>
+    <a href="/contact">Contact</a>
+    <a href="https://x.com/Jabiru_" target="_blank" rel="noopener noreferrer">X</a>
+  </div>
+</footer>
+
+<script>
+function updateThemeIcon() {
+  var dark = document.documentElement.getAttribute('data-theme') === 'dark';
+  document.querySelector('.theme-icon').textContent = dark ? '☀' : '☾';
+}
+function toggleTheme() {
+  var root = document.documentElement;
+  var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  root.setAttribute('data-theme', next);
+  try { localStorage.setItem('ef-theme', next); } catch (e) {}
+  updateThemeIcon();
+}
+updateThemeIcon();
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

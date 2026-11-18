@@ -45,7 +45,8 @@
    "url": "https://notion.so",
    "desc": "All-in-one workspace for notes, docs & wikis.",
    "cat": "Productivity",
-   "icon": "icons/1.jpg"
+   "icon": "icons/1.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 2,
@@ -53,15 +54,17 @@
    "url": "https://github.com",
    "desc": "Version control and code collaboration platform.",
    "cat": "Productivity",
-   "icon": "icons/2.jpg"
+   "icon": "icons/2.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 3,
    "name": "ChatGPT",
-   "url": "https://chat.openai.com",
-   "desc": "AI-powered chat and writing assistant.",
+   "url": "https://chatgpt.com",
+   "desc": "OpenAI's AI assistant for research, writing, coding and analysis.",
    "cat": "Productivity",
-   "icon": "icons/3.jpg"
+   "icon": "icons/3.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 4,
@@ -69,7 +72,8 @@
    "url": "https://linear.app",
    "desc": "Fast, streamlined project management for teams.",
    "cat": "Productivity",
-   "icon": "icons/4.jpg"
+   "icon": "icons/4.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 5,
@@ -77,7 +81,8 @@
    "url": "https://lunarfinance.io",
    "desc": "DeFi aggregator for optimal swap routes.",
    "cat": "Dex Aggregator",
-   "icon": "icons/5.jpg"
+   "icon": "icons/5.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 6,
@@ -85,7 +90,8 @@
    "url": "https://jumper.xyz",
    "desc": "Cross-chain bridge and swap aggregator.",
    "cat": "Dex Aggregator",
-   "icon": "icons/6.jpg"
+   "icon": "icons/6.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 7,
@@ -93,7 +99,8 @@
    "url": "https://swap.defillama.com",
    "desc": "DefiLlama meta-aggregator for best swap rates.",
    "cat": "Dex Aggregator",
-   "icon": "icons/7.jpg"
+   "icon": "icons/7.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 8,
@@ -101,7 +108,8 @@
    "url": "https://polymarket.com",
    "desc": "Decentralized prediction market platform.",
    "cat": "Prediction Market",
-   "icon": "icons/8.jpg"
+   "icon": "icons/8.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 9,
@@ -109,7 +117,8 @@
    "url": "https://kalshi.com",
    "desc": "Regulated event contracts and prediction markets.",
    "cat": "Prediction Market",
-   "icon": "icons/9.jpg"
+   "icon": "icons/9.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 10,
@@ -117,7 +126,8 @@
    "url": "https://polymarketanalytics.com",
    "desc": "Analytics and insights for Polymarket traders.",
    "cat": "Prediction Market",
-   "icon": "icons/10.jpg"
+   "icon": "icons/10.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 11,
@@ -125,7 +135,8 @@
    "url": "https://www.polysights.xyz",
    "desc": "Prediction market data and sentiment tools.",
    "cat": "Prediction Market",
-   "icon": "icons/11.jpg"
+   "icon": "icons/11.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 12,
@@ -133,7 +144,8 @@
    "url": "https://messari.io",
    "desc": "Crypto research, data and market intelligence.",
    "cat": "Research Blogs",
-   "icon": "icons/12.jpg"
+   "icon": "icons/12.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 13,
@@ -141,7 +153,8 @@
    "url": "https://4pillars.io/en",
    "desc": "In-depth crypto research and protocol analysis.",
    "cat": "Research Blogs",
-   "icon": "icons/13.jpg"
+   "icon": "icons/13.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 14,
@@ -149,7 +162,8 @@
    "url": "https://delphidigital.io",
    "desc": "Institutional-grade crypto research and insights.",
    "cat": "Research Blogs",
-   "icon": "icons/14.jpg"
+   "icon": "icons/14.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 15,
@@ -157,7 +171,8 @@
    "url": "https://blockworksresearch.com",
    "desc": "Professional crypto market research and analysis.",
    "cat": "Research Blogs",
-   "icon": "icons/15.jpg"
+   "icon": "icons/15.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 16,
@@ -165,7 +180,8 @@
    "url": "https://www.blocmates.com",
    "desc": "Accessible DeFi and crypto research for all levels.",
    "cat": "Research Blogs",
-   "icon": "icons/16.jpg"
+   "icon": "icons/16.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 17,
@@ -173,15 +189,17 @@
    "url": "https://a16zcrypto.com",
    "desc": "Research and insights from a16z crypto fund.",
    "cat": "Research Blogs",
-   "icon": "icons/17.jpg"
+   "icon": "icons/17.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 18,
    "name": "Nansen Research",
-   "url": "https://app.nansen.ai",
+   "url": "https://nansen.ai/blog",
    "desc": "On-chain analytics and smart money research.",
    "cat": "Research Blogs",
-   "icon": "icons/18.jpg"
+   "icon": "icons/18.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 19,
@@ -189,7 +207,8 @@
    "url": "https://research.binance.com",
    "desc": "Crypto market research from Binance analysts.",
    "cat": "Research Blogs",
-   "icon": "icons/19.jpg"
+   "icon": "icons/19.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 20,
@@ -197,7 +216,8 @@
    "url": "https://www.paradigm.xyz",
    "desc": "Research and writing from Paradigm crypto fund.",
    "cat": "Research Blogs",
-   "icon": "icons/20.jpg"
+   "icon": "icons/20.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 21,
@@ -205,15 +225,17 @@
    "url": "https://heybeluga.com",
    "desc": "Curated crypto research and DeFi insights.",
    "cat": "Research Blogs",
-   "icon": "icons/21.jpg"
+   "icon": "icons/21.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 22,
    "name": "The Block",
    "url": "https://www.theblock.co",
    "desc": "Crypto news, research and data platform.",
-   "cat": "Research Blogs",
-   "icon": "icons/22.jpg"
+   "cat": "News",
+   "icon": "icons/22.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 23,
@@ -221,7 +243,8 @@
    "url": "https://cryptonary.com",
    "desc": "Crypto education and investment research.",
    "cat": "Research Blogs",
-   "icon": "icons/23.jpg"
+   "icon": "icons/23.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 24,
@@ -229,7 +252,8 @@
    "url": "https://milkroad.com",
    "desc": "Daily crypto newsletter and market insights.",
    "cat": "Research Blogs",
-   "icon": "icons/24.jpg"
+   "icon": "icons/24.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 25,
@@ -237,7 +261,8 @@
    "url": "https://watcher.guru",
    "desc": "Real-time crypto news and market alerts.",
    "cat": "News",
-   "icon": "icons/25.jpg"
+   "icon": "icons/25.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 26,
@@ -245,7 +270,8 @@
    "url": "https://x.com/DegenerateNews",
    "desc": "Crypto degen news and alpha on X.",
    "cat": "News",
-   "icon": "icons/26.jpg"
+   "icon": "icons/26.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 27,
@@ -253,7 +279,8 @@
    "url": "https://news.treeofalpha.com",
    "desc": "Aggregated crypto news from Tree of Alpha.",
    "cat": "News",
-   "icon": "icons/27.jpg"
+   "icon": "icons/27.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 28,
@@ -261,7 +288,8 @@
    "url": "https://x.dbnews.com",
    "desc": "Fast crypto news feed and market updates.",
    "cat": "News",
-   "icon": "icons/28.jpg"
+   "icon": "icons/28.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 29,
@@ -269,7 +297,8 @@
    "url": "https://x.com/zoomerfied",
    "desc": "Crypto commentary and market takes on X.",
    "cat": "News",
-   "icon": "icons/29.jpg"
+   "icon": "icons/29.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 30,
@@ -277,7 +306,8 @@
    "url": "https://defillama.com",
    "desc": "DeFi TVL tracker and protocol analytics.",
    "cat": "Data & Analytics",
-   "icon": "icons/30.jpg"
+   "icon": "icons/30.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 31,
@@ -285,7 +315,8 @@
    "url": "https://tokenterminal.com",
    "desc": "Fundamental financial metrics for crypto protocols.",
    "cat": "Data & Analytics",
-   "icon": "icons/31.jpg"
+   "icon": "icons/31.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 32,
@@ -293,7 +324,8 @@
    "url": "https://tokenomist.ai",
    "desc": "Token unlock schedules and vesting analytics.",
    "cat": "Data & Analytics",
-   "icon": "icons/32.jpg"
+   "icon": "icons/32.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 33,
@@ -301,7 +333,8 @@
    "url": "https://flipsidecrypto.xyz",
    "desc": "Community-powered blockchain analytics platform.",
    "cat": "Data & Analytics",
-   "icon": "icons/33.jpg"
+   "icon": "icons/33.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 34,
@@ -309,7 +342,8 @@
    "url": "https://www.artemis.ai",
    "desc": "Crypto sector analytics and benchmarking.",
    "cat": "Data & Analytics",
-   "icon": "icons/34.jpg"
+   "icon": "icons/34.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 35,
@@ -317,7 +351,8 @@
    "url": "https://app.nansen.ai",
    "desc": "On-chain analytics and smart money tracking.",
    "cat": "Data & Analytics",
-   "icon": "icons/35.jpg"
+   "icon": "icons/35.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 36,
@@ -325,7 +360,8 @@
    "url": "https://intel.arkm.com",
    "desc": "Blockchain intelligence and wallet tracking.",
    "cat": "Data & Analytics",
-   "icon": "icons/36.jpg"
+   "icon": "icons/36.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 37,
@@ -333,7 +369,8 @@
    "url": "https://dexscreener.com",
    "desc": "Real-time DEX pair and token analytics.",
    "cat": "Data & Analytics",
-   "icon": "icons/37.jpg"
+   "icon": "icons/37.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 38,
@@ -341,7 +378,8 @@
    "url": "https://ai.0xscope.com",
    "desc": "AI-powered on-chain intelligence and analytics.",
    "cat": "Data & Analytics",
-   "icon": "icons/38.jpg"
+   "icon": "icons/38.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 39,
@@ -349,7 +387,8 @@
    "url": "https://dune.com",
    "desc": "Community-built blockchain data dashboards.",
    "cat": "Data & Analytics",
-   "icon": "icons/39.jpg"
+   "icon": "icons/39.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 40,
@@ -357,7 +396,8 @@
    "url": "https://bubblemaps.io",
    "desc": "Visual token supply and wallet distribution maps.",
    "cat": "Data & Analytics",
-   "icon": "icons/40.jpg"
+   "icon": "icons/40.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 41,
@@ -365,7 +405,8 @@
    "url": "https://sosovalue.com",
    "desc": "Crypto ETF and market data analytics.",
    "cat": "Data & Analytics",
-   "icon": "icons/41.jpg"
+   "icon": "icons/41.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 42,
@@ -373,7 +414,8 @@
    "url": "https://www.dextools.io/app",
    "desc": "DEX trading tools, charts and token info.",
    "cat": "Data & Analytics",
-   "icon": "icons/42.jpg"
+   "icon": "icons/42.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 43,
@@ -381,7 +423,8 @@
    "url": "https://www.coingecko.com",
    "desc": "Comprehensive crypto price and market data.",
    "cat": "Data & Analytics",
-   "icon": "icons/43.jpg"
+   "icon": "icons/43.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 44,
@@ -389,7 +432,8 @@
    "url": "https://coinmarketcap.com",
    "desc": "Global crypto market caps and price tracking.",
    "cat": "Data & Analytics",
-   "icon": "icons/44.jpg"
+   "icon": "icons/44.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 45,
@@ -397,7 +441,8 @@
    "url": "https://etherscan.io",
    "desc": "Ethereum blockchain explorer and analytics.",
    "cat": "Data & Analytics",
-   "icon": "icons/45.jpg"
+   "icon": "icons/45.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 46,
@@ -405,7 +450,8 @@
    "url": "https://l2beat.com",
    "desc": "Ethereum Layer 2 risk and TVL analytics.",
    "cat": "Data & Analytics",
-   "icon": "icons/46.jpg"
+   "icon": "icons/46.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 47,
@@ -413,7 +459,8 @@
    "url": "https://app.rwa.io/overview",
    "desc": "Real world assets on-chain data and analytics.",
    "cat": "Data & Analytics",
-   "icon": "icons/47.jpg"
+   "icon": "icons/47.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 48,
@@ -421,7 +468,8 @@
    "url": "https://depinscan.io",
    "desc": "Decentralized physical infrastructure network data.",
    "cat": "Data & Analytics",
-   "icon": "icons/48.jpg"
+   "icon": "icons/48.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 49,
@@ -429,7 +477,8 @@
    "url": "https://www.bitcoinlayers.org",
    "desc": "Bitcoin Layer 2 and scaling solution tracker.",
    "cat": "Data & Analytics",
-   "icon": "icons/49.jpg"
+   "icon": "icons/49.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 50,
@@ -437,7 +486,8 @@
    "url": "https://www.nftscan.com",
    "desc": "Multi-chain NFT explorer and analytics.",
    "cat": "Data & Analytics",
-   "icon": "icons/50.jpg"
+   "icon": "icons/50.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 51,
@@ -445,7 +495,8 @@
    "url": "https://debank.com",
    "desc": "DeFi portfolio tracker and wallet analytics.",
    "cat": "Data & Analytics",
-   "icon": "icons/51.jpg"
+   "icon": "icons/51.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 52,
@@ -453,7 +504,8 @@
    "url": "https://cryptorank.io",
    "desc": "Crypto fundraising, vesting and market analytics.",
    "cat": "Data & Analytics",
-   "icon": "icons/52.jpg"
+   "icon": "icons/52.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 53,
@@ -461,7 +513,8 @@
    "url": "https://www.rootdata.com",
    "desc": "Crypto project and investor database.",
    "cat": "Data & Analytics",
-   "icon": "icons/53.jpg"
+   "icon": "icons/53.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 54,
@@ -469,7 +522,8 @@
    "url": "https://kolscan.io",
    "desc": "KOL wallet tracking and influence analytics.",
    "cat": "Data & Analytics",
-   "icon": "icons/54.jpg"
+   "icon": "icons/54.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 55,
@@ -477,7 +531,8 @@
    "url": "https://blockworks.com",
    "desc": "Crypto media, events and market intelligence.",
    "cat": "Data & Analytics",
-   "icon": "icons/55.jpg"
+   "icon": "icons/55.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 56,
@@ -485,7 +540,8 @@
    "url": "https://glassnode.com",
    "desc": "On-chain market intelligence and analytics.",
    "cat": "Data & Analytics",
-   "icon": "icons/56.jpg"
+   "icon": "icons/56.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 57,
@@ -493,7 +549,8 @@
    "url": "https://www.coinglass.com",
    "desc": "Crypto derivatives and liquidation data.",
    "cat": "Data & Analytics",
-   "icon": "icons/57.jpg"
+   "icon": "icons/57.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 58,
@@ -501,7 +558,8 @@
    "url": "https://revoke.cash",
    "desc": "Revoke token approvals to protect your wallet.",
    "cat": "Security",
-   "icon": "icons/58.jpg"
+   "icon": "icons/58.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 59,
@@ -509,7 +567,8 @@
    "url": "https://www.pocketuniverse.app",
    "desc": "Transaction simulation and phishing protection.",
    "cat": "Security",
-   "icon": "icons/59.jpg"
+   "icon": "icons/59.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 60,
@@ -517,7 +576,8 @@
    "url": "https://peckshield.com",
    "desc": "Blockchain security audits and threat monitoring.",
    "cat": "Security",
-   "icon": "icons/60.jpg"
+   "icon": "icons/60.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 61,
@@ -525,7 +585,8 @@
    "url": "https://phantom.com",
    "desc": "Multi-chain crypto wallet for Solana and more.",
    "cat": "Wallet",
-   "icon": "icons/61.jpg"
+   "icon": "icons/61.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 62,
@@ -533,7 +594,8 @@
    "url": "https://rabby.io",
    "desc": "Smart EVM wallet with risk scanning.",
    "cat": "Wallet",
-   "icon": "icons/62.jpg"
+   "icon": "icons/62.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 63,
@@ -541,7 +603,8 @@
    "url": "https://metamask.io",
    "desc": "The most widely used Ethereum browser wallet.",
    "cat": "Wallet",
-   "icon": "icons/63.jpg"
+   "icon": "icons/63.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 64,
@@ -549,7 +612,8 @@
    "url": "https://www.keplr.app",
    "desc": "Interchain wallet for the Cosmos ecosystem.",
    "cat": "Wallet",
-   "icon": "icons/64.jpg"
+   "icon": "icons/64.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 65,
@@ -557,7 +621,8 @@
    "url": "https://www.xverse.app",
    "desc": "Bitcoin and Stacks wallet for Web3.",
    "cat": "Wallet",
-   "icon": "icons/65.jpg"
+   "icon": "icons/65.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 66,
@@ -565,7 +630,8 @@
    "url": "https://slush.app",
    "desc": "Clean and simple crypto wallet experience.",
    "cat": "Wallet",
-   "icon": "icons/66.jpg"
+   "icon": "icons/66.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 67,
@@ -573,7 +639,8 @@
    "url": "https://stargate.finance",
    "desc": "Omnichain native asset bridge protocol.",
    "cat": "Bridges",
-   "icon": "icons/67.jpg"
+   "icon": "icons/67.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 68,
@@ -581,7 +648,8 @@
    "url": "https://app.hyperliquid.xyz/trade",
    "desc": "High-performance on-chain perpetuals exchange.",
    "cat": "Perp Dex",
-   "icon": "icons/68.jpg"
+   "icon": "icons/68.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 69,
@@ -589,7 +657,8 @@
    "url": "https://www.tread.fi",
    "desc": "Perp trading analytics and position tracking.",
    "cat": "Perp Dex",
-   "icon": "icons/69.jpg"
+   "icon": "icons/69.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 70,
@@ -597,7 +666,8 @@
    "url": "https://app.santiment.net",
    "desc": "Crypto social and on-chain sentiment analytics.",
    "cat": "Social Analytics",
-   "icon": "icons/70.jpg"
+   "icon": "icons/70.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 71,
@@ -605,7 +675,8 @@
    "url": "https://lunarcrush.com",
    "desc": "Social media analytics and crypto sentiment.",
    "cat": "Social Analytics",
-   "icon": "icons/71.jpg"
+   "icon": "icons/71.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 72,
@@ -613,7 +684,8 @@
    "url": "https://twitterscore.io",
    "desc": "Crypto Twitter influence and engagement scoring.",
    "cat": "Social Analytics",
-   "icon": "icons/72.jpg"
+   "icon": "icons/72.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 73,
@@ -621,7 +693,8 @@
    "url": "https://getmoni.io/discover",
    "desc": "Smart money social tracking and alpha discovery.",
    "cat": "Social Analytics",
-   "icon": "icons/73.jpg"
+   "icon": "icons/73.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 74,
@@ -629,7 +702,8 @@
    "url": "https://kaito.ai",
    "desc": "AI-powered crypto information and attention tracking.",
    "cat": "Social Analytics",
-   "icon": "icons/74.jpg"
+   "icon": "icons/74.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 75,
@@ -637,7 +711,8 @@
    "url": "https://sorsa.io",
    "desc": "Social analytics and crypto community insights.",
    "cat": "Social Analytics",
-   "icon": "icons/75.jpg"
+   "icon": "icons/75.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 76,
@@ -645,7 +720,8 @@
    "url": "https://immunefi.com",
    "desc": "Largest crypto bug bounty platform.",
    "cat": "Bounty",
-   "icon": "icons/76.jpg"
+   "icon": "icons/76.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 77,
@@ -653,7 +729,8 @@
    "url": "https://scribble.network",
    "desc": "Crypto research and writing bounties.",
    "cat": "Bounty",
-   "icon": "icons/77.jpg"
+   "icon": "icons/77.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 78,
@@ -661,7 +738,8 @@
    "url": "https://code4rena.com",
    "desc": "Competitive smart contract security audits.",
    "cat": "Bounty",
-   "icon": "icons/78.jpg"
+   "icon": "icons/78.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 79,
@@ -669,7 +747,8 @@
    "url": "https://sherlock.xyz",
    "desc": "Smart contract audit and exploit coverage.",
    "cat": "Bounty",
-   "icon": "icons/79.jpg"
+   "icon": "icons/79.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 80,
@@ -677,7 +756,8 @@
    "url": "https://rova.xyz/tasks",
    "desc": "Crypto tasks and bounty earning platform.",
    "cat": "Bounty",
-   "icon": "icons/80.jpg"
+   "icon": "icons/80.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 81,
@@ -685,7 +765,8 @@
    "url": "https://superteam.fun/earn",
    "desc": "Solana ecosystem grants and bounties.",
    "cat": "Bounty",
-   "icon": "icons/81.jpg"
+   "icon": "icons/81.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 82,
@@ -693,7 +774,8 @@
    "url": "https://wizzhq.xyz",
    "desc": "Crypto quests, tasks and earning platform.",
    "cat": "Bounty",
-   "icon": "icons/82.jpg"
+   "icon": "icons/82.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 83,
@@ -701,7 +783,8 @@
    "url": "https://app.firstdollar.money",
    "desc": "Earn your first dollar through crypto tasks.",
    "cat": "Bounty",
-   "icon": "icons/83.jpg"
+   "icon": "icons/83.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 84,
@@ -709,7 +792,8 @@
    "url": "https://axiom.trade",
    "desc": "On-chain trading terminal for degens.",
    "cat": "Trenches",
-   "icon": "icons/84.jpg"
+   "icon": "icons/84.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 85,
@@ -717,7 +801,8 @@
    "url": "https://pump.fun",
    "desc": "Launch and trade meme coins on Solana.",
    "cat": "Trenches",
-   "icon": "icons/85.jpg"
+   "icon": "icons/85.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 86,
@@ -725,7 +810,8 @@
    "url": "https://www.stablewatch.io",
    "desc": "Stablecoin monitoring and depeg alerts.",
    "cat": "DeFi",
-   "icon": "icons/86.jpg"
+   "icon": "icons/86.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 87,
@@ -733,7 +819,8 @@
    "url": "https://aave.com",
    "desc": "Decentralized liquidity and lending protocol.",
    "cat": "DeFi",
-   "icon": "icons/87.jpg"
+   "icon": "icons/87.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 88,
@@ -741,7 +828,8 @@
    "url": "https://app.safe.global/",
    "desc": "Multi-sig wallet and platform.",
    "cat": "Wallet",
-   "icon": "icons/88.jpg"
+   "icon": "icons/88.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 89,
@@ -749,7 +837,8 @@
    "url": "https://typefully.com/",
    "desc": "Assist creators to write, schedule & publish on X.",
    "cat": "Productivity",
-   "icon": "icons/89.jpg"
+   "icon": "icons/89.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 90,
@@ -757,7 +846,8 @@
    "url": "https://ethena.fi/",
    "desc": "Decentralized synthetic dollar protocol that turns crypto market structure into a yield-bearing dollar system.",
    "cat": "DeFi",
-   "icon": "icons/90.jpg"
+   "icon": "icons/90.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 91,
@@ -765,7 +855,8 @@
    "url": "https://app.cielo.finance/",
    "desc": "Track everything. Trade anything on Solana + Base. Onchain discovery & wallet intelligence for EVM, Bitcoin, Hyperliquid, Polymarket + advanced Solana trading.",
    "cat": "Data & Analytics",
-   "icon": "icons/91.jpg"
+   "icon": "icons/91.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 92,
@@ -773,7 +864,8 @@
    "url": "https://app.summ.com/",
    "desc": "Crypto Tax Calculator.",
    "cat": "Data & Analytics",
-   "icon": "icons/92.jpg"
+   "icon": "icons/92.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 93,
@@ -781,7 +873,8 @@
    "url": "https://quillbot.com/",
    "desc": "AI-powered writing tool that helps users paraphrase, improve, and refine text for clarity and style.",
    "cat": "Productivity",
-   "icon": "icons/93.jpg"
+   "icon": "icons/93.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 94,
@@ -789,7 +882,8 @@
    "url": "https://gmgn.ai/",
    "desc": "Fast Trade, Copy Trade & AFK Automation.",
    "cat": "Trenches",
-   "icon": "icons/94.jpg"
+   "icon": "icons/94.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 95,
@@ -797,7 +891,8 @@
    "url": "https://chainlist.org/",
    "desc": "Add networks, Chains, RPCs.",
    "cat": "Utilities",
-   "icon": "icons/95.jpg"
+   "icon": "icons/95.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 96,
@@ -805,7 +900,8 @@
    "url": "https://binance.com/",
    "desc": "The world's leading blockchain ecosystem and digital asset exchange.",
    "cat": "CEX",
-   "icon": "icons/96.jpg"
+   "icon": "icons/96.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 97,
@@ -813,7 +909,8 @@
    "url": "https://sol-incinerator.com/",
    "desc": "Reclaim SOL by closing your token accounts.",
    "cat": "Utilities",
-   "icon": "icons/97.jpg"
+   "icon": "icons/97.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 98,
@@ -821,7 +918,8 @@
    "url": "https://www.scamsniffer.io/extension/",
    "desc": "More safer browsing and signing experience.",
    "cat": "Security",
-   "icon": "icons/98.jpg"
+   "icon": "icons/98.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 99,
@@ -829,15 +927,17 @@
    "url": "https://railgun.org/",
    "desc": "Hold assets and interact with DeFi privately, no bridge needed.",
    "cat": "DeFi",
-   "icon": "icons/99.jpg"
+   "icon": "icons/99.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 100,
    "name": "Whale Alert",
-   "url": "https://x.com/whale_alert",
+   "url": "https://whale-alert.io",
    "desc": "Live reporting on large and interesting blockchain transactions as they happen.",
    "cat": "News",
-   "icon": "icons/100.jpg"
+   "icon": "icons/100.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 101,
@@ -845,7 +945,8 @@
    "url": "https://www.strategicethreserve.xyz/",
    "desc": "The Strategic ETH Reserve.",
    "cat": "Utilities",
-   "icon": "icons/101.jpg"
+   "icon": "icons/101.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 102,
@@ -853,7 +954,8 @@
    "url": "https://www.jito.network/",
    "desc": "Market Layer of Solana.",
    "cat": "DeFi",
-   "icon": "icons/102.jpg"
+   "icon": "icons/102.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 103,
@@ -861,7 +963,8 @@
    "url": "https://search.defillama.com/",
    "desc": "The fastest way to find safe, official links for thousands of crypto projects.",
    "cat": "Utilities",
-   "icon": "icons/103.jpg"
+   "icon": "icons/103.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 104,
@@ -869,7 +972,8 @@
    "url": "https://www.pendle.finance/",
    "desc": "Yield trading platform.",
    "cat": "DeFi",
-   "icon": "icons/104.jpg"
+   "icon": "icons/104.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 105,
@@ -877,7 +981,8 @@
    "url": "https://kamino.com/lend",
    "desc": "Credit infrastructure on Solana.",
    "cat": "DeFi",
-   "icon": "icons/105.jpg"
+   "icon": "icons/105.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 106,
@@ -885,7 +990,8 @@
    "url": "https://www.curve.finance/",
    "desc": "Home of stablecoins.",
    "cat": "DeFi",
-   "icon": "icons/106.jpg"
+   "icon": "icons/106.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 107,
@@ -893,7 +999,8 @@
    "url": "https://www.alchemy.com/",
    "desc": "Onchain developer platform. Build with blockchain RPC APIs, smart wallets and rollups.",
    "cat": "Utilities",
-   "icon": "icons/107.jpg"
+   "icon": "icons/107.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 108,
@@ -901,7 +1008,8 @@
    "url": "https://balancer.fi/",
    "desc": "Programmable AMM infrastructure.",
    "cat": "DeFi",
-   "icon": "icons/108.jpg"
+   "icon": "icons/108.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 109,
@@ -909,7 +1017,8 @@
    "url": "https://www.frontrun.pro/",
    "desc": "Extension wallet for pro onchain traders with speed and advanced tooling.",
    "cat": "Wallet",
-   "icon": "icons/109.jpg"
+   "icon": "icons/109.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 110,
@@ -917,7 +1026,8 @@
    "url": "https://www.meteora.ag/",
    "desc": "Building world-class dynamic liquidity pools for the biggest LP community.",
    "cat": "DeFi",
-   "icon": "icons/110.jpg"
+   "icon": "icons/110.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 111,
@@ -925,7 +1035,8 @@
    "url": "https://fomo.family/",
    "desc": "Social trading app.",
    "cat": "Trenches",
-   "icon": "icons/111.jpg"
+   "icon": "icons/111.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 112,
@@ -933,7 +1044,8 @@
    "url": "https://learnweb3.io/",
    "desc": "Become a web3 developer today for free!",
    "cat": "Educational",
-   "icon": "icons/112.jpg"
+   "icon": "icons/112.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 113,
@@ -941,7 +1053,8 @@
    "url": "https://www.moonpay.com/",
    "desc": "The easy way for people and AI to buy, sell, and use crypto.",
    "cat": "Ramps",
-   "icon": "icons/113.jpg"
+   "icon": "icons/113.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 114,
@@ -949,7 +1062,8 @@
    "url": "https://trojan.com/",
    "desc": "Experience the fastest onchain execution with unmatched rewards.",
    "cat": "Trenches",
-   "icon": "icons/114.jpg"
+   "icon": "icons/114.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 115,
@@ -957,7 +1071,8 @@
    "url": "https://moonshot.com/",
    "desc": "Buy, Sell, and Create Memes with Apple Pay.",
    "cat": "Trenches",
-   "icon": "icons/115.jpg"
+   "icon": "icons/115.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 116,
@@ -965,7 +1080,8 @@
    "url": "https://intents.near.org/",
    "desc": "The universal trading protocol for onchain markets and tokenized assets.",
    "cat": "Bridges",
-   "icon": "icons/116.jpg"
+   "icon": "icons/116.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 117,
@@ -973,7 +1089,8 @@
    "url": "https://shop.ledger.com/",
    "desc": "Hardware wallet for securely storing crypto offline, keeping private keys safe and transactions protected.",
    "cat": "Wallet",
-   "icon": "icons/117.jpg"
+   "icon": "icons/117.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 118,
@@ -981,7 +1098,8 @@
    "url": "https://x.com/TornadoCash",
    "desc": "A fully decentralized protocol for private transactions on Ethereum.",
    "cat": "DeFi",
-   "icon": "icons/118.jpg"
+   "icon": "icons/118.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 119,
@@ -989,7 +1107,8 @@
    "url": "https://www.ether.fi/",
    "desc": "Ethereum staking and restaking protocol that lets you earn yield while keeping full control of your assets.",
    "cat": "DeFi",
-   "icon": "icons/119.jpg"
+   "icon": "icons/119.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 120,
@@ -997,7 +1116,8 @@
    "url": "https://www.metadao.fi/",
    "desc": "Raise money while putting ownership into the hands of your early users and believers.",
    "cat": "Launchpad",
-   "icon": "icons/120.jpg"
+   "icon": "icons/120.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 121,
@@ -1005,7 +1125,8 @@
    "url": "https://app.legion.cc?homie=04A42448",
    "desc": "Early access to the best ICOs and pre-token sales.",
    "cat": "Launchpad",
-   "icon": "icons/121.jpg"
+   "icon": "icons/121.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 122,
@@ -1013,7 +1134,8 @@
    "url": "https://buidlpad.com/",
    "desc": "Launch the future.",
    "cat": "Launchpad",
-   "icon": "icons/122.jpg"
+   "icon": "icons/122.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 123,
@@ -1021,7 +1143,8 @@
    "url": "https://echo.xyz/",
    "desc": "Invest in early-stage cryptocurrency projects and new startups alongside notable angels.",
    "cat": "Launchpad",
-   "icon": "icons/123.jpg"
+   "icon": "icons/123.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 124,
@@ -1029,7 +1152,8 @@
    "url": "https://coinlist.co/",
    "desc": "Buy the newest tokens before they list anywhere else.",
    "cat": "Launchpad",
-   "icon": "icons/124.jpg"
+   "icon": "icons/124.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 125,
@@ -1037,7 +1161,8 @@
    "url": "https://app.morpho.org/",
    "desc": "The universal lending network.",
    "cat": "DeFi",
-   "icon": "icons/125.jpg"
+   "icon": "icons/125.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 126,
@@ -1045,7 +1170,8 @@
    "url": "https://www.bybit.com/en/",
    "desc": "The ultimate crypto exchange and Web3 platform.",
    "cat": "CEX",
-   "icon": "icons/126.jpg"
+   "icon": "icons/126.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 127,
@@ -1053,7 +1179,8 @@
    "url": "https://mayan.finance/",
    "desc": "Swap any asset to any chain instantly.",
    "cat": "Bridges",
-   "icon": "icons/127.jpg"
+   "icon": "icons/127.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 128,
@@ -1061,7 +1188,8 @@
    "url": "https://www.mexc.com/0fee-infinite?utm_source=socialmedia&utm_medium=MEXC&utm_campaign=brand_upgrading",
    "desc": "Your 0-Fee Gateway to infinite opportunities. Trade Crypto, Gold, Silver, Oil, Prediction Markets and US Stocks.",
    "cat": "CEX",
-   "icon": "icons/128.jpg"
+   "icon": "icons/128.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 129,
@@ -1069,7 +1197,8 @@
    "url": "https://www.okx.com/en-eu",
    "desc": "A new alternative for your crypto journey.",
    "cat": "CEX",
-   "icon": "icons/129.jpg"
+   "icon": "icons/129.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 130,
@@ -1077,7 +1206,8 @@
    "url": "https://www.squidrouter.com/",
    "desc": "Seamless execution across 100+ networks.",
    "cat": "Bridges",
-   "icon": "icons/130.jpg"
+   "icon": "icons/130.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 131,
@@ -1085,7 +1215,8 @@
    "url": "https://t.me/maestro?start=r-linktreebot",
    "desc": "The ultimate Telegram trading suite for DeFi.",
    "cat": "Trenches",
-   "icon": "icons/131.jpg"
+   "icon": "icons/131.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 132,
@@ -1093,7 +1224,8 @@
    "url": "https://compound.finance/",
    "desc": "Decentralized lending protocol where users earn interest or borrow against crypto assets.",
    "cat": "DeFi",
-   "icon": "icons/132.jpg"
+   "icon": "icons/132.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 133,
@@ -1101,7 +1233,8 @@
    "url": "https://x.com/Whale_Sniper",
    "desc": "Get notified when unusual activity is spotted on exchanges.",
    "cat": "News",
-   "icon": "icons/133.png"
+   "icon": "icons/133.png",
+   "added": "2026-10-21"
   },
   {
    "id": 134,
@@ -1109,7 +1242,8 @@
    "url": "https://swap.cow.fi?ref=COW-307465",
    "desc": "Decentralized trading protocol that matches orders directly to get better prices and lower fees.",
    "cat": "DeFi",
-   "icon": "icons/134.jpg"
+   "icon": "icons/134.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 135,
@@ -1117,7 +1251,8 @@
    "url": "https://www.bankless.com/",
    "desc": "Media and education platform for the Bankless movement in crypto.",
    "cat": "Research Blogs",
-   "icon": "icons/135.jpg"
+   "icon": "icons/135.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 136,
@@ -1125,7 +1260,8 @@
    "url": "https://www.bithumb.com/",
    "desc": "Digital Asset Platform based in Korea.",
    "cat": "CEX",
-   "icon": "icons/136.jpg"
+   "icon": "icons/136.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 137,
@@ -1133,7 +1269,8 @@
    "url": "https://www.upbit.com/",
    "desc": "The Most Trusted Global Digital Asset Exchange.",
    "cat": "CEX",
-   "icon": "icons/137.jpg"
+   "icon": "icons/137.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 138,
@@ -1141,15 +1278,17 @@
    "url": "https://app.printr.money/",
    "desc": "Launch a token on any chain in one click.",
    "cat": "Trenches",
-   "icon": "icons/138.jpg"
+   "icon": "icons/138.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 139,
    "name": "Antidrain",
    "url": "https://www.antidrain.dev/",
    "desc": "Rescue airdrops, recover staked tokens & save NFTs from compromised wallets. One atomic transaction.",
-   "cat": "Utilities",
-   "icon": "icons/139.png"
+   "cat": "Security",
+   "icon": "icons/139.png",
+   "added": "2026-10-21"
   },
   {
    "id": 140,
@@ -1157,7 +1296,8 @@
    "url": "https://batch-revoker.vercel.app/",
    "desc": "Revoke multiple tokens in single tx and single approval in each chain.",
    "cat": "Security",
-   "icon": "icons/140.svg"
+   "icon": "icons/140.svg",
+   "added": "2026-10-21"
   },
   {
    "id": 141,
@@ -1165,7 +1305,8 @@
    "url": "https://zapper.xyz/",
    "desc": "Track your DeFi and NFT portfolio.",
    "cat": "Data & Analytics",
-   "icon": "icons/141.jpg"
+   "icon": "icons/141.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 142,
@@ -1173,7 +1314,8 @@
    "url": "https://debridge.com/",
    "desc": "Trade any opportunity, ahead of the curve. Trustless by design.",
    "cat": "Bridges",
-   "icon": "icons/142.jpg"
+   "icon": "icons/142.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 143,
@@ -1181,7 +1323,8 @@
    "url": "https://www.virtuals.io/",
    "desc": "A hybrid, intelligent economy where humans and agents coordinate to achieve sovereignty.",
    "cat": "AI Agents",
-   "icon": "icons/143.jpg"
+   "icon": "icons/143.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 144,
@@ -1189,7 +1332,8 @@
    "url": "https://aixbt.tech/",
    "desc": "Real-time market intelligence platform analyzing social intel, on-chain data, and other sources to surface emerging trends.",
    "cat": "AI Agents",
-   "icon": "icons/144.jpg"
+   "icon": "icons/144.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 145,
@@ -1197,7 +1341,8 @@
    "url": "https://crt.sh/",
    "desc": "Verify domain names, organization names and SSL certificates.",
    "cat": "Utilities",
-   "icon": "icons/145.jpg"
+   "icon": "icons/145.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 146,
@@ -1205,7 +1350,8 @@
    "url": "https://blowfish.xyz/",
    "desc": "Transaction warnings and malicious dApp protection on 10+ chains.",
    "cat": "Security",
-   "icon": "icons/146.jpg"
+   "icon": "icons/146.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 147,
@@ -1213,7 +1359,8 @@
    "url": "https://honeypot.is/",
    "desc": "Check if a coin or token is a honeypot before buying.",
    "cat": "Security",
-   "icon": "icons/147.png"
+   "icon": "icons/147.png",
+   "added": "2026-10-21"
   },
   {
    "id": 148,
@@ -1221,7 +1368,8 @@
    "url": "https://gopluslabs.io/en",
    "desc": "Security layer for checking token risks, malicious addresses, and dApp risk signals.",
    "cat": "Security",
-   "icon": "icons/148.jpg"
+   "icon": "icons/148.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 149,
@@ -1229,7 +1377,8 @@
    "url": "https://app.ethos.network/",
    "desc": "Reputation and credibility for crypto, driven by peer-to-peer reviews.",
    "cat": "Social Analytics",
-   "icon": "icons/149.jpg"
+   "icon": "icons/149.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 150,
@@ -1237,7 +1386,8 @@
    "url": "https://aegisweb3.com/",
    "desc": "Detects scams and token phishing domains.",
    "cat": "Security",
-   "icon": "icons/150.png"
+   "icon": "icons/150.png",
+   "added": "2026-10-21"
   },
   {
    "id": 151,
@@ -1245,7 +1395,8 @@
    "url": "https://quacks.app/?ref=NDIDI_GRAM",
    "desc": "Social network for creators to examine and monetize their brand.",
    "cat": "Social Analytics",
-   "icon": "icons/151.jpg"
+   "icon": "icons/151.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 152,
@@ -1253,7 +1404,8 @@
    "url": "https://app.lighter.xyz/",
    "desc": "Trade digital assets with low costs and low latency on Ethereum L2 with custom ZK circuits.",
    "cat": "Perp Dex",
-   "icon": "icons/152.jpg"
+   "icon": "icons/152.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 153,
@@ -1261,7 +1413,8 @@
    "url": "https://discord.com/",
    "desc": "Communication platform for text, voice, and video chat.",
    "cat": "Productivity",
-   "icon": "icons/153.png"
+   "icon": "icons/153.png",
+   "added": "2026-10-21"
   },
   {
    "id": 154,
@@ -1269,7 +1422,8 @@
    "url": "https://www.tradingview.com/",
    "desc": "Financial charting and market analysis platform for traders and investors.",
    "cat": "Data & Analytics",
-   "icon": "icons/154.jpg"
+   "icon": "icons/154.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 155,
@@ -1277,7 +1431,8 @@
    "url": "https://app.uniswap.org/",
    "desc": "Buy and sell crypto on Ethereum and 18+ other chains.",
    "cat": "DeFi",
-   "icon": "icons/155.jpg"
+   "icon": "icons/155.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 156,
@@ -1285,7 +1440,8 @@
    "url": "https://telegram.org/",
    "desc": "Cloud-based messaging platform for chat, voice calls, and large communities.",
    "cat": "Productivity",
-   "icon": "icons/156.jpg"
+   "icon": "icons/156.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 157,
@@ -1293,7 +1449,8 @@
    "url": "https://opensea.io/",
    "desc": "Multichain NFT marketplace.",
    "cat": "NFTs",
-   "icon": "icons/157.jpg"
+   "icon": "icons/157.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 158,
@@ -1301,7 +1458,8 @@
    "url": "https://rollup.wtf/",
    "desc": "Tracks the performance of Ethereum Layer 2 rollups.",
    "cat": "Utilities",
-   "icon": "icons/158.svg"
+   "icon": "icons/158.svg",
+   "added": "2026-10-21"
   },
   {
    "id": 159,
@@ -1309,7 +1467,8 @@
    "url": "https://alternative.me/crypto/fear-and-greed-index/",
    "desc": "The Fear and Greed Index for Bitcoin and other large cryptocurrencies.",
    "cat": "Utilities",
-   "icon": "icons/159.png"
+   "icon": "icons/159.png",
+   "added": "2026-10-21"
   },
   {
    "id": 160,
@@ -1317,7 +1476,8 @@
    "url": "https://polycop.fun/leaderboard",
    "desc": "Smart Money Trading Bot on Polymarket.",
    "cat": "Prediction Market",
-   "icon": "icons/160.jpg"
+   "icon": "icons/160.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 161,
@@ -1325,7 +1485,8 @@
    "url": "https://app.mimix.xyz/",
    "desc": "Verifiable ad network for organic content.",
    "cat": "Bounty",
-   "icon": "icons/161.jpg"
+   "icon": "icons/161.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 162,
@@ -1333,7 +1494,8 @@
    "url": "https://walletconnect.com/",
    "desc": "Largest network of digital wallets.",
    "cat": "Wallet",
-   "icon": "icons/162.jpg"
+   "icon": "icons/162.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 163,
@@ -1341,7 +1503,8 @@
    "url": "https://ff.io/?ref=cry43atb",
    "desc": "Fully automatic cryptocurrency exchange with Lightning Network support.",
    "cat": "Utilities",
-   "icon": "icons/163.jpg"
+   "icon": "icons/163.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 164,
@@ -1349,7 +1512,8 @@
    "url": "https://sunrise.xyz/",
    "desc": "Solana asset gateway connecting cross-chain assets to liquid Solana-native markets.",
    "cat": "DeFi",
-   "icon": "icons/164.jpg"
+   "icon": "icons/164.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 165,
@@ -1357,7 +1521,8 @@
    "url": "https://defi.xstocks.fi/points?ref=HEADBOY",
    "desc": "Over 100 tokenized stocks and ETFs available onchain and on centralized exchanges.",
    "cat": "DeFi",
-   "icon": "icons/165.jpg"
+   "icon": "icons/165.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 166,
@@ -1365,7 +1530,8 @@
    "url": "https://www.veilo.network/",
    "desc": "All-in-one Solana privacy app.",
    "cat": "Wallet",
-   "icon": "icons/166.jpg"
+   "icon": "icons/166.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 167,
@@ -1373,7 +1539,8 @@
    "url": "https://app.gib.work/?ref=gibwork",
    "desc": "Create work, take on work, and get paid in crypto.",
    "cat": "Bounty",
-   "icon": "icons/167.jpg"
+   "icon": "icons/167.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 168,
@@ -1381,7 +1548,8 @@
    "url": "https://app.kairos.trade/",
    "desc": "Prediction Market Trading Terminal.",
    "cat": "Prediction Market",
-   "icon": "icons/168.jpg"
+   "icon": "icons/168.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 169,
@@ -1389,7 +1557,8 @@
    "url": "https://luma.com/home",
    "desc": "Delightful events platform for hosting and discovering events.",
    "cat": "Productivity",
-   "icon": "icons/169.jpg"
+   "icon": "icons/169.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 170,
@@ -1397,7 +1566,8 @@
    "url": "https://www.shillz.app/",
    "desc": "Community Rewards Platform.",
    "cat": "Bounty",
-   "icon": "icons/170.jpg"
+   "icon": "icons/170.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 171,
@@ -1405,15 +1575,17 @@
    "url": "https://aerodrome.finance/",
    "desc": "The central trading and liquidity marketplace on Base.",
    "cat": "DeFi",
-   "icon": "icons/171.jpg"
+   "icon": "icons/171.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 172,
    "name": "BaseApp",
    "url": "https://base.app/",
    "desc": "Trade, earn, predict, and chat with friends or agents.",
-   "cat": "DeFi",
-   "icon": "icons/172.jpg"
+   "cat": "Wallet",
+   "icon": "icons/172.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 173,
@@ -1421,7 +1593,8 @@
    "url": "https://marketcapof.com/",
    "desc": "Explore the potential price of your favorite crypto or stock.",
    "cat": "Utilities",
-   "icon": "icons/173.jpg"
+   "icon": "icons/173.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 174,
@@ -1429,7 +1602,8 @@
    "url": "https://jup.ag/",
    "desc": "Solana's leading liquidity hub for swaps, trading, and capital management across the ecosystem.",
    "cat": "DeFi",
-   "icon": "icons/174.jpg"
+   "icon": "icons/174.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 175,
@@ -1437,7 +1611,8 @@
    "url": "https://bags.fm/",
    "desc": "Launch, Trade, Earn, and Discover the Next Big Thing.",
    "cat": "Trenches",
-   "icon": "icons/175.jpg"
+   "icon": "icons/175.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 176,
@@ -1445,7 +1620,8 @@
    "url": "https://birdeye.so/",
    "desc": "All-in-one trading data tool with real-time charts, smart money flows, and rich historical data.",
    "cat": "Data & Analytics",
-   "icon": "icons/176.jpg"
+   "icon": "icons/176.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 177,
@@ -1453,7 +1629,8 @@
    "url": "https://bankr.bot/terminal",
    "desc": "Build an AI agent and launch a token.",
    "cat": "Trenches",
-   "icon": "icons/177.jpg"
+   "icon": "icons/177.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 178,
@@ -1461,7 +1638,8 @@
    "url": "https://www.metaplex.com/",
    "desc": "Discover, trade, and launch tokens on Solana.",
    "cat": "Launchpad",
-   "icon": "icons/178.jpg"
+   "icon": "icons/178.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 179,
@@ -1469,7 +1647,8 @@
    "url": "https://alphagate.io/",
    "desc": "Discovering crypto projects before they go mainstream.",
    "cat": "Data & Analytics",
-   "icon": "icons/179.svg"
+   "icon": "icons/179.svg",
+   "added": "2026-10-21"
   },
   {
    "id": 180,
@@ -1477,7 +1656,8 @@
    "url": "https://backpack.exchange/",
    "desc": "Your brokerage, your exchange, your money.",
    "cat": "Perp Dex",
-   "icon": "icons/180.jpg"
+   "icon": "icons/180.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 181,
@@ -1485,7 +1665,8 @@
    "url": "https://www.upshift.finance/",
    "desc": "Institutional vaults for Earn, RWAs, PayFi and more. Non-custodial.",
    "cat": "DeFi",
-   "icon": "icons/181.jpg"
+   "icon": "icons/181.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 182,
@@ -1493,7 +1674,8 @@
    "url": "https://magiceden.io/",
    "desc": "The home of all collectibles on Solana and multichain.",
    "cat": "NFTs",
-   "icon": "icons/182.png"
+   "icon": "icons/182.png",
+   "added": "2026-10-21"
   },
   {
    "id": 183,
@@ -1501,7 +1683,8 @@
    "url": "https://hedgey.finance/",
    "desc": "Token vesting, lockups, grants, and distributions for teams, investors, and community.",
    "cat": "DeFi",
-   "icon": "icons/183.jpg"
+   "icon": "icons/183.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 184,
@@ -1509,7 +1692,8 @@
    "url": "https://garden.finance/",
    "desc": "The new standard for Bitcoin rails.",
    "cat": "Bridges",
-   "icon": "icons/184.jpg"
+   "icon": "icons/184.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 185,
@@ -1517,7 +1701,8 @@
    "url": "https://early.bulk.trade/deposit?ref=HEADBOY",
    "desc": "One Exchange. Infinite Markets.",
    "cat": "Perp Dex",
-   "icon": "icons/185.jpg"
+   "icon": "icons/185.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 187,
@@ -1525,15 +1710,8 @@
    "url": "https://world.xyz/",
    "desc": "The Solana prediction market.",
    "cat": "Prediction Market",
-   "icon": "icons/187.jpg"
-  },
-  {
-   "id": 188,
-   "name": "OpenAI",
-   "url": "https://openai.com/",
-   "desc": "AI research and deployment company building advanced models and tools for useful artificial intelligence.",
-   "cat": "Productivity",
-   "icon": "icons/188.jpg"
+   "icon": "icons/187.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 189,
@@ -1541,7 +1719,8 @@
    "url": "https://tryquant.io/",
    "desc": "AI-powered trading platform combining chat-based execution, automation, and analytics.",
    "cat": "AI Agents",
-   "icon": "icons/189.jpg"
+   "icon": "icons/189.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 190,
@@ -1549,7 +1728,8 @@
    "url": "https://pharos.watch/about/",
    "desc": "Monitors 364 stablecoins with live reserve feeds, depeg warnings, and a public blacklist tracker.",
    "cat": "Security",
-   "icon": "icons/190.jpg"
+   "icon": "icons/190.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 191,
@@ -1557,7 +1737,8 @@
    "url": "https://merkl.xyz/",
    "desc": "Calculates yield and rewards earned onchain and distributes them to your wallet.",
    "cat": "DeFi",
-   "icon": "icons/191.jpg"
+   "icon": "icons/191.jpg",
+   "added": "2026-10-21"
   },
   {
    "id": 192,
@@ -1565,7 +1746,8 @@
    "url": "https://claude.ai",
    "desc": "AI assistant by Anthropic for writing, research, coding & analysis.",
    "cat": "Productivity",
-   "icon": "icons/192.jpg"
+   "icon": "icons/192.jpg",
+   "added": "2026-10-29"
   },
   {
    "id": 193,
@@ -1573,7 +1755,8 @@
    "url": "https://proxima.tools",
    "desc": "All-in-one infrastructure for launching and managing tokens.",
    "cat": "Trenches",
-   "icon": "icons/193.jpg"
+   "icon": "icons/193.jpg",
+   "added": "2026-11-01"
   },
   {
    "id": 194,
@@ -1581,15 +1764,17 @@
    "url": "https://10x.gg",
    "desc": "Trade majors and lowcaps on leverage.",
    "cat": "Perp Dex",
-   "icon": "icons/194.jpg"
+   "icon": "icons/194.jpg",
+   "added": "2026-11-01"
   },
   {
    "id": 195,
    "name": "Rugcheck",
    "url": "https://rugcheck.xyz",
    "desc": "Solana's most trusted anti-rug tool.",
-   "cat": "Utilities",
-   "icon": "icons/195.jpg"
+   "cat": "Security",
+   "icon": "icons/195.jpg",
+   "added": "2026-11-01"
   },
   {
    "id": 196,
@@ -1597,7 +1782,8 @@
    "url": "https://ultrasound.money",
    "desc": "Track ETH burn and supply.",
    "cat": "Utilities",
-   "icon": "icons/196.jpg"
+   "icon": "icons/196.jpg",
+   "added": "2026-11-01"
   },
   {
    "id": 197,
@@ -1605,7 +1791,8 @@
    "url": "https://app.exponent.finance/",
    "desc": "Solana yield exchange: trade interest rates, hedge yield and earn with automated vaults.",
    "cat": "DeFi",
-   "icon": "icons/197.jpg"
+   "icon": "icons/197.jpg",
+   "added": "2026-11-01"
   },
   {
    "id": 198,
@@ -1613,7 +1800,8 @@
    "url": "https://maxy.tools/tiermaker",
    "desc": "Tier list maker: rank 379+ Web3 projects from S to F and export as PNG.",
    "cat": "Utilities",
-   "icon": "icons/198.jpg"
+   "icon": "icons/198.jpg",
+   "added": "2026-11-01"
   },
   {
    "id": 199,
@@ -1621,7 +1809,8 @@
    "url": "https://velo.xyz/",
    "desc": "Faster, easier crypto data: markets, news and trading in one place.",
    "cat": "Data & Analytics",
-   "icon": "icons/199.jpg"
+   "icon": "icons/199.jpg",
+   "added": "2026-11-01"
   },
   {
    "id": 200,
@@ -1629,7 +1818,8 @@
    "url": "https://app.onre.finance",
    "desc": "Solana's highest-yield institutional dollar asset, backed by real-world reinsurance.",
    "cat": "DeFi",
-   "icon": "icons/200.jpg"
+   "icon": "icons/200.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 201,
@@ -1637,7 +1827,8 @@
    "url": "https://infrastructure.finance/",
    "desc": "Tokenizes the digital infrastructure powering AI, with yield tokens and a points program.",
    "cat": "DeFi",
-   "icon": "icons/201.jpg"
+   "icon": "icons/201.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 202,
@@ -1645,7 +1836,8 @@
    "url": "https://arcus.xyz/",
    "desc": "Stock and crypto perps and spot, built by the dYdX team with Robinhood.",
    "cat": "Perp Dex",
-   "icon": "icons/202.jpg"
+   "icon": "icons/202.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 203,
@@ -1653,7 +1845,8 @@
    "url": "https://hylo.so",
    "desc": "Liquidation-resistant leveraged tokens and a high-yield Solana stablecoin.",
    "cat": "DeFi",
-   "icon": "icons/203.jpg"
+   "icon": "icons/203.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 204,
@@ -1661,7 +1854,8 @@
    "url": "https://solstice.finance",
    "desc": "Solana yield layer behind the USX stablecoin, SLX and YieldVault.",
    "cat": "DeFi",
-   "icon": "icons/204.jpg"
+   "icon": "icons/204.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 205,
@@ -1669,7 +1863,8 @@
    "url": "https://variational.io",
    "desc": "Zero-fee perps on 500+ crypto, stock and commodity markets, built on Arbitrum.",
    "cat": "Perp Dex",
-   "icon": "icons/205.jpg"
+   "icon": "icons/205.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 206,
@@ -1677,7 +1872,8 @@
    "url": "https://loopscale.com",
    "desc": "Order book credit markets for lending, borrowing and one-click loops on Solana.",
    "cat": "DeFi",
-   "icon": "icons/206.jpg"
+   "icon": "icons/206.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 207,
@@ -1685,7 +1881,8 @@
    "url": "https://titan.exchange/",
    "desc": "Solana DEX meta-aggregator for best-price swaps.",
    "cat": "Dex Aggregator",
-   "icon": "icons/207.jpg"
+   "icon": "icons/207.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 208,
@@ -1693,7 +1890,8 @@
    "url": "https://app.backyard.finance/",
    "desc": "Pick and deposit into top Solana yield vaults from one place.",
    "cat": "DeFi",
-   "icon": "icons/208.jpg"
+   "icon": "icons/208.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 209,
@@ -1701,7 +1899,8 @@
    "url": "https://cryptoquant.com",
    "desc": "On-chain and market data on exchange flows, miners and whales, with alerts and custom dashboards.",
    "cat": "Data & Analytics",
-   "icon": "icons/209.jpg"
+   "icon": "icons/209.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 210,
@@ -1709,7 +1908,8 @@
    "url": "https://www.kaiko.com",
    "desc": "Institutional-grade market data: trades, order books, liquidity and benchmark prices across exchanges.",
    "cat": "Data & Analytics",
-   "icon": "icons/210.jpg"
+   "icon": "icons/210.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 211,
@@ -1717,7 +1917,8 @@
    "url": "https://coinmetrics.io",
    "desc": "Transparent network and market data, indexes and research trusted by institutions.",
    "cat": "Data & Analytics",
-   "icon": "icons/211.jpg"
+   "icon": "icons/211.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 212,
@@ -1725,7 +1926,8 @@
    "url": "https://sentora.com",
    "desc": "Institutional DeFi intelligence, risk analytics and yield strategies.",
    "cat": "Data & Analytics",
-   "icon": "icons/212.jpg"
+   "icon": "icons/212.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 213,
@@ -1733,7 +1935,8 @@
    "url": "https://growthepie.com",
    "desc": "Open analytics for Ethereum and its L2s: fees, activity, blockspace and app usage.",
    "cat": "Data & Analytics",
-   "icon": "icons/213.jpg"
+   "icon": "icons/213.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 214,
@@ -1741,7 +1944,8 @@
    "url": "https://zerion.io",
    "desc": "Wallet and portfolio tracker for tokens, NFTs and DeFi across 60+ chains, with built-in swaps.",
    "cat": "Wallet",
-   "icon": "icons/214.jpg"
+   "icon": "icons/214.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 215,
@@ -1749,7 +1953,8 @@
    "url": "https://solscan.io",
    "desc": "Solana's go-to explorer for transactions, tokens, accounts and holder breakdowns.",
    "cat": "Data & Analytics",
-   "icon": "icons/215.jpg"
+   "icon": "icons/215.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 216,
@@ -1757,7 +1962,8 @@
    "url": "https://spotonchain.ai",
    "desc": "AI-powered whale and smart-money tracking with real-time alerts on market-moving wallets.",
    "cat": "Data & Analytics",
-   "icon": "icons/216.jpg"
+   "icon": "icons/216.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 217,
@@ -1765,7 +1971,8 @@
    "url": "https://bitquery.io",
    "desc": "Blockchain data APIs and real-time streams for DEX trades, transfers and balances on 40+ chains.",
    "cat": "Utilities",
-   "icon": "icons/217.jpg"
+   "icon": "icons/217.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 218,
@@ -1773,7 +1980,8 @@
    "url": "https://goldrush.dev",
    "desc": "Covalent's multichain data API for decoded transactions, balances and token holders on 100+ chains.",
    "cat": "Utilities",
-   "icon": "icons/218.jpg"
+   "icon": "icons/218.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 219,
@@ -1781,7 +1989,8 @@
    "url": "https://moralis.com",
    "desc": "Wallet, token, NFT and price APIs for building crypto apps, bots and dashboards.",
    "cat": "Utilities",
-   "icon": "icons/219.jpg"
+   "icon": "icons/219.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 220,
@@ -1789,7 +1998,8 @@
    "url": "https://tenderly.co",
    "desc": "Simulate, debug and monitor smart contracts and transactions before they hit the chain.",
    "cat": "Utilities",
-   "icon": "icons/220.jpg"
+   "icon": "icons/220.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 221,
@@ -1797,7 +2007,8 @@
    "url": "https://routescan.io",
    "desc": "One block explorer for 110+ EVM chains, subnets and appchains.",
    "cat": "Data & Analytics",
-   "icon": "icons/221.jpg"
+   "icon": "icons/221.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 222,
@@ -1805,7 +2016,8 @@
    "url": "https://www.blockscout.com",
    "desc": "Open-source block explorer powering 3,000+ EVM chains.",
    "cat": "Data & Analytics",
-   "icon": "icons/222.jpg"
+   "icon": "icons/222.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 223,
@@ -1813,7 +2025,8 @@
    "url": "https://www.oklink.com",
    "desc": "Multichain explorer with address analysis, token data and compliance-grade intelligence.",
    "cat": "Data & Analytics",
-   "icon": "icons/223.jpg"
+   "icon": "icons/223.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 224,
@@ -1821,7 +2034,8 @@
    "url": "https://defisafety.com",
    "desc": "Rates DeFi protocols on documentation, testing, transparency and admin controls.",
    "cat": "Security",
-   "icon": "icons/224.jpg"
+   "icon": "icons/224.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 225,
@@ -1829,7 +2043,8 @@
    "url": "https://www.geckoterminal.com",
    "desc": "CoinGecko's real-time DEX tracker for pools, prices, liquidity and newly launched pairs.",
    "cat": "Data & Analytics",
-   "icon": "icons/225.jpg"
+   "icon": "icons/225.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 226,
@@ -1837,7 +2052,8 @@
    "url": "https://coinalyze.net",
    "desc": "Futures analytics: open interest, funding rates, liquidations and basis across exchanges.",
    "cat": "Data & Analytics",
-   "icon": "icons/226.jpg"
+   "icon": "icons/226.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 227,
@@ -1845,7 +2061,8 @@
    "url": "https://1inch.com",
    "desc": "Routes swaps across hundreds of liquidity sources on 13+ chains for the best execution.",
    "cat": "Dex Aggregator",
-   "icon": "icons/227.jpg"
+   "icon": "icons/227.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 228,
@@ -1853,7 +2070,8 @@
    "url": "https://matcha.xyz",
    "desc": "0x-powered DEX aggregator with gasless and cross-chain swaps and upfront cost breakdowns.",
    "cat": "Dex Aggregator",
-   "icon": "icons/228.jpg"
+   "icon": "icons/228.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 229,
@@ -1861,7 +2079,8 @@
    "url": "https://photon-sol.tinyastro.io",
    "desc": "Lightning-fast Solana terminal for spotting new tokens and sniping trades.",
    "cat": "Trenches",
-   "icon": "icons/229.jpg"
+   "icon": "icons/229.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 230,
@@ -1869,7 +2088,8 @@
    "url": "https://neo.bullx.io",
    "desc": "Multichain memecoin trading terminal with live charts, limit orders and fast execution.",
    "cat": "Trenches",
-   "icon": "icons/230.jpg"
+   "icon": "icons/230.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 231,
@@ -1877,7 +2097,8 @@
    "url": "https://metasleuth.io",
    "desc": "BlockSec's visual tool for tracing stolen funds and mapping wallet connections.",
    "cat": "Security",
-   "icon": "icons/231.jpg"
+   "icon": "icons/231.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 232,
@@ -1885,7 +2106,8 @@
    "url": "https://www.chainalysis.com/product/reactor/",
    "desc": "Investigation software used by governments and exchanges to trace funds across chains.",
    "cat": "Security",
-   "icon": "icons/232.jpg"
+   "icon": "icons/232.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 233,
@@ -1893,7 +2115,8 @@
    "url": "https://www.trmlabs.com",
    "desc": "Blockchain intelligence for investigations, sanctions screening and crypto compliance.",
    "cat": "Security",
-   "icon": "icons/233.jpg"
+   "icon": "icons/233.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 234,
@@ -1901,7 +2124,8 @@
    "url": "https://www.elliptic.co/products/investigator/",
    "desc": "Cross-chain forensics that follows funds, flags illicit exposure and builds evidence.",
    "cat": "Security",
-   "icon": "icons/234.jpg"
+   "icon": "icons/234.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 235,
@@ -1909,7 +2133,8 @@
    "url": "https://misttrack.io",
    "desc": "SlowMist's fund-tracing and AML tool with wallet risk scores and stolen-fund tracking.",
    "cat": "Security",
-   "icon": "icons/235.jpg"
+   "icon": "icons/235.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 236,
@@ -1917,7 +2142,8 @@
    "url": "https://www.chainabuse.com",
    "desc": "Search and report scam addresses in a public database of crypto fraud.",
    "cat": "Security",
-   "icon": "icons/236.jpg"
+   "icon": "icons/236.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 237,
@@ -1925,7 +2151,8 @@
    "url": "https://blockaid.io",
    "desc": "Simulates transactions and blocks malicious ones before you sign. Trusted by MetaMask and Coinbase.",
    "cat": "Security",
-   "icon": "icons/237.jpg"
+   "icon": "icons/237.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 238,
@@ -1933,7 +2160,8 @@
    "url": "https://www.sardine.ai",
    "desc": "Fraud prevention and AML platform for banks, fintechs and crypto companies.",
    "cat": "Security",
-   "icon": "icons/238.jpg"
+   "icon": "icons/238.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 239,
@@ -1941,7 +2169,8 @@
    "url": "https://www.soliduslabs.com/solutions/platform",
    "desc": "Market surveillance that detects manipulation, wash trading and insider activity across venues.",
    "cat": "Security",
-   "icon": "icons/239.jpg"
+   "icon": "icons/239.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 240,
@@ -1949,7 +2178,8 @@
    "url": "https://merklescience.com",
    "desc": "Crypto risk and compliance: transaction monitoring, wallet screening and investigations.",
    "cat": "Security",
-   "icon": "icons/240.jpg"
+   "icon": "icons/240.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 241,
@@ -1957,7 +2187,8 @@
    "url": "https://crystalintelligence.com",
    "desc": "All-in-one blockchain investigation tool for tracing funds and screening counterparties.",
    "cat": "Security",
-   "icon": "icons/241.jpg"
+   "icon": "icons/241.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 242,
@@ -1965,7 +2196,8 @@
    "url": "https://blocksec.com/phalcon/explorer",
    "desc": "Breaks down any transaction step by step, with fund flows, calls and exploits visualized.",
    "cat": "Security",
-   "icon": "icons/242.jpg"
+   "icon": "icons/242.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 243,
@@ -1973,7 +2205,8 @@
    "url": "https://tokensniffer.com",
    "desc": "Scans token contracts for scam patterns and gives each token a safety score.",
    "cat": "Security",
-   "icon": "icons/243.jpg"
+   "icon": "icons/243.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 244,
@@ -1981,7 +2214,8 @@
    "url": "https://www.forta.org",
    "desc": "Real-time threat detection network that flags exploits and scams on-chain.",
    "cat": "Security",
-   "icon": "icons/244.jpg"
+   "icon": "icons/244.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 245,
@@ -1989,7 +2223,8 @@
    "url": "https://www.lookonchain.com",
    "desc": "Whale and smart-money moves, explained in plain English as they happen.",
    "cat": "Data & Analytics",
-   "icon": "icons/245.jpg"
+   "icon": "icons/245.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 246,
@@ -1997,7 +2232,8 @@
    "url": "https://insightx.network",
    "desc": "Maps hidden links between token holders to expose insiders, bundles and sybil wallets.",
    "cat": "Data & Analytics",
-   "icon": "icons/246.jpg"
+   "icon": "icons/246.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 247,
@@ -2005,7 +2241,8 @@
    "url": "https://solsniffer.com",
    "desc": "Scans Solana tokens for rug risks and gives each one a safety score.",
    "cat": "Security",
-   "icon": "icons/247.jpg"
+   "icon": "icons/247.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 248,
@@ -2013,7 +2250,8 @@
    "url": "https://dropstab.com",
    "desc": "Token unlocks, vesting schedules, funding rounds and investor lists in one dashboard.",
    "cat": "Data & Analytics",
-   "icon": "icons/248.jpg"
+   "icon": "icons/248.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 249,
@@ -2021,7 +2259,8 @@
    "url": "https://coinank.com",
    "desc": "Derivatives data: liquidation heatmaps, open interest, funding rates and long/short ratios.",
    "cat": "Data & Analytics",
-   "icon": "icons/249.jpg"
+   "icon": "icons/249.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 250,
@@ -2029,7 +2268,8 @@
    "url": "https://cryptofees.info",
    "desc": "Ranks blockchains and protocols by the fees people actually pay to use them, updated daily.",
    "cat": "Data & Analytics",
-   "icon": "icons/250.jpg"
+   "icon": "icons/250.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 251,
@@ -2037,7 +2277,8 @@
    "url": "https://farside.co.uk",
    "desc": "Daily inflows and outflows for Bitcoin and Ether ETFs.",
    "cat": "Data & Analytics",
-   "icon": "icons/251.jpg"
+   "icon": "icons/251.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 252,
@@ -2045,7 +2286,8 @@
    "url": "https://mempool.space",
    "desc": "Live Bitcoin explorer for fees, blocks and pending transactions.",
    "cat": "Data & Analytics",
-   "icon": "icons/252.jpg"
+   "icon": "icons/252.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 253,
@@ -2053,7 +2295,8 @@
    "url": "https://www.fomoscan.sh",
    "desc": "Reveals the traders behind Fomo wallets, with identities, social graphs and copy-trading data on Solana, Base and BNB.",
    "cat": "Data & Analytics",
-   "icon": "icons/253.jpg"
+   "icon": "icons/253.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 254,
@@ -2061,7 +2304,8 @@
    "url": "https://www.copyfomo.com",
    "desc": "Telegram bot that mirrors any Fomo leaderboard trader's buys and sells into your own wallet, at your size.",
    "cat": "Trenches",
-   "icon": "icons/254.jpg"
+   "icon": "icons/254.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 255,
@@ -2069,7 +2313,8 @@
    "url": "https://hogen.pro/fomo-helper/",
    "desc": "Free Chrome extension that adds a token's story, community thesis and holder breakdown to Fomo, GMGN and XXYY.",
    "cat": "Utilities",
-   "icon": "icons/255.jpg"
+   "icon": "icons/255.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 256,
@@ -2077,7 +2322,8 @@
    "url": "https://fomoguard.family",
    "desc": "Chrome extension that adds limit orders, paper trading and rug checks to Fomo.",
    "cat": "Trenches",
-   "icon": "icons/256.jpg"
+   "icon": "icons/256.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 257,
@@ -2085,7 +2331,8 @@
    "url": "https://fomosignal.family",
    "desc": "Chrome extension that pings you the moment traders you track link a wallet, buy, or pile into the same token.",
    "cat": "Trenches",
-   "icon": "icons/257.jpg"
+   "icon": "icons/257.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 258,
@@ -2093,7 +2340,8 @@
    "url": "https://stalkchain.com",
    "desc": "Tracks KOL wallets with PnL leaderboards, a live trade feed and the tokens they're buying right now.",
    "cat": "Data & Analytics",
-   "icon": "icons/258.jpg"
+   "icon": "icons/258.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 259,
@@ -2101,7 +2349,8 @@
    "url": "https://www.hoodwatch.io/whales",
    "desc": "See what whales are buying on Robinhood Chain, ranked by conviction, low caps first.",
    "cat": "Data & Analytics",
-   "icon": "icons/259.jpg"
+   "icon": "icons/259.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 260,
@@ -2109,7 +2358,8 @@
    "url": "https://wind.jokkimon.club",
    "desc": "Second-by-second alerts when the crypto accounts you follow post, across every platform.",
    "cat": "Social Analytics",
-   "icon": "icons/260.jpg"
+   "icon": "icons/260.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 261,
@@ -2117,7 +2367,8 @@
    "url": "https://web3.bio",
    "desc": "Search any handle, address or ENS name to find the wallets and profiles linked to it.",
    "cat": "Utilities",
-   "icon": "icons/261.jpg"
+   "icon": "icons/261.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 262,
@@ -2125,7 +2376,8 @@
    "url": "https://whobought.xyz",
    "desc": "Live Fomo and Pump.fun trader swaps: what they bought, at what market cap, and whether they held or dumped.",
    "cat": "Trenches",
-   "icon": "icons/262.jpg"
+   "icon": "icons/262.jpg",
+   "added": "2026-11-03"
   },
   {
    "id": 263,
@@ -2133,7 +2385,8 @@
    "url": "https://www.bitget.com",
    "desc": "Global crypto exchange for spot, futures and copy trading, with its own Web3 wallet.",
    "cat": "CEX",
-   "icon": "icons/263.jpg"
+   "icon": "icons/263.jpg",
+   "added": "2026-11-04"
   },
   {
    "id": 264,
@@ -2141,7 +2394,8 @@
    "url": "https://alphabot.app",
    "desc": "Enter whitelist raffles and giveaways for upcoming NFT mints, and track project collabs in one place.",
    "cat": "NFTs",
-   "icon": "icons/264.jpg"
+   "icon": "icons/264.jpg",
+   "added": "2026-11-04"
   },
   {
    "id": 265,
@@ -2149,7 +2403,8 @@
    "url": "https://nftcalendar.io",
    "desc": "Calendar of upcoming NFT drops, so you can see what is minting over the next few days.",
    "cat": "NFTs",
-   "icon": "icons/265.jpg"
+   "icon": "icons/265.jpg",
+   "added": "2026-11-04"
   },
   {
    "id": 266,
@@ -2157,7 +2412,8 @@
    "url": "https://mintgo.fun/",
    "desc": "Live NFT mint tracker for Ethereum, Robinhood Chain, Ink and Arc, with trending collections and minting tools.",
    "cat": "NFTs",
-   "icon": "icons/266.jpg"
+   "icon": "icons/266.jpg",
+   "added": "2026-11-04"
   },
   {
    "id": 267,
@@ -2165,7 +2421,8 @@
    "url": "https://waypoint.tools/mintscan/",
    "desc": "Waypoint's live mint scanner: see which collections are minting fastest right now, across mainnet and L2s.",
    "cat": "NFTs",
-   "icon": "icons/267.jpg"
+   "icon": "icons/267.jpg",
+   "added": "2026-11-04"
   },
   {
    "id": 268,
@@ -2173,7 +2430,8 @@
    "url": "https://guap.wtf/",
    "desc": "Real-time NFT mint tracker for Robinhood Chain, with a new-mint feed, trending collections and free mint alerts.",
    "cat": "NFTs",
-   "icon": "icons/268.jpg"
+   "icon": "icons/268.jpg",
+   "added": "2026-11-04"
   },
   {
    "id": 269,
@@ -2181,7 +2439,8 @@
    "url": "https://alphatrack.xyz/",
    "desc": "Track alpha groups, callers and upcoming NFT collabs, with a mint calendar, raffle auto-entry and eligibility checker.",
    "cat": "NFTs",
-   "icon": "icons/269.jpg"
+   "icon": "icons/269.jpg",
+   "added": "2026-11-04"
   },
   {
    "id": 270,
@@ -2189,7 +2448,8 @@
    "url": "https://mct.xyz/en",
    "desc": "All-in-one crypto toolbox: free mint scanner, gas tracker, batch transfers, multi-wallet tools and monitors.",
    "cat": "Utilities",
-   "icon": "icons/270.jpg"
+   "icon": "icons/270.jpg",
+   "added": "2026-11-04"
   },
   {
    "id": 271,
@@ -2197,7 +2457,8 @@
    "url": "https://leak.me/",
    "desc": "Ranks the X accounts that smart crypto accounts are following right now, with a one-line summary of why.",
    "cat": "Social Analytics",
-   "icon": "icons/271.jpg"
+   "icon": "icons/271.jpg",
+   "added": "2026-11-04"
   },
   {
    "id": 272,
@@ -2205,7 +2466,8 @@
    "url": "https://purealpha.app/",
    "desc": "Catch new crypto accounts early by tracking who a handpicked network of traders just followed.",
    "cat": "Social Analytics",
-   "icon": "icons/272.jpg"
+   "icon": "icons/272.jpg",
+   "added": "2026-11-04"
   },
   {
    "id": 273,
@@ -2213,7 +2475,8 @@
    "url": "https://985monitor.xyz/",
    "desc": "One live feed of X, Truth Social, Telegram, WeChat, news and Binance Square posts from the accounts you track.",
    "cat": "Social Analytics",
-   "icon": "icons/273.jpg"
+   "icon": "icons/273.jpg",
+   "added": "2026-11-04"
   },
   {
    "id": 274,
@@ -2221,7 +2484,8 @@
    "url": "https://x-relay.com/",
    "desc": "Forward any X account's posts, replies, follows and contract drops to Telegram or Discord within milliseconds.",
    "cat": "Social Analytics",
-   "icon": "icons/274.jpg"
+   "icon": "icons/274.jpg",
+   "added": "2026-11-04"
   },
   {
    "id": 275,
@@ -2229,7 +2493,8 @@
    "url": "https://uxento.io/",
    "desc": "Memecoin deployer and tracking platform: watch social signals and launch tokens in one click.",
    "cat": "Trenches",
-   "icon": "icons/275.jpg"
+   "icon": "icons/275.jpg",
+   "added": "2026-11-04"
   },
   {
    "id": 276,
@@ -2237,7 +2502,8 @@
    "url": "https://j7tracker.io/",
    "desc": "Sniper tool with sub-millisecond token deploys and social-media tracking under 200ms.",
    "cat": "Trenches",
-   "icon": "icons/276.jpg"
+   "icon": "icons/276.jpg",
+   "added": "2026-11-04"
   },
   {
    "id": 277,
@@ -2245,7 +2511,8 @@
    "url": "https://app.justlarps.fun/",
    "desc": "Exposes the teams behind serial rug pulls, with a live feed built from public posts and on-chain records.",
    "cat": "Security",
-   "icon": "icons/277.jpg"
+   "icon": "icons/277.jpg",
+   "added": "2026-11-04"
   },
   {
    "id": 278,
@@ -2253,7 +2520,8 @@
    "url": "https://app.orbitalhq.xyz/",
    "desc": "Real-time curated alpha, on-chain analytics and AI agents for spotting projects early.",
    "cat": "Data & Analytics",
-   "icon": "icons/278.jpg"
+   "icon": "icons/278.jpg",
+   "added": "2026-11-04"
   },
   {
    "id": 279,
@@ -2261,7 +2529,8 @@
    "url": "https://t.me/SilentAlphaBot",
    "desc": "Telegram bot that alerts you when your favourite crypto influencers follow a new account on X.",
    "cat": "Social Analytics",
-   "icon": "icons/279.jpg"
+   "icon": "icons/279.jpg",
+   "added": "2026-11-04"
   },
   {
    "id": 280,
@@ -2269,7 +2538,8 @@
    "url": "https://t.me/redactedsystemsbot",
    "desc": "Telegram bot with fast, custom monitors for crypto X accounts and social media activity.",
    "cat": "Social Analytics",
-   "icon": "icons/280.jpg"
+   "icon": "icons/280.jpg",
+   "added": "2026-11-04"
   },
   {
    "id": 281,
@@ -2277,7 +2547,8 @@
    "url": "https://x.com",
    "desc": "Where crypto happens in real time: news, alpha, launches and the people building it.",
    "cat": "Productivity",
-   "icon": "icons/281.jpg"
+   "icon": "icons/281.jpg",
+   "added": "2026-11-04"
   },
   {
    "id": 282,
@@ -2285,7 +2556,8 @@
    "url": "https://icoanalytics.org/",
    "desc": "Track upcoming TGEs and token sales, VC deal flow, investors and the ROI of recently launched tokens.",
    "cat": "Data & Analytics",
-   "icon": "icons/282.jpg"
+   "icon": "icons/282.jpg",
+   "added": "2026-11-04"
   },
   {
    "id": 283,
@@ -2293,15 +2565,17 @@
    "url": "https://crypto-fundraising.info/",
    "desc": "Database of every crypto funding round from pre-seed to Series C, with investor profiles and deal history.",
    "cat": "Data & Analytics",
-   "icon": "icons/283.jpg"
+   "icon": "icons/283.jpg",
+   "added": "2026-11-04"
   },
   {
    "id": 284,
    "name": "EigenPhi",
    "url": "https://eigenphi.substack.com/",
    "desc": "Wisdom of DeFi: research on MEV, sandwich attacks and on-chain trading behaviour.",
-   "cat": "Research Blogs",
-   "icon": "icons/284.jpg"
+   "cat": "Data & Analytics",
+   "icon": "icons/284.jpg",
+   "added": "2026-11-04"
   },
   {
    "id": 285,
@@ -2309,7 +2583,8 @@
    "url": "https://www.chaincatcher.com/en",
    "desc": "Leading Chinese-language Web3 and AI media outlet with 24/7 news, flash updates and research, now in English too.",
    "cat": "News",
-   "icon": "icons/285.jpg"
+   "icon": "icons/285.jpg",
+   "added": "2026-11-04"
   },
   {
    "id": 286,
@@ -2317,7 +2592,8 @@
    "url": "https://dexu.ai/",
    "desc": "AI social analytics that tracks mindshare, sentiment, KOLs and narratives across X, YouTube, TikTok, Reddit and Telegram.",
    "cat": "Social Analytics",
-   "icon": "icons/286.jpg"
+   "icon": "icons/286.jpg",
+   "added": "2026-11-04"
   },
   {
    "id": 287,
@@ -2325,7 +2601,8 @@
    "url": "https://revert.finance",
    "desc": "Analytics, lending and automation for Uniswap-style liquidity providers: track LP returns and auto-compound or rebalance positions.",
    "cat": "DeFi",
-   "icon": "icons/287.jpg"
+   "icon": "icons/287.jpg",
+   "added": "2026-11-04"
   },
   {
    "id": 288,
@@ -2333,7 +2610,8 @@
    "url": "https://rayo.gg",
    "desc": "Community-curated directory for discovering emerging Web3 projects, formerly The Dapp List.",
    "cat": "Data & Analytics",
-   "icon": "icons/288.jpg"
+   "icon": "icons/288.jpg",
+   "added": "2026-11-04"
   },
   {
    "id": 289,
@@ -2341,7 +2619,8 @@
    "url": "https://chaineye.tools",
    "desc": "Free, open-source multi-chain analytics tools for retail investors.",
    "cat": "Data & Analytics",
-   "icon": "icons/289.jpg"
+   "icon": "icons/289.jpg",
+   "added": "2026-11-04"
   },
   {
    "id": 290,
@@ -2349,7 +2628,8 @@
    "url": "https://cryptopanic.com/",
    "desc": "News aggregator that pulls crypto headlines from everywhere and shows community votes on their price impact.",
    "cat": "News",
-   "icon": "icons/290.jpg"
+   "icon": "icons/290.jpg",
+   "added": "2026-11-04"
   },
   {
    "id": 291,
@@ -2357,7 +2637,8 @@
    "url": "https://whales.market/",
    "desc": "Pre-market DEX for trading tokens and points before they launch, through secured OTC deals.",
    "cat": "DeFi",
-   "icon": "icons/291.jpg"
+   "icon": "icons/291.jpg",
+   "added": "2026-11-04"
   },
   {
    "id": 292,
@@ -2365,7 +2646,8 @@
    "url": "https://www.crunchbase.com",
    "desc": "Company and funding database for tracking startups, investors and private-market deals.",
    "cat": "Data & Analytics",
-   "icon": "icons/292.jpg"
+   "icon": "icons/292.jpg",
+   "added": "2026-11-04"
   },
   {
    "id": 293,
@@ -2373,7 +2655,8 @@
    "url": "https://www.breadcrumbs.app/",
    "desc": "Blockchain investigation tool: follow funds across wallets with transaction graphs, labels and risk scores.",
    "cat": "Security",
-   "icon": "icons/293.jpg"
+   "icon": "icons/293.jpg",
+   "added": "2026-11-04"
   },
   {
    "id": 294,
@@ -2381,7 +2664,8 @@
    "url": "https://www.virustotal.com",
    "desc": "Scan suspicious links, files and domains with 70+ antivirus engines before you click or connect a wallet.",
    "cat": "Security",
-   "icon": "icons/294.jpg"
+   "icon": "icons/294.jpg",
+   "added": "2026-11-04"
   },
   {
    "id": 295,
@@ -2389,7 +2673,8 @@
    "url": "https://urlscan.io/",
    "desc": "Sandbox any website to see what it loads, where it connects and whether it is a known phishing page.",
    "cat": "Security",
-   "icon": "icons/295.jpg"
+   "icon": "icons/295.jpg",
+   "added": "2026-11-04"
   },
   {
    "id": 296,
@@ -2397,7 +2682,8 @@
    "url": "https://mobyscreener.com/",
    "desc": "Real-time whale flows and smart-money signals for Solana tokens, now as a mobile app.",
    "cat": "Data & Analytics",
-   "icon": "icons/296.jpg"
+   "icon": "icons/296.jpg",
+   "added": "2026-11-04"
   },
   {
    "id": 297,
@@ -2405,7 +2691,8 @@
    "url": "https://walletlabels.xyz/",
    "desc": "Look up who is behind a wallet: exchanges, whales, funds and DeFi protocols, from a hand-verified label set.",
    "cat": "Data & Analytics",
-   "icon": "icons/297.jpg"
+   "icon": "icons/297.jpg",
+   "added": "2026-11-04"
   },
   {
    "id": 298,
@@ -2413,7 +2700,8 @@
    "url": "https://www.blockchain.com/explorer",
    "desc": "The original Bitcoin block explorer: look up blocks, transactions and addresses on BTC, ETH and more.",
    "cat": "Data & Analytics",
-   "icon": "icons/298.jpg"
+   "icon": "icons/298.jpg",
+   "added": "2026-11-04"
   },
   {
    "id": 299,
@@ -2421,7 +2709,8 @@
    "url": "https://blocksec.com/metasuites",
    "desc": "BlockSec browser extension that adds address labels, AI transaction explanations and 20+ tools to block explorers.",
    "cat": "Utilities",
-   "icon": "icons/299.jpg"
+   "icon": "icons/299.jpg",
+   "added": "2026-11-04"
   },
   {
    "id": 300,
@@ -2429,7 +2718,8 @@
    "url": "https://usdc.range.org/",
    "desc": "Track USDC moving between chains over Circle's CCTP bridge, transfer by transfer.",
    "cat": "Bridges",
-   "icon": "icons/300.jpg"
+   "icon": "icons/300.jpg",
+   "added": "2026-11-04"
   },
   {
    "id": 301,
@@ -2437,7 +2727,8 @@
    "url": "https://www.socketscan.io/",
    "desc": "Explorer for bridge transactions routed through Socket: search a hash or wallet to follow a transfer across chains.",
    "cat": "Bridges",
-   "icon": "icons/301.jpg"
+   "icon": "icons/301.jpg",
+   "added": "2026-11-04"
   },
   {
    "id": 302,
@@ -2445,7 +2736,8 @@
    "url": "https://pulsy.app/",
    "desc": "Cross-chain intelligence suite that tracks liquidity flows across bridges, plus no-code on-chain event workflows.",
    "cat": "Bridges",
-   "icon": "icons/302.jpg"
+   "icon": "icons/302.jpg",
+   "added": "2026-11-04"
   },
   {
    "id": 303,
@@ -2453,7 +2745,8 @@
    "url": "https://chainspot.io/",
    "desc": "Compare bridges and swap rates across 27+ chains, with on-chain data on every route.",
    "cat": "Bridges",
-   "icon": "icons/303.jpg"
+   "icon": "icons/303.jpg",
+   "added": "2026-11-04"
   },
   {
    "id": 304,
@@ -2461,7 +2754,8 @@
    "url": "https://www.osint.industries/",
    "desc": "Look up an email, phone number or username to see the accounts and profiles linked to it across hundreds of sites.",
    "cat": "OSINT",
-   "icon": "icons/304.jpg"
+   "icon": "icons/304.jpg",
+   "added": "2026-11-04"
   },
   {
    "id": 305,
@@ -2469,7 +2763,8 @@
    "url": "https://epieos.com/",
    "desc": "Find the Google and other accounts tied to an email address or phone number.",
    "cat": "OSINT",
-   "icon": "icons/305.jpg"
+   "icon": "icons/305.jpg",
+   "added": "2026-11-04"
   },
   {
    "id": 306,
@@ -2477,7 +2772,8 @@
    "url": "https://whatsmyname.app/",
    "desc": "Search a username across 600+ sites to find every account someone runs under the same handle.",
    "cat": "OSINT",
-   "icon": "icons/306.jpg"
+   "icon": "icons/306.jpg",
+   "added": "2026-11-04"
   },
   {
    "id": 307,
@@ -2485,7 +2781,8 @@
    "url": "https://t.me/tgdb_bot",
    "desc": "Telegram bot that searches public groups and channels and shows which public chats a user has joined.",
    "cat": "OSINT",
-   "icon": "icons/307.jpg"
+   "icon": "icons/307.jpg",
+   "added": "2026-11-04"
   },
   {
    "id": 308,
@@ -2493,7 +2790,8 @@
    "url": "https://discord.id/",
    "desc": "Look up a Discord user ID to see when the account was created, plus its avatar, banner and badges.",
    "cat": "OSINT",
-   "icon": "icons/308.jpg"
+   "icon": "icons/308.jpg",
+   "added": "2026-11-04"
   },
   {
    "id": 309,
@@ -2501,7 +2799,8 @@
    "url": "https://lens.google.com/",
    "desc": "Reverse image search: check whether a founder's photo is stolen, stock or used on other profiles.",
    "cat": "OSINT",
-   "icon": "icons/309.jpg"
+   "icon": "icons/309.jpg",
+   "added": "2026-11-04"
   },
   {
    "id": 310,
@@ -2509,7 +2808,8 @@
    "url": "https://yandex.com/images/",
    "desc": "Reverse image search that is often better than Google at matching faces and finding reused profile photos.",
    "cat": "OSINT",
-   "icon": "icons/310.jpg"
+   "icon": "icons/310.jpg",
+   "added": "2026-11-04"
   },
   {
    "id": 311,
@@ -2517,7 +2817,8 @@
    "url": "https://leakpeek.com/",
    "desc": "Search billions of breached records by email, username or phone to see where an identity has leaked.",
    "cat": "OSINT",
-   "icon": "icons/311.jpg"
+   "icon": "icons/311.jpg",
+   "added": "2026-11-04"
   },
   {
    "id": 312,
@@ -2525,7 +2826,8 @@
    "url": "https://snusbase.com/",
    "desc": "Search engine for leaked database breaches, by email, username, IP, name or password hash.",
    "cat": "OSINT",
-   "icon": "icons/312.jpg"
+   "icon": "icons/312.jpg",
+   "added": "2026-11-04"
   },
   {
    "id": 313,
@@ -2533,7 +2835,8 @@
    "url": "https://intelx.io/",
    "desc": "Search engine and archive covering data leaks, the dark web and the public web, by email, domain, IP or Bitcoin address.",
    "cat": "OSINT",
-   "icon": "icons/313.jpg"
+   "icon": "icons/313.jpg",
+   "added": "2026-11-04"
   },
   {
    "id": 314,
@@ -2541,7 +2844,8 @@
    "url": "https://spur.us/",
    "desc": "Check an IP address for VPN, proxy and residential-proxy use to spot masked or fake locations.",
    "cat": "OSINT",
-   "icon": "icons/314.jpg"
+   "icon": "icons/314.jpg",
+   "added": "2026-11-04"
   },
   {
    "id": 315,
@@ -2549,7 +2853,8 @@
    "url": "https://cavalier.hudsonrock.com/",
    "desc": "Hudson Rock's infostealer database: check whether an email or domain has been hit by password-stealing malware.",
    "cat": "OSINT",
-   "icon": "icons/315.jpg"
+   "icon": "icons/315.jpg",
+   "added": "2026-11-04"
   },
   {
    "id": 316,
@@ -2557,7 +2862,8 @@
    "url": "https://securitytrails.com/",
    "desc": "Historical DNS and WHOIS records: see who owned a domain and where it pointed before.",
    "cat": "OSINT",
-   "icon": "icons/316.jpg"
+   "icon": "icons/316.jpg",
+   "added": "2026-11-04"
   },
   {
    "id": 317,
@@ -2565,7 +2871,8 @@
    "url": "https://web.archive.org/",
    "desc": "See past versions of any website, including pages a project has since deleted or changed.",
    "cat": "OSINT",
-   "icon": "icons/317.jpg"
+   "icon": "icons/317.jpg",
+   "added": "2026-11-04"
   },
   {
    "id": 318,
@@ -2573,7 +2880,8 @@
    "url": "https://archive.ph/",
    "desc": "Save a permanent snapshot of a webpage or tweet, and find snapshots others have saved.",
    "cat": "OSINT",
-   "icon": "icons/318.jpg"
+   "icon": "icons/318.jpg",
+   "added": "2026-11-04"
   },
   {
    "id": 319,
@@ -2581,7 +2889,8 @@
    "url": "https://hyperdash.com",
    "desc": "Hyperliquid trading terminal with advanced order execution, top-trader tracking and market analytics, formerly HypurrDash.",
    "cat": "Perp Dex",
-   "icon": "icons/319.jpg"
+   "icon": "icons/319.jpg",
+   "added": "2026-11-04"
   },
   {
    "id": 320,
@@ -2589,7 +2898,8 @@
    "url": "https://app.tori.finance/earn?referral=VDJUF",
    "desc": "Synthetic dollar protocol: swap USDC or USDT for trUSD and stake it to earn yield from market-neutral trading strategies, from $1.",
    "cat": "DeFi",
-   "icon": "icons/320.jpg"
+   "icon": "icons/320.jpg",
+   "added": "2026-11-05"
   },
   {
    "id": 321,
@@ -2597,7 +2907,8 @@
    "url": "https://trueo.com",
    "desc": "Permissionless prediction markets on Base that anyone can create.",
    "cat": "Prediction Market",
-   "icon": "icons/321.jpg"
+   "icon": "icons/321.jpg",
+   "added": "2026-11-12"
   },
   {
    "id": 322,
@@ -2605,7 +2916,8 @@
    "url": "https://polymarketscan.org",
    "desc": "Polymarket analytics and whale tracking: large trades, graded wallet records, a free radar, Copilot and an Agent API.",
    "cat": "Prediction Market",
-   "icon": "icons/322.jpg"
+   "icon": "icons/322.jpg",
+   "added": "2026-11-12"
   },
   {
    "id": 323,
@@ -2613,7 +2925,8 @@
    "url": "https://www.citriniresearch.com",
    "desc": "Thematic, cross-asset investment research.",
    "cat": "Research Blogs",
-   "icon": "icons/323.jpg"
+   "icon": "icons/323.jpg",
+   "added": "2026-11-12"
   },
   {
    "id": 324,
@@ -2621,7 +2934,8 @@
    "url": "https://relay.link",
    "desc": "The universal onchain payment rail: bridge and swap tokens instantly across chains.",
    "cat": "Bridges",
-   "icon": "icons/324.jpg"
+   "icon": "icons/324.jpg",
+   "added": "2026-11-12"
   },
   {
    "id": 325,
@@ -2629,7 +2943,8 @@
    "url": "https://metric.xyz",
    "desc": "The DEX that prices pools to reality. Trade, provide liquidity or deploy an active pool on Ethereum, Robinhood Chain and BNB Chain.",
    "cat": "DeFi",
-   "icon": "icons/325.jpg"
+   "icon": "icons/325.jpg",
+   "added": "2026-11-12"
   },
   {
    "id": 326,
@@ -2637,7 +2952,8 @@
    "url": "https://predict.fun",
    "desc": "The BNB-native prediction market. Predict outcomes across politics, sports, crypto and more, and earn rewards.",
    "cat": "Prediction Market",
-   "icon": "icons/326.jpg"
+   "icon": "icons/326.jpg",
+   "added": "2026-11-13"
   },
   {
    "id": 327,
@@ -2645,7 +2961,8 @@
    "url": "https://trustwallet.com",
    "desc": "Self-custody crypto wallet to swap, trade perps, make predictions and more.",
    "cat": "Wallet",
-   "icon": "icons/327.jpg"
+   "icon": "icons/327.jpg",
+   "added": "2026-11-13"
   },
   {
    "id": 328,
@@ -2653,7 +2970,8 @@
    "url": "https://papertrade.xyz",
    "desc": "Fully onchain synthetic perpetuals on Hyperliquid with up to 1000x leverage and zero slippage.",
    "cat": "Perp Dex",
-   "icon": "icons/328.jpg"
+   "icon": "icons/328.jpg",
+   "added": "2026-11-13"
   },
   {
    "id": 329,
@@ -2661,7 +2979,8 @@
    "url": "https://fluid.io",
    "desc": "The liquidity layer for all finance: lend, borrow, trade and more.",
    "cat": "DeFi",
-   "icon": "icons/329.jpg"
+   "icon": "icons/329.jpg",
+   "added": "2026-11-13"
   },
   {
    "id": 330,
@@ -2669,7 +2988,8 @@
    "url": "https://ens.domains",
    "desc": "Ethereum Name Service: get a readable web3 username like name.eth for your wallet.",
    "cat": "Utilities",
-   "icon": "icons/330.jpg"
+   "icon": "icons/330.jpg",
+   "added": "2026-11-13"
   },
   {
    "id": 331,
@@ -2677,7 +2997,8 @@
    "url": "https://huma.finance",
    "desc": "PayFi protocol offering real yield from real payment flows, with $20B in payment volume processed.",
    "cat": "DeFi",
-   "icon": "icons/331.jpg"
+   "icon": "icons/331.jpg",
+   "added": "2026-11-13"
   },
   {
    "id": 332,
@@ -2685,7 +3006,8 @@
    "url": "https://www.bungee.exchange",
    "desc": "Infinite ways to play the market: trade with their money, trade with leverage, or swap into anything.",
    "cat": "Dex Aggregator",
-   "icon": "icons/332.jpg"
+   "icon": "icons/332.jpg",
+   "added": "2026-11-13"
   },
   {
    "id": 333,
@@ -2693,7 +3015,8 @@
    "url": "https://re.xyz",
    "desc": "Brings the reinsurance market onchain: stablecoin deposits back real reinsurance treaties, with access through reUSD and reUSDe.",
    "cat": "DeFi",
-   "icon": "icons/333.jpg"
+   "icon": "icons/333.jpg",
+   "added": "2026-11-14"
   },
   {
    "id": 334,
@@ -2701,7 +3024,8 @@
    "url": "https://forestroadvault.com",
    "desc": "Real-world specialty-finance credit across media, renewables and digital assets, brought onchain via USDfr and sUSDfr.",
    "cat": "DeFi",
-   "icon": "icons/334.jpg"
+   "icon": "icons/334.jpg",
+   "added": "2026-11-14"
   },
   {
    "id": 335,
@@ -2709,7 +3033,8 @@
    "url": "https://www.3jane.xyz",
    "desc": "Cryptonative credit creation, backed by Paradigm.",
    "cat": "DeFi",
-   "icon": "icons/335.jpg"
+   "icon": "icons/335.jpg",
+   "added": "2026-11-14"
   },
   {
    "id": 336,
@@ -2717,7 +3042,8 @@
    "url": "https://www.hastra.io",
    "desc": "Institutional-grade yield products: PRIME on Solana and Ethereum, and AUTO on Solana.",
    "cat": "DeFi",
-   "icon": "icons/336.jpg"
+   "icon": "icons/336.jpg",
+   "added": "2026-11-14"
   },
   {
    "id": 337,
@@ -2725,7 +3051,422 @@
    "url": "https://maple.finance",
    "desc": "Onchain asset manager offering digital asset lending and yield products, with $25B originated.",
    "cat": "DeFi",
-   "icon": "icons/337.jpg"
+   "icon": "icons/337.jpg",
+   "added": "2026-11-14"
+  },
+  {
+   "id": 338,
+   "name": "Perplexity",
+   "url": "https://www.perplexity.ai",
+   "desc": "AI answer engine that searches the web and cites its sources.",
+   "cat": "Productivity",
+   "icon": "icons/338.jpg",
+   "added": "2026-11-18"
+  },
+  {
+   "id": 339,
+   "name": "Grok",
+   "url": "https://grok.com",
+   "desc": "xAI's assistant with real-time access to X, handy for tracking crypto narratives.",
+   "cat": "Productivity",
+   "icon": "icons/339.jpg",
+   "added": "2026-11-18"
+  },
+  {
+   "id": 340,
+   "name": "KyberSwap",
+   "url": "https://kyberswap.com",
+   "desc": "DEX aggregator across 20+ EVM chains and 650+ DEXs for the best swap rates.",
+   "cat": "Dex Aggregator",
+   "icon": "icons/340.jpg",
+   "added": "2026-11-18"
+  },
+  {
+   "id": 341,
+   "name": "Odos",
+   "url": "https://odos.xyz",
+   "desc": "Multi-chain smart order routing that finds optimal execution for any token swap.",
+   "cat": "Dex Aggregator",
+   "icon": "icons/341.jpg",
+   "added": "2026-11-18"
+  },
+  {
+   "id": 342,
+   "name": "Velora",
+   "url": "https://www.velora.xyz",
+   "desc": "Crosschain swaps for traders and dApps, formerly ParaSwap.",
+   "cat": "Dex Aggregator",
+   "icon": "icons/342.jpg",
+   "added": "2026-11-18"
+  },
+  {
+   "id": 343,
+   "name": "Limitless",
+   "url": "https://limitless.exchange",
+   "desc": "Community-driven prediction markets on crypto, finance, football and esports.",
+   "cat": "Prediction Market",
+   "icon": "icons/343.jpg",
+   "added": "2026-11-18"
+  },
+  {
+   "id": 344,
+   "name": "Myriad",
+   "url": "https://myriad.markets",
+   "desc": "Predict outcomes across crypto, sports, politics, gaming and more.",
+   "cat": "Prediction Market",
+   "icon": "icons/344.jpg",
+   "added": "2026-11-18"
+  },
+  {
+   "id": 345,
+   "name": "CoinDesk",
+   "url": "https://www.coindesk.com",
+   "desc": "Leading crypto news, markets coverage and data since 2013.",
+   "cat": "News",
+   "icon": "icons/345.jpg",
+   "added": "2026-11-18"
+  },
+  {
+   "id": 346,
+   "name": "Decrypt",
+   "url": "https://decrypt.co",
+   "desc": "Crypto news, data and markets in one place.",
+   "cat": "News",
+   "icon": "icons/346.jpg",
+   "added": "2026-11-18"
+  },
+  {
+   "id": 347,
+   "name": "The Defiant",
+   "url": "https://thedefiant.io",
+   "desc": "Independent DeFi news, with a free DeFi Daily newsletter.",
+   "cat": "News",
+   "icon": "icons/347.jpg",
+   "added": "2026-11-18"
+  },
+  {
+   "id": 348,
+   "name": "Cointelegraph",
+   "url": "https://cointelegraph.com",
+   "desc": "Crypto news, research and podcasts since 2013.",
+   "cat": "News",
+   "icon": "icons/348.jpg",
+   "added": "2026-11-18"
+  },
+  {
+   "id": 349,
+   "name": "Unchained",
+   "url": "https://unchainedcrypto.com",
+   "desc": "Global crypto news and podcast network with daily newsletters.",
+   "cat": "News",
+   "icon": "icons/349.jpg",
+   "added": "2026-11-18"
+  },
+  {
+   "id": 350,
+   "name": "Solflare",
+   "url": "https://www.solflare.com",
+   "desc": "Self-custody Solana wallet for staking, swapping and managing tokens and NFTs.",
+   "cat": "Wallet",
+   "icon": "icons/350.png",
+   "added": "2026-11-18"
+  },
+  {
+   "id": 351,
+   "name": "Rainbow",
+   "url": "https://rainbow.me",
+   "desc": "Friendly Ethereum wallet that rewards you for being active onchain.",
+   "cat": "Wallet",
+   "icon": "icons/351.jpg",
+   "added": "2026-11-18"
+  },
+  {
+   "id": 352,
+   "name": "Exodus",
+   "url": "https://www.exodus.com",
+   "desc": "Multi-chain self-custody wallet to spend, swap and earn.",
+   "cat": "Wallet",
+   "icon": "icons/352.jpg",
+   "added": "2026-11-18"
+  },
+  {
+   "id": 353,
+   "name": "Across",
+   "url": "https://across.to",
+   "desc": "Fast crosschain bridge with a ~2 second median fill and $40B+ moved.",
+   "cat": "Bridges",
+   "icon": "icons/353.jpg",
+   "added": "2026-11-18"
+  },
+  {
+   "id": 354,
+   "name": "Portal Bridge",
+   "url": "https://portalbridge.com",
+   "desc": "Fast, secure token transfers and swaps between chains, powered by Wormhole.",
+   "cat": "Bridges",
+   "icon": "icons/354.jpg",
+   "added": "2026-11-18"
+  },
+  {
+   "id": 355,
+   "name": "dYdX",
+   "url": "https://dydx.xyz",
+   "desc": "Fully decentralized, community-governed pro trading platform for perpetuals.",
+   "cat": "Perp Dex",
+   "icon": "icons/355.jpg",
+   "added": "2026-11-18"
+  },
+  {
+   "id": 356,
+   "name": "GMX",
+   "url": "https://gmx.io",
+   "desc": "Onchain perpetual and spot DEX with up to 100x leverage from your own wallet.",
+   "cat": "Perp Dex",
+   "icon": "icons/356.jpg",
+   "added": "2026-11-18"
+  },
+  {
+   "id": 357,
+   "name": "Drift",
+   "url": "https://app.drift.trade",
+   "desc": "Solana's perpetuals DEX with spot trading, lending and borrowing.",
+   "cat": "Perp Dex",
+   "icon": "icons/357.png",
+   "added": "2026-11-18"
+  },
+  {
+   "id": 358,
+   "name": "Aster",
+   "url": "https://www.asterdex.com",
+   "desc": "Next-gen perp DEX for all traders, backed by YZi Labs.",
+   "cat": "Perp Dex",
+   "icon": "icons/358.jpg",
+   "added": "2026-11-18"
+  },
+  {
+   "id": 359,
+   "name": "Paradex",
+   "url": "https://www.paradex.trade",
+   "desc": "Perpetuals exchange with privacy and zero trading fees for retail.",
+   "cat": "Perp Dex",
+   "icon": "icons/359.png",
+   "added": "2026-11-18"
+  },
+  {
+   "id": 360,
+   "name": "edgeX",
+   "url": "https://www.edgex.exchange",
+   "desc": "24/7 perpetual futures for stocks, commodities, indices and crypto.",
+   "cat": "Perp Dex",
+   "icon": "icons/360.jpg",
+   "added": "2026-11-18"
+  },
+  {
+   "id": 361,
+   "name": "Coinbase",
+   "url": "https://www.coinbase.com",
+   "desc": "US-listed exchange to buy, sell and store crypto.",
+   "cat": "CEX",
+   "icon": "icons/361.jpg",
+   "added": "2026-11-18"
+  },
+  {
+   "id": 362,
+   "name": "Kraken",
+   "url": "https://www.kraken.com",
+   "desc": "Exchange for crypto, stocks and futures, operating since 2011.",
+   "cat": "CEX",
+   "icon": "icons/362.jpg",
+   "added": "2026-11-18"
+  },
+  {
+   "id": 363,
+   "name": "KuCoin",
+   "url": "https://www.kucoin.com",
+   "desc": "Global crypto exchange with a wide range of listed tokens.",
+   "cat": "CEX",
+   "icon": "icons/363.jpg",
+   "added": "2026-11-18"
+  },
+  {
+   "id": 364,
+   "name": "Gate",
+   "url": "https://www.gate.com",
+   "desc": "Exchange with 5,400+ cryptos plus stocks and CFDs.",
+   "cat": "CEX",
+   "icon": "icons/364.jpg",
+   "added": "2026-11-18"
+  },
+  {
+   "id": 365,
+   "name": "Blur",
+   "url": "https://blur.io",
+   "desc": "The NFT marketplace for pro traders, backed by Paradigm.",
+   "cat": "NFTs",
+   "icon": "icons/365.jpg",
+   "added": "2026-11-18"
+  },
+  {
+   "id": 366,
+   "name": "Tensor",
+   "url": "https://www.tensor.trade",
+   "desc": "Solana's leading NFT marketplace.",
+   "cat": "NFTs",
+   "icon": "icons/366.jpg",
+   "added": "2026-11-18"
+  },
+  {
+   "id": 367,
+   "name": "elizaOS",
+   "url": "https://elizaos.ai",
+   "desc": "Open-source operating system for building AI agents.",
+   "cat": "AI Agents",
+   "icon": "icons/367.jpg",
+   "added": "2026-11-18"
+  },
+  {
+   "id": 368,
+   "name": "Olas",
+   "url": "https://olas.network",
+   "desc": "Own and monetize autonomous AI agents, powered by the OLAS token.",
+   "cat": "AI Agents",
+   "icon": "icons/368.jpg",
+   "added": "2026-11-18"
+  },
+  {
+   "id": 369,
+   "name": "Giza",
+   "url": "https://www.gizatech.xyz",
+   "desc": "Autonomous agents that manage onchain capital.",
+   "cat": "AI Agents",
+   "icon": "icons/369.jpg",
+   "added": "2026-11-18"
+  },
+  {
+   "id": 370,
+   "name": "Ethereum.org",
+   "url": "https://ethereum.org/learn/",
+   "desc": "Official guides to Ethereum, wallets, staking and how crypto works.",
+   "cat": "Educational",
+   "icon": "icons/370.jpg",
+   "added": "2026-11-18"
+  },
+  {
+   "id": 371,
+   "name": "Binance Academy",
+   "url": "https://www.binance.com/en/academy",
+   "desc": "Free blockchain and crypto lessons, from beginner to advanced.",
+   "cat": "Educational",
+   "icon": "icons/371.jpg",
+   "added": "2026-11-18"
+  },
+  {
+   "id": 372,
+   "name": "Cyfrin Updraft",
+   "url": "https://updraft.cyfrin.io",
+   "desc": "150+ hours of free smart contract development and security courses.",
+   "cat": "Educational",
+   "icon": "icons/372.jpg",
+   "added": "2026-11-18"
+  },
+  {
+   "id": 373,
+   "name": "Transak",
+   "url": "https://transak.com",
+   "desc": "Buy and sell crypto with fiat across many countries and payment methods.",
+   "cat": "Ramps",
+   "icon": "icons/373.jpg",
+   "added": "2026-11-18"
+  },
+  {
+   "id": 374,
+   "name": "Ramp Network",
+   "url": "https://rampnetwork.com",
+   "desc": "EU-licensed on/off-ramp in 150+ countries, trusted by 8M customers.",
+   "cat": "Ramps",
+   "icon": "icons/374.jpg",
+   "added": "2026-11-18"
+  },
+  {
+   "id": 375,
+   "name": "Banxa",
+   "url": "https://www.banxa.com",
+   "desc": "Fiat-to-crypto infrastructure behind 350+ wallets and apps.",
+   "cat": "Ramps",
+   "icon": "icons/375.jpg",
+   "added": "2026-11-18"
+  },
+  {
+   "id": 376,
+   "name": "Mercuryo",
+   "url": "https://mercuryo.io",
+   "desc": "Buy, sell and spend crypto with cards and bank transfers.",
+   "cat": "Ramps",
+   "icon": "icons/376.jpg",
+   "added": "2026-11-18"
+  },
+  {
+   "id": 377,
+   "name": "Lido",
+   "url": "https://lido.fi",
+   "desc": "Liquid staking for Ethereum: stake ETH and get stETH to use across DeFi.",
+   "cat": "DeFi",
+   "icon": "icons/377.jpg",
+   "added": "2026-11-18"
+  },
+  {
+   "id": 378,
+   "name": "Sky",
+   "url": "https://sky.money",
+   "desc": "Savings and capital allocation network behind USDS and the Sky Savings Rate (formerly MakerDAO).",
+   "cat": "DeFi",
+   "icon": "icons/378.jpg",
+   "added": "2026-11-18"
+  },
+  {
+   "id": 379,
+   "name": "EigenCloud",
+   "url": "https://www.eigencloud.xyz",
+   "desc": "Restaking and verifiable cloud stack from the team behind EigenLayer.",
+   "cat": "DeFi",
+   "icon": "icons/379.jpg",
+   "added": "2026-11-18"
+  },
+  {
+   "id": 380,
+   "name": "Raydium",
+   "url": "https://raydium.io",
+   "desc": "Solana AMM and liquidity hub for swaps, pools and token launches.",
+   "cat": "DeFi",
+   "icon": "icons/380.png",
+   "added": "2026-11-18"
+  },
+  {
+   "id": 381,
+   "name": "Orca",
+   "url": "https://www.orca.so",
+   "desc": "Solana's concentrated liquidity DEX for swaps and LPing.",
+   "cat": "DeFi",
+   "icon": "icons/381.jpg",
+   "added": "2026-11-18"
+  },
+  {
+   "id": 382,
+   "name": "PancakeSwap",
+   "url": "https://pancakeswap.finance",
+   "desc": "Leading multi-chain DEX on BNB Chain for swaps, farms and perps.",
+   "cat": "DeFi",
+   "icon": "icons/382.png",
+   "added": "2026-11-18"
+  },
+  {
+   "id": 383,
+   "name": "Spark",
+   "url": "https://spark.fi",
+   "desc": "Onchain capital allocator offering savings and lending, part of the Sky ecosystem.",
+   "cat": "DeFi",
+   "icon": "icons/383.png",
+   "added": "2026-11-18"
   }
  ]
 }

@@ -3,7 +3,20 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Jabiru</title>
+<title>Jabiru · Web3 app directory</title>
+<meta name="description" content="Find the right Web3 app fast. Hundreds of curated tools for DeFi, trading, security, analytics and more, sorted into folders."/>
+<meta name="theme-color" content="#FF6B45"/>
+<link rel="manifest" href="/manifest.webmanifest"/>
+<link rel="canonical" href="https://everythingfi.vercel.app/app"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="Jabiru"/>
+<meta property="og:title" content="Jabiru · Web3 app directory"/>
+<meta property="og:description" content="Find the right Web3 app fast. Hundreds of curated tools, sorted into folders."/>
+<meta property="og:url" content="https://everythingfi.vercel.app/app"/>
+<meta property="og:image" content="https://everythingfi.vercel.app/og.png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:site" content="@Jabiru_"/>
+<meta name="twitter:image" content="https://everythingfi.vercel.app/og.png"/>
 <link rel="icon" type="image/png" href="/icons/favicon.png"/>
 <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -36,7 +49,8 @@
 
     <div class="nav-search-wrap">
       <span class="nav-search-icon">⌕</span>
-      <input type="text" id="search" placeholder="Search..." oninput="render()"/>
+      <input type="text" id="search" placeholder="Search..." oninput="render()" aria-label="Search apps"/>
+      <kbd class="search-kbd" aria-hidden="true">/</kbd>
       <button type="button" class="filter-btn" id="filter-btn" aria-expanded="false" aria-controls="filter-panel" title="Filters">
         <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M20 18h0" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/><circle cx="16" cy="6" r="2" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="10" cy="12" r="2" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="18" cy="18" r="2" stroke="currentColor" stroke-width="2" fill="none"/></svg>
         <span class="filter-btn-label">Filters</span><span class="filter-badge" id="filter-badge" hidden></span>
@@ -66,6 +80,41 @@
 <script>
 var site = { brand: {}, catOrder: [], apps: [] };
 var activeTab = 'All';
+// Special views that live next to the category folders.
+var SAVED = 'Saved', NEW = 'New this week';
+var VIEW_HASH = { 'Saved': 'saved', 'New this week': 'new' };
+var NEW_DAYS = 7;
+
+// Saved and recently opened apps are kept in this browser only.
+function loadIds(key) {
+  try { var v = JSON.parse(localStorage.getItem(key) || '[]'); return Array.isArray(v) ? v.map(String) : []; } catch (e) { return []; }
+}
+function storeIds(key, ids) { try { localStorage.setItem(key, JSON.stringify(ids)); } catch (e) {} }
+var savedIds = loadIds('ef-saved');
+var recentIds = loadIds('ef-recent');
+function isSaved(a) { return savedIds.indexOf(String(a.id)) >= 0; }
+function toggleSave(id) {
+  id = String(id);
+  var i = savedIds.indexOf(id);
+  if (i >= 0) savedIds.splice(i, 1); else savedIds.unshift(id);
+  storeIds('ef-saved', savedIds);
+}
+function byIds(ids) {
+  return ids.map(function (id) { return site.apps.find(function (a) { return String(a.id) === id; }); }).filter(Boolean);
+}
+function isNew(a) {
+  if (!a.added) return false;
+  var age = (Date.now() - new Date(a.added + 'T00:00:00Z').getTime()) / 864e5;
+  return age >= 0 && age < NEW_DAYS;
+}
+function newApps() {
+  return site.apps.filter(isNew).sort(function (x, y) { return x.added < y.added ? 1 : x.added > y.added ? -1 : y.id - x.id; });
+}
+function appsForTab(tab) {
+  if (tab === SAVED) return byIds(savedIds);
+  if (tab === NEW) return newApps();
+  return site.apps.filter(function (a) { return a.cat === tab; });
+}
 
 function esc(s) {
   return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
@@ -95,14 +144,14 @@ function hasAllTags(a) {
 function filteredApps() {
   var q = document.getElementById('search').value.trim().toLowerCase();
   return site.apps.filter(function (a) {
-    var inCat = activeTab === 'All' || a.cat === activeTab;
+    var inCat = activeTab === 'All' || (activeTab === SAVED ? isSaved(a) : activeTab === NEW ? isNew(a) : a.cat === activeTab);
     var inQ = !q || [a.name, a.desc, a.cat].concat(tagsOf(a)).join(' ').toLowerCase().indexOf(q) >= 0;
     return inCat && inQ && hasAllTags(a);
   });
 }
 
 function renderFilterPanel() {
-  var inScope = site.apps.filter(function (a) { return activeTab === 'All' || a.cat === activeTab; });
+  var inScope = activeTab === 'All' ? site.apps : appsForTab(activeTab);
   var out = '<div class="filter-panel-head"><span class="filter-panel-title">Filter apps</span>' +
     (activeTags.length ? '<button type="button" class="filter-clear" data-clear>Clear all</button>' : '') + '</div>';
   tagData.groups.forEach(function (g) {
@@ -160,6 +209,11 @@ function setFilterPanel(open) {
 function renderSidebar() {
   var out = '<div class="sidebar-label">Browse</div>';
   out += '<button class="sidebar-all-btn' + (activeTab === 'All' ? ' active' : '') + '" data-cat="All"><span>All tools</span></button>';
+  var nNew = newApps().length;
+  if (nNew) out += '<button class="sidebar-all-btn' + (activeTab === NEW ? ' active' : '') + '" data-cat="' + NEW + '"><span>New this week</span><span class="side-count is-new">' + nNew + '</span></button>';
+  out += '<button class="sidebar-all-btn' + (activeTab === SAVED ? ' active' : '') + '" data-cat="' + SAVED + '"><span>Saved</span>' +
+    (savedIds.length ? '<span class="side-count">' + byIds(savedIds).length + '</span>' : '') + '</button>';
+  out += '<div class="sidebar-label sidebar-label-sub">Folders</div>';
   categories().forEach(function (c) {
     out += '<div class="cat-item"><button class="cat-trigger' + (activeTab === c ? ' active' : '') + '" data-cat="' + esc(c) + '">' +
       '<span class="cat-name">' + esc(c) + '</span></button></div>';
@@ -167,13 +221,19 @@ function renderSidebar() {
   document.getElementById('sidebar').innerHTML = out;
 }
 
+var STAR = '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 3.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.2-4.1 5.8-.8z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>';
 function buildCard(a, i) {
   var bg = 'background:rgba(79,142,247,0.1)';
   var icon = isImage(a.icon)
     ? '<div class="card-icon" style="' + bg + ';padding:0;overflow:hidden"><img src="' + esc(a.icon) + '" alt="" loading="lazy"/></div>'
     : '<div class="card-icon" style="' + bg + '">' + esc(a.icon || '🔗') + '</div>';
+  var saved = isSaved(a);
   return '<div class="card" tabindex="0" data-id="' + esc(a.id) + '" style="animation-delay:' + Math.min(i * 0.05, 0.6).toFixed(2) + 's">' +
-    '<div class="card-top">' + icon + '</div>' +
+    '<div class="card-top">' + icon +
+      '<div class="card-actions">' + (isNew(a) ? '<span class="card-new">New</span>' : '') +
+      '<button type="button" class="card-save' + (saved ? ' on' : '') + '" data-save="' + esc(a.id) + '" aria-pressed="' + saved + '" ' +
+        'aria-label="' + (saved ? 'Remove ' : 'Save ') + esc(a.name) + '" title="' + (saved ? 'Saved' : 'Save') + '">' + STAR + '</button></div>' +
+    '</div>' +
     '<div class="card-title">' + esc(a.name) + '<span class="card-arrow">&#8599;</span></div>' +
     '<div class="card-desc">' + esc(a.desc) + '</div></div>';
 }
@@ -204,6 +264,8 @@ var CAT_DESC = {
   'Utilities': 'Handy tools for everyday on-chain tasks.',
   'Chains': 'Blockchains and L2 networks to build and transact on.'
 };
+CAT_DESC[SAVED] = 'Apps you starred. They stay saved in this browser.';
+CAT_DESC[NEW] = 'The latest apps added to Jabiru in the past ' + NEW_DAYS + ' days.';
 function catDesc(c) { return CAT_DESC[c] || 'A collection of ' + c + ' tools.'; }
 function appCount(n) { return n + (n === 1 ? ' app' : ' apps'); }
 function appsIn(cat) { return site.apps.filter(function (a) { return a.cat === cat; }); }
@@ -249,15 +311,18 @@ function render() {
 
   if (activeTab !== 'All') {
     // Opened folder: header with a way back, then the folder's apps.
-    var total = appsIn(activeTab).length;
+    var total = appsForTab(activeTab).length;
     out = '<header class="lib-head folder-head">' +
       '<button class="folder-backlink" data-folder="All"><span aria-hidden="true">&larr;</span> All tools</button>' +
       '<div class="folder-head-row"><span class="folder-head-icon">' + FOLDER_ICON + '</span>' +
       '<h1 class="lib-title">' + esc(activeTab) + '</h1><span class="lib-count">' + appCount(total) + '</span></div>' +
       '<p class="lib-sub">' + esc(catDesc(activeTab)) + '</p></header>' + activeFilterRow();
+    if (activeTab === SAVED || activeTab === NEW) list = appsForTab(activeTab).filter(function (a) { return list.indexOf(a) >= 0; });
     out += list.length
       ? '<div class="grid">' + list.map(buildCard).join('') + '</div>'
-      : emptyState('Nothing in ' + activeTab + ' matches ' + label, 'Try another word, remove a filter, or go back to search all tools.');
+      : activeTab === SAVED && !savedIds.length
+        ? emptyState('No saved apps yet', 'Tap the star on any app to keep it here for next time.', '☆')
+        : emptyState('Nothing in ' + activeTab + ' matches ' + label, 'Try another word, remove a filter, or go back to search all tools.');
   } else if (filtering) {
     // Searching or filtering from All tools: results from every folder, grouped by folder.
     out = '<header class="lib-head"><h1 class="lib-title">Results for ' + esc(label) + '</h1>' +
@@ -273,11 +338,17 @@ function render() {
   } else {
     // All tools: the folder library.
     out = '<header class="lib-head"><h1 class="lib-title">All tools</h1>' +
-      '<p class="lib-sub">Every app on Jabiru, sorted into folders. Open one to explore.</p></header>' +
+      '<p class="lib-sub">' + site.apps.length + ' apps, sorted into ' + cats.length + ' folders. Open one to explore.</p></header>' +
+      shelf('Jump back in', byIds(recentIds).slice(0, 6), null) +
+      shelf('New on Jabiru', newApps().slice(0, 6), NEW) +
+      shelf('Saved', byIds(savedIds).slice(0, 6), savedIds.length > 6 ? SAVED : null) +
+      (recentIds.length || savedIds.length || newApps().length ? '<div class="cat-section-hdr shelf-hdr"><span class="cat-section-hdr-name">Folders</span></div>' : '') +
       '<div class="folder-grid">' + cats.map(buildFolder).join('') + '</div>';
   }
   grid.className = '';
   grid.innerHTML = out;
+  var brandName = (site.brand && site.brand.name) || 'Jabiru';
+  document.title = activeTab === 'All' ? brandName + ' · Web3 app directory' : activeTab + ' · ' + brandName;
 
   // Play the entrance animation only when the view changes, not on every keystroke.
   var view = activeTab + (activeTab === 'All' && filtering ? ':search' : '');
@@ -287,8 +358,16 @@ function render() {
   }
 }
 
-function emptyState(msg, sub) {
-  return '<div class="empty-state"><div class="empty-state-icon">🔍</div>' +
+// A short row of apps on the All tools page, with an optional link to see them all.
+function shelf(title, apps, tab) {
+  if (!apps.length) return '';
+  return '<section class="cat-section shelf"><div class="cat-section-hdr"><span class="cat-section-hdr-name">' + esc(title) + '</span>' +
+    (tab ? '<button class="cat-section-open" data-folder="' + esc(tab) + '">See all &rarr;</button>' : '') + '</div>' +
+    '<div class="grid">' + apps.map(buildCard).join('') + '</div></section>';
+}
+
+function emptyState(msg, sub, icon) {
+  return '<div class="empty-state"><div class="empty-state-icon">' + (icon || '🔍') + '</div>' +
     '<div class="empty-state-msg">' + esc(msg) + '</div><div class="empty-state-sub">' + esc(sub) + '</div></div>';
 }
 
@@ -296,11 +375,13 @@ function emptyState(msg, sub) {
 function tabFromHash() {
   var h = '';
   try { h = decodeURIComponent(location.hash.slice(1)); } catch (e) {}
+  if (h === 'saved') return SAVED;
+  if (h === 'new') return NEW;
   return categories().indexOf(h) >= 0 ? h : 'All';
 }
 function setTab(cat) {
   if (cat !== activeTab) {
-    history.pushState(null, '', cat === 'All' ? location.pathname + location.search : '#' + encodeURIComponent(cat));
+    history.pushState(null, '', cat === 'All' ? location.pathname + location.search : '#' + (VIEW_HASH[cat] || encodeURIComponent(cat)));
     document.getElementById('search').value = '';
   }
   activeTab = cat; closeSidebar(); render(); window.scrollTo(0, 0);
@@ -314,7 +395,6 @@ function applyBrand() {
   var b = site.brand || {};
   var name = b.name || 'Jabiru';
   document.getElementById('logo-text').textContent = name;
-  document.title = name;
   var img = document.getElementById('logo-icon-img');
   var emoji = document.getElementById('logo-icon-emoji');
   if (b.logoImage) { img.src = b.logoImage; img.hidden = false; emoji.hidden = true; }
@@ -326,7 +406,10 @@ function applyBrand() {
 
 function launchApp(id) {
   var app = site.apps.find(function (a) { return String(a.id) === String(id); });
-  if (app) window.open(app.url, '_blank', 'noopener,noreferrer');
+  if (!app) return;
+  window.open(app.url, '_blank', 'noopener,noreferrer');
+  recentIds = [String(app.id)].concat(recentIds.filter(function (x) { return x !== String(app.id); })).slice(0, 12);
+  storeIds('ef-recent', recentIds);
 }
 
 document.getElementById('sidebar').addEventListener('click', function (e) {
@@ -346,12 +429,27 @@ document.getElementById('filter-panel').addEventListener('click', function (e) {
 document.addEventListener('click', function (e) {
   if (!e.target.closest('.nav-search-wrap')) setFilterPanel(false);
 });
+// "/" or Cmd/Ctrl+K jumps to search.
+document.addEventListener('keydown', function (e) {
+  var typing = /^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName) || e.target.isContentEditable;
+  if ((e.key === '/' && !typing) || ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k')) {
+    e.preventDefault(); var s = document.getElementById('search'); s.focus(); s.select();
+  }
+});
 document.addEventListener('keydown', function (e) {
   if (e.key === 'Escape' && !document.getElementById('filter-panel').hidden) {
     setFilterPanel(false); document.getElementById('filter-btn').focus();
   }
 });
 document.getElementById('grid').addEventListener('click', function (e) {
+  var save = e.target.closest('[data-save]');
+  if (save) {
+    var sid = save.getAttribute('data-save');
+    toggleSave(sid); render();
+    // Keep keyboard focus on the star after the page redraws.
+    var again = document.querySelector('[data-save="' + sid + '"]'); if (again) again.focus({ preventScroll: true });
+    return;
+  }
   var untag = e.target.closest('[data-untag]');
   if (untag) { toggleTag(untag.getAttribute('data-untag')); return; }
   if (e.target.closest('[data-clear]')) { clearTags(); return; }
@@ -361,6 +459,7 @@ document.getElementById('grid').addEventListener('click', function (e) {
   if (card) launchApp(card.getAttribute('data-id'));
 });
 document.getElementById('grid').addEventListener('keydown', function (e) {
+  if (e.target.closest('[data-save]')) return;
   var card = e.target.closest('.card');
   if (card && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); launchApp(card.getAttribute('data-id')); }
 });

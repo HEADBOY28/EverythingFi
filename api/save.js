@@ -22,6 +22,7 @@ function validate(site) {
   const apps = site.apps;
   if (!Array.isArray(apps) || apps.length > 3000) throw new Error('Invalid app list');
   const ids = new Set();
+  const today = new Date().toISOString().slice(0, 10);
   const cleanApps = apps.map((a, i) => {
     const where = `App #${i + 1}`;
     if (!a || typeof a !== 'object') throw new Error(where + ' is invalid');
@@ -38,7 +39,9 @@ function validate(site) {
     if (desc === null) throw new Error(`"${name}" description is too long`);
     if (!cat) throw new Error(`"${name}" needs a category`);
     if (icon === null) throw new Error(`"${name}" has an invalid icon`);
-    return { id, name, url, desc, cat, icon };
+    // "added" powers the New badges; new apps get today's date.
+    const added = typeof a.added === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(a.added) ? a.added : today;
+    return { id, name, url, desc, cat, icon, added };
   });
   if (!Array.isArray(site.catOrder) || site.catOrder.length > 200) throw new Error('Invalid category list');
   const catOrder = [...new Set(site.catOrder.map((c) => str(c, 60)).filter(Boolean))];

@@ -3,10 +3,22 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Jabiru</title>
+<title>Jabiru · The app for all apps</title>
 <link rel="icon" type="image/png" href="/icons/favicon.png"/>
 <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
 <meta name="description" content="Jabiru is a curated directory of Web3 apps, organized by category."/>
+<meta name="theme-color" content="#FF6B45"/>
+<link rel="manifest" href="/manifest.webmanifest"/>
+<link rel="canonical" href="https://everythingfi.vercel.app/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="Jabiru"/>
+<meta property="og:title" content="Jabiru · The app for all apps"/>
+<meta property="og:description" content="Jabiru is a curated directory of Web3 apps, organized by category."/>
+<meta property="og:url" content="https://everythingfi.vercel.app/"/>
+<meta property="og:image" content="https://everythingfi.vercel.app/og.png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:site" content="@Jabiru_"/>
+<meta name="twitter:image" content="https://everythingfi.vercel.app/og.png"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Newsreader:opsz,wght@6..72,300&family=Syne:wght@600;700;800&display=swap" rel="stylesheet"/>
@@ -291,7 +303,7 @@ function applySite() {
   var name = b.name || 'Jabiru';
   $('logo-text').textContent = name;
   $('foot-name').textContent = name;
-  document.title = name;
+  document.title = name + ' · The app for all apps';
   var img = $('logo-icon-img'), emoji = $('logo-icon-emoji');
   if (b.logoImage) { img.src = b.logoImage; img.hidden = false; emoji.hidden = true; }
   else { emoji.textContent = b.logoEmoji || '🗂'; emoji.hidden = false; img.hidden = true; }

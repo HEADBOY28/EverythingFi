@@ -1,0 +1,14 @@
+{
+  "name": "Jabiru · Web3 app directory",
+  "short_name": "Jabiru",
+  "description": "A curated directory of Web3 apps, sorted into folders.",
+  "start_url": "/app",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#F5F0FA",
+  "theme_color": "#FF6B45",
+  "icons": [
+    { "src": "/icons/jabiru-mark.png", "sizes": "256x256", "type": "image/png", "purpose": "any" },
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}
