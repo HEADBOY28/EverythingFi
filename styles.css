@@ -771,8 +771,8 @@ body{
 /* Page heading */
 .lib-head{margin:4px 0 22px;}
 .lib-title{
-  font-family:'Syne',sans-serif;
-  font-size:26px;font-weight:700;letter-spacing:-0.02em;
+  font-family:'Inter',system-ui,sans-serif;
+  font-size:26px;font-weight:600;letter-spacing:-0.02em;
   color:var(--text);line-height:1.15;
 }
 .lib-sub{font-size:13.5px;color:var(--text2);margin-top:6px;line-height:1.5;max-width:560px;}
