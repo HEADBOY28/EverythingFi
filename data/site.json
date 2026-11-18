@@ -645,7 +645,7 @@
   {
    "id": 68,
    "name": "Hyperliquid",
-   "url": "https://app.hyperliquid.xyz/trade",
+   "url": "https://app.hyperliquid.xyz/join/HEADBOY",
    "desc": "High-performance on-chain perpetuals exchange.",
    "cat": "Perp Dex",
    "icon": "icons/68.jpg",
@@ -1401,7 +1401,7 @@
   {
    "id": 152,
    "name": "Lighter",
-   "url": "https://app.lighter.xyz/",
+   "url": "https://app.lighter.xyz/?referral=JABIRU&source=none",
    "desc": "Trade digital assets with low costs and low latency on Ethereum L2 with custom ZK circuits.",
    "cat": "Perp Dex",
    "icon": "icons/152.jpg",
@@ -1698,7 +1698,7 @@
   {
    "id": 185,
    "name": "Bulk",
-   "url": "https://early.bulk.trade/deposit?ref=HEADBOY",
+   "url": "https://app.bulk.trade/ref/HEADBOY",
    "desc": "One Exchange. Infinite Markets.",
    "cat": "Perp Dex",
    "icon": "icons/185.jpg",
@@ -1761,7 +1761,7 @@
   {
    "id": 194,
    "name": "10x",
-   "url": "https://10x.gg",
+   "url": "https://10x.gg/r/ugdkrfx",
    "desc": "Trade majors and lowcaps on leverage.",
    "cat": "Perp Dex",
    "icon": "icons/194.jpg",
@@ -1833,7 +1833,7 @@
   {
    "id": 202,
    "name": "Arcus",
-   "url": "https://arcus.xyz/",
+   "url": "https://app.arcus.xyz/ref/HEADBOY",
    "desc": "Stock and crypto perps and spot, built by the dYdX team with Robinhood.",
    "cat": "Perp Dex",
    "icon": "icons/202.jpg",
@@ -3219,7 +3219,7 @@
   {
    "id": 358,
    "name": "Aster",
-   "url": "https://www.asterdex.com",
+   "url": "https://www.asterdex.com/en/referral/b7575E",
    "desc": "Next-gen perp DEX for all traders, backed by YZi Labs.",
    "cat": "Perp Dex",
    "icon": "icons/358.jpg",
@@ -3228,7 +3228,7 @@
   {
    "id": 359,
    "name": "Paradex",
-   "url": "https://www.paradex.trade",
+   "url": "https://app.paradex.trade/r/HEADBOY",
    "desc": "Perpetuals exchange with privacy and zero trading fees for retail.",
    "cat": "Perp Dex",
    "icon": "icons/359.png",
