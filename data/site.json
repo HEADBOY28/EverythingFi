@@ -3082,15 +3082,6 @@
    "added": "2026-11-18"
   },
   {
-   "id": 341,
-   "name": "Odos",
-   "url": "https://odos.xyz",
-   "desc": "Multi-chain smart order routing that finds optimal execution for any token swap.",
-   "cat": "Dex Aggregator",
-   "icon": "icons/341.jpg",
-   "added": "2026-11-18"
-  },
-  {
    "id": 342,
    "name": "Velora",
    "url": "https://www.velora.xyz",
@@ -3226,15 +3217,6 @@
    "added": "2026-11-18"
   },
   {
-   "id": 357,
-   "name": "Drift",
-   "url": "https://app.drift.trade",
-   "desc": "Solana's perpetuals DEX with spot trading, lending and borrowing.",
-   "cat": "Perp Dex",
-   "icon": "icons/357.png",
-   "added": "2026-11-18"
-  },
-  {
    "id": 358,
    "name": "Aster",
    "url": "https://www.asterdex.com",
@@ -3295,15 +3277,6 @@
    "desc": "Exchange with 5,400+ cryptos plus stocks and CFDs.",
    "cat": "CEX",
    "icon": "icons/364.jpg",
-   "added": "2026-11-18"
-  },
-  {
-   "id": 365,
-   "name": "Blur",
-   "url": "https://blur.io",
-   "desc": "The NFT marketplace for pro traders, backed by Paradigm.",
-   "cat": "NFTs",
-   "icon": "icons/365.jpg",
    "added": "2026-11-18"
   },
   {
