@@ -77,6 +77,13 @@
   </div>
 </div>
 
+<!-- One-time question after sign-in: email updates -->
+<div class="optin-bar" id="optin-bar" role="region" aria-label="Email updates" hidden>
+  <span class="optin-bar-q">Get new apps and offers in your inbox?</span>
+  <button type="button" class="lp-optin-yes" data-optin="yes">Yes, send me updates</button>
+  <button type="button" class="lp-optin-no" data-optin="no">No thanks</button>
+</div>
+
 <!-- Sign-in prompt (saving apps needs an account) -->
 <div class="overlay" id="join-modal">
   <div class="modal join-modal" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="join-title">
@@ -91,7 +98,6 @@
     </ul>
     <div class="join-google" id="join-google" hidden>
       <div class="lp-google-btn" id="google-btn-modal"></div>
-      <label class="lp-consent"><input type="checkbox" id="google-consent-modal"> <span>Send me new apps, news and offers. Unsubscribe anytime.</span></label>
     </div>
     <a class="lp-btn lp-btn-primary" href="/" id="join-fallback" hidden>Sign in</a>
     <p class="join-error" id="join-error" role="alert" hidden></p>
@@ -128,7 +134,7 @@ var accountReady = fetch('/api/account', { credentials: 'same-origin', cache: 'n
   .then(function (info) {
     if (!info) return;
     account.clientId = info.clientId || '';
-    if (info.user) account.signedIn = true;
+    if (info.user) { account.signedIn = true; if (info.user.askConsent) showOptin(); }
   })
   .catch(function () {});
 function mySavedIds() { return account.signedIn ? savedIds : []; }
@@ -566,12 +572,13 @@ async function onGoogleCredential(response) {
     var res = await fetch('/api/account', {
       method: 'POST', credentials: 'same-origin',
       headers: { 'Content-Type': 'application/json', 'X-Requested-With': 'jabiru-site' },
-      body: JSON.stringify({ credential: response.credential, consent: document.getElementById('google-consent-modal').checked })
+      body: JSON.stringify({ credential: response.credential })
     });
     var body = {};
     try { body = await res.json(); } catch (e) {}
     if (!res.ok || !body.user) throw new Error(body.error || 'Sign-in failed. Please try again.');
     account.signedIn = true;
+    if (body.user.askConsent) showOptin();
     var id = pendingSave;
     closeJoin();
     if (id && savedIds.indexOf(String(id)) < 0) toggleSave(id);
@@ -584,6 +591,26 @@ document.getElementById('join-modal').addEventListener('click', function (e) {
   if (e.target === this || e.target.closest('[data-join-close]')) closeJoin();
 });
 document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && joinOpen) closeJoin(); });
+
+// ── One-time email updates question ──
+function showOptin() { document.getElementById('optin-bar').hidden = false; }
+document.getElementById('optin-bar').addEventListener('click', function (e) {
+  var b = e.target.closest('[data-optin]');
+  if (!b) return;
+  var yes = b.getAttribute('data-optin') === 'yes';
+  var bar = this;
+  fetch('/api/account', {
+    method: 'PATCH', credentials: 'same-origin',
+    headers: { 'Content-Type': 'application/json', 'X-Requested-With': 'jabiru-site' },
+    body: JSON.stringify({ consent: yes })
+  }).catch(function () {});
+  if (yes) {
+    bar.innerHTML = '<span class="optin-bar-q">You’re subscribed. Unsubscribe anytime from any email.</span>';
+    setTimeout(function () { bar.hidden = true; }, 3000);
+  } else {
+    bar.hidden = true;
+  }
+});
 
 function toggleSidebar() {
   document.getElementById('sidebar').classList.toggle('open');

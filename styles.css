@@ -1123,3 +1123,15 @@ body{
 /* Search: orange focus ring */
 #search:focus{box-shadow:0 0 0 4px var(--accentbg2);}
 .nav-search-wrap:focus-within{border-color:var(--accent);}
+
+/* One-time email updates question (after sign-in) */
+.lp-optin-yes, .lp-optin-no { font: inherit; font-size: 12.5px; font-weight: 600; padding: 7px 12px; border-radius: 8px; cursor: pointer; }
+.lp-optin-yes { background: var(--accent); color: #fff; border: 1px solid var(--accent); }
+.lp-optin-yes:hover { background: var(--accent2); }
+.lp-optin-no { background: none; color: var(--text2); border: 1px solid var(--border2); }
+.lp-optin-no:hover { color: var(--text); background: var(--surface2); }
+.optin-bar { position: fixed; left: 50%; bottom: 20px; transform: translateX(-50%); z-index: 60; display: flex; align-items: center; gap: 10px;
+  flex-wrap: wrap; justify-content: center; max-width: calc(100% - 32px); padding: 12px 14px; border-radius: 14px;
+  background: var(--surface); border: 1px solid var(--border3); box-shadow: 0 12px 34px rgba(28,20,36,.18); }
+.optin-bar[hidden] { display: none; }
+.optin-bar-q { font-size: 13px; font-weight: 600; }

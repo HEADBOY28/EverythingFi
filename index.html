@@ -97,6 +97,9 @@
   .lp-explore:hover { color: var(--accent); }
   .lp-auth-foot .lp-explore { color: var(--accent); }
   .lp-hl { color: var(--accent); }
+  .lp-optin { margin: 0 0 14px; padding: 12px 14px; border-radius: 12px; background: var(--accentbg); border: 1px solid var(--border3); }
+  .lp-optin-q { font-size: 13px; font-weight: 600; margin: 0 0 10px; }
+  .lp-optin-actions { display: flex; gap: 8px; flex-wrap: wrap; }
   .lp-explore span { transition: transform .15s; }
   .lp-explore:hover span { transform: translateX(3px); }
   @media (max-width: 420px) {
@@ -179,7 +182,6 @@
         <!-- Google sign-in (shown once GOOGLE_CLIENT_ID is set in Vercel) -->
         <div class="lp-google" id="google-wrap" hidden>
           <div class="lp-google-btn" id="google-btn" aria-label="Continue with Google"></div>
-          <label class="lp-consent"><input type="checkbox" id="google-consent"> <span>Get the latest Jabiru news, new apps and offers straight to your inbox.</span></label>
           <p class="lp-legal-note">By continuing, you agree to our <a href="/terms">Terms</a> and <a href="/privacy">Privacy Policy</a>.</p>
         </div>
         <form class="lp-email" id="email-form" novalidate>
@@ -207,6 +209,13 @@
             <div class="lp-wallet-label" id="auth-label">Connected</div>
             <div class="lp-wallet-addr" id="wallet-addr"></div>
             <div class="lp-wallet-sub" id="wallet-sub" hidden></div>
+          </div>
+        </div>
+        <div class="lp-optin" id="optin" hidden>
+          <p class="lp-optin-q">Get new apps and offers in your inbox?</p>
+          <div class="lp-optin-actions">
+            <button type="button" class="lp-optin-yes" onclick="answerOptin(true)">Yes, send me updates</button>
+            <button type="button" class="lp-optin-no" onclick="answerOptin(false)">No thanks</button>
           </div>
         </div>
         <a class="lp-btn lp-btn-primary" href="/app"><span class="lp-btn-lead">Enter Jabiru</span>
@@ -252,7 +261,6 @@
     </ul>
     <div class="join-google" id="join-google" hidden>
       <div class="lp-google-btn" id="google-btn-modal"></div>
-      <label class="lp-consent"><input type="checkbox" id="google-consent-modal"> <span>Send me new apps, news and offers. Unsubscribe anytime.</span></label>
     </div>
     <button type="button" class="lp-btn lp-btn-primary" id="join-fallback" onclick="closeJoin(); $('email-btn').focus();" hidden>Sign up with email</button>
     <a class="join-skip" href="/app" id="join-skip">Explore anyway <span aria-hidden="true">→</span></a>
@@ -341,10 +349,23 @@ function showSignedIn(label, signOutText) {
   $('wallet-sub').hidden = true;
 }
 
+// One-time question after Google sign-in: get updates by email?
+function answerOptin(yes) {
+  $('optin').hidden = true;
+  if (googleUser) googleUser.askConsent = false;
+  fetch('/api/account', {
+    method: 'PATCH', credentials: 'same-origin',
+    headers: { 'Content-Type': 'application/json', 'X-Requested-With': 'jabiru-site' },
+    body: JSON.stringify({ consent: yes })
+  }).then(function (r) { if (yes) note(r.ok ? 'You’re subscribed. Unsubscribe anytime from any email.' : 'Could not save that. Please try again.', !r.ok); })
+    .catch(function () {});
+}
+
 function showDisconnected() {
   $('auth-out').hidden = false;
   $('explore-wrap').hidden = false;
   $('auth-in').hidden = true;
+  $('optin').hidden = true;
   $('email-fields').hidden = true;
   $('email-label').textContent = 'Continue with email';
 }
@@ -404,6 +425,7 @@ function showGoogle(user) {
   $('wallet-addr').title = user.email;
   $('wallet-sub').textContent = user.email;
   $('wallet-sub').hidden = false;
+  $('optin').hidden = !user.askConsent;
   var pic = /^https:\/\/[a-z0-9.-]+\.googleusercontent\.com\//i.test(user.picture || '') ? user.picture : '';
   $('wallet-avatar').innerHTML = pic
     ? '<img class="is-photo" alt="" referrerpolicy="no-referrer" src="' + esc(pic) + '"/>'
@@ -418,7 +440,7 @@ async function onGoogleCredential(response) {
       method: 'POST',
       credentials: 'same-origin',
       headers: { 'Content-Type': 'application/json', 'X-Requested-With': 'jabiru-site' },
-      body: JSON.stringify({ credential: response.credential, consent: $('google-consent').checked || (joinOpen && $('google-consent-modal').checked) })
+      body: JSON.stringify({ credential: response.credential })
     });
     var body = {};
     try { body = await res.json(); } catch (err) {}
