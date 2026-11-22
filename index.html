@@ -96,6 +96,7 @@
   .lp-explore { display: inline-flex; align-items: center; gap: 6px; color: var(--text); font-weight: 600; text-decoration: none; white-space: nowrap; }
   .lp-explore:hover { color: var(--accent); }
   .lp-auth-foot .lp-explore { color: var(--accent); }
+  .lp-hl { color: var(--accent); }
   .lp-explore span { transition: transform .15s; }
   .lp-explore:hover span { transform: translateX(3px); }
   @media (max-width: 420px) {
@@ -164,7 +165,7 @@
 </header>
 
 <main class="lp-main">
-  <h1 class="lp-title" id="tagline">The app for all apps.</h1>
+  <h1 class="lp-title" id="tagline">The app for all <span class="lp-hl">apps</span>.</h1>
   <p class="lp-intro" id="intro">Curated Web3 tools, sorted by category so you find what you need fast.</p>
 
   <div class="lp-auth">
@@ -302,7 +303,11 @@ function applySite() {
   // Show the drawn wordmark while the site is called Jabiru; otherwise show the name as text.
   document.querySelector('.nav-brand').classList.toggle('use-wordmark', name.trim().toLowerCase() === 'jabiru');
 
-  if (L.tagline) $('tagline').textContent = L.tagline;
+  if (L.tagline) {
+    // Colour the word "apps" orange (falls back to plain text if it's not in the headline).
+    var safe = esc(L.tagline);
+    $('tagline').innerHTML = /\bapps\b/i.test(L.tagline) ? safe.replace(/\b(apps)\b(?![\s\S]*\bapps\b)/i, '<span class="lp-hl">$1</span>') : safe;
+  }
   if (L.intro) $('intro').textContent = L.intro;
 
   var apps = site.apps || [];
