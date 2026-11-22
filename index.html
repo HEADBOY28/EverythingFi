@@ -165,7 +165,7 @@
 </header>
 
 <main class="lp-main">
-  <h1 class="lp-title" id="tagline">The app for all <span class="lp-hl">apps</span>.</h1>
+  <h1 class="lp-title" id="tagline">The app for all <span class="lp-hl">apps.</span></h1>
   <p class="lp-intro" id="intro">Curated Web3 tools, sorted by category so you find what you need fast.</p>
 
   <div class="lp-auth">
@@ -306,7 +306,7 @@ function applySite() {
   if (L.tagline) {
     // Colour the word "apps" orange (falls back to plain text if it's not in the headline).
     var safe = esc(L.tagline);
-    $('tagline').innerHTML = /\bapps\b/i.test(L.tagline) ? safe.replace(/\b(apps)\b(?![\s\S]*\bapps\b)/i, '<span class="lp-hl">$1</span>') : safe;
+    $('tagline').innerHTML = /\bapps\b/i.test(L.tagline) ? safe.replace(/\b(apps[.!?]?)(?![\s\S]*\bapps\b)/i, '<span class="lp-hl">$1</span>') : safe;
   }
   if (L.intro) $('intro').textContent = L.intro;
 
